@@ -13,7 +13,34 @@
     <Attr Name="_jprName" Value="../../Model.jpr"/>
     <Attr Name="_NamedConnection" Value="Connection1"/>
     <Attr Name="_appModuleNames0" Value="model.UserRole.AppModule"/>
+    <Attr Name="_appModuleNames1" Value="model.ERP.AppModule"/>
   </DesignTime>
+  <Containee
+    Name="EO"
+    PackageName="model.ERP.EO"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="ERP"
+    PackageName="model.ERP"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="VO"
+    PackageName="model.ERP.VO"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+      <Attr Name="_VL" Value="true"/>
+    </DesignTime>
+  </Containee>
   <Containee
     Name="EO"
     PackageName="model.UserRole.EO"

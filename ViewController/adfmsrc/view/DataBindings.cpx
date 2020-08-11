@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.11.57" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/Main_Pages/Modules/General_Ledger/General_Ledger.jsf" usageId="view_General_LedgerPageDef"/>
+    <page path="/Main_Pages/Modules/Inventory/Inventory.jsf" usageId="view_InventoryPageDef"/>
+    <page path="/Main_Pages/Modules/User_Management/User_Management.jsf" usageId="view_User_ManagementPageDef"/>
+    <page path="/Main_Pages/Modules/Payable_Receivable/Payable_Receivable.jsf"
+          usageId="view_Payable_ReceivablePageDef"/>
+    <page path="/Main_Pages/Dashboard.jsf" usageId="view_DashboardPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/General_Ledger/Chart_of_Account_TaskFlow.xml#Chart_of_Account_TaskFlow@ExecuteWithParams"
+          usageId="view_Chart_of_Account_TaskFlow_Chart_of_Account_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/General_Ledger/Project_Setup_TaskFlow.xml#Project_Setup_TaskFlow@ExecuteWithParams"
+          usageId="view_Project_Setup_TaskFlow_Project_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Unit_of_Measurement_TaskFlow.xml#Unit_of_Measurement_TaskFlow@ExecuteWithParams"
+          usageId="view_Unit_of_Measurement_TaskFlow_Unit_of_Measurement_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Quality_Inspection_TaskFlow.xml#Quality_Inspection_TaskFlow@ExecuteWithParams"
+          usageId="view_Quality_Inspection_TaskFlow_Quality_Inspection_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Purchase_Order_TaskFlow.xml#Purchase_Order_TaskFlow@ExecuteWithParams"
+          usageId="view_Purchase_Order_TaskFlow_Purchase_Order_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Opening_Balance_TaskFlow.xml#Opening_Balance_TaskFlow@ExecuteWithParams"
+          usageId="view_Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Inward_Gate_Pass_TaskFlow.xml#Inward_Gate_Pass_TaskFlow@ExecuteWithParams"
+          usageId="view_Inward_Gate_Pass_TaskFlow_Inward_Gate_Pass_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Goods_Receipt_Notes_TaskFlow.xml#Goods_Receipt_Notes_TaskFlow@ExecuteWithParams"
+          usageId="view_Goods_Receipt_Notes_TaskFlow_Goods_Receipt_Notes_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Department_Setup_TaskFlow.xml#Department_Setup_TaskFlow@ExecuteWithParams"
+          usageId="view_Department_Setup_TaskFlow_Department_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Demand_Order_TaskFlow.xml#Demand_Order_TaskFlow@ExecuteWithParams"
+          usageId="view_Demand_Order_TaskFlow_Demand_Order_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payable_Receivable/Supplier_Setup_TaskFlow.xml#Supplier_Setup_TaskFlow@ExecuteWithParams"
+          usageId="view_Supplier_Setup_TaskFlow_Supplier_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
+    <page id="view_InventoryPageDef" path="Main_Pages.Modules.Inventory.InventoryPageDef"/>
+    <page id="view_User_ManagementPageDef" path="Main_Pages.Modules.User_Management.User_ManagementPageDef"/>
+    <page id="view_Payable_ReceivablePageDef" path="Main_Pages.Modules.Payable_Receivable.Payable_ReceivablePageDef"/>
+    <page id="view_DashboardPageDef" path="Main_Pages.DashboardPageDef"/>
+    <page id="view_Chart_of_Account_TaskFlow_Chart_of_Account_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.General_Ledger.Chart_of_Account_TaskFlow_Chart_of_Account_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Project_Setup_TaskFlow_Project_Setup_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.General_Ledger.Project_Setup_TaskFlow_Project_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Unit_of_Measurement_TaskFlow_Unit_of_Measurement_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Inventory.Unit_of_Measurement_TaskFlow_Unit_of_Measurement_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Quality_Inspection_TaskFlow_Quality_Inspection_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Inventory.Quality_Inspection_TaskFlow_Quality_Inspection_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Purchase_Order_TaskFlow_Purchase_Order_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Inventory.Purchase_Order_TaskFlow_Purchase_Order_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Inventory.Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Inward_Gate_Pass_TaskFlow_Inward_Gate_Pass_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Inventory.Inward_Gate_Pass_TaskFlow_Inward_Gate_Pass_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Goods_Receipt_Notes_TaskFlow_Goods_Receipt_Notes_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Inventory.Goods_Receipt_Notes_TaskFlow_Goods_Receipt_Notes_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Department_Setup_TaskFlow_Department_Setup_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Inventory.Department_Setup_TaskFlow_Department_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Demand_Order_TaskFlow_Demand_Order_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Inventory.Demand_Order_TaskFlow_Demand_Order_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Supplier_Setup_TaskFlow_Supplier_Setup_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payable_Receivable.Supplier_Setup_TaskFlow_Supplier_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

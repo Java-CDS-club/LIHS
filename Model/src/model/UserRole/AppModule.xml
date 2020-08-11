@@ -67,6 +67,21 @@
   <ViewUsage
     Name="TblUserMasterView2"
     ViewObjectName="model.UserRole.VO.TblUserMasterView"/>
+  <ViewUsage
+    Name="USERS_MODULE1"
+    ViewObjectName="model.UserRole.VO.USERS_MODULE"/>
+  <ViewUsage
+    Name="Pages_General_Ledger1"
+    ViewObjectName="model.UserRole.VO.Pages_General_Ledger"/>
+  <ViewUsage
+    Name="Pages_Inventory1"
+    ViewObjectName="model.UserRole.VO.Pages_Inventory"/>
+  <ViewUsage
+    Name="Pages_Payable_Receivable1"
+    ViewObjectName="model.UserRole.VO.Pages_Payable_Receivable"/>
+  <ViewUsage
+    Name="USERS_CRUD_OPERATIONS1"
+    ViewObjectName="model.UserRole.VO.USERS_CRUD_OPERATIONS"/>
   <ViewLinkUsage
     Name="FkPagesLink1"
     ViewLinkObjectName="model.UserRole.VO.FkPagesLink"
