@@ -35,6 +35,7 @@
           usageId="view_Demand_Order_TaskFlow_Demand_Order_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Payable_Receivable/Supplier_Setup_TaskFlow.xml#Supplier_Setup_TaskFlow@ExecuteWithParams"
           usageId="view_Supplier_Setup_TaskFlow_Supplier_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Department_Setup.jsff" usageId="view_Department_SetupPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -64,9 +65,15 @@
           path="Task_Flows.Modules.Inventory.Demand_Order_TaskFlow_Demand_Order_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Supplier_Setup_TaskFlow_Supplier_Setup_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Payable_Receivable.Supplier_Setup_TaskFlow_Supplier_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Department_SetupPageDef" path="Fragments.Modules.Inventory.Department_SetupPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl1" Package="model.ERP"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
                      SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
