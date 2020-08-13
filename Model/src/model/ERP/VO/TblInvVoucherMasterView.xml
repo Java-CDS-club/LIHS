@@ -124,4 +124,9 @@
     ViewLink="model.ERP.VO.FkInvVoucherDetailMasterLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblInvVoucherDDView"
+    ViewLink="model.ERP.VO.FkTblInvVoucherDDFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

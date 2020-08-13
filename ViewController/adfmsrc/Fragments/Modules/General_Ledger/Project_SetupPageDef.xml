@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="Department_SetupPageDef"
-                Package="Fragments.Modules.Inventory">
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="Project_SetupPageDef"
+                Package="Fragments.Modules.General_Ledger">
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="USERS_CRUD_OPERATIONS1" RangeSize="25" DataControl="AppModuleDataControl"
               id="USERS_CRUD_OPERATIONS1Iterator"/>
-    <iterator Binds="TblDepartmentView1" RangeSize="8" DataControl="AppModuleDataControl1"
-              id="TblDepartmentView1Iterator"/>
-    <searchRegion Binds="TblDepartmentView1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblDepartmentView1Query"/>
+    <iterator Binds="TblProjectView1" RangeSize="8" DataControl="AppModuleDataControl1" id="TblProjectView1Iterator"/>
+    <searchRegion Binds="TblProjectView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjectView1Query"/>
   </executables>
   <bindings>
     <tree IterBinding="USERS_CRUD_OPERATIONS1Iterator" id="USERS_CRUD_OPERATIONS1">
@@ -23,8 +22,8 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <tree IterBinding="TblDepartmentView1Iterator" id="TblDepartmentView1">
-      <nodeDefinition DefName="model.ERP.VO.TblDepartmentView" Name="TblDepartmentView10">
+    <tree IterBinding="TblProjectView1Iterator" id="TblProjectView1">
+      <nodeDefinition DefName="model.ERP.VO.TblProjectView" Name="TblProjectView10">
         <AttrNames>
           <Item Value="Id"/>
           <Item Value="Name"/>
@@ -32,10 +31,10 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="TblDepartmentView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+    <action IterBinding="TblProjectView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
             Action="createInsertRow"/>
-    <action IterBinding="TblDepartmentView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
-    <action IterBinding="TblDepartmentView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="TblProjectView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblProjectView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl1"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl1"/>
   </bindings>

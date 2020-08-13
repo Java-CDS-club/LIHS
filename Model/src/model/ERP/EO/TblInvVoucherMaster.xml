@@ -153,6 +153,13 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TBL_INV_VOUCHER_MASTER"/>
+  <Attribute
+    Name="ProjectId"
+    ColumnName="PROJECT_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_INV_VOUCHER_MASTER"/>
   <AccessorAttribute
     Name="TblInvVoucherDetail"
     Association="model.ERP.EO.FkInvVoucherDetailMasterAssoc"
@@ -174,6 +181,13 @@
     AssociationOtherEnd="model.ERP.EO.FkInvVoucherMasterSupplierAssoc.TblInvVoucherMaster"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblInvVoucherDD"
+    Association="model.ERP.EO.FkTblInvVoucherDDFkAssoc"
+    AssociationEnd="model.ERP.EO.FkTblInvVoucherDDFkAssoc.TblInvVoucherDD"
+    AssociationOtherEnd="model.ERP.EO.FkTblInvVoucherDDFkAssoc.TblInvVoucherMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="PkInvVoucherMasterId"
     PrimaryKey="true">

@@ -36,6 +36,18 @@
     <page path="/WEB-INF/Task_Flows/Modules/Payable_Receivable/Supplier_Setup_TaskFlow.xml#Supplier_Setup_TaskFlow@ExecuteWithParams"
           usageId="view_Supplier_Setup_TaskFlow_Supplier_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Inventory/Department_Setup.jsff" usageId="view_Department_SetupPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/General_Ledger/Project_Setup.jsff" usageId="view_Project_SetupPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/General_Ledger/Chart_of_Account.jsff"
+          usageId="view_Chart_of_AccountPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Unit_of_Measurement.jsff"
+          usageId="view_Unit_of_MeasurementPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Opening_Balance.jsff" usageId="view_Opening_BalancePageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Demand_Order.jsff" usageId="view_Demand_OrderPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Goods_Receipt_Notes.jsff"
+          usageId="view_Goods_Receipt_NotesPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Inward_Gate_Pass.jsff" usageId="view_Inward_Gate_PassPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Quality_Inspection.jsff" usageId="view_Quality_InspectionPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Purchase_Order.jsff" usageId="view_Purchase_OrderPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -66,6 +78,15 @@
     <page id="view_Supplier_Setup_TaskFlow_Supplier_Setup_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Payable_Receivable.Supplier_Setup_TaskFlow_Supplier_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Department_SetupPageDef" path="Fragments.Modules.Inventory.Department_SetupPageDef"/>
+    <page id="view_Project_SetupPageDef" path="Fragments.Modules.General_Ledger.Project_SetupPageDef"/>
+    <page id="view_Chart_of_AccountPageDef" path="Fragments.Modules.General_Ledger.Chart_of_AccountPageDef"/>
+    <page id="view_Unit_of_MeasurementPageDef" path="Fragments.Modules.Inventory.Unit_of_MeasurementPageDef"/>
+    <page id="view_Opening_BalancePageDef" path="Fragments.Modules.Inventory.Opening_BalancePageDef"/>
+    <page id="view_Demand_OrderPageDef" path="Fragments.Modules.Inventory.Demand_OrderPageDef"/>
+    <page id="view_Goods_Receipt_NotesPageDef" path="Fragments.Modules.Inventory.Goods_Receipt_NotesPageDef"/>
+    <page id="view_Inward_Gate_PassPageDef" path="Fragments.Modules.Inventory.Inward_Gate_PassPageDef"/>
+    <page id="view_Quality_InspectionPageDef" path="Fragments.Modules.Inventory.Quality_InspectionPageDef"/>
+    <page id="view_Purchase_OrderPageDef" path="Fragments.Modules.Inventory.Purchase_OrderPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
