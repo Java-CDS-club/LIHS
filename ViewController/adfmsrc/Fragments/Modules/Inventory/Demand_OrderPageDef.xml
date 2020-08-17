@@ -64,8 +64,6 @@
         <Item Value="NetAmount"/>
       </AttrNames>
     </attributeValues>
-    <list IterBinding="TblInvVoucherMasterINV1Iterator" StaticList="false" Uses="LOV_PblSuppId" id="PblSuppId"
-          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="TblInvVoucherMasterINV1Iterator" id="PoNo">
       <AttrNames>
         <Item Value="PoNo"/>
@@ -79,11 +77,6 @@
     <attributeValues IterBinding="TblInvVoucherMasterINV1Iterator" id="Vno">
       <AttrNames>
         <Item Value="Vno"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="TblInvVoucherMasterINV1Iterator" id="Vtp">
-      <AttrNames>
-        <Item Value="Vtp"/>
       </AttrNames>
     </attributeValues>
     <action IterBinding="TblInvVoucherMasterINV1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
@@ -113,7 +106,7 @@
           <Item Value="PoNo"/>
           <Item Value="QcNo"/>
           <Item Value="Vno"/>
-          <Item Value="Vtp"/>
+          
           <Item Value="ProjectId"/>
         </AttrNames>
       </nodeDefinition>
@@ -143,9 +136,9 @@
             Action="iteratorExecute"/>
     <action IterBinding="TblInvVoucherDetailView6Iterator" id="Delete1" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
-    <list IterBinding="TblInvVoucherMasterINV1Iterator" StaticList="false" Uses="LOV_Vtp" id="Vtp1"
-          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <list IterBinding="TblInvVoucherMasterINV1Iterator" StaticList="false" Uses="LOV_ProjectId" id="ProjectId"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="TblInvVoucherMasterINV1Iterator" StaticList="false" Uses="LOV_Vtp" id="Vtp"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>
