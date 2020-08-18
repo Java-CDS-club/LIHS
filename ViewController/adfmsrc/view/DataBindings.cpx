@@ -50,6 +50,8 @@
     <page path="/WEB-INF/Fragments/Modules/Inventory/Purchase_Order.jsff" usageId="view_Purchase_OrderPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Payable_Receivable/Supplier_Setup.jsff"
           usageId="view_Supplier_SetupPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Chart_of_Account_Inv_TaskFlow.xml#Chart_of_Account_Inv_TaskFlow@ExecuteWithParams"
+          usageId="view_Chart_of_Account_Inv_TaskFlow_Chart_of_Account_Inv_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -90,6 +92,8 @@
     <page id="view_Quality_InspectionPageDef" path="Fragments.Modules.Inventory.Quality_InspectionPageDef"/>
     <page id="view_Purchase_OrderPageDef" path="Fragments.Modules.Inventory.Purchase_OrderPageDef"/>
     <page id="view_Supplier_SetupPageDef" path="Fragments.Modules.Payable_Receivable.Supplier_SetupPageDef"/>
+    <page id="view_Chart_of_Account_Inv_TaskFlow_Chart_of_Account_Inv_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Inventory.Chart_of_Account_Inv_TaskFlow_Chart_of_Account_Inv_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
