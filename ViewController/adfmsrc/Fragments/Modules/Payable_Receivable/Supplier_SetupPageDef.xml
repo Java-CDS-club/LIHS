@@ -6,10 +6,10 @@
     <variableIterator id="variables"/>
     <iterator Binds="USERS_CRUD_OPERATIONS1" RangeSize="25" DataControl="AppModuleDataControl"
               id="USERS_CRUD_OPERATIONS1Iterator"/>
-    <iterator Binds="TblPblSuppView1" RangeSize="25" DataControl="AppModuleDataControl1" id="TblPblSuppView1Iterator"/>
+    <iterator Binds="TblPblSuppView1" RangeSize="8" DataControl="AppModuleDataControl1" id="TblPblSuppView1Iterator"/>
     <searchRegion Binds="TblPblSuppView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblPblSuppView1Query"/>
-    <iterator Binds="TblPblSuppItemsView2" RangeSize="25" DataControl="AppModuleDataControl1"
+    <iterator Binds="TblPblSuppItemsView2" RangeSize="8" DataControl="AppModuleDataControl1"
               id="TblPblSuppItemsView2Iterator"/>
     <searchRegion Binds="TblPblSuppItemsView2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblPblSuppItemsView2Query"/>
