@@ -48,6 +48,8 @@
     <page path="/WEB-INF/Fragments/Modules/Inventory/Inward_Gate_Pass.jsff" usageId="view_Inward_Gate_PassPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Inventory/Quality_Inspection.jsff" usageId="view_Quality_InspectionPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Inventory/Purchase_Order.jsff" usageId="view_Purchase_OrderPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payable_Receivable/Supplier_Setup.jsff"
+          usageId="view_Supplier_SetupPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -87,6 +89,7 @@
     <page id="view_Inward_Gate_PassPageDef" path="Fragments.Modules.Inventory.Inward_Gate_PassPageDef"/>
     <page id="view_Quality_InspectionPageDef" path="Fragments.Modules.Inventory.Quality_InspectionPageDef"/>
     <page id="view_Purchase_OrderPageDef" path="Fragments.Modules.Inventory.Purchase_OrderPageDef"/>
+    <page id="view_Supplier_SetupPageDef" path="Fragments.Modules.Payable_Receivable.Supplier_SetupPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
