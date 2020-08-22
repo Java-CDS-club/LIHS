@@ -147,5 +147,10 @@
         <Item Value="NetAmount"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="TblInvVoucherMasterINV1Iterator" id="Vtp1">
+      <AttrNames>
+        <Item Value="Vtp"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

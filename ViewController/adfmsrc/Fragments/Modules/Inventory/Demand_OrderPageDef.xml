@@ -140,5 +140,10 @@
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <list IterBinding="TblInvVoucherMasterINV1Iterator" StaticList="false" Uses="LOV_Vtp" id="Vtp"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="TblInvVoucherMasterINV1Iterator" id="Vtp1">
+      <AttrNames>
+        <Item Value="Vtp"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>
