@@ -6,19 +6,39 @@
   Name="TblInvVoucherMasterINV"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SelectList="TblInvVoucherMaster.CARRIER, 
+       TblInvVoucherMaster.CREATED_BY, 
+       TblInvVoucherMaster.CREATED_DATE, 
+       TblInvVoucherMaster.DATED, 
+       TblInvVoucherMaster.DEPARTMENT_ID, 
+       TblInvVoucherMaster.DO_NO, 
+       TblInvVoucherMaster.ID, 
+       TblInvVoucherMaster.IGP_NO, 
+       TblInvVoucherMaster.NARRATION, 
+       TblInvVoucherMaster.NET_AMOUNT, 
+       TblInvVoucherMaster.PBL_SUPP_ID, 
+       TblInvVoucherMaster.PO_NO, 
+       TblInvVoucherMaster.QC_NO, 
+       TblInvVoucherMaster.UPDATED_BY, 
+       TblInvVoucherMaster.UPDATED_DATE, 
+       TblInvVoucherMaster.VNO, 
+       TblInvVoucherMaster.VTP, 
+       TblInvVoucherMaster.PROJECT_ID"
+  FromList="TBL_INV_VOUCHER_MASTER TblInvVoucherMaster"
+  Where="TblInvVoucherMaster.VTP = :getVTP">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
         ResId="model.ERP.VO.TblInvVoucherMasterINV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <Variable
+    Name="getVTP"
+    Kind="where"
+    Type="java.lang.String"/>
   <ViewAccessor
     Name="Department_Name_LOV1"
     ViewObjectName="model.LOV.Department_Name_LOV"

@@ -126,5 +126,10 @@
             Action="iteratorExecute"/>
     <action IterBinding="TblInvVoucherDetailView6Iterator" id="Delete1" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
+    <attributeValues IterBinding="TblInvVoucherMasterINV1Iterator" id="Vtp1">
+      <AttrNames>
+        <Item Value="Vtp"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

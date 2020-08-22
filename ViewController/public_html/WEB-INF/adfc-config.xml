@@ -30,4 +30,9 @@
     <managed-bean-class>view.Login.USERS_CRUD</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__7">
+    <managed-bean-name>GLvoucherTypeBean</managed-bean-name>
+    <managed-bean-class>view.VoucherType.GLvoucherType</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>
