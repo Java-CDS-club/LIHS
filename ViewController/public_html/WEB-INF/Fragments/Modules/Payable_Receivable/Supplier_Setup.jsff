@@ -76,7 +76,7 @@
                   <af:spacer  id="s8"/>
                   <af:inputText value="#{bindings.Phone.inputValue}" label="Phone"
                                 required="#{bindings.Phone.hints.mandatory}"
-                                columns="#{bindings.Phone.hints.displayWidth}"
+                                columns="20"
                                 maximumLength="#{bindings.Phone.hints.precision}"
                                 shortDesc="#{bindings.Phone.hints.tooltip}" id="it5"
                                 contentStyle='text-align: right'>
@@ -87,13 +87,14 @@
                                 required="#{bindings.Designation.hints.mandatory}"
                                 columns="20"
                                 maximumLength="#{bindings.Designation.hints.precision}"
-                                shortDesc="#{bindings.Designation.hints.tooltip}" id="it6">
+                                shortDesc="#{bindings.Designation.hints.tooltip}" id="it6"
+                                contentStyle="text-align: right">
                     <f:validator binding="#{bindings.Designation.validator}"/>
                   </af:inputText>
                   <af:spacer  id="s11"/>
                   <af:inputText value="#{bindings.Cnic.inputValue}" label="CNIC"
                                 required="#{bindings.Cnic.hints.mandatory}"
-                                columns="#{bindings.Cnic.hints.displayWidth}"
+                                columns="20"
                                 maximumLength="#{bindings.Cnic.hints.precision}"
                                 shortDesc="#{bindings.Cnic.hints.tooltip}" id="it7"
                                 contentStyle='text-align: right'>
@@ -103,7 +104,7 @@
                   <af:spacer  id="s18"/>
                   <af:inputText value="#{bindings.Cell.inputValue}" label="Cell"
                                 required="#{bindings.Cell.hints.mandatory}"
-                                columns="#{bindings.Cell.hints.displayWidth}"
+                                columns="20"
                                 maximumLength="#{bindings.Cell.hints.precision}"
                                 shortDesc="#{bindings.Cell.hints.tooltip}" id="it8"
                                 contentStyle='text-align: right'>
@@ -471,7 +472,7 @@
                   </af:column>
                   <af:column sortProperty="#{bindings.TblPblSuppItemsView2.hints.ItemL4Id.name}" filterable="true"
                              sortable="true" headerText="Items"
-                             id="c17" width="200">
+                             id="c17" width="400">
                              <f:facet name="filter">
                                   <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
                                    id="it30" placeholder="Search ">

@@ -144,7 +144,7 @@
                                   required="#{bindings.TblOpenBlncInvView1.hints.Amount.mandatory}"
                                   columns="#{bindings.TblOpenBlncInvView1.hints.Amount.displayWidth}"
                                   maximumLength="#{bindings.TblOpenBlncInvView1.hints.Amount.precision}"
-                                  shortDesc="#{bindings.TblOpenBlncInvView1.hints.Amount.tooltip}" id="it5">
+                                  shortDesc="#{bindings.TblOpenBlncInvView1.hints.Amount.tooltip}" id="it5" readOnly="true">
                       <f:validator binding="#{row.bindings.Amount.validator}"/>
                       <af:convertNumber groupingUsed="false"
                                         pattern="#{bindings.TblOpenBlncInvView1.hints.Amount.format}"/>

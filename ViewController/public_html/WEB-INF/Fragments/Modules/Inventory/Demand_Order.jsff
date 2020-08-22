@@ -32,7 +32,7 @@
                     <f:validator binding="#{bindings.Id.validator}"/>
                     <af:convertNumber groupingUsed="false" pattern="#{bindings.Id.format}"/>
                   </af:inputText>
-                  <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Tyoe"
+                  <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type"
                                       required="#{bindings.Vtp.hints.mandatory}"
                                       shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc2" contentStyle="width:135px;" disabled="true">
                     <f:selectItems value="#{bindings.Vtp.items}" id="si2"/>

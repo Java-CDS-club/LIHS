@@ -48,7 +48,7 @@
                 <af:convertNumber groupingUsed="false" pattern="#{bindings.GlL1Id.format}"/>
               </af:inputText>
                             <af:spacer  id="s4"/>
-                            <af:inputText value="#{bindings.GlL1Name.inputValue}" label="Level 1"
+                            <af:inputText value="#{bindings.GlL1Name.inputValue}" label="Name"
                             required="#{bindings.GlL1Name.hints.mandatory}"
                             columns="#{bindings.GlL1Name.hints.displayWidth}"
                             maximumLength="#{bindings.GlL1Name.hints.precision}"
@@ -116,7 +116,7 @@
                     </af:inputText>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblGlL1View1.hints.GlL1Name.name}" filterable="true"
-                             sortable="true" headerText="Level 1" id="c2" width="200">
+                             sortable="true" headerText="Name" id="c2" width="200">
                              <f:facet name="filter">
                                   <af:inputText value="#{vs.filterCriteria.GlL1Name}"
                                    id="it9" placeholder="Search ">
@@ -182,7 +182,7 @@
                             </af:inputText>
                             <af:spacer  id="s10"/>
                             <af:inputText value="#{bindings.GlL2Name.inputValue}"
-                                          label="Level 2"
+                                          label="Name"
                                           required="#{bindings.GlL2Name.hints.mandatory}"
                                           columns="#{bindings.GlL2Name.hints.displayWidth}"
                                           maximumLength="#{bindings.GlL2Name.hints.precision}"
@@ -265,7 +265,7 @@
                               </af:selectOneChoice>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblGlL2View2.hints.GlL2Name.name}" filterable="true"
-                             sortable="true" headerText="Level 2" id="c5" width="200">
+                             sortable="true" headerText="Name" id="c5" width="200">
                              <f:facet name="filter">
                                   <af:inputText value="#{vs.filterCriteria.GlL2Name}"
                                    id="it12" placeholder="Search ">
@@ -335,7 +335,7 @@
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.GlL3Id.format}"/>
                         </af:inputText>
                         <af:spacer  id="s15"/>
-                        <af:inputText value="#{bindings.GlL3Name.inputValue}" label="Level 3"
+                        <af:inputText value="#{bindings.GlL3Name.inputValue}" label="Name"
                                       required="#{bindings.GlL3Name.hints.mandatory}"
                                       columns="#{bindings.GlL3Name.hints.displayWidth}"
                                       maximumLength="#{bindings.GlL3Name.hints.precision}"
@@ -418,7 +418,7 @@
                               </af:selectOneChoice>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblGlL3View3.hints.GlL3Name.name}" filterable="true"
-                             sortable="true" headerText="Level 3" id="c8" width="200" >
+                             sortable="true" headerText="Name" id="c8" width="200" >
                              <f:facet name="filter">
                                   <af:inputText value="#{vs.filterCriteria.GlL3Name}"
                                    id="it15" placeholder="Search ">
@@ -478,7 +478,7 @@
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.GlL4Id.format}"/>
                         </af:inputText>
                         <af:spacer  id="s17"/>
-                        <af:inputText value="#{bindings.GlL4Name.inputValue}" label="Level 4"
+                        <af:inputText value="#{bindings.GlL4Name.inputValue}" label="Name"
                                       required="#{bindings.GlL4Name.hints.mandatory}"
                                       columns="#{bindings.GlL4Name.hints.displayWidth}"
                                       maximumLength="#{bindings.GlL4Name.hints.precision}"
@@ -559,7 +559,7 @@
                               </af:selectOneChoice>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblGlL4View3.hints.GlL4Name.name}" filterable="true"
-                             sortable="true" headerText="Level 4" id="c11" width="200">
+                             sortable="true" headerText="Name" id="c11" width="200">
                              <f:facet name="filter">
                                   <af:inputText value="#{vs.filterCriteria.GlL4Name}"
                                    id="it18" placeholder="Search ">

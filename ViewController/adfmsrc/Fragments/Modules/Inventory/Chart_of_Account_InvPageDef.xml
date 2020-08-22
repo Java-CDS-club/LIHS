@@ -87,5 +87,15 @@
             Action="createInsertRow"/>
     <action IterBinding="TblItemL4View3Iterator" id="Execute3" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblItemL4View3Iterator" id="Delete3" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="TblItemL4View3Iterator" id="TblItemL4View31">
+      <nodeDefinition DefName="model.ERP.VO.TblItemL4View" Name="TblItemL4View310">
+        <AttrNames>
+          <Item Value="ItemL3Id"/>
+          <Item Value="ItemL4Id"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>
