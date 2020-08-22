@@ -85,7 +85,12 @@
                 </af:table>
               </af:showDetailItem>
               <af:showDetailItem text="Search" id="sdi4">
-                <af:table value="#{bindings.TblItemL4View31.collectionModel}" var="row"
+                <af:panelGridLayout id="pgl10">
+                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr13">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc13">
+                      <af:panelTabbed position="above" id="pt5">
+                        <af:showDetailItem id="tab2" text="Tab Label 2">
+                          <af:table value="#{bindings.TblItemL4View31.collectionModel}" var="row"
                           rows="#{bindings.TblItemL4View31.rangeSize}"
                           emptyText="#{bindings.TblItemL4View31.viewable ? 'No data to display.' : 'Access Denied.'}"
                           rowBandingInterval="0"
@@ -142,6 +147,11 @@
                     </af:selectOneChoice>
                   </af:column>
                 </af:table>
+                        </af:showDetailItem>
+                      </af:panelTabbed>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
               </af:showDetailItem>
             </af:panelTabbed>
           </af:gridCell>
