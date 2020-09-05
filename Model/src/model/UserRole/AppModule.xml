@@ -82,6 +82,9 @@
   <ViewUsage
     Name="USERS_CRUD_OPERATIONS1"
     ViewObjectName="model.UserRole.VO.USERS_CRUD_OPERATIONS"/>
+  <ViewUsage
+    Name="Pages_Production1"
+    ViewObjectName="model.UserRole.VO.Pages_Production"/>
   <ViewLinkUsage
     Name="FkPagesLink1"
     ViewLinkObjectName="model.UserRole.VO.FkPagesLink"

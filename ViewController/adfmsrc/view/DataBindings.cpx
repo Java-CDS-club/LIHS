@@ -64,6 +64,17 @@
           usageId="view_Purchase_Order_TaskFlow_Purchase_Order_TaskFlow_ExecuteWithParams1PageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Inventory/Quality_Inspection_TaskFlow.xml#Quality_Inspection_TaskFlow@ExecuteWithParams1"
           usageId="view_Quality_Inspection_TaskFlow_Quality_Inspection_TaskFlow_ExecuteWithParams1PageDef"/>
+    <page path="/Main_Pages/Modules/Production/Production.jsf" usageId="view_ProductionPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Production/Batch_Order_Quantity_TaskFlow.xml#Batch_Order_Quantity_TaskFlow@ExecuteWithParams"
+          usageId="view_Batch_Order_Quantity_TaskFlow_Batch_Order_Quantity_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Production/Finished_Goods_Transfer_TaskFlow.xml#Finished_Goods_Transfer_TaskFlow@ExecuteWithParams"
+          usageId="view_Finished_Goods_Transfer_TaskFlow_Finished_Goods_Transfer_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Production/Production_Order_TaskFlow.xml#Production_Order_TaskFlow@ExecuteWithParams"
+          usageId="view_Production_Order_TaskFlow_Production_Order_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Production/Production_Issuance_TaskFlow.xml#Production_Issuance_TaskFlow@ExecuteWithParams"
+          usageId="view_Production_Issuance_TaskFlow_Production_Issuance_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Production/Production_Finished_Goods_TaskFlow.xml#Production_Finished_Goods_TaskFlow@ExecuteWithParams"
+          usageId="view_Production_Finished_Goods_TaskFlow_Production_Finished_Goods_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -117,6 +128,17 @@
           path="Task_Flows.Modules.Inventory.Purchase_Order_TaskFlow_Purchase_Order_TaskFlow_ExecuteWithParams1PageDef"/>
     <page id="view_Quality_Inspection_TaskFlow_Quality_Inspection_TaskFlow_ExecuteWithParams1PageDef"
           path="Task_Flows.Modules.Inventory.Quality_Inspection_TaskFlow_Quality_Inspection_TaskFlow_ExecuteWithParams1PageDef"/>
+    <page id="view_ProductionPageDef" path="Main_Pages.Modules.Production.ProductionPageDef"/>
+    <page id="view_Batch_Order_Quantity_TaskFlow_Batch_Order_Quantity_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Production.Batch_Order_Quantity_TaskFlow_Batch_Order_Quantity_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Finished_Goods_Transfer_TaskFlow_Finished_Goods_Transfer_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Production.Finished_Goods_Transfer_TaskFlow_Finished_Goods_Transfer_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Production_Order_TaskFlow_Production_Order_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Production.Production_Order_TaskFlow_Production_Order_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Production_Issuance_TaskFlow_Production_Issuance_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Production.Production_Issuance_TaskFlow_Production_Issuance_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Production_Finished_Goods_TaskFlow_Production_Finished_Goods_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Production.Production_Finished_Goods_TaskFlow_Production_Finished_Goods_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
