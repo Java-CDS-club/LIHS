@@ -75,6 +75,12 @@
           usageId="view_Production_Issuance_TaskFlow_Production_Issuance_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Production/Production_Finished_Goods_TaskFlow.xml#Production_Finished_Goods_TaskFlow@ExecuteWithParams"
           usageId="view_Production_Finished_Goods_TaskFlow_Production_Finished_Goods_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Production/Finished_Goods_Transfer.jsff"
+          usageId="view_Finished_Goods_TransferPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Production/Production_Finished_Goods.jsff"
+          usageId="view_Production_Finished_GoodsPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Production/Production_Issuance.jsff"
+          usageId="view_Production_IssuancePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -139,6 +145,10 @@
           path="Task_Flows.Modules.Production.Production_Issuance_TaskFlow_Production_Issuance_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Production_Finished_Goods_TaskFlow_Production_Finished_Goods_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Production.Production_Finished_Goods_TaskFlow_Production_Finished_Goods_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Finished_Goods_TransferPageDef" path="Fragments.Modules.Production.Finished_Goods_TransferPageDef"/>
+    <page id="view_Production_Finished_GoodsPageDef"
+          path="Fragments.Modules.Production.Production_Finished_GoodsPageDef"/>
+    <page id="view_Production_IssuancePageDef" path="Fragments.Modules.Production.Production_IssuancePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
