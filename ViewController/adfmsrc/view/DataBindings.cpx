@@ -75,6 +75,7 @@
           usageId="view_Production_Issuance_TaskFlow_Production_Issuance_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Production/Production_Finished_Goods_TaskFlow.xml#Production_Finished_Goods_TaskFlow@ExecuteWithParams"
           usageId="view_Production_Finished_Goods_TaskFlow_Production_Finished_Goods_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Production/Production_Order.jsff" usageId="view_Production_OrderPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -139,6 +140,7 @@
           path="Task_Flows.Modules.Production.Production_Issuance_TaskFlow_Production_Issuance_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Production_Finished_Goods_TaskFlow_Production_Finished_Goods_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Production.Production_Finished_Goods_TaskFlow_Production_Finished_Goods_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Production_OrderPageDef" path="Fragments.Modules.Production.Production_OrderPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
