@@ -181,6 +181,9 @@
   <ViewUsage
     Name="TblProIssMasterView2"
     ViewObjectName="model.ERP.VO.TblProIssMasterView"/>
+  <ViewUsage
+    Name="TblProIssDetailDView3"
+    ViewObjectName="model.ERP.VO.TblProIssDetailDView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -360,5 +363,11 @@
     ViewLinkObjectName="model.ERP.VO.FkProIssMasterPorLink"
     SrcViewUsageName="model.ERP.AppModule.TblPorMasterView1"
     DstViewUsageName="model.ERP.AppModule.TblProIssMasterView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkProIssDetailDMasterLink2"
+    ViewLinkObjectName="model.ERP.VO.FkProIssDetailDMasterLink"
+    SrcViewUsageName="model.ERP.AppModule.TblProIssDetailView2"
+    DstViewUsageName="model.ERP.AppModule.TblProIssDetailDView3"
     Reversed="false"/>
 </AppModule>
