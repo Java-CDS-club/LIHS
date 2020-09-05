@@ -265,7 +265,7 @@
                     <af:inputText value="#{row.bindings.SrNo.inputValue}"
                                   label="#{bindings.TblProFgDetailView2.hints.SrNo.label}"
                                   required="#{bindings.TblProFgDetailView2.hints.SrNo.mandatory}"
-                                  columns="#{bindings.TblProFgDetailView2.hints.SrNo.displayWidth}"
+                                  columns="20"
                                   maximumLength="#{bindings.TblProFgDetailView2.hints.SrNo.precision}"
                                   shortDesc="#{bindings.TblProFgDetailView2.hints.SrNo.tooltip}" id="it5">
                       <f:validator binding="#{row.bindings.SrNo.validator}"/>

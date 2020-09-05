@@ -82,6 +82,8 @@
           usageId="view_Production_Finished_GoodsPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Production/Production_Issuance.jsff"
           usageId="view_Production_IssuancePageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Production/Batch_Order_Quantity.jsff"
+          usageId="view_Batch_Order_QuantityPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -151,6 +153,7 @@
     <page id="view_Production_Finished_GoodsPageDef"
           path="Fragments.Modules.Production.Production_Finished_GoodsPageDef"/>
     <page id="view_Production_IssuancePageDef" path="Fragments.Modules.Production.Production_IssuancePageDef"/>
+    <page id="view_Batch_Order_QuantityPageDef" path="Fragments.Modules.Production.Batch_Order_QuantityPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"

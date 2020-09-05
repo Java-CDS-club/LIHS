@@ -7,32 +7,6 @@
     </af:dialog>
   </af:popup>
   <af:panelAccordion discloseMany="false" id="pa1" styleClass="content_pannel_acc">
-    <af:showDetailItem id="pane1" text="Store Issuance">
-         <af:panelGroupLayout id="pgl4" styleClass="position_fixed_button">
-         <af:button id="b2" text="Help" icon="#{resource['images:info.png']}" iconPosition="top"
-                   inlineStyle="background-color:InfoBackground;">
-          <af:showPopupBehavior popupId="p1"/>
-        </af:button>
-        <af:spacer width="10" height="10" id="s12"/>
-                            <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
-                                   disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b1"
-                                   icon="#{resource['images:cancel.png']}" iconPosition="top">
-                            <af:resetActionListener/>
-                        </af:button>
-                        <af:spacer width="10" height="10" id="s9"/>
-                        <af:button actionListener="#{bindings.Commit.execute}" text="Save All"
-                                   disabled="#{!bindings.Commit.enabled}" id="b10" icon="#{resource['images:save.png']}"
-                                   iconPosition="top"/>
-                        <af:spacer width="10" height="10" id="s1"/>
-                        </af:panelGroupLayout>
-      <af:panelGridLayout id="pgl1">
-        <af:gridRow marginTop="5px" height="auto" id="gr1">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"/>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" id="gr2">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-            <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
-              <af:showDetailItem id="tab1" text="Store Issuance Master">
     <af:showDetailItem id="pane1" text="Production Issuance">
          <af:panelGroupLayout id="pgl4" styleClass="position_fixed_button">
          <af:button id="b2" text="Help" icon="#{resource['images:info.png']}" iconPosition="top"
@@ -58,7 +32,17 @@
         <af:gridRow marginTop="5px" height="auto" id="gr2">
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
             <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
-              <af:showDetailItem id="tab1" text="Production Issuance Master">
+             
+    <af:showDetailItem id="sdi2" text="Production Issuance">
+        
+      <af:panelGridLayout id="pgl8">
+        <af:gridRow marginTop="5px" height="auto" id="gr7">
+          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7"/>
+        </af:gridRow>
+        <af:gridRow marginTop="5px" height="auto" id="gr8">
+          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8">
+            <af:panelTabbed position="above" id="pt4" styleClass="tabel_pannel_tab">
+              <af:showDetailItem id="sdi3" text="Production Issuance Master">
                 <af:panelFormLayout id="pfl1" maxColumns="3" rows="6">
                   <af:inputText value="#{bindings.Id.inputValue}" label="ID" visible="false"
                                 required="#{bindings.Id.hints.mandatory}" columns="#{bindings.Id.hints.displayWidth}"
@@ -292,7 +276,7 @@
                     <af:inputText value="#{row.bindings.SrNo.inputValue}"
                                   label="#{bindings.TblProIssDetailView2.hints.SrNo.label}"
                                   required="#{bindings.TblProIssDetailView2.hints.SrNo.mandatory}"
-                                  columns="#{bindings.TblProIssDetailView2.hints.SrNo.displayWidth}"
+                                  columns="20"
                                   maximumLength="#{bindings.TblProIssDetailView2.hints.SrNo.precision}"
                                   shortDesc="#{bindings.TblProIssDetailView2.hints.SrNo.tooltip}" id="it5">
                       <f:validator binding="#{row.bindings.SrNo.validator}"/>
@@ -428,7 +412,7 @@
                     <af:inputText value="#{row.bindings.SrNo.inputValue}"
                                   label="#{bindings.TblProIssDetailDView3.hints.SrNo.label}"
                                   required="#{bindings.TblProIssDetailDView3.hints.SrNo.mandatory}"
-                                  columns="#{bindings.TblProIssDetailDView3.hints.SrNo.displayWidth}"
+                                  columns="20"
                                   maximumLength="#{bindings.TblProIssDetailDView3.hints.SrNo.precision}"
                                   shortDesc="#{bindings.TblProIssDetailDView3.hints.SrNo.tooltip}" id="it9">
                       <f:validator binding="#{row.bindings.SrNo.validator}"/>
@@ -557,6 +541,11 @@
         </af:gridRow>
         
       </af:panelGridLayout>
+    </af:showDetailItem>
+    </af:panelTabbed>
+    </af:gridCell>
+    </af:gridRow>
+    </af:panelGridLayout>
     </af:showDetailItem>
   </af:panelAccordion>
 </ui:composition>

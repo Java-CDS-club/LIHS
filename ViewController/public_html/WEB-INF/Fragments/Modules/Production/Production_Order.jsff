@@ -25,7 +25,6 @@
                                    iconPosition="top"/>
                         <af:spacer width="10" height="10" id="s1"/>
                         </af:panelGroupLayout>
-                        
       <af:panelGridLayout id="pgl1">
         <af:gridRow marginTop="5px" height="auto" id="gr1">
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"/>
@@ -33,9 +32,7 @@
         <af:gridRow marginTop="5px" height="auto" id="gr2">
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
             <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
-             
               <af:showDetailItem id="tab1" text="Production Order Master">
-                
                 <af:panelFormLayout id="pfl1" maxColumns="3" rows="6"> 
                   <af:inputText value="#{bindings.Id.inputValue}" label="ID" visible="false"
                                 required="#{bindings.Id.hints.mandatory}" columns="#{bindings.Id.hints.displayWidth}"
@@ -244,8 +241,7 @@
                                            actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
                                     <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}"/>
                                 </af:button>
-                
-                <af:spacer width="5" height="10" id="s5"/>
+                                <af:spacer width="5" height="10" id="s5"/>
                             </af:iterator>
                         </af:panelGroupLayout>
           </af:gridCell>
@@ -254,7 +250,6 @@
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
             <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="tab2" text="Detail">
-               
                 <af:table value="#{bindings.TblPorDetailView2.collectionModel}" var="row"
                           rows="#{bindings.TblPorDetailView2.rangeSize}"
                           emptyText="#{bindings.TblPorDetailView2.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -294,7 +289,7 @@
                     <af:inputText value="#{row.bindings.SrNo.inputValue}"
                                   label="#{bindings.TblPorDetailView2.hints.SrNo.label}"
                                   required="#{bindings.TblPorDetailView2.hints.SrNo.mandatory}"
-                                  columns="#{bindings.TblPorDetailView2.hints.SrNo.displayWidth}"
+                                  columns="20"
                                   maximumLength="#{bindings.TblPorDetailView2.hints.SrNo.precision}"
                                   shortDesc="#{bindings.TblPorDetailView2.hints.SrNo.tooltip}" id="it6">
                       <f:validator binding="#{row.bindings.SrNo.validator}"/>
@@ -380,10 +375,8 @@
                                            actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
                                     <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}1"/>
                                 </af:button>
-               
-                <af:spacer width="5" height="10" id="s3"/>
-               
-              </af:iterator>
+                                <af:spacer width="5" height="10" id="s3"/>
+                            </af:iterator>
                         </af:panelGroupLayout>
            </af:gridCell>
         </af:gridRow>

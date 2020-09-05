@@ -3,17 +3,34 @@
                 Package="Fragments.Modules.Production">
   <parameters/>
   <executables>
-    <variableIterator id="variables"/>
-    <iterator Binds="TblPorMasterView1" RangeSize="25" DataControl="AppModuleDataControl1"
+    <iterator Binds="USERS_CRUD_OPERATIONS1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="USERS_CRUD_OPERATIONS1Iterator"/>
+    <iterator Binds="TblPorMasterView1" RangeSize="8" DataControl="AppModuleDataControl1"
               id="TblPorMasterView1Iterator"/>
-    <iterator Binds="TblPorDetailView1" RangeSize="25" DataControl="AppModuleDataControl1"
-              id="TblPorDetailView1Iterator"/>
-    <searchRegion Binds="TblPorDetailView1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblPorDetailView1Query"/>
-    <iterator Binds="TblPorDetailView2" RangeSize="25" DataControl="AppModuleDataControl1"
+    <searchRegion Binds="TblPorMasterView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblPorMasterView1Query"/>
+    <iterator Binds="TblPorDetailView2" RangeSize="8" DataControl="AppModuleDataControl1"
               id="TblPorDetailView2Iterator"/>
+    <searchRegion Binds="TblPorDetailView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblPorDetailView2Query"/>
   </executables>
   <bindings>
+    <tree IterBinding="USERS_CRUD_OPERATIONS1Iterator" id="USERS_CRUD_OPERATIONS1">
+      <nodeDefinition DefName="model.UserRole.VO.USERS_CRUD_OPERATIONS" Name="USERS_CRUD_OPERATIONS10">
+        <AttrNames>
+          <Item Value="Crudid"/>
+          <Item Value="Operation"/>
+          <Item Value="Icon"/>
+          <Item Value="Bindingname"/>
+          <Item Value="Btndisabled"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="TblPorMasterView1Iterator" id="Id">
+      <AttrNames>
+        <Item Value="Id"/>
+      </AttrNames>
+    </attributeValues>
     <attributeValues IterBinding="TblPorMasterView1Iterator" id="Vno">
       <AttrNames>
         <Item Value="Vno"/>
@@ -42,9 +59,30 @@
     <action IterBinding="TblPorMasterView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
     <action IterBinding="TblPorMasterView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
     <action IterBinding="TblPorMasterView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
-    <tree IterBinding="TblPorDetailView1Iterator" id="TblPorDetailView1">
-      <nodeDefinition DefName="model.ERP.VO.TblPorDetailView" Name="TblPorDetailView10">
+    <action IterBinding="TblPorMasterView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblPorMasterView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblPorMasterView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl1"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl1"/>
+    <tree IterBinding="TblPorMasterView1Iterator" id="TblPorMasterView1">
+      <nodeDefinition DefName="model.ERP.VO.TblPorMasterView" Name="TblPorMasterView10">
         <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Vno"/>
+          <Item Value="Vtp"/>
+          <Item Value="Dated"/>
+          <Item Value="ItemL3Id"/>
+          <Item Value="Qty"/>
+          <Item Value="Narration"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblPorDetailView2Iterator" id="TblPorDetailView2">
+      <nodeDefinition DefName="model.ERP.VO.TblPorDetailView" Name="TblPorDetailView20">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="PorMasterId"/>
           <Item Value="SrNo"/>
           <Item Value="ItemL4Id"/>
           <Item Value="UomId"/>
@@ -53,12 +91,6 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="TblPorMasterView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
-    <action IterBinding="TblPorMasterView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
-    <action IterBinding="TblPorMasterView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl1"/>
-    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl1"/>
     <action IterBinding="TblPorDetailView2Iterator" id="CreateInsert1" RequiresUpdateModel="true"
             Action="createInsertRow"/>
     <action IterBinding="TblPorDetailView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
