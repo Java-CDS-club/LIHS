@@ -14,8 +14,8 @@
                     <af:gridRow marginTop="5px" height="auto" id="pt_gr1">
                         <af:gridCell marginStart="5px" width="20%" id="pt_gc2">
                             <af:spacer width="20" height="10" id="pt_s2"/>
-                            <af:image source="#{resource['images:back_to_home.png']}" id="pt_i1"
-                                      inlineStyle="width:220px; height:122px; margin-top:2%;"/>
+                            <af:image source="#{resource['images:lihs_logo.jpg']}" id="pt_i1"
+                                      inlineStyle="width:300px; height:122px; margin-top:2%;"/>
                         </af:gridCell>
                         <af:gridCell marginStart="5px" width="80%" halign="end" valign="bottom" marginEnd="5px"
                                      id="pt_gc3">
