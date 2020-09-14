@@ -37,21 +37,15 @@
         <Item Value="Vno"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblBoqMasterView1Iterator" id="Vtp">
-      <AttrNames>
-        <Item Value="Vtp"/>
-      </AttrNames>
-    </attributeValues>
+    <list IterBinding="TblBoqMasterView1Iterator" StaticList="false" Uses="LOV_Vtp" id="Vtp1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="TblBoqMasterView1Iterator" id="Dated">
       <AttrNames>
         <Item Value="Dated"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblBoqMasterView1Iterator" id="ItemL4Id">
-      <AttrNames>
-        <Item Value="ItemL4Id"/>
-      </AttrNames>
-    </attributeValues>
+    <list IterBinding="TblBoqMasterView1Iterator" StaticList="false" Uses="LOV_ItemL4Id" id="ItemL4Id1"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="TblBoqMasterView1Iterator" id="Qty">
       <AttrNames>
         <Item Value="Qty"/>

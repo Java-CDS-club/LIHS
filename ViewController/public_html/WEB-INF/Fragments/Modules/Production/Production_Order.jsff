@@ -43,7 +43,7 @@
                   </af:inputText>
                   <af:spacer  id="s6"/>
                   <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No."
-                                required="#{bindings.Vno.hints.mandatory}" columns="20"
+                                required="#{bindings.Vno.hints.mandatory}" columns="17"
                                 maximumLength="#{bindings.Vno.hints.precision}"
                                 shortDesc="#{bindings.Vno.hints.tooltip}" id="it2" contentStyle='text-align: right'>
                     <f:validator binding="#{bindings.Vno.validator}"/>
@@ -73,7 +73,7 @@
                   </af:selectOneChoice>
                   <af:spacer  id="s8"/>
                   <af:inputText value="#{bindings.Qty.inputValue}" label="Quantity"
-                                required="#{bindings.Qty.hints.mandatory}" columns="20"
+                                required="#{bindings.Qty.hints.mandatory}" columns="17"
                                 maximumLength="#{bindings.Qty.hints.precision}"
                                 shortDesc="#{bindings.Qty.hints.tooltip}" id="it3">
                     <f:validator binding="#{bindings.Qty.validator}"/>
@@ -82,7 +82,7 @@
                   <af:spacer id="s10"/>
                   <af:inputText value="#{bindings.Narration.inputValue}" label="Narration"
                                 required="#{bindings.Narration.hints.mandatory}"
-                                columns="20"
+                                columns="30"
                                 maximumLength="#{bindings.Narration.hints.precision}"
                                 shortDesc="#{bindings.Narration.hints.tooltip}" id="it4">
                     <f:validator binding="#{bindings.Narration.validator}"/>
