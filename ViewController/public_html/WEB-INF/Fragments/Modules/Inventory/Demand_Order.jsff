@@ -49,7 +49,7 @@
                   <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No."
                                 required="#{bindings.Vno.hints.mandatory}" columns="17"
                                 maximumLength="#{bindings.Vno.hints.precision}"
-                                shortDesc="#{bindings.Vno.hints.tooltip}" id="it2" contentStyle='text-align: right'>
+                                shortDesc="#{bindings.Vno.hints.tooltip}" id="it2" contentStyle='text-align: right' disabled="true">
 
                     <f:validator binding="#{bindings.Vno.validator}"/>
                   </af:inputText>
