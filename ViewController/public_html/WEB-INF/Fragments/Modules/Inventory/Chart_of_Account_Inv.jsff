@@ -88,13 +88,8 @@
                     </af:selectOneChoice>
                   </af:column>
                 </af:table>
-                        </af:showDetailItem>
-                      </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="5px" height="auto" id="gr15">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc15">
-                      <af:panelGroupLayout id="pgl3" halign="center"  layout="horizontal">
+                <af:spacer width="5" height="10" id="s5"/>
+                 <af:panelGroupLayout id="pgl3" halign="center"  layout="horizontal">
                             <af:iterator id="i2" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
                                 <af:button id="btn#{status.index+1}" text="#{index.Operation}"
@@ -103,11 +98,14 @@
                                     <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}"/>
                                 </af:button>
                
-                <af:spacer width="5" height="10" id="s5"/>
+                <af:spacer width="5" height="10" id="s3"/>
                             </af:iterator>
                         </af:panelGroupLayout>
+                        </af:showDetailItem>
+                      </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>
+                 
                   <af:gridRow marginTop="5px" height="auto" id="gr16">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc16">
                       <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
@@ -170,13 +168,8 @@
                     </af:selectOneChoice>
                   </af:column>
                 </af:table>
-              </af:showDetailItem>
-            </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="5px" height="auto" id="gr17">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc17">
-                       <af:panelGroupLayout id="pgl2"  halign="center" layout="horizontal">
+                <af:spacer width="5" height="10" id="s2"/>
+                <af:panelGroupLayout id="pgl2"  halign="center" layout="horizontal">
                             <af:iterator id="i1" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
                                 <af:button id="btn#{status.index+1}" text="#{index.Operation}"
@@ -185,11 +178,14 @@
                                     <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}1"/>
                                 </af:button>
                
-                <af:spacer width="5" height="10" id="s2"/>
+                <af:spacer width="5" height="10" id="s4"/>
                             </af:iterator>
                         </af:panelGroupLayout>
+              </af:showDetailItem>
+            </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>
+                 
                   <af:gridRow marginTop="5px" height="auto" id="gr18">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc18">
                        <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
@@ -252,14 +248,8 @@
                     </af:selectOneChoice>
                   </af:column>
                 </af:table>
-               
-              </af:showDetailItem>
-            </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="5px" height="auto" id="gr19">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc19">
-                      <af:panelGroupLayout id="pgl6"  halign="center" layout="horizontal">
+                <af:spacer width="5" height="10" id="s6"/>
+               <af:panelGroupLayout id="pgl6"  halign="center" layout="horizontal">
                             <af:iterator id="i3" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
                                 <af:button id="btn#{status.index+1}" text="#{index.Operation}"
@@ -268,11 +258,14 @@
                                     <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}2"/>
                                 </af:button>
                 
-                <af:spacer width="5" height="10" id="s6"/>
+                <af:spacer width="5" height="10" id="s7"/>
                             </af:iterator>
                         </af:panelGroupLayout>
+              </af:showDetailItem>
+            </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>
+                  
                   <af:gridRow marginTop="5px" height="auto" id="gr20">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc20">
                        <af:panelTabbed position="above" id="pt4" styleClass="tabel_pannel_tab">
@@ -335,14 +328,8 @@
                     </af:selectOneChoice>
                   </af:column>
                 </af:table>
-          
-              </af:showDetailItem>
-            </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr21">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc21">
-                      <af:panelGroupLayout id="pgl8" halign="center"  layout="horizontal">
+                <af:spacer width="5" height="10" id="s8"/>
+          <af:panelGroupLayout id="pgl8" halign="center"  layout="horizontal">
                             <af:iterator id="i4" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
                                 <af:button id="btn#{status.index+1}" text="#{index.Operation}"
@@ -351,11 +338,14 @@
                                     <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}3"/>
                                 </af:button>
                 
-                <af:spacer width="5" height="10" id="s8"/>
+                <af:spacer width="5" height="10" id="s10"/>
                             </af:iterator>
                         </af:panelGroupLayout>
+              </af:showDetailItem>
+            </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>
+                  
                 </af:panelGridLayout>
                
               </af:showDetailItem>

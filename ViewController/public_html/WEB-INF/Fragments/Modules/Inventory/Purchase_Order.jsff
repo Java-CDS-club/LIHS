@@ -67,7 +67,7 @@
                   <af:selectOneChoice value="#{bindings.ProjectId.inputValue}" label="Project"
                                       required="#{bindings.ProjectId.hints.mandatory}"
                                       shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc6"
-                                      contentStyle="width:135px;" disabled="true">
+                                      contentStyle="width:135px;" >
                     <f:selectItems value="#{bindings.ProjectId.items}" id="si6"/>
                     <f:validator binding="#{bindings.ProjectId.validator}"/>
                   </af:selectOneChoice>
@@ -75,7 +75,7 @@
                   <af:selectOneChoice value="#{bindings.DepartmentId.inputValue}" label="Department"
                                       required="#{bindings.DepartmentId.hints.mandatory}"
                                       shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="soc1"
-                                      contentStyle="width:135px;" disabled="true">
+                                      contentStyle="width:135px;">
                     <f:selectItems value="#{bindings.DepartmentId.items}" id="si1"/>
                     <f:validator binding="#{bindings.DepartmentId.validator}"/>
                   </af:selectOneChoice>
