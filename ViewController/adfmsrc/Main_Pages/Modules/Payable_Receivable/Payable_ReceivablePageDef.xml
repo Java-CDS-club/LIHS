@@ -5,7 +5,7 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="Pages_Payable_Receivable1" RangeSize="25" DataControl="AppModuleDataControl"
-              id="Pages_Payable_Receivable1Iterator"/>
+              id="Pages_Payable_Receivable1Iterator" Refresh="always" CacheResults="false"/>
     <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.PayableReceivableSidebarBean.dynamicTaskFlowId}"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>

@@ -24,7 +24,7 @@
                                             <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="padding: 4%;">
                                                 <af:button text="#{item.bindings.PagesName.inputValue}" id="b1"
                                                            inlineStyle="width:190px;"
-                                                           icon="/LIHS-ViewController-context-root/faces/javax.faces.resource/#{item.bindings.PageIcon.inputValue}?ln=images"
+                                                           icon="/LIHS/faces/javax.faces.resource/#{item.bindings.PageIcon.inputValue}?ln=images"
                                                            actionListener="#{viewScope.ProductionSidebarBean.fragmentCall}">
                                                     <f:attribute name="link" value="#{item.bindings.PageLink.inputValue}"/>
                                                 </af:button>

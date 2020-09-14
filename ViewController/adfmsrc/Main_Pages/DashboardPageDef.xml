@@ -4,7 +4,8 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="USERS_MODULE1" RangeSize="25" DataControl="AppModuleDataControl" id="USERS_MODULE1Iterator"/>
+    <iterator Binds="USERS_MODULE1" RangeSize="25" DataControl="AppModuleDataControl" id="USERS_MODULE1Iterator"
+              Refresh="always" CacheResults="false"/>
   </executables>
   <bindings>
     <tree IterBinding="USERS_MODULE1Iterator" id="USERS_MODULE1">

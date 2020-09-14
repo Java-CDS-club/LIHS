@@ -7,7 +7,7 @@
     <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.ProductionSidebarBean.dynamicTaskFlowId}"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <iterator Binds="Pages_Production1" RangeSize="25" DataControl="AppModuleDataControl"
-              id="Pages_Production1Iterator"/>
+              id="Pages_Production1Iterator" Refresh="always" CacheResults="false"/>
   </executables>
   <bindings>
     <tree IterBinding="Pages_Production1Iterator" id="Pages_Production1">

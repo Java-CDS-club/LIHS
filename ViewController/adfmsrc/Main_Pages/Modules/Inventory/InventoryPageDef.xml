@@ -6,7 +6,8 @@
     <variableIterator id="variables"/>
     <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.InventorySidebarBean.dynamicTaskFlowId}" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <iterator Binds="Pages_Inventory1" RangeSize="25" DataControl="AppModuleDataControl" id="Pages_Inventory1Iterator"/>
+    <iterator Binds="Pages_Inventory1" RangeSize="25" DataControl="AppModuleDataControl" id="Pages_Inventory1Iterator"
+              Refresh="always" CacheResults="false"/>
   </executables>
   <bindings>
     <tree IterBinding="Pages_Inventory1Iterator" id="Pages_Inventory1">

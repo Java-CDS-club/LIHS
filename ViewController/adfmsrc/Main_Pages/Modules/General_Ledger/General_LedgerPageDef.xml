@@ -7,7 +7,7 @@
     <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.GeneralLedgerSidebarBean.dynamicTaskFlowId}"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <iterator Binds="Pages_General_Ledger1" RangeSize="25" DataControl="AppModuleDataControl"
-              id="Pages_General_Ledger1Iterator"/>
+              id="Pages_General_Ledger1Iterator" Refresh="always" CacheResults="false"/>
   </executables>
   <bindings>
     <tree IterBinding="Pages_General_Ledger1Iterator" id="Pages_General_Ledger1">

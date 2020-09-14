@@ -21,7 +21,7 @@
         <af:iterator id="i2" value="#{bindings.USERS_MODULE1.collectionModel}" var="item" varStatus="status">
                 <af:panelGroupLayout id="pgl4" layout="vertical" inlineStyle="width:75%;padding: 12%;">
                     <af:link text="#{item.bindings.ModuleMenuName.inputValue}" id="l17"
-                    icon="/LIHS-ViewController-context-root/faces/javax.faces.resource/#{item.bindings.ModuleMenuIcon.inputValue}?ln=images"
+                    icon="/LIHS/faces/javax.faces.resource/#{item.bindings.ModuleMenuIcon.inputValue}?ln=images"
                              destination="/faces/#{item.bindings.ModuleMenuLink.inputValue}"
                              inlineStyle="font-size:x-large; color: #008442;font-weight: bold;" iconPosition="top"/>
                 </af:panelGroupLayout>
