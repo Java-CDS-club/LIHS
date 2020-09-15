@@ -135,11 +135,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
-    Name="TblInvVoucherDetailView"
-    ViewLink="model.ERP.VO.FkInvVoucherDetailItemL4IdLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="TblPblSuppItemsView"
     ViewLink="model.ERP.VO.FkPblSuppItemsItemL4IdLink"
     Type="oracle.jbo.RowIterator"

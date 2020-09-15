@@ -214,13 +214,6 @@
     ColumnType="NUMBER"
     TableName="TBL_PBL_SUPP"/>
   <AccessorAttribute
-    Name="TblInvVoucherMaster"
-    Association="model.ERP.EO.FkInvVoucherMasterSupplierAssoc"
-    AssociationEnd="model.ERP.EO.FkInvVoucherMasterSupplierAssoc.TblInvVoucherMaster"
-    AssociationOtherEnd="model.ERP.EO.FkInvVoucherMasterSupplierAssoc.TblPblSupp"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="TblPblSuppItems"
     Association="model.ERP.EO.FkPblSuppItemsSuppIdAssoc"
     AssociationEnd="model.ERP.EO.FkPblSuppItemsSuppIdAssoc.TblPblSuppItems"

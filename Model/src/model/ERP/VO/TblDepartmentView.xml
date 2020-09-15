@@ -90,9 +90,4 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblDepartment"
     AliasName="UPDATED_BY"/>
-  <ViewLinkAccessor
-    Name="TblInvVoucherMasterView"
-    ViewLink="model.ERP.VO.FkInvVoucherMasterDepartmentLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
 </ViewObject>

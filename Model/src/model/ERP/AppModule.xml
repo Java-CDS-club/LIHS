@@ -23,12 +23,6 @@
     Name="TblGlL4View1"
     ViewObjectName="model.ERP.VO.TblGlL4View"/>
   <ViewUsage
-    Name="TblInvVoucherDetailView1"
-    ViewObjectName="model.ERP.VO.TblInvVoucherDetailView"/>
-  <ViewUsage
-    Name="TblInvVoucherMasterView1"
-    ViewObjectName="model.ERP.VO.TblInvVoucherMasterView"/>
-  <ViewUsage
     Name="TblItemL1View1"
     ViewObjectName="model.ERP.VO.TblItemL1View"/>
   <ViewUsage
@@ -59,17 +53,8 @@
     Name="TblGlL2View2"
     ViewObjectName="model.ERP.VO.TblGlL2View"/>
   <ViewUsage
-    Name="TblInvVoucherDetailView2"
-    ViewObjectName="model.ERP.VO.TblInvVoucherDetailView"/>
-  <ViewUsage
     Name="TblGlL3View2"
     ViewObjectName="model.ERP.VO.TblGlL3View"/>
-  <ViewUsage
-    Name="TblInvVoucherMasterView2"
-    ViewObjectName="model.ERP.VO.TblInvVoucherMasterView"/>
-  <ViewUsage
-    Name="TblInvVoucherMasterView3"
-    ViewObjectName="model.ERP.VO.TblInvVoucherMasterView"/>
   <ViewUsage
     Name="TblPblSuppItemsView2"
     ViewObjectName="model.ERP.VO.TblPblSuppItemsView"/>
@@ -86,9 +71,6 @@
     Name="TblOpenBlncInvView2"
     ViewObjectName="model.ERP.VO.TblOpenBlncInvView"/>
   <ViewUsage
-    Name="TblInvVoucherDetailView3"
-    ViewObjectName="model.ERP.VO.TblInvVoucherDetailView"/>
-  <ViewUsage
     Name="TblPblSuppItemsView3"
     ViewObjectName="model.ERP.VO.TblPblSuppItemsView"/>
   <ViewUsage
@@ -97,9 +79,6 @@
   <ViewUsage
     Name="TblItemL3View2"
     ViewObjectName="model.ERP.VO.TblItemL3View"/>
-  <ViewUsage
-    Name="TblInvVoucherDetailView4"
-    ViewObjectName="model.ERP.VO.TblInvVoucherDetailView"/>
   <ViewUsage
     Name="TblItemL3View3"
     ViewObjectName="model.ERP.VO.TblItemL3View"/>
@@ -112,24 +91,6 @@
   <ViewUsage
     Name="TblGlL4View3"
     ViewObjectName="model.ERP.VO.TblGlL4View"/>
-  <ViewUsage
-    Name="TblInvVoucherDetailView5"
-    ViewObjectName="model.ERP.VO.TblInvVoucherDetailView"/>
-  <ViewUsage
-    Name="TblInvVoucherDDView1"
-    ViewObjectName="model.ERP.VO.TblInvVoucherDDView"/>
-  <ViewUsage
-    Name="TblInvVoucherDDView2"
-    ViewObjectName="model.ERP.VO.TblInvVoucherDDView"/>
-  <ViewUsage
-    Name="TblInvVoucherMasterINV1"
-    ViewObjectName="model.ERP.VO.TblInvVoucherMasterINV"/>
-  <ViewUsage
-    Name="TblInvVoucherDetailView6"
-    ViewObjectName="model.ERP.VO.TblInvVoucherDetailView"/>
-  <ViewUsage
-    Name="TblInvVoucherDDView3"
-    ViewObjectName="model.ERP.VO.TblInvVoucherDDView"/>
   <ViewUsage
     Name="TblFgTrnDetailView1"
     ViewObjectName="model.ERP.VO.TblFgTrnDetailView"/>
@@ -278,28 +239,10 @@
     DstViewUsageName="model.ERP.AppModule.TblGlL2View2"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="FkInvVoucherDetailMasterLink1"
-    ViewLinkObjectName="model.ERP.VO.FkInvVoucherDetailMasterLink"
-    SrcViewUsageName="model.ERP.AppModule.TblInvVoucherMasterView1"
-    DstViewUsageName="model.ERP.AppModule.TblInvVoucherDetailView2"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="FkGlL2IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL2IdLink"
     SrcViewUsageName="model.ERP.AppModule.TblGlL2View1"
     DstViewUsageName="model.ERP.AppModule.TblGlL3View2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkInvVoucherMasterDepartmentLink1"
-    ViewLinkObjectName="model.ERP.VO.FkInvVoucherMasterDepartmentLink"
-    SrcViewUsageName="model.ERP.AppModule.TblDepartmentView1"
-    DstViewUsageName="model.ERP.AppModule.TblInvVoucherMasterView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkInvVoucherMasterSupplierLink1"
-    ViewLinkObjectName="model.ERP.VO.FkInvVoucherMasterSupplierLink"
-    SrcViewUsageName="model.ERP.AppModule.TblPblSuppView1"
-    DstViewUsageName="model.ERP.AppModule.TblInvVoucherMasterView3"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FkPblSuppItemsSuppIdLink1"
@@ -332,12 +275,6 @@
     DstViewUsageName="model.ERP.AppModule.TblOpenBlncInvView2"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="FkInvVoucherDetailItemL4IdLink1"
-    ViewLinkObjectName="model.ERP.VO.FkInvVoucherDetailItemL4IdLink"
-    SrcViewUsageName="model.ERP.AppModule.TblItemL4View1"
-    DstViewUsageName="model.ERP.AppModule.TblInvVoucherDetailView3"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="FkPblSuppItemsItemL4IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkPblSuppItemsItemL4IdLink"
     SrcViewUsageName="model.ERP.AppModule.TblItemL4View1"
@@ -354,12 +291,6 @@
     ViewLinkObjectName="model.ERP.VO.FkTblItemL3FkLink"
     SrcViewUsageName="model.ERP.AppModule.TblItemL2View1"
     DstViewUsageName="model.ERP.AppModule.TblItemL3View2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkInvVoucherDetailUomLink1"
-    ViewLinkObjectName="model.ERP.VO.FkInvVoucherDetailUomLink"
-    SrcViewUsageName="model.ERP.AppModule.TblUomView1"
-    DstViewUsageName="model.ERP.AppModule.TblInvVoucherDetailView4"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FkTblItemL3FkLink2"
@@ -384,24 +315,6 @@
     ViewLinkObjectName="model.ERP.VO.FkGlL3IdLink"
     SrcViewUsageName="model.ERP.AppModule.TblGlL3View3"
     DstViewUsageName="model.ERP.AppModule.TblGlL4View3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkTblInvVoucherDDFkLink1"
-    ViewLinkObjectName="model.ERP.VO.FkTblInvVoucherDDFkLink"
-    SrcViewUsageName="model.ERP.AppModule.TblInvVoucherMasterView1"
-    DstViewUsageName="model.ERP.AppModule.TblInvVoucherDDView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkTblInvVoucherMasterINVFkLink1"
-    ViewLinkObjectName="model.ERP.VO.FkTblInvVoucherMasterINVFkLink"
-    SrcViewUsageName="model.ERP.AppModule.TblInvVoucherMasterINV1"
-    DstViewUsageName="model.ERP.AppModule.TblInvVoucherDetailView6"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkTblInvVoucherDDINVFkLink1"
-    ViewLinkObjectName="model.ERP.VO.FkTblInvVoucherDDINVFkLink"
-    SrcViewUsageName="model.ERP.AppModule.TblInvVoucherMasterINV1"
-    DstViewUsageName="model.ERP.AppModule.TblInvVoucherDDView3"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FkFgTrnDetailMasterLink1"

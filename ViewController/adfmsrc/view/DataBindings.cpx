@@ -54,16 +54,6 @@
           usageId="view_Chart_of_Account_Inv_TaskFlow_Chart_of_Account_Inv_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Inventory/Chart_of_Account_Inv.jsff"
           usageId="view_Chart_of_Account_InvPageDef"/>
-    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Demand_Order_TaskFlow.xml#Demand_Order_TaskFlow@ExecuteWithParams1"
-          usageId="view_Demand_Order_TaskFlow_Demand_Order_TaskFlow_ExecuteWithParams1PageDef"/>
-    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Goods_Receipt_Notes_TaskFlow.xml#Goods_Receipt_Notes_TaskFlow@ExecuteWithParams1"
-          usageId="view_Goods_Receipt_Notes_TaskFlow_Goods_Receipt_Notes_TaskFlow_ExecuteWithParams1PageDef"/>
-    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Inward_Gate_Pass_TaskFlow.xml#Inward_Gate_Pass_TaskFlow@ExecuteWithParams1"
-          usageId="view_Inward_Gate_Pass_TaskFlow_Inward_Gate_Pass_TaskFlow_ExecuteWithParams1PageDef"/>
-    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Purchase_Order_TaskFlow.xml#Purchase_Order_TaskFlow@ExecuteWithParams1"
-          usageId="view_Purchase_Order_TaskFlow_Purchase_Order_TaskFlow_ExecuteWithParams1PageDef"/>
-    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Quality_Inspection_TaskFlow.xml#Quality_Inspection_TaskFlow@ExecuteWithParams1"
-          usageId="view_Quality_Inspection_TaskFlow_Quality_Inspection_TaskFlow_ExecuteWithParams1PageDef"/>
     <page path="/Main_Pages/Modules/Production/Production.jsf" usageId="view_ProductionPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Production/Batch_Order_Quantity_TaskFlow.xml#Batch_Order_Quantity_TaskFlow@ExecuteWithParams"
           usageId="view_Batch_Order_Quantity_TaskFlow_Batch_Order_Quantity_TaskFlow_ExecuteWithParamsPageDef"/>
@@ -127,16 +117,6 @@
     <page id="view_Chart_of_Account_Inv_TaskFlow_Chart_of_Account_Inv_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Inventory.Chart_of_Account_Inv_TaskFlow_Chart_of_Account_Inv_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Chart_of_Account_InvPageDef" path="Fragments.Modules.Inventory.Chart_of_Account_InvPageDef"/>
-    <page id="view_Demand_Order_TaskFlow_Demand_Order_TaskFlow_ExecuteWithParams1PageDef"
-          path="Task_Flows.Modules.Inventory.Demand_Order_TaskFlow_Demand_Order_TaskFlow_ExecuteWithParams1PageDef"/>
-    <page id="view_Goods_Receipt_Notes_TaskFlow_Goods_Receipt_Notes_TaskFlow_ExecuteWithParams1PageDef"
-          path="Task_Flows.Modules.Inventory.Goods_Receipt_Notes_TaskFlow_Goods_Receipt_Notes_TaskFlow_ExecuteWithParams1PageDef"/>
-    <page id="view_Inward_Gate_Pass_TaskFlow_Inward_Gate_Pass_TaskFlow_ExecuteWithParams1PageDef"
-          path="Task_Flows.Modules.Inventory.Inward_Gate_Pass_TaskFlow_Inward_Gate_Pass_TaskFlow_ExecuteWithParams1PageDef"/>
-    <page id="view_Purchase_Order_TaskFlow_Purchase_Order_TaskFlow_ExecuteWithParams1PageDef"
-          path="Task_Flows.Modules.Inventory.Purchase_Order_TaskFlow_Purchase_Order_TaskFlow_ExecuteWithParams1PageDef"/>
-    <page id="view_Quality_Inspection_TaskFlow_Quality_Inspection_TaskFlow_ExecuteWithParams1PageDef"
-          path="Task_Flows.Modules.Inventory.Quality_Inspection_TaskFlow_Quality_Inspection_TaskFlow_ExecuteWithParams1PageDef"/>
     <page id="view_ProductionPageDef" path="Main_Pages.Modules.Production.ProductionPageDef"/>
     <page id="view_Batch_Order_Quantity_TaskFlow_Batch_Order_Quantity_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Production.Batch_Order_Quantity_TaskFlow_Batch_Order_Quantity_TaskFlow_ExecuteWithParamsPageDef"/>

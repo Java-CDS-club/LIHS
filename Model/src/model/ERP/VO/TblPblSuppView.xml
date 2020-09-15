@@ -192,11 +192,6 @@
     EntityUsage="TblPblSupp"
     AliasName="UPDATED_BY"/>
   <ViewLinkAccessor
-    Name="TblInvVoucherMasterView"
-    ViewLink="model.ERP.VO.FkInvVoucherMasterSupplierLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="TblPblSuppItemsView"
     ViewLink="model.ERP.VO.FkPblSuppItemsSuppIdLink"
     Type="oracle.jbo.RowIterator"

@@ -74,13 +74,6 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TBL_UOM"/>
-  <AccessorAttribute
-    Name="TblInvVoucherDetail"
-    Association="model.ERP.EO.FkInvVoucherDetailUomAssoc"
-    AssociationEnd="model.ERP.EO.FkInvVoucherDetailUomAssoc.TblInvVoucherDetail"
-    AssociationOtherEnd="model.ERP.EO.FkInvVoucherDetailUomAssoc.TblUom"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
   <Key
     Name="PkUomId"
     PrimaryKey="true">

@@ -93,13 +93,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <AccessorAttribute
-    Name="TblInvVoucherDetail"
-    Association="model.ERP.EO.FkInvVoucherDetailItemL4IdAssoc"
-    AssociationEnd="model.ERP.EO.FkInvVoucherDetailItemL4IdAssoc.TblInvVoucherDetail"
-    AssociationOtherEnd="model.ERP.EO.FkInvVoucherDetailItemL4IdAssoc.TblItemL4"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="TblPblSuppItems"
     Association="model.ERP.EO.FkPblSuppItemsItemL4IdAssoc"
     AssociationEnd="model.ERP.EO.FkPblSuppItemsItemL4IdAssoc.TblPblSuppItems"
