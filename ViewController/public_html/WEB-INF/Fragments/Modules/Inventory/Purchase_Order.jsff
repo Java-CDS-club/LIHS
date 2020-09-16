@@ -289,7 +289,7 @@
                               </af:inputText>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblPoDView2.hints.ItemL4Id.name}" filterable="true"
-                                       sortable="true" headerText="Item"
+                                       sortable="true" headerText="Item Level 4"
                                        id="c7" width="200">
                                        <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.ItemL4Id}"

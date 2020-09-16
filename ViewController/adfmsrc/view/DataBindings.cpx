@@ -76,6 +76,7 @@
           usageId="view_Batch_Order_QuantityPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Inventory/Debit_Notes_TaskFlow.xml#Debit_Notes_TaskFlow@ExecuteWithParams"
           usageId="view_Debit_Notes_TaskFlow_Debit_Notes_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Debit_Notes.jsff" usageId="view_Debit_NotesPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -138,6 +139,7 @@
     <page id="view_Batch_Order_QuantityPageDef" path="Fragments.Modules.Production.Batch_Order_QuantityPageDef"/>
     <page id="view_Debit_Notes_TaskFlow_Debit_Notes_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Inventory.Debit_Notes_TaskFlow_Debit_Notes_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Debit_NotesPageDef" path="Fragments.Modules.Inventory.Debit_NotesPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
