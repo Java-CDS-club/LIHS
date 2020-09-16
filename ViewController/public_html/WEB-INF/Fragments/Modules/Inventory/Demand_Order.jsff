@@ -27,7 +27,7 @@
                 <af:panelGridLayout id="pgl2">
                   <af:gridRow marginTop="5px" height="auto" id="gr3">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3">
-                      <af:panelTabbed position="above" id="pt2" styleClass="content_pannel_acc">
+                      <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                         <af:showDetailItem id="tab2" text="Demand Order Master">
                           <af:panelFormLayout id="pfl1" maxColumns="3" rows="6">
                             <af:inputText value="#{bindings.Id.inputValue}" label="ID" visible="false"
@@ -127,7 +127,7 @@
                   </af:gridRow>
                   <af:gridRow marginTop="5px" height="auto" id="gr5">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                      <af:panelTabbed position="above" id="pt3" styleClass="content_pannel_acc">
+                      <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
                         <af:showDetailItem id="tab3" text="Demand Order Detail">
                           <af:table value="#{bindings.TblDoDView2.collectionModel}" var="row"
                                     rows="#{bindings.TblDoDView2.rangeSize}"
