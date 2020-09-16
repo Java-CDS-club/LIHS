@@ -165,7 +165,7 @@
                                     rowSelection="single" fetchSize="#{bindings.TblGrnDView2.rangeSize}"
                                     filterModel="#{bindings.TblGrnDView2Query.queryDescriptor}" filterVisible="true"
                                     queryListener="#{bindings.TblGrnDView2Query.processQuery}" varStatus="vs" id="t2"
-                                    scrollPolicy="page" autoHeightRows="0" partialTriggers="::b6 ::b7 ::b8">
+                                    scrollPolicy="page" autoHeightRows="0" >
                              <af:column sortProperty="#{bindings.TblGrnDView2.hints.Id.name}" filterable="true"
                              sortable="true" headerText="ID" id="c1" align="right" visible="false">
                              <f:facet name="filter">
