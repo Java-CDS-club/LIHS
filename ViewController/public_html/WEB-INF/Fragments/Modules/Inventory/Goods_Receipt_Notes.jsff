@@ -120,7 +120,7 @@
                               <f:validator binding="#{bindings.Narration.validator}"/>
                             </af:inputText>
                             <f:facet name="footer">
-                              <af:panelGroupLayout layout="horizontal" id="pgl6">
+                              <af:panelGroupLayout layout="horizontal" halign="center" id="pgl6">
                                 <af:button actionListener="#{bindings.First.execute}" text="First"
                                            disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b2"/>
                                 <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
@@ -132,14 +132,8 @@
                               </af:panelGroupLayout>
                             </f:facet>
                           </af:panelFormLayout>
-                          
-                        </af:showDetailItem>
-                      </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="5px" height="auto" id="gr4">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                     <af:panelGroupLayout id="pgl3" halign="center" layout="horizontal">
+                          <af:spacer width="5" height="10" id="s3"/>
+                           <af:panelGroupLayout id="pgl3" halign="center" layout="horizontal">
                             <af:iterator id="i2" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
                                 <af:button id="btn#{status.index+1}" text="#{index.Operation}"
@@ -147,11 +141,14 @@
                                            actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
                                     <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}"/>
                                 </af:button>
-                                <af:spacer width="5" height="10" id="s3"/>
+                                <af:spacer width="5" height="10" id="s13"/>
                             </af:iterator>
                         </af:panelGroupLayout>
+                        </af:showDetailItem>
+                      </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>
+                 
                   <af:gridRow marginTop="5px" height="auto" id="gr5">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                       <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
@@ -308,13 +305,8 @@
                               </af:inputText>
                             </af:column>
                           </af:table>
-                        </af:showDetailItem>
-                      </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="5px" height="auto" id="gr6">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                       <af:panelGroupLayout id="pgl5" layout="horizontal">
+                          <af:spacer width="5" height="10" id="s8"/>
+                          <af:panelGroupLayout id="pgl5" halign="center" layout="horizontal">
                             
                             <af:iterator id="i1" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
@@ -323,11 +315,14 @@
                                            actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
                                     <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}1"/>
                                 </af:button>
-                                <af:spacer width="5" height="10" id="s8"/>
+                                
                             </af:iterator>
                         </af:panelGroupLayout>
+                        </af:showDetailItem>
+                      </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>
+                  
                   <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr7">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7"/>
                   </af:gridRow>
