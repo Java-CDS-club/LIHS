@@ -102,7 +102,7 @@
                     <f:validator binding="#{bindings.Narration.validator}"/>
                   </af:inputText>
                             <f:facet name="footer">
-                              <af:panelGroupLayout layout="horizontal" id="pgl7">
+                              <af:panelGroupLayout layout="horizontal" halign="center" id="pgl7">
                                 <af:button actionListener="#{bindings.First.execute}" text="First"
                                            disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b2"/>
                                 <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
@@ -114,14 +114,8 @@
                               </af:panelGroupLayout>
                             </f:facet>
                           </af:panelFormLayout>
-                          
-                        </af:showDetailItem>
-                      </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="5px" height="auto" id="gr7">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
-                      <af:panelGroupLayout id="pgl3" layout="horizontal">
+                          <af:spacer width="5" height="10" id="s5"/>
+                           <af:panelGroupLayout id="pgl3" halign="center" layout="horizontal">
                             
                             <af:iterator id="i2" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
@@ -130,11 +124,14 @@
                                            actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
                                     <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}"/>
                                 </af:button>
-                                <af:spacer width="5" height="10" id="s5"/>
+                                <af:spacer width="5" height="10" id="s11"/>
                             </af:iterator>
                         </af:panelGroupLayout>
+                        </af:showDetailItem>
+                      </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>
+                 
                   <af:gridRow marginTop="5px" height="auto" id="gr8">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8">
                        <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
@@ -215,14 +212,8 @@
                               </af:inputText>
                             </af:column>
                           </af:table>
-                          
-                        </af:showDetailItem>
-            </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="5px" height="auto" id="gr9">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc9">
-                      <af:panelGroupLayout id="pgl2" layout="horizontal">
+                          <af:spacer width="5" height="10" id="s3"/>
+                          <af:panelGroupLayout id="pgl2" halign="center" layout="horizontal">
                             
                             <af:iterator id="i1" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
@@ -231,11 +222,14 @@
                                            actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
                                     <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}1"/>
                                 </af:button>
-                                <af:spacer width="5" height="10" id="s3"/>
+                                <af:spacer width="5" height="10" id="s14"/>
                             </af:iterator>
                         </af:panelGroupLayout>
+                        </af:showDetailItem>
+            </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>
+                  
                   <af:gridRow marginTop="5px" height="auto" id="gr10">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc10">
                       <af:panelTabbed position="above" id="pt4">
@@ -391,14 +385,8 @@
                               </af:inputText>
                             </af:column>
                           </af:table>
-                          
-                        </af:showDetailItem>
-                      </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr11">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc11">
-                       <af:panelGroupLayout id="pgl6" layout="horizontal">
+                          <af:spacer width="5" height="10" id="s8"/>
+                          <af:panelGroupLayout id="pgl6" halign="center" layout="horizontal">
                             
                             <af:iterator id="i3" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
@@ -407,11 +395,14 @@
                                            actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
                                     <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}2"/>
                                 </af:button>
-                                <af:spacer width="5" height="10" id="s8"/>
+                                <af:spacer width="5" height="10" id="s13"/>
                             </af:iterator>
                         </af:panelGroupLayout>
+                        </af:showDetailItem>
+                      </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>
+                 
                 </af:panelGridLayout>
               </af:showDetailItem>
               <af:showDetailItem text="Search" id="sdi1">
