@@ -92,6 +92,7 @@
           <Item Value="PoMId"/>
           <Item Value="DoMId"/>
           <Item Value="Narration"/>
+          <Item Value="Dated"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
