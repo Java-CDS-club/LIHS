@@ -177,7 +177,7 @@
                                         label="#{row.bindings.ItemL4Id.label}"
                                         required="#{bindings.TblQcDView2.hints.ItemL4Id.mandatory}"
                                         shortDesc="#{bindings.TblQcDView2.hints.ItemL4Id.tooltip}"
-                                        id="soc4" readOnly="true">
+                                        id="soc4" >
                       <f:selectItems value="#{row.bindings.ItemL4Id.items}" id="si4"/>
                       <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                     </af:selectOneChoice>
@@ -192,7 +192,7 @@
 </f:facet>
                     <af:selectOneChoice value="#{row.bindings.UomId.inputValue}" label="#{row.bindings.UomId.label}"
                                         required="#{bindings.TblQcDView2.hints.UomId.mandatory}"
-                                        shortDesc="#{bindings.TblQcDView2.hints.UomId.tooltip}" id="soc5" readOnly="true">
+                                        shortDesc="#{bindings.TblQcDView2.hints.UomId.tooltip}" id="soc5" >
                       <f:selectItems value="#{row.bindings.UomId.items}" id="si5"/>
                       <f:validator binding="#{row.bindings.UomId.validator}"/>
                     </af:selectOneChoice>
@@ -243,7 +243,7 @@
                                   required="#{bindings.TblQcDView2.hints.IgpQty.mandatory}"
                                   columns="#{bindings.TblQcDView2.hints.IgpQty.displayWidth}"
                                   maximumLength="#{bindings.TblQcDView2.hints.IgpQty.precision}"
-                                  shortDesc="#{bindings.TblQcDView2.hints.IgpQty.tooltip}" id="it17" readOnly="true">
+                                  shortDesc="#{bindings.TblQcDView2.hints.IgpQty.tooltip}" id="it17" >
                       <f:validator binding="#{row.bindings.IgpQty.validator}"/>
                       <af:convertNumber groupingUsed="false"
                                         pattern="#{bindings.TblQcDView2.hints.IgpQty.format}"/>

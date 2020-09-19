@@ -63,7 +63,7 @@
                   <af:spacer  id="s6"/>
                   <af:selectOneChoice value="#{bindings.ProjectId.inputValue}" label="Project"
                                       required="#{bindings.ProjectId.hints.mandatory}"
-                                      shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc6" disabled="true"
+                                      shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc6" 
                                       contentStyle="width:135px;" >
                     <f:selectItems value="#{bindings.ProjectId.items}" id="si6"/>
                     <f:validator binding="#{bindings.ProjectId.validator}"/>
@@ -71,7 +71,7 @@
                   <af:spacer  id="s2"/>
                   <af:selectOneChoice value="#{bindings.DepartmentId.inputValue}" label="Department"
                                       required="#{bindings.DepartmentId.hints.mandatory}"
-                                      shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="soc1" disabled="true"
+                                      shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="soc1" 
                                       contentStyle="width:135px;">
                     <f:selectItems value="#{bindings.DepartmentId.items}" id="si1"/>
                     <f:validator binding="#{bindings.DepartmentId.validator}"/>
@@ -366,7 +366,7 @@
                                             required="#{bindings.TblPoDView2.hints.DoQty.mandatory}"
                                             columns="#{bindings.TblPoDView2.hints.DoQty.displayWidth}"
                                             maximumLength="#{bindings.TblPoDView2.hints.DoQty.precision}"
-                                            shortDesc="#{bindings.TblPoDView2.hints.DoQty.tooltip}" id="it16" readOnly="true">
+                                            shortDesc="#{bindings.TblPoDView2.hints.DoQty.tooltip}" id="it16" >
                                 <f:validator binding="#{row.bindings.DoQty.validator}"/>
                                 <af:convertNumber groupingUsed="false"
                                                   pattern="#{bindings.TblPoDView2.hints.DoQty.format}"/>
