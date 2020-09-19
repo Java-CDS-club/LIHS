@@ -400,6 +400,41 @@
                                                   pattern="#{bindings.TblPoDView2.hints.BalQty.format}"/>
                               </af:inputText>
                             </af:column>
+                            <af:column headerText="Rate" id="c13" sortable="true" filterable="true">
+                            <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Rate}"
+       id="it28" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                              <af:inputText value="#{row.bindings.Rate.inputValue}"
+                                            label="#{bindings.TblPoDView2.hints.Rate.label}"
+                                            required="#{bindings.TblPoDView2.hints.Rate.mandatory}"
+                                            columns="#{bindings.TblPoDView2.hints.Rate.displayWidth}"
+                                            maximumLength="#{bindings.TblPoDView2.hints.Rate.precision}"
+                                            shortDesc="#{bindings.TblPoDView2.hints.Rate.tooltip}" id="it26" >
+                                <f:validator binding="#{row.bindings.Rate.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblPoDView2.hints.Rate.format}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column headerText="Amount" id="c22" sortable="true"
+                                       filterable="true">
+                                        <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Amount}"
+       id="it29" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                              <af:inputText value="#{row.bindings.Amount.inputValue}"
+                                            label="#{bindings.TblPoDView2.hints.Amount.label}"
+                                            required="#{bindings.TblPoDView2.hints.Amount.mandatory}"
+                                            columns="#{bindings.TblPoDView2.hints.Amount.displayWidth}"
+                                            maximumLength="#{bindings.TblPoDView2.hints.Amount.precision}"
+                                            shortDesc="#{bindings.TblPoDView2.hints.Amount.tooltip}" id="it27" readOnly="true">
+                                <f:validator binding="#{row.bindings.Amount.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblPoDView2.hints.Amount.format}"/>
+                              </af:inputText>
+                            </af:column>
                           </af:table>
                           <af:spacer width="5" height="10" id="s8"/>
                           <af:panelGroupLayout id="pgl6" halign="center" layout="horizontal">

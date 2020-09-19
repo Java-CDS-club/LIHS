@@ -110,6 +110,8 @@
           <Item Value="Qty"/>
           <Item Value="DoQty"/>
           <Item Value="BalQty"/>
+          <Item Value="Rate"/>
+          <Item Value="Amount"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
