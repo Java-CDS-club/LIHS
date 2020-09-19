@@ -18,14 +18,6 @@
     ViewObjectName="model.LOV.Voucher_Type"
     RowLevelBinds="true"/>
   <ViewAccessor
-    Name="Inv_QC_Master_LOV1"
-    ViewObjectName="model.LOV.Inv_QC_Master_LOV"
-    RowLevelBinds="true"/>
-  <ViewAccessor
-    Name="Inv_PO_Master_LOV1"
-    ViewObjectName="model.LOV.Inv_PO_Master_LOV"
-    RowLevelBinds="true"/>
-  <ViewAccessor
     Name="Department_Name_LOV1"
     ViewObjectName="model.LOV.Department_Name_LOV"
     RowLevelBinds="true"/>
@@ -52,44 +44,6 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="ViewAttr"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_QcMId"
-    ListVOName="Inv_QC_Master_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="QcMId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Id"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Dated"/>
-      <Item Value="Vno"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_PoMId"
-    ListVOName="Inv_PO_Master_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="PoMId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Id"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Dated"/>
-      <Item Value="Vno"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -182,35 +136,28 @@
     PrecisionRule="true"
     EntityAttrName="Dated"
     EntityUsage="TblGrnM"
-    AliasName="DATED"/>
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblGrnMView.Dated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblGrnMView.Dated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="QcMId"
     PrecisionRule="true"
     EntityAttrName="QcMId"
     EntityUsage="TblGrnM"
-    AliasName="QC_M_ID"
-    LOVName="LOV_QcMId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="QC_M_ID"/>
   <ViewAttribute
     Name="PoMId"
     PrecisionRule="true"
     EntityAttrName="PoMId"
     EntityUsage="TblGrnM"
-    AliasName="PO_M_ID"
-    LOVName="LOV_PoMId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="PO_M_ID"/>
   <ViewAttribute
     Name="Narration"
     PrecisionRule="true"
@@ -299,4 +246,8 @@
     ViewLink="model.ERP.VO.FkDnMGrnLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>
