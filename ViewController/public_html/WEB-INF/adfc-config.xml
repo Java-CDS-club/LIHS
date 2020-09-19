@@ -40,4 +40,9 @@
     <managed-bean-class>view.sidebar.ProductionSidebar</managed-bean-class>
     <managed-bean-scope>view</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__9">
+    <managed-bean-name>FixedAsstesSidebarBean</managed-bean-name>
+    <managed-bean-class>view.sidebar.FixedAsstesSidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

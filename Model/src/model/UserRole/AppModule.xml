@@ -85,6 +85,9 @@
   <ViewUsage
     Name="Pages_Production1"
     ViewObjectName="model.UserRole.VO.Pages_Production"/>
+  <ViewUsage
+    Name="Pages_Fixed_Assets1"
+    ViewObjectName="model.UserRole.VO.Pages_Fixed_Assets"/>
   <ViewLinkUsage
     Name="FkPagesLink1"
     ViewLinkObjectName="model.UserRole.VO.FkPagesLink"
