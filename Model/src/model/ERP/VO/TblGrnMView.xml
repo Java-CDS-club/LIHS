@@ -29,6 +29,10 @@
     Name="Pbl_Supplier_Name_LOV1"
     ViewObjectName="model.LOV.Pbl_Supplier_Name_LOV"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Inv_QC_Master_LOV1"
+    ViewObjectName="model.LOV.Inv_QC_Master_LOV"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Vtp"
     ListVOName="Voucher_Type1"
@@ -101,6 +105,25 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_QcMId"
+    ListVOName="Inv_QC_Master_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="QcMId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Id"/>
+      <Item Value="Dated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblGrnM"
     Entity="model.ERP.EO.TblGrnM"/>
@@ -151,7 +174,15 @@
     PrecisionRule="true"
     EntityAttrName="QcMId"
     EntityUsage="TblGrnM"
-    AliasName="QC_M_ID"/>
+    AliasName="QC_M_ID"
+    LOVName="LOV_QcMId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="PoMId"
     PrecisionRule="true"

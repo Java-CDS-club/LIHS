@@ -6,13 +6,14 @@
   Name="Inv_QC_Master_LOV"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SelectList="TblQcM.ID, 
+       TblQcM.DATED, 
+       TblQcM.VNO"
+  FromList="TBL_QC_M TblQcM"
+  Where="tblqcm.id not in (select QC_M_ID From Tbl_GRN_M Where QC_M_ID is not null)">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
