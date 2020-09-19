@@ -27,7 +27,7 @@
                   <af:gridRow marginTop="5px" height="auto" id="gr6">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                       <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
-                        <af:showDetailItem id="tab3" text="Purchase Orderl Master">
+                        <af:showDetailItem id="tab3" text="Purchase Order Master">
                           <af:panelFormLayout id="pfl1" maxColumns="3" rows="6">
                                 <af:inputText value="#{bindings.Id.inputValue}" label="ID" visible="false"
                                 required="#{bindings.Id.hints.mandatory}" columns="#{bindings.Id.hints.displayWidth}"

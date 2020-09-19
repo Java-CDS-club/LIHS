@@ -18,8 +18,8 @@
     ViewObjectName="model.LOV.Voucher_Type"
     RowLevelBinds="true"/>
   <ViewAccessor
-    Name="Inv_IGP_Master_LOV1"
-    ViewObjectName="model.LOV.Inv_IGP_Master_LOV"
+    Name="Pending_IGP_LOV1"
+    ViewObjectName="model.LOV.Pending_IGP_LOV"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Vtp"
@@ -41,7 +41,7 @@
   </ListBinding>
   <ListBinding
     Name="LOV_IgpMId"
-    ListVOName="Inv_IGP_Master_LOV1"
+    ListVOName="Pending_IGP_LOV1"
     ListRangeSize="-1"
     NullValueFlag="none"
     MRUCount="0">
@@ -53,8 +53,9 @@
       <Item Value="Id"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Id"/>
       <Item Value="Dated"/>
-      <Item Value="Vno"/>
+      <Item Value="BalQty"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>

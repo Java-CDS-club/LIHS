@@ -35,7 +35,9 @@
     SQLType="NUMERIC"
     Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="TBL_IGP_D"/>
+    TableName="TBL_IGP_D"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true"/>
   <Attribute
     Name="ItemL4Id"
     IsNotNull="true"

@@ -78,7 +78,7 @@
                     <f:validator binding="#{bindings.DepartmentId.validator}"/>
                   </af:selectOneChoice>
                   <af:spacer  id="s11"/>
-                  <af:selectOneChoice value="#{bindings.PblSuppId.inputValue}" label="Pbl Supplier"
+                  <af:selectOneChoice value="#{bindings.PblSuppId.inputValue}" label="Supplier"
                                       required="#{bindings.PblSuppId.hints.mandatory}"
                                       shortDesc="#{bindings.PblSuppId.hints.tooltip}" id="soc3"
                                       contentStyle="width:135px;" >
@@ -442,7 +442,7 @@
                       <f:validator binding="#{row.bindings.DepartmentId.validator}"/>
                     </af:selectOneChoice>
                   </af:column>
-                  <af:column headerText="Pbl Supplier" id="c16" sortable="true" filterable="true" width="200">
+                  <af:column headerText="Supplier" id="c16" sortable="true" filterable="true" width="200">
                   <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.PblSuppId}"
        id="it36" placeholder="Search ">
