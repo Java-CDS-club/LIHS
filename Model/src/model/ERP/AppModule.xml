@@ -232,6 +232,24 @@
   <ViewUsage
     Name="TblQcMView2"
     ViewObjectName="model.ERP.VO.TblQcMView"/>
+  <ViewUsage
+    Name="TblGinDView1"
+    ViewObjectName="model.ERP.VO.TblGinDView"/>
+  <ViewUsage
+    Name="TblGinMView1"
+    ViewObjectName="model.ERP.VO.TblGinMView"/>
+  <ViewUsage
+    Name="TblItnDView1"
+    ViewObjectName="model.ERP.VO.TblItnDView"/>
+  <ViewUsage
+    Name="TblItnMView1"
+    ViewObjectName="model.ERP.VO.TblItnMView"/>
+  <ViewUsage
+    Name="TblGinDView2"
+    ViewObjectName="model.ERP.VO.TblGinDView"/>
+  <ViewUsage
+    Name="TblItnDView2"
+    ViewObjectName="model.ERP.VO.TblItnDView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -453,5 +471,17 @@
     ViewLinkObjectName="model.ERP.VO.FkQcMIgpLink"
     SrcViewUsageName="model.ERP.AppModule.TblIgpMView1"
     DstViewUsageName="model.ERP.AppModule.TblQcMView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkGinDMLink1"
+    ViewLinkObjectName="model.ERP.VO.FkGinDMLink"
+    SrcViewUsageName="model.ERP.AppModule.TblGinMView1"
+    DstViewUsageName="model.ERP.AppModule.TblGinDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkItnDMLink1"
+    ViewLinkObjectName="model.ERP.VO.FkItnDMLink"
+    SrcViewUsageName="model.ERP.AppModule.TblItnMView1"
+    DstViewUsageName="model.ERP.AppModule.TblItnDView2"
     Reversed="false"/>
 </AppModule>
