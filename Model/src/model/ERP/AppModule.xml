@@ -250,6 +250,15 @@
   <ViewUsage
     Name="TblItnDView2"
     ViewObjectName="model.ERP.VO.TblItnDView"/>
+  <ViewUsage
+    Name="TblKitchenMenuDView1"
+    ViewObjectName="model.ERP.VO.TblKitchenMenuDView"/>
+  <ViewUsage
+    Name="TblKitchenMenuMView1"
+    ViewObjectName="model.ERP.VO.TblKitchenMenuMView"/>
+  <ViewUsage
+    Name="TblKitchenMenuDView2"
+    ViewObjectName="model.ERP.VO.TblKitchenMenuDView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -483,5 +492,11 @@
     ViewLinkObjectName="model.ERP.VO.FkItnDMLink"
     SrcViewUsageName="model.ERP.AppModule.TblItnMView1"
     DstViewUsageName="model.ERP.AppModule.TblItnDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkKitchenMenuDLink1"
+    ViewLinkObjectName="model.ERP.VO.FkKitchenMenuDLink"
+    SrcViewUsageName="model.ERP.AppModule.TblKitchenMenuMView1"
+    DstViewUsageName="model.ERP.AppModule.TblKitchenMenuDView2"
     Reversed="false"/>
 </AppModule>
