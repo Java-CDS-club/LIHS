@@ -100,6 +100,10 @@
           usageId="view_Goods_Issue_Notes_TaskFlow_Goods_Issue_Notes_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Inventory/Inter_Transfer_Notes_TaskFlow.xml#Inter_Transfer_Notes_TaskFlow@ExecuteWithParams"
           usageId="view_Inter_Transfer_Notes_TaskFlow_Inter_Transfer_Notes_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Goods_Issue_Notes.jsff" usageId="view_Goods_Issue_NotesPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Inter_Transfer_Notes.jsff"
+          usageId="view_Inter_Transfer_NotesPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Production/Kitchen_Menu.jsff" usageId="view_Kitchen_MenuPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -186,6 +190,9 @@
           path="Task_Flows.Modules.Inventory.Goods_Issue_Notes_TaskFlow_Goods_Issue_Notes_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Inter_Transfer_Notes_TaskFlow_Inter_Transfer_Notes_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Inventory.Inter_Transfer_Notes_TaskFlow_Inter_Transfer_Notes_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Goods_Issue_NotesPageDef" path="Fragments.Modules.Inventory.Goods_Issue_NotesPageDef"/>
+    <page id="view_Inter_Transfer_NotesPageDef" path="Fragments.Modules.Inventory.Inter_Transfer_NotesPageDef"/>
+    <page id="view_Kitchen_MenuPageDef" path="Fragments.Modules.Production.Kitchen_MenuPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
