@@ -92,6 +92,7 @@
           <Item Value="PoMId"/>
           <Item Value="DoMId"/>
           <Item Value="Narration"/>
+          <Item Value="Dated"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -109,6 +110,8 @@
           <Item Value="Qty"/>
           <Item Value="DoQty"/>
           <Item Value="BalQty"/>
+          <Item Value="Rate"/>
+          <Item Value="Amount"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

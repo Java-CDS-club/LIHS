@@ -54,7 +54,6 @@
       <Item Value="Id"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Dated"/>
       <Item Value="Vno"/>
     </AttrArray>
     <DisplayCriteria/>
@@ -62,6 +61,25 @@
   <EntityUsage
     Name="TblPoDD"
     Entity="model.ERP.EO.TblPoDD"/>
+  <EntityUsage
+    Name="TblDoM"
+    Entity="model.ERP.EO.TblDoM"
+    Association="model.ERP.EO.FkPoDdDoIdAssoc"
+    AssociationEnd="model.ERP.EO.FkPoDdDoIdAssoc.TblDoM"
+    SourceUsage="model.ERP.VO.TblPoDDView.TblPoDD"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="LEFT OUTER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.ERP.EO.TblDoM.Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.ERP.EO.TblPoDD.DoMId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
@@ -127,4 +145,32 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblPoDD"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="Dated"
+    PrecisionRule="true"
+    EntityAttrName="Dated"
+    EntityUsage="TblDoM"
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblPoDDView.Dated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblPoDDView.Dated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Id1"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblDoM"
+    AliasName="ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Id"/>
+  </AttrArray>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

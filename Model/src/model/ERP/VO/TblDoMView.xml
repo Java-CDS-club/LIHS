@@ -6,13 +6,21 @@
   Name="TblDoMView"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SelectList="TblDoM.ID, 
+       TblDoM.VNO, 
+       TblDoM.VTP, 
+       TblDoM.DATED, 
+       TblDoM.DEPARTMENT_ID, 
+       TblDoM.PROJECT_ID, 
+       TblDoM.NARRATION, 
+       TblDoM.CREATED_DATE, 
+       TblDoM.CREATED_BY, 
+       TblDoM.UPDATED_DATE, 
+       TblDoM.UPDATED_BY"
+  FromList="TBL_DO_M TblDoM">
   <ViewAccessor
     Name="Voucher_Type1"
     ViewObjectName="model.LOV.Voucher_Type"
@@ -114,7 +122,16 @@
     PrecisionRule="true"
     EntityAttrName="Dated"
     EntityUsage="TblDoM"
-    AliasName="DATED"/>
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblDoMView.Dated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblDoMView.Dated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DepartmentId"
     PrecisionRule="true"
@@ -183,4 +200,8 @@
     ViewLink="model.ERP.VO.FkPoDdDoIdLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

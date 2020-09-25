@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="Voucher_Type"
+  Name="Pending_IGP_LOV"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
@@ -15,32 +15,47 @@
   <Properties>
     <SchemaBasedProperties>
       <LABEL
-        ResId="model.LOV.Voucher_Type_LABEL"/>
+        ResId="model.LOV.Pending_IGP_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <SQLQuery><![CDATA[Select  
+DATED, 
+ID, 
+BAL_QTY 
+From VEW_PENDINGIGP]]></SQLQuery>
   <ViewAttribute
-    Name="ViewAttr"
-    IsUpdateable="false"
-    IsSelected="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Type="java.lang.String"
-    ColumnType="$none$"
-    SQLType="VARCHAR"/>
-  <ViewAttribute
-    Name="DBAttr"
+    Name="Dated"
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
-    Type="java.lang.String"
-    ColumnType="$none$"
-    SQLType="VARCHAR"/>
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    AliasName="DATED"
+    Expression="DATED"
+    SQLType="DATE"/>
+  <ViewAttribute
+    Name="Id"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="ID"
+    Expression="ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="BalQty"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="BAL_QTY"
+    Expression="BAL_QTY"
+    SQLType="NUMERIC"/>
   <AttrArray Name="KeyAttributes">
-    <Item Value="DBAttr"/>
+    <Item Value="Id"/>
   </AttrArray>
-  <StaticList
-    Rows="8"
-    Columns="2"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>
