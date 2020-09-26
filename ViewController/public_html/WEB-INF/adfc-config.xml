@@ -45,4 +45,9 @@
     <managed-bean-class>view.sidebar.FixedAsstesSidebar</managed-bean-class>
     <managed-bean-scope>view</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__10">
+    <managed-bean-name>BankCashSidebarBean</managed-bean-name>
+    <managed-bean-class>view.sidebar.BankCashSidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

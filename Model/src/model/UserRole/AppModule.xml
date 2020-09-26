@@ -88,6 +88,9 @@
   <ViewUsage
     Name="Pages_Fixed_Assets1"
     ViewObjectName="model.UserRole.VO.Pages_Fixed_Assets"/>
+  <ViewUsage
+    Name="Pages_Bank_Cash1"
+    ViewObjectName="model.UserRole.VO.Pages_Bank_Cash"/>
   <ViewLinkUsage
     Name="FkPagesLink1"
     ViewLinkObjectName="model.UserRole.VO.FkPagesLink"
