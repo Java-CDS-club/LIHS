@@ -10,7 +10,7 @@
     <page path="/Main_Pages/Modules/General_Ledger/General_Ledger.jsf" usageId="view_General_LedgerPageDef"/>
     <page path="/Main_Pages/Modules/Inventory/Inventory.jsf" usageId="view_InventoryPageDef"/>
     <page path="/Main_Pages/Modules/User_Management/User_Management.jsf" usageId="view_User_ManagementPageDef"/>
-    <page path="/Main_Pages/Modules/Payable_Receivable/Payable_Receivable.jsf"
+    <page path="/Main_Pages/Modules/Payable/Payable.jsf"
           usageId="view_Payable_ReceivablePageDef"/>
     <page path="/Main_Pages/Dashboard.jsf" usageId="view_DashboardPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/General_Ledger/Chart_of_Account_TaskFlow.xml#Chart_of_Account_TaskFlow@ExecuteWithParams"
@@ -33,7 +33,7 @@
           usageId="view_Department_Setup_TaskFlow_Department_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Inventory/Demand_Order_TaskFlow.xml#Demand_Order_TaskFlow@ExecuteWithParams"
           usageId="view_Demand_Order_TaskFlow_Demand_Order_TaskFlow_ExecuteWithParamsPageDef"/>
-    <page path="/WEB-INF/Task_Flows/Modules/Payable_Receivable/Supplier_Setup_TaskFlow.xml#Supplier_Setup_TaskFlow@ExecuteWithParams"
+    <page path="/WEB-INF/Task_Flows/Modules/Payable/Supplier_Setup_TaskFlow.xml#Supplier_Setup_TaskFlow@ExecuteWithParams"
           usageId="view_Supplier_Setup_TaskFlow_Supplier_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Inventory/Department_Setup.jsff" usageId="view_Department_SetupPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/General_Ledger/Project_Setup.jsff" usageId="view_Project_SetupPageDef"/>
@@ -48,7 +48,7 @@
     <page path="/WEB-INF/Fragments/Modules/Inventory/Inward_Gate_Pass.jsff" usageId="view_Inward_Gate_PassPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Inventory/Quality_Inspection.jsff" usageId="view_Quality_InspectionPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Inventory/Purchase_Order.jsff" usageId="view_Purchase_OrderPageDef"/>
-    <page path="/WEB-INF/Fragments/Modules/Payable_Receivable/Supplier_Setup.jsff"
+    <page path="/WEB-INF/Fragments/Modules/Payable/Supplier_Setup.jsff"
           usageId="view_Supplier_SetupPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Inventory/Chart_of_Account_Inv_TaskFlow.xml#Chart_of_Account_Inv_TaskFlow@ExecuteWithParams"
           usageId="view_Chart_of_Account_Inv_TaskFlow_Chart_of_Account_Inv_TaskFlow_ExecuteWithParamsPageDef"/>
@@ -91,9 +91,9 @@
           usageId="view_Kitchen_Menu_TaskFlow_Kitchen_Menu_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Inventory/Cash_Purchase_TaskFlow.xml#Cash_Purchase_TaskFlow@ExecuteWithParams"
           usageId="view_Cash_Purchase_TaskFlow_Cash_Purchase_TaskFlow_ExecuteWithParamsPageDef"/>
-    <page path="/WEB-INF/Task_Flows/Modules/Payable_Receivable/Cash_Payment_TaskFlow.xml#Cash_Payment_TaskFlow@ExecuteWithParams"
+    <page path="/WEB-INF/Task_Flows/Modules/Payable/Cash_Payment_TaskFlow.xml#Cash_Payment_TaskFlow@ExecuteWithParams"
           usageId="view_Cash_Payment_TaskFlow_Cash_Payment_TaskFlow_ExecuteWithParamsPageDef1"/>
-    <page path="/WEB-INF/Task_Flows/Modules/Payable_Receivable/Bank_Payment_TaskFlow.xml#Bank_Payment_TaskFlow@ExecuteWithParams"
+    <page path="/WEB-INF/Task_Flows/Modules/Payable/Bank_Payment_TaskFlow.xml#Bank_Payment_TaskFlow@ExecuteWithParams"
           usageId="view_Bank_Payment_TaskFlow_Bank_Payment_TaskFlow_ExecuteWithParamsPageDef1"/>
     <page path="/Main_Pages/Modules/Fixed_Assets/Fixed_Assets.jsf" usageId="view_Fixed_AssetsPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Inventory/Goods_Issue_Notes_TaskFlow.xml#Goods_Issue_Notes_TaskFlow@ExecuteWithParams"

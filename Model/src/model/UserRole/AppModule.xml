@@ -77,8 +77,8 @@
     Name="Pages_Inventory1"
     ViewObjectName="model.UserRole.VO.Pages_Inventory"/>
   <ViewUsage
-    Name="Pages_Payable_Receivable1"
-    ViewObjectName="model.UserRole.VO.Pages_Payable_Receivable"/>
+    Name="Pages_Payable1"
+    ViewObjectName="model.UserRole.VO.Pages_Payable"/>
   <ViewUsage
     Name="USERS_CRUD_OPERATIONS1"
     ViewObjectName="model.UserRole.VO.USERS_CRUD_OPERATIONS"/>

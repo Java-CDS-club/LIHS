@@ -17,15 +17,15 @@
                             <f:facet name="first">
                                 <!-- Left -->
                                 <af:panelAccordion discloseMany="false" id="pa4" inlineStyle="width:210px; ">
-                                    <af:showDetailItem id="sdi1" text="Payable Receivable">
+                                    <af:showDetailItem id="sdi1" text="Payable">
                                         <af:spacer width="190" height="10" id="s1"/>
-                                        <af:iterator id="i2" value="#{bindings.Pages_Payable_Receivable1.collectionModel}" var="item"
+                                        <af:iterator id="i2" value="#{bindings.Pages_Payable1.collectionModel}" var="item"
                                                      varStatus="status">
                                             <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="padding: 4%;">
                                                 <af:button text="#{item.bindings.PagesName.inputValue}" id="b1"
                                                            inlineStyle="width:190px;"
                                                            icon="/LIHS/faces/javax.faces.resource/#{item.bindings.PageIcon.inputValue}?ln=images"
-                                                           actionListener="#{viewScope.PayableReceivableSidebarBean.fragmentCall}">
+                                                           actionListener="#{viewScope.PayableSidebarBean.fragmentCall}">
                                                     <f:attribute name="link" value="#{item.bindings.PageLink.inputValue}"/>
                                                 </af:button>
                                             </af:panelGroupLayout>

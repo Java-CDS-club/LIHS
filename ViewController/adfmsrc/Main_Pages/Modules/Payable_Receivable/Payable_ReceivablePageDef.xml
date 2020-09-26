@@ -4,14 +4,13 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="Pages_Payable_Receivable1" RangeSize="25" DataControl="AppModuleDataControl"
-              id="Pages_Payable_Receivable1Iterator" Refresh="always" CacheResults="false"/>
-    <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.PayableReceivableSidebarBean.dynamicTaskFlowId}"
-              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.PayableSidebarBean.dynamicTaskFlowId}" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="Pages_Payable1" RangeSize="25" DataControl="AppModuleDataControl" id="Pages_Payable1Iterator"/>
   </executables>
   <bindings>
-    <tree IterBinding="Pages_Payable_Receivable1Iterator" id="Pages_Payable_Receivable1">
-      <nodeDefinition DefName="model.UserRole.VO.Pages_Payable_Receivable" Name="Pages_Payable_Receivable10">
+    <tree IterBinding="Pages_Payable1Iterator" id="Pages_Payable1">
+      <nodeDefinition DefName="model.UserRole.VO.Pages_Payable" Name="Pages_Payable10">
         <AttrNames>
           <Item Value="PagesName"/>
           <Item Value="Ast"/>

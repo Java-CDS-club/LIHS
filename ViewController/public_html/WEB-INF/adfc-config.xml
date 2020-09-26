@@ -20,11 +20,6 @@
     <managed-bean-class>view.sidebar.UserManagementSidebar</managed-bean-class>
     <managed-bean-scope>view</managed-bean-scope>
   </managed-bean>
-  <managed-bean id="__5">
-    <managed-bean-name>PayableReceivableSidebarBean</managed-bean-name>
-    <managed-bean-class>view.sidebar.PayableReceivableSidebar</managed-bean-class>
-    <managed-bean-scope>view</managed-bean-scope>
-  </managed-bean>
   <managed-bean id="__6">
     <managed-bean-name>USERS_CRUD_BEAN</managed-bean-name>
     <managed-bean-class>view.Login.USERS_CRUD</managed-bean-class>
@@ -48,6 +43,11 @@
   <managed-bean id="__10">
     <managed-bean-name>BankCashSidebarBean</managed-bean-name>
     <managed-bean-class>view.sidebar.BankCashSidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name>PayableSidebarBean</managed-bean-name>
+    <managed-bean-class>view.sidebar.PayableSidebar</managed-bean-class>
     <managed-bean-scope>view</managed-bean-scope>
   </managed-bean>
 </adfc-config>

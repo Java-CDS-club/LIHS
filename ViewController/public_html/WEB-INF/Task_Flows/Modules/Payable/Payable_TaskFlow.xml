@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="Payable_Receivable">
-      <page>/WEB-INF/Fragments/Modules/Payable_Receivable/Payable_Receivable.jsff</page>
+      <page>/WEB-INF/Fragments/Modules/Payable/Payable.jsff</page>
     </view>
     <use-page-fragments/>
   </task-flow-definition>
