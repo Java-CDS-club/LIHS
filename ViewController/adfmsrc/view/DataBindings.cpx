@@ -105,6 +105,10 @@
           usageId="view_Inter_Transfer_NotesPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Production/Kitchen_Menu.jsff" usageId="view_Kitchen_MenuPageDef"/>
     <page path="/Main_Pages/Modules/Bank_Cash/Bank_Cash.jsf" usageId="view_Bank_CashPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Bank_Cash/Bank_Setup_TaskFlow.xml#Bank_Setup_TaskFlow@ExecuteWithParams"
+          usageId="view_Bank_Setup_TaskFlow_Bank_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Bank_Cash/Cash_Setup_TaskFlow.xml#Cash_Setup_TaskFlow@ExecuteWithParams"
+          usageId="view_Cash_Setup_TaskFlow_Cash_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -195,6 +199,10 @@
     <page id="view_Inter_Transfer_NotesPageDef" path="Fragments.Modules.Inventory.Inter_Transfer_NotesPageDef"/>
     <page id="view_Kitchen_MenuPageDef" path="Fragments.Modules.Production.Kitchen_MenuPageDef"/>
     <page id="view_Bank_CashPageDef" path="Main_Pages.Modules.Bank_Cash.Bank_CashPageDef"/>
+    <page id="view_Bank_Setup_TaskFlow_Bank_Setup_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Bank_Cash.Bank_Setup_TaskFlow_Bank_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Cash_Setup_TaskFlow_Cash_Setup_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Bank_Cash.Cash_Setup_TaskFlow_Cash_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"

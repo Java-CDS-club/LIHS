@@ -259,6 +259,39 @@
   <ViewUsage
     Name="TblKitchenMenuDView2"
     ViewObjectName="model.ERP.VO.TblKitchenMenuDView"/>
+  <ViewUsage
+    Name="TblBankCashView1"
+    ViewObjectName="model.ERP.VO.TblBankCashView"/>
+  <ViewUsage
+    Name="TblPbpDView1"
+    ViewObjectName="model.ERP.VO.TblPbpDView"/>
+  <ViewUsage
+    Name="TblPbpMView1"
+    ViewObjectName="model.ERP.VO.TblPbpMView"/>
+  <ViewUsage
+    Name="TblPcpDView1"
+    ViewObjectName="model.ERP.VO.TblPcpDView"/>
+  <ViewUsage
+    Name="TblPcpMView1"
+    ViewObjectName="model.ERP.VO.TblPcpMView"/>
+  <ViewUsage
+    Name="TblPbpDView2"
+    ViewObjectName="model.ERP.VO.TblPbpDView"/>
+  <ViewUsage
+    Name="TblPcpDView2"
+    ViewObjectName="model.ERP.VO.TblPcpDView"/>
+  <ViewUsage
+    Name="TblPbpDView3"
+    ViewObjectName="model.ERP.VO.TblPbpDView"/>
+  <ViewUsage
+    Name="TblPcpDView3"
+    ViewObjectName="model.ERP.VO.TblPcpDView"/>
+  <ViewUsage
+    Name="Bank_Setup1"
+    ViewObjectName="model.ERP.VO.Bank_Setup"/>
+  <ViewUsage
+    Name="Cash_Setup1"
+    ViewObjectName="model.ERP.VO.Cash_Setup"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -498,5 +531,29 @@
     ViewLinkObjectName="model.ERP.VO.FkKitchenMenuDLink"
     SrcViewUsageName="model.ERP.AppModule.TblKitchenMenuMView1"
     DstViewUsageName="model.ERP.AppModule.TblKitchenMenuDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkPbpDLink1"
+    ViewLinkObjectName="model.ERP.VO.FkPbpDLink"
+    SrcViewUsageName="model.ERP.AppModule.TblPbpMView1"
+    DstViewUsageName="model.ERP.AppModule.TblPbpDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkPcpDMLink1"
+    ViewLinkObjectName="model.ERP.VO.FkPcpDMLink"
+    SrcViewUsageName="model.ERP.AppModule.TblPcpMView1"
+    DstViewUsageName="model.ERP.AppModule.TblPcpDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkPbpDIdLink1"
+    ViewLinkObjectName="model.ERP.VO.FkPbpDIdLink"
+    SrcViewUsageName="model.ERP.AppModule.TblBankCashView1"
+    DstViewUsageName="model.ERP.AppModule.TblPbpDView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkPcpDIdLink1"
+    ViewLinkObjectName="model.ERP.VO.FkPcpDIdLink"
+    SrcViewUsageName="model.ERP.AppModule.TblBankCashView1"
+    DstViewUsageName="model.ERP.AppModule.TblPcpDView3"
     Reversed="false"/>
 </AppModule>
