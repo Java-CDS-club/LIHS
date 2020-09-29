@@ -27,16 +27,15 @@
   </AssociationEnd>
   <AssociationEnd
     Name="TblPcpD"
-    Cardinality="1"
+    Cardinality="-1"
     Owner="model.ERP.EO.TblPcpD">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
       <Attr Name="_finderName" Value="TblPcpD"/>
-      <Attr Name="_foreignKey" Value="model.ERP.EO.TblPcpD.FkPcpDM"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.ERP.EO.TblPcpD.Id"/>
+      <Item Value="model.ERP.EO.TblPcpD.PcpMId"/>
     </AttrArray>
   </AssociationEnd>
 </Association>

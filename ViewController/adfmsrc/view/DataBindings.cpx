@@ -109,6 +109,11 @@
           usageId="view_Bank_Setup_TaskFlow_Bank_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Bank_Cash/Cash_Setup_TaskFlow.xml#Cash_Setup_TaskFlow@ExecuteWithParams"
           usageId="view_Cash_Setup_TaskFlow_Cash_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Bank_Cash/Bank_Cash.jsff" usageId="view_Bank_CashPageDef1"/>
+    <page path="/WEB-INF/Fragments/Modules/Bank_Cash/Bank_Setup.jsff" usageId="view_Bank_SetupPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Bank_Cash/Cash_Setup.jsff" usageId="view_Cash_SetupPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payable/Bank_Payment.jsff" usageId="view_Bank_PaymentPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payable/Cash_Payment.jsff" usageId="view_Cash_PaymentPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -203,6 +208,11 @@
           path="Task_Flows.Modules.Bank_Cash.Bank_Setup_TaskFlow_Bank_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Cash_Setup_TaskFlow_Cash_Setup_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Bank_Cash.Cash_Setup_TaskFlow_Cash_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Bank_CashPageDef1" path="Fragments.Modules.Bank_Cash.Bank_CashPageDef"/>
+    <page id="view_Bank_SetupPageDef" path="Fragments.Modules.Bank_Cash.Bank_SetupPageDef"/>
+    <page id="view_Cash_SetupPageDef" path="Fragments.Modules.Bank_Cash.Cash_SetupPageDef"/>
+    <page id="view_Bank_PaymentPageDef" path="Fragments.Modules.Payable.Bank_PaymentPageDef"/>
+    <page id="view_Cash_PaymentPageDef" path="Fragments.Modules.Payable.Cash_PaymentPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"

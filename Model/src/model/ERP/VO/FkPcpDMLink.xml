@@ -23,7 +23,7 @@
   </ViewLinkDefEnd>
   <ViewLinkDefEnd
     Name="TblPcpDView"
-    Cardinality="1"
+    Cardinality="-1"
     Owner="model.ERP.VO.TblPcpDView">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
