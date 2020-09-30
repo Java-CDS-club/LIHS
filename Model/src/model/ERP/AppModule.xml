@@ -292,6 +292,51 @@
   <ViewUsage
     Name="Cash_Setup1"
     ViewObjectName="model.ERP.VO.Cash_Setup"/>
+  <ViewUsage
+    Name="TblBpvDView1"
+    ViewObjectName="model.ERP.VO.TblBpvDView"/>
+  <ViewUsage
+    Name="TblBpvMView1"
+    ViewObjectName="model.ERP.VO.TblBpvMView"/>
+  <ViewUsage
+    Name="TblBrvDView1"
+    ViewObjectName="model.ERP.VO.TblBrvDView"/>
+  <ViewUsage
+    Name="TblBrvMView1"
+    ViewObjectName="model.ERP.VO.TblBrvMView"/>
+  <ViewUsage
+    Name="TblCpvDView1"
+    ViewObjectName="model.ERP.VO.TblCpvDView"/>
+  <ViewUsage
+    Name="TblCpvMView1"
+    ViewObjectName="model.ERP.VO.TblCpvMView"/>
+  <ViewUsage
+    Name="TblCrvDView1"
+    ViewObjectName="model.ERP.VO.TblCrvDView"/>
+  <ViewUsage
+    Name="TblCrvMView1"
+    ViewObjectName="model.ERP.VO.TblCrvMView"/>
+  <ViewUsage
+    Name="TblJvDView1"
+    ViewObjectName="model.ERP.VO.TblJvDView"/>
+  <ViewUsage
+    Name="TblJvMView1"
+    ViewObjectName="model.ERP.VO.TblJvMView"/>
+  <ViewUsage
+    Name="TblBpvDView2"
+    ViewObjectName="model.ERP.VO.TblBpvDView"/>
+  <ViewUsage
+    Name="TblBrvDView2"
+    ViewObjectName="model.ERP.VO.TblBrvDView"/>
+  <ViewUsage
+    Name="TblCrvDView2"
+    ViewObjectName="model.ERP.VO.TblCrvDView"/>
+  <ViewUsage
+    Name="TblCpvDView2"
+    ViewObjectName="model.ERP.VO.TblCpvDView"/>
+  <ViewUsage
+    Name="TblJvDView2"
+    ViewObjectName="model.ERP.VO.TblJvDView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -555,5 +600,35 @@
     ViewLinkObjectName="model.ERP.VO.FkPcpDIdLink"
     SrcViewUsageName="model.ERP.AppModule.TblBankCashView1"
     DstViewUsageName="model.ERP.AppModule.TblPcpDView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkBpvDMasterLink1"
+    ViewLinkObjectName="model.ERP.VO.FkBpvDMasterLink"
+    SrcViewUsageName="model.ERP.AppModule.TblBpvMView1"
+    DstViewUsageName="model.ERP.AppModule.TblBpvDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkBrvDMasterLink1"
+    ViewLinkObjectName="model.ERP.VO.FkBrvDMasterLink"
+    SrcViewUsageName="model.ERP.AppModule.TblBrvMView1"
+    DstViewUsageName="model.ERP.AppModule.TblBrvDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkCrvDMasterLink1"
+    ViewLinkObjectName="model.ERP.VO.FkCrvDMasterLink"
+    SrcViewUsageName="model.ERP.AppModule.TblCrvMView1"
+    DstViewUsageName="model.ERP.AppModule.TblCrvDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkCpvDMasterLink1"
+    ViewLinkObjectName="model.ERP.VO.FkCpvDMasterLink"
+    SrcViewUsageName="model.ERP.AppModule.TblCpvMView1"
+    DstViewUsageName="model.ERP.AppModule.TblCpvDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkJvDMasterLink1"
+    ViewLinkObjectName="model.ERP.VO.FkJvDMasterLink"
+    SrcViewUsageName="model.ERP.AppModule.TblJvMView1"
+    DstViewUsageName="model.ERP.AppModule.TblJvDView2"
     Reversed="false"/>
 </AppModule>
