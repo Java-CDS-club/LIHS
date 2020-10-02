@@ -101,14 +101,14 @@
                                           required="#{bindings.Vno.hints.mandatory}"
                                           columns="20"
                                           maximumLength="#{bindings.Vno.hints.precision}"
-                                          shortDesc="#{bindings.Vno.hints.tooltip}" id="it4"
+                                          shortDesc="#{bindings.Vno.hints.tooltip}" id="it4" disabled="true"
                                           contentStyle="width:150px;">
                               <f:validator binding="#{bindings.Vno.validator}"/>
                             </af:inputText>
                             <af:spacer  id="s12"/>
                             <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type"
                                                 required="#{bindings.Vtp.hints.mandatory}"
-                                                shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc3"
+                                                shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc3" disabled="true"
                                                 contentStyle="width:150px;">
                               <f:selectItems value="#{bindings.Vtp.items}" id="si3"/>
                               <f:validator binding="#{bindings.Vtp.validator}"/>
@@ -190,7 +190,7 @@
                                             required="#{bindings.TblBpvDView2.hints.SrNo.mandatory}"
                                             columns="20"
                                             maximumLength="#{bindings.TblBpvDView2.hints.SrNo.precision}"
-                                            shortDesc="#{bindings.TblBpvDView2.hints.SrNo.tooltip}" id="it16">
+                                            shortDesc="#{bindings.TblBpvDView2.hints.SrNo.tooltip}" id="it16" readOnly="true" >
                                 <f:validator binding="#{row.bindings.SrNo.validator}"/>
                                 <af:convertNumber groupingUsed="false"
                                                   pattern="#{bindings.TblBpvDView2.hints.SrNo.format}"/>
@@ -207,7 +207,7 @@
                               <af:selectOneChoice value="#{row.bindings.GlL4Id.inputValue}"
                                                   label="#{row.bindings.GlL4Id.label}"
                                                   required="#{bindings.TblBpvDView2.hints.GlL4Id.mandatory}"
-                                                  shortDesc="#{bindings.TblBpvDView2.hints.GlL4Id.tooltip}" id="soc7">
+                                                  shortDesc="#{bindings.TblBpvDView2.hints.GlL4Id.tooltip}" id="soc7" readOnly="true">
                                 <f:selectItems value="#{row.bindings.GlL4Id.items}" id="si7"/>
                                 <f:validator binding="#{row.bindings.GlL4Id.validator}"/>
                               </af:selectOneChoice>
@@ -225,7 +225,7 @@
                                             required="#{bindings.TblBpvDView2.hints.Description.mandatory}"
                                             columns="#{bindings.TblBpvDView2.hints.Description.displayWidth}"
                                             maximumLength="#{bindings.TblBpvDView2.hints.Description.precision}"
-                                            shortDesc="#{bindings.TblBpvDView2.hints.Description.tooltip}" id="it17">
+                                            shortDesc="#{bindings.TblBpvDView2.hints.Description.tooltip}" id="it17" >
                                 <f:validator binding="#{row.bindings.Description.validator}"/>
                               </af:inputText>
                             </af:column>
@@ -241,7 +241,7 @@
                                             required="#{bindings.TblBpvDView2.hints.Dr.mandatory}"
                                             columns="#{bindings.TblBpvDView2.hints.Dr.displayWidth}"
                                             maximumLength="#{bindings.TblBpvDView2.hints.Dr.precision}"
-                                            shortDesc="#{bindings.TblBpvDView2.hints.Dr.tooltip}" id="it18">
+                                            shortDesc="#{bindings.TblBpvDView2.hints.Dr.tooltip}" id="it18" >
                                 <f:validator binding="#{row.bindings.Dr.validator}"/>
                                 <af:convertNumber groupingUsed="false"
                                                   pattern="#{bindings.TblBpvDView2.hints.Dr.format}"/>
@@ -259,7 +259,7 @@
                                             required="#{bindings.TblBpvDView2.hints.Cr.mandatory}"
                                             columns="#{bindings.TblBpvDView2.hints.Cr.displayWidth}"
                                             maximumLength="#{bindings.TblBpvDView2.hints.Cr.precision}"
-                                            shortDesc="#{bindings.TblBpvDView2.hints.Cr.tooltip}" id="it19">
+                                            shortDesc="#{bindings.TblBpvDView2.hints.Cr.tooltip}" id="it19" >
                                 <f:validator binding="#{row.bindings.Cr.validator}"/>
                                 <af:convertNumber groupingUsed="false"
                                                   pattern="#{bindings.TblBpvDView2.hints.Cr.format}"/>
