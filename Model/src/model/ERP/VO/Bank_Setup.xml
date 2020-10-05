@@ -97,7 +97,8 @@
     PrecisionRule="true"
     EntityAttrName="Type"
     EntityUsage="TblBankCash"
-    AliasName="TYPE"/>
+    AliasName="TYPE"
+    DefaultValue="B"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

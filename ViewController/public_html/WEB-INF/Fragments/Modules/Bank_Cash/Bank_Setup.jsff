@@ -49,7 +49,7 @@
                     <af:convertNumber groupingUsed="false" pattern="#{bindings.Bank_Setup1.hints.Id.format}"/>
                   </af:inputText>
                 </af:column>
-                <af:column sortProperty="#{bindings.Bank_Setup1.hints.Type.name}" filterable="true" sortable="true"
+                <!--<af:column sortProperty="#{bindings.Bank_Setup1.hints.Type.name}" filterable="true" sortable="true"
                            headerText="Type" id="c2" >
                             <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Type}"
@@ -63,7 +63,7 @@
                                 shortDesc="#{bindings.Bank_Setup1.hints.Type.tooltip}" id="it2">
                     <f:validator binding="#{row.bindings.Type.validator}"/>
                   </af:inputText>
-                </af:column>
+                </af:column>-->
                 <af:column sortProperty="#{bindings.Bank_Setup1.hints.Name.name}" filterable="true" sortable="true"
                            headerText="Name" id="c3" width="200">
                             <f:facet name="filter">

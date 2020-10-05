@@ -3,47 +3,26 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="Cash_Setup"
+  Name="Bank_Cash_Bank_LOV"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectList="TblBankCash.CONT_PERSON, 
-       TblBankCash.DESIG, 
-       TblBankCash.ID, 
-       TblBankCash.NAME, 
-       TblBankCash.TYPE"
-  FromList="TBL_BANK_CASH TblBankCash"
-  Where="TblBankCash.TYPE = 'C'"
   BindingStyle="OracleName"
   CustomQuery="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SelectList="TblBankCash.NAME, 
+       TblBankCash.ID, 
+       TblBankCash.TYPE"
+  FromList="TBL_BANK_CASH TblBankCash"
+  Where="TblBankCash.TYPE = 'B'">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
-        ResId="model.ERP.VO.Cash_Setup_LABEL"/>
+        ResId="model.LOV.Bank_Cash_Bank_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
   <EntityUsage
     Name="TblBankCash"
     Entity="model.ERP.EO.TblBankCash"/>
-  <ViewAttribute
-    Name="ContPerson"
-    PrecisionRule="true"
-    EntityAttrName="ContPerson"
-    EntityUsage="TblBankCash"
-    AliasName="CONT_PERSON"/>
-  <ViewAttribute
-    Name="Desig"
-    PrecisionRule="true"
-    EntityAttrName="Desig"
-    EntityUsage="TblBankCash"
-    AliasName="DESIG"/>
-  <ViewAttribute
-    Name="Id"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Id"
-    EntityUsage="TblBankCash"
-    AliasName="ID"/>
   <ViewAttribute
     Name="Name"
     PrecisionRule="true"
@@ -51,12 +30,17 @@
     EntityUsage="TblBankCash"
     AliasName="NAME"/>
   <ViewAttribute
+    Name="Id"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblBankCash"
+    AliasName="ID"/>
+  <ViewAttribute
     Name="Type"
     PrecisionRule="true"
     EntityAttrName="Type"
     EntityUsage="TblBankCash"
-    AliasName="TYPE"
-    DefaultValue="C"/>
+    AliasName="TYPE"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

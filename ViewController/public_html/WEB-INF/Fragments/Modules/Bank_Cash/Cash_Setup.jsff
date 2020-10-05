@@ -97,7 +97,7 @@
                       <f:validator binding="#{row.bindings.ContPerson.validator}"/>
                     </af:inputText>
                   </af:column>
-                  <af:column sortProperty="#{bindings.Cash_Setup1.hints.Type.name}" filterable="true" sortable="true"
+                  <!--<af:column sortProperty="#{bindings.Cash_Setup1.hints.Type.name}" filterable="true" sortable="true"
                              headerText="Type" id="c5">
                              <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Type}"
@@ -112,7 +112,7 @@
                                   shortDesc="#{bindings.Cash_Setup1.hints.Type.tooltip}" id="it5">
                       <f:validator binding="#{row.bindings.Type.validator}"/>
                     </af:inputText>
-                  </af:column>
+                  </af:column>-->
                 </af:table>
                 
               </af:showDetailItem>

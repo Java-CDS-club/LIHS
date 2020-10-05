@@ -6,7 +6,8 @@
     <variableIterator id="variables"/>
     <iterator Binds="USERS_CRUD_OPERATIONS1" RangeSize="25" DataControl="AppModuleDataControl"
               id="USERS_CRUD_OPERATIONS1Iterator"/>
-    <iterator Binds="Bank_Setup1" RangeSize="25" DataControl="AppModuleDataControl1" id="Bank_Setup1Iterator"/>
+    <iterator Binds="Bank_Setup1" RangeSize="25" DataControl="AppModuleDataControl1" id="Bank_Setup1Iterator"
+              Refresh="always" CacheResults="false"/>
     <searchRegion Binds="Bank_Setup1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Bank_Setup1Query"/>
   </executables>

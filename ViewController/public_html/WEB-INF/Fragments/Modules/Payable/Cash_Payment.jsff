@@ -173,24 +173,21 @@
                                                   pattern="#{bindings.TblPcpDView2.hints.SrNo.format}"/>
                               </af:inputText>
                             </af:column>
-                            <af:column sortProperty="#{bindings.TblPcpDView2.hints.BankCashId.name}" filterable="true"
-                                       sortable="true" headerText="Bank Cash ID"
-                                       id="c13">
-                                        <f:facet name="filter">
+                            <af:column headerText="#{bindings.TblPcpDView2.hints.BankCashId.label}" id="c7" filterable="true"
+                                       sortable="true" >
+                             <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.BankCashId}"
        id="it22" placeholder="Search ">
       </af:inputText>
 </f:facet>
-                              <af:inputText value="#{row.bindings.BankCashId.inputValue}"
-                                            label="#{bindings.TblPcpDView2.hints.BankCashId.label}"
-                                            required="#{bindings.TblPcpDView2.hints.BankCashId.mandatory}"
-                                            columns="#{bindings.TblPcpDView2.hints.BankCashId.displayWidth}"
-                                            maximumLength="#{bindings.TblPcpDView2.hints.BankCashId.precision}"
-                                            shortDesc="#{bindings.TblPcpDView2.hints.BankCashId.tooltip}" id="it17">
+                              <af:selectOneChoice value="#{row.bindings.BankCashId.inputValue}"
+                                                  label="#{row.bindings.BankCashId.label}"
+                                                  required="#{bindings.TblPcpDView2.hints.BankCashId.mandatory}"
+                                                  shortDesc="#{bindings.TblPcpDView2.hints.BankCashId.tooltip}"
+                                                  id="soc7">
+                                <f:selectItems value="#{row.bindings.BankCashId.items}" id="si7"/>
                                 <f:validator binding="#{row.bindings.BankCashId.validator}"/>
-                                <af:convertNumber groupingUsed="false"
-                                                  pattern="#{bindings.TblPcpDView2.hints.BankCashId.format}"/>
-                              </af:inputText>
+                              </af:selectOneChoice>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblPcpDView2.hints.Description.name}" filterable="true"
                                        sortable="true" headerText="Description"
