@@ -337,6 +337,12 @@
   <ViewUsage
     Name="TblJvDView2"
     ViewObjectName="model.ERP.VO.TblJvDView"/>
+  <ViewUsage
+    Name="TblProjectDView1"
+    ViewObjectName="model.ERP.VO.TblProjectDView"/>
+  <ViewUsage
+    Name="TblProjectDdView1"
+    ViewObjectName="model.ERP.VO.TblProjectDdView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -630,5 +636,17 @@
     ViewLinkObjectName="model.ERP.VO.FkJvDMasterLink"
     SrcViewUsageName="model.ERP.AppModule.TblJvMView1"
     DstViewUsageName="model.ERP.AppModule.TblJvDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkProjectFkLink2"
+    ViewLinkObjectName="model.ERP.VO.FkProjectFkLink"
+    SrcViewUsageName="model.ERP.AppModule.TblProjectView1"
+    DstViewUsageName="model.ERP.AppModule.TblProjectDView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkProjectCenterLink1"
+    ViewLinkObjectName="model.ERP.VO.FkProjectCenterLink"
+    SrcViewUsageName="model.ERP.AppModule.TblProjectDView1"
+    DstViewUsageName="model.ERP.AppModule.TblProjectDdView1"
     Reversed="false"/>
 </AppModule>

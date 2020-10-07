@@ -3,23 +3,29 @@
 <!---->
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="TblProject"
+  Name="TblProjectDd"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
   DBObjectType="table"
-  DBObjectName="TBL_PROJECT"
-  AliasName="TblProject"
+  DBObjectName="TBL_PROJECT_DD"
+  AliasName="TblProjectDd"
   BindingStyle="OracleName">
   <Attribute
     Name="Id"
+    IsNotNull="true"
     ColumnName="ID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_PROJECT"
-    PrimaryKey="true"
-    RetrievedOnInsert="true"
-    RetrievedOnUpdate="true"/>
+    TableName="TBL_PROJECT_DD"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ProjectDId"
+    ColumnName="PROJECT_D_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_PROJECT_DD"/>
   <Attribute
     Name="Name"
     IsNotNull="true"
@@ -28,7 +34,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TBL_PROJECT">
+    TableName="TBL_PROJECT_DD">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="150"/>
     </DesignTime>
@@ -40,7 +46,7 @@
     SQLType="CHAR"
     Type="java.lang.String"
     ColumnType="CHAR"
-    TableName="TBL_PROJECT"
+    TableName="TBL_PROJECT_DD"
     RetrievedOnUpdate="true"
     RetrievedOnInsert="true">
     <DesignTime>
@@ -53,43 +59,54 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="TBL_PROJECT"/>
+    TableName="TBL_PROJECT_DD"/>
   <Attribute
     Name="CreatedBy"
     ColumnName="CREATED_BY"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_PROJECT"/>
+    TableName="TBL_PROJECT_DD"/>
   <Attribute
     Name="UpdatedDate"
     ColumnName="UPDATED_DATE"
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="TBL_PROJECT"/>
+    TableName="TBL_PROJECT_DD"/>
   <Attribute
     Name="UpdatedBy"
     ColumnName="UPDATED_BY"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_PROJECT"/>
+    TableName="TBL_PROJECT_DD"/>
   <AccessorAttribute
     Name="TblProjectD"
-    Association="model.ERP.EO.FkProjectAssoc"
-    AssociationEnd="model.ERP.EO.FkProjectAssoc.TblProjectD"
-    AssociationOtherEnd="model.ERP.EO.FkProjectAssoc.TblProject"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
+    Association="model.ERP.EO.FkProjectCenterAssoc"
+    AssociationEnd="model.ERP.EO.FkProjectCenterAssoc.TblProjectD"
+    AssociationOtherEnd="model.ERP.EO.FkProjectCenterAssoc.TblProjectDd"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
-    Name="PkProject"
+    Name="PkProjectCenter"
     PrimaryKey="true">
     <DesignTime>
-      <Attr Name="_DBObjectName" Value="PK_PROJECT"/>
+      <Attr Name="_DBObjectName" Value="PK_PROJECT_Center"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.ERP.EO.TblProject.Id"/>
+      <Item Value="model.ERP.EO.TblProjectDd.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkProjectCenter">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_PROJECT_D"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_PROJECT_Center"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblProjectDd.ProjectDId"/>
     </AttrArray>
   </Key>
 </Entity>

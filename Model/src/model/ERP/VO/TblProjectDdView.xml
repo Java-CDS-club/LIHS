@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="TblProjectView"
+  Name="TblProjectDdView"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
   SelectListFlags="1"
@@ -13,86 +13,57 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
-  <ViewAccessor
-    Name="Active_LOV1"
-    ViewObjectName="model.LOV.Active_LOV"
-    RowLevelBinds="true"/>
-  <ListBinding
-    Name="LOV_Ast"
-    ListVOName="Active_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="Ast"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="DBAttr"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="ViewAttr"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
   <EntityUsage
-    Name="TblProject"
-    Entity="model.ERP.EO.TblProject"/>
+    Name="TblProjectDd"
+    Entity="model.ERP.EO.TblProjectDd"/>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Id"
-    EntityUsage="TblProject"
+    EntityUsage="TblProjectDd"
     AliasName="ID"/>
+  <ViewAttribute
+    Name="ProjectDId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectDId"
+    EntityUsage="TblProjectDd"
+    AliasName="PROJECT_D_ID"/>
   <ViewAttribute
     Name="Name"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Name"
-    EntityUsage="TblProject"
+    EntityUsage="TblProjectDd"
     AliasName="NAME"/>
   <ViewAttribute
     Name="Ast"
     PrecisionRule="true"
     EntityAttrName="Ast"
-    EntityUsage="TblProject"
-    AliasName="AST"
-    LOVName="LOV_Ast">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    EntityUsage="TblProjectDd"
+    AliasName="AST"/>
   <ViewAttribute
     Name="CreatedDate"
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
-    EntityUsage="TblProject"
+    EntityUsage="TblProjectDd"
     AliasName="CREATED_DATE"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
-    EntityUsage="TblProject"
+    EntityUsage="TblProjectDd"
     AliasName="CREATED_BY"/>
   <ViewAttribute
     Name="UpdatedDate"
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
-    EntityUsage="TblProject"
+    EntityUsage="TblProjectDd"
     AliasName="UPDATED_DATE"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
-    EntityUsage="TblProject"
+    EntityUsage="TblProjectDd"
     AliasName="UPDATED_BY"/>
-  <ViewLinkAccessor
-    Name="TblProjectDView"
-    ViewLink="model.ERP.VO.FkProjectFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
 </ViewObject>
