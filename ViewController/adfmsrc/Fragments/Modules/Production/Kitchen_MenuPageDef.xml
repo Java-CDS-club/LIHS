@@ -67,6 +67,7 @@
           <Item Value="Id"/>
           <Item Value="ItemL4Id"/>
           <Item Value="TotalPerson"/>
+          <Item Value="Dated"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

@@ -95,4 +95,10 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblKitchenMenuD"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="Dated"
+    PrecisionRule="true"
+    EntityAttrName="Dated"
+    EntityUsage="TblKitchenMenuD"
+    AliasName="DATED"/>
 </ViewObject>

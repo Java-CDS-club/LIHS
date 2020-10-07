@@ -141,6 +141,22 @@
                                                   pattern="#{bindings.TblKitchenMenuDView2.hints.Id.format}"/>
                               </af:inputText>
                             </af:column>
+                            <af:column headerText="Date" id="c9" sortable="true" filterable="true">
+                             <f:facet name="filter">
+                      <af:inputDate value="#{bindings.TblKitchenMenuDView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
+                                    id="id10" placeholder="Search ">
+                        <af:convertDateTime pattern="#{bindings.TblKitchenMenuDView2.hints.Dated.format}"/>
+                      </af:inputDate>
+                    </f:facet>
+                              <af:inputDate value="#{row.bindings.Dated.inputValue}"
+                                            label="#{bindings.TblKitchenMenuDView2.hints.Dated.label}"
+                                            required="#{bindings.TblKitchenMenuDView2.hints.Dated.mandatory}"
+                                            columns="#{bindings.TblKitchenMenuDView2.hints.Dated.displayWidth}"
+                                            shortDesc="#{bindings.TblKitchenMenuDView2.hints.Dated.tooltip}" id="id11">
+                                <f:validator binding="#{row.bindings.Dated.validator}"/>
+                                <af:convertDateTime pattern="#{bindings.TblKitchenMenuDView2.hints.Dated.format}"/>
+                              </af:inputDate>
+                            </af:column>
                             <af:column sortProperty="#{bindings.TblKitchenMenuDView2.hints.ItemL4Id.name}"
                                        filterable="true" sortable="true"
                                        headerText="Item Level 4" id="c7" width="200">
@@ -186,7 +202,7 @@
                   </af:gridRow>
                   <af:gridRow marginTop="5px" height="auto" id="gr6">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                       <af:panelGroupLayout id="pgl5" layout="horizontal">
+                       <af:panelGroupLayout id="pgl5" halign="center" layout="horizontal">
                             
                             <af:iterator id="i1" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
@@ -220,7 +236,7 @@
                              sortable="true" headerText="#{bindings.TblKitchenMenuMView1.hints.Id.label}" id="c1" visible="false">
                              <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Id}"
-       id="id4" placeholder="Search ">
+       id="it8" placeholder="Search ">
       </af:inputText>
 </f:facet>
 
@@ -239,7 +255,7 @@
                              sortable="true" headerText="Date" id="c2">
                     <f:facet name="filter">
                       <af:inputDate value="#{bindings.TblKitchenMenuMView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
-                                    id="id10" placeholder="Search ">
+                                    id="id13" placeholder="Search ">
                         <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.Dated.format}"/>
                       </af:inputDate>
                     </f:facet>

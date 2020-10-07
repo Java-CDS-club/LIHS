@@ -69,6 +69,13 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TBL_KITCHEN_MENU_D"/>
+  <Attribute
+    Name="Dated"
+    ColumnName="DATED"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TBL_KITCHEN_MENU_D"/>
   <AccessorAttribute
     Name="TblKitchenMenuM"
     Association="model.ERP.EO.FkKitchenMenuDAssoc"
