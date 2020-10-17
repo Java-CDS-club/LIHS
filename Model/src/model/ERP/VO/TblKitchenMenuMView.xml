@@ -50,19 +50,46 @@
     PrecisionRule="true"
     EntityAttrName="Dated"
     EntityUsage="TblKitchenMenuM"
-    AliasName="DATED"/>
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblKitchenMenuMView.Dated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblKitchenMenuMView.Dated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="FrDated"
     PrecisionRule="true"
     EntityAttrName="FrDated"
     EntityUsage="TblKitchenMenuM"
-    AliasName="FR_DATED"/>
+    AliasName="FR_DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblKitchenMenuMView.FrDated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblKitchenMenuMView.FrDated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ToDated"
     PrecisionRule="true"
     EntityAttrName="ToDated"
     EntityUsage="TblKitchenMenuM"
-    AliasName="TO_DATED"/>
+    AliasName="TO_DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblKitchenMenuMView.ToDated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblKitchenMenuMView.ToDated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ProjectId"
     PrecisionRule="true"
@@ -106,4 +133,8 @@
     ViewLink="model.ERP.VO.FkKitchenMenuDLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

@@ -25,6 +25,10 @@
     Name="Inv_GRN_Master_LOV1"
     ViewObjectName="model.LOV.Inv_GRN_Master_LOV"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Bank_Cash_Cash_LOV1"
+    ViewObjectName="model.LOV.Bank_Cash_Cash_LOV"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Vtp"
     ListVOName="Voucher_Type1"
@@ -80,6 +84,24 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_BankCashId"
+    ListVOName="Bank_Cash_Cash_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="BankCashId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblPcpM"
     Entity="model.ERP.EO.TblPcpM"/>
@@ -115,7 +137,16 @@
     PrecisionRule="true"
     EntityAttrName="Dated"
     EntityUsage="TblPcpM"
-    AliasName="DATED"/>
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblPcpMView.Dated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblPcpMView.Dated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Narration"
     PrecisionRule="true"
@@ -129,6 +160,20 @@
     EntityUsage="TblPcpM"
     AliasName="PBL_SUPP_ID"
     LOVName="LOV_PblSuppId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="BankCashId"
+    PrecisionRule="true"
+    EntityAttrName="BankCashId"
+    EntityUsage="TblPcpM"
+    AliasName="BANK_CASH_ID"
+    LOVName="LOV_BankCashId">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -179,4 +224,8 @@
     ViewLink="model.ERP.VO.FkPcpDMLink"
     Type="oracle.jbo.Row"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

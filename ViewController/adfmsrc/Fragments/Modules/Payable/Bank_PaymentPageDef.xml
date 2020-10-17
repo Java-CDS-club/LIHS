@@ -37,8 +37,6 @@
     </attributeValues>
     <list IterBinding="TblPbpMView1Iterator" StaticList="false" Uses="LOV_PblSuppId" id="PblSuppId"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <list IterBinding="TblPbpMView1Iterator" StaticList="false" Uses="LOV_GrnMId" id="GrnMId" DTSupportsMRU="false"
-          SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="TblPbpMView1Iterator" id="Narration">
       <AttrNames>
         <Item Value="Narration"/>
@@ -83,11 +81,12 @@
           <Item Value="Vtp"/>
           <Item Value="Dated"/>
           <Item Value="PblSuppId"/>
-          <Item Value="GrnMId"/>
+          
           <Item Value="ChqNo"/>
           <Item Value="ChqDate"/>
           <Item Value="ClrDate"/>
           <Item Value="Narration"/>
+          <Item Value="BankCashId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -100,11 +99,15 @@
           <Item Value="Description"/>
           <Item Value="Dr"/>
           <Item Value="Cr"/>
+          <Item Value="PoMId"/>
+          <Item Value="Amount"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
     <action IterBinding="TblPbpDView2Iterator" id="CreateInsert1" RequiresUpdateModel="true" Action="createInsertRow"/>
     <action IterBinding="TblPbpDView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblPbpDView2Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <list IterBinding="TblPbpMView1Iterator" StaticList="false" Uses="LOV_BankCashId" id="BankCashId"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

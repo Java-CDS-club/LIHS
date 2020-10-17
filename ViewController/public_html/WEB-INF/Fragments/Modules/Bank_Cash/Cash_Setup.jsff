@@ -33,7 +33,8 @@
                           filterModel="#{bindings.Cash_Setup1Query.queryDescriptor}" filterVisible="true"
                           queryListener="#{bindings.Cash_Setup1Query.processQuery}" varStatus="vs" id="t1"
                           scrollPolicy="page" autoHeightRows="0">
-                  <af:column sortProperty="#{bindings.Cash_Setup1.hints.Id.name}" filterable="true" sortable="true"
+                  
+<af:column sortProperty="#{bindings.Cash_Setup1.hints.Id.name}" filterable="true" sortable="true"
                              headerText="ID" id="c1" visible="false">
                              <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Id}"
@@ -49,8 +50,24 @@
                       <af:convertNumber groupingUsed="false" pattern="#{bindings.Cash_Setup1.hints.Id.format}"/>
                     </af:inputText>
                   </af:column>
+                  <!--<af:column sortProperty="#{bindings.Cash_Setup1.hints.Type.name}" filterable="true" sortable="true"
+                             headerText="Type" id="c5">
+                             <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Type}"
+       id="it9" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                    <af:inputText value="#{row.bindings.Type.inputValue}"
+                                  label="#{bindings.Cash_Setup1.hints.Type.label}"
+                                  required="#{bindings.Cash_Setup1.hints.Type.mandatory}"
+                                  columns="20"
+                                  maximumLength="#{bindings.Cash_Setup1.hints.Type.precision}"
+                                  shortDesc="#{bindings.Cash_Setup1.hints.Type.tooltip}" id="it5">
+                      <f:validator binding="#{row.bindings.Type.validator}"/>
+                    </af:inputText>
+                  </af:column>-->
                   <af:column sortProperty="#{bindings.Cash_Setup1.hints.Name.name}" filterable="true" sortable="true"
-                             headerText="Name" id="c2">
+                             headerText="Name" id="c2" width="200">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Name}"
        id="it6" placeholder="Search ">
@@ -66,7 +83,7 @@
                     </af:inputText>
                   </af:column>
                   <af:column sortProperty="#{bindings.Cash_Setup1.hints.Desig.name}" filterable="true" sortable="true"
-                             headerText="Designation" id="c3">
+                             headerText="Designation" id="c3" width="100">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Desig}"
        id="it7" placeholder="Search ">
@@ -97,22 +114,7 @@
                       <f:validator binding="#{row.bindings.ContPerson.validator}"/>
                     </af:inputText>
                   </af:column>
-                  <!--<af:column sortProperty="#{bindings.Cash_Setup1.hints.Type.name}" filterable="true" sortable="true"
-                             headerText="Type" id="c5">
-                             <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.Type}"
-       id="it9" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-                    <af:inputText value="#{row.bindings.Type.inputValue}"
-                                  label="#{bindings.Cash_Setup1.hints.Type.label}"
-                                  required="#{bindings.Cash_Setup1.hints.Type.mandatory}"
-                                  columns="20"
-                                  maximumLength="#{bindings.Cash_Setup1.hints.Type.precision}"
-                                  shortDesc="#{bindings.Cash_Setup1.hints.Type.tooltip}" id="it5">
-                      <f:validator binding="#{row.bindings.Type.validator}"/>
-                    </af:inputText>
-                  </af:column>-->
+                  
                 </af:table>
                 
               </af:showDetailItem>

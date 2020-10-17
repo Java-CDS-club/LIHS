@@ -92,7 +92,16 @@
     PrecisionRule="true"
     EntityAttrName="Dated"
     EntityUsage="TblBrvM"
-    AliasName="DATED"/>
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblBrvMView.Dated_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblBrvMView.Dated_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ChqNo"
     PrecisionRule="true"
@@ -104,13 +113,31 @@
     PrecisionRule="true"
     EntityAttrName="ChqDate"
     EntityUsage="TblBrvM"
-    AliasName="CHQ_DATE"/>
+    AliasName="CHQ_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblBrvMView.ChqDate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblBrvMView.ChqDate_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ClrDate"
     PrecisionRule="true"
     EntityAttrName="ClrDate"
     EntityUsage="TblBrvM"
-    AliasName="CLR_DATE"/>
+    AliasName="CLR_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblBrvMView.ClrDate_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblBrvMView.ClrDate_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Narration"
     PrecisionRule="true"
@@ -160,4 +187,8 @@
     ViewLink="model.ERP.VO.FkBrvDMasterLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

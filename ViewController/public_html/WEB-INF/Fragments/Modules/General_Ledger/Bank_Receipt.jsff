@@ -59,7 +59,7 @@
                             
                             
                             <af:inputText value="#{bindings.Narration.inputValue}"
-                                          label="Narration"
+                                          label="Remarks"
                                           required="#{bindings.Narration.hints.mandatory}"
                                           columns="#{bindings.Narration.hints.displayWidth}"
                                           maximumLength="#{bindings.Narration.hints.precision}"
@@ -180,7 +180,7 @@
                               </af:inputText>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblBrvDView2.hints.SrNo.name}" filterable="true"
-                                       sortable="true" headerText="Serial No." id="c12">
+                                       sortable="true" headerText="Sr No." id="c12" width="50">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.SrNo}"
        id="it20" placeholder="Search ">
@@ -199,7 +199,7 @@
                             </af:column>
                             <af:column sortProperty="#{bindings.TblBrvDView2.hints.GlL4Id.name}" filterable="true"
                                        sortable="true" headerText="GL Level 4"
-                                       id="c13" width="150">
+                                       id="c13" width="200">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.GlL4Id}"
        id="it21" placeholder="Search ">
@@ -215,7 +215,7 @@
                             </af:column>
                             <af:column sortProperty="#{bindings.TblBrvDView2.hints.Description.name}" filterable="true"
                                        sortable="true" headerText="Description"
-                                       id="c14" width="400">
+                                       id="c14" width="250">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Description}"
        id="it22" placeholder="Search ">
@@ -433,7 +433,7 @@
                     </af:inputDate>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblBrvMView1.hints.Narration.name}" filterable="true"
-                             sortable="true" headerText="Narration" id="c10" width="400">
+                             sortable="true" headerText="Remarks" id="c10" width="300">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Narration}"
        id="it14" placeholder="Search ">

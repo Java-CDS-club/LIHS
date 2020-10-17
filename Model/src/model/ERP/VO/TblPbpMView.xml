@@ -25,6 +25,10 @@
     Name="Inv_GRN_Master_LOV1"
     ViewObjectName="model.LOV.Inv_GRN_Master_LOV"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Bank_Cash_Bank_LOV1"
+    ViewObjectName="model.LOV.Bank_Cash_Bank_LOV"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Vtp"
     ListVOName="Voucher_Type1"
@@ -80,6 +84,24 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_BankCashId"
+    ListVOName="Bank_Cash_Bank_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="BankCashId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblPbpM"
     Entity="model.ERP.EO.TblPbpM"/>
@@ -115,7 +137,16 @@
     PrecisionRule="true"
     EntityAttrName="Dated"
     EntityUsage="TblPbpM"
-    AliasName="DATED"/>
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblPbpMView.Dated_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblPbpMView.Dated_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ChqNo"
     PrecisionRule="true"
@@ -127,13 +158,31 @@
     PrecisionRule="true"
     EntityAttrName="ChqDate"
     EntityUsage="TblPbpM"
-    AliasName="CHQ_DATE"/>
+    AliasName="CHQ_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblPbpMView.ChqDate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblPbpMView.ChqDate_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ClrDate"
     PrecisionRule="true"
     EntityAttrName="ClrDate"
     EntityUsage="TblPbpM"
-    AliasName="CLR_DATE"/>
+    AliasName="CLR_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblPbpMView.ClrDate_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblPbpMView.ClrDate_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Narration"
     PrecisionRule="true"
@@ -161,6 +210,20 @@
     EntityUsage="TblPbpM"
     AliasName="GRN_M_ID"
     LOVName="LOV_GrnMId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="BankCashId"
+    PrecisionRule="true"
+    EntityAttrName="BankCashId"
+    EntityUsage="TblPbpM"
+    AliasName="BANK_CASH_ID"
+    LOVName="LOV_BankCashId">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -197,4 +260,8 @@
     ViewLink="model.ERP.VO.FkPbpDLink"
     Type="oracle.jbo.Row"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

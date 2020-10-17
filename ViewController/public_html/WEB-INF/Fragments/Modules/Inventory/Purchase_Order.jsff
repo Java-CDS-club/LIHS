@@ -39,7 +39,7 @@
                   <af:inputDate value="#{bindings.Dated.inputValue}" label="Date"
                                 required="#{bindings.Dated.hints.mandatory}"
                                 columns="20"
-                                shortDesc="#{bindings.Dated.hints.tooltip}" id="id1" contentStyle="width:135px;">
+                                shortDesc="#{bindings.Dated.hints.tooltip}" id="id1" contentStyle="width:138px;">
                     <f:validator binding="#{bindings.Dated.validator}"/>
                     <af:convertDateTime pattern="#{bindings.Dated.format}"/>
                   </af:inputDate>
@@ -48,16 +48,17 @@
                                 required="#{bindings.Carrier.hints.mandatory}"
                                 columns="20"
                                 maximumLength="#{bindings.Carrier.hints.precision}"
-                                shortDesc="#{bindings.Carrier.hints.tooltip}" id="it3">
+                                shortDesc="#{bindings.Carrier.hints.tooltip}" id="it3" contentStyle="width:138px;">
                     <f:validator binding="#{bindings.Carrier.validator}"/>
                   </af:inputText>
                   
                   <af:spacer  id="s16"/>
-                  <af:inputText value="#{bindings.Narration.inputValue}" label="Narration"
+                  <af:inputText value="#{bindings.Narration.inputValue}" label="Remarks"
                                 required="#{bindings.Narration.hints.mandatory}"
                                 columns="20"
                                 maximumLength="#{bindings.Narration.hints.precision}"
-                                shortDesc="#{bindings.Narration.hints.tooltip}" id="it10" rows="10">
+                                shortDesc="#{bindings.Narration.hints.tooltip}" id="it10" rows="10"
+                                contentStyle="width:138px;">
                     <f:validator binding="#{bindings.Narration.validator}"/>
                   </af:inputText>
                    <af:spacer  id="s4"/>
@@ -80,7 +81,7 @@
                   <af:selectOneChoice value="#{bindings.PblSuppId.inputValue}" label="Supplier"
                                       required="#{bindings.PblSuppId.hints.mandatory}"
                                       shortDesc="#{bindings.PblSuppId.hints.tooltip}" id="soc3"
-                                      contentStyle="width:138px;">
+                                      contentStyle="width:135px;">
                     <f:selectItems value="#{bindings.PblSuppId.items}" id="si3"/>
                     <f:validator binding="#{bindings.PblSuppId.validator}"/>
                   </af:selectOneChoice>
@@ -211,7 +212,7 @@
                               </af:inputDate>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblPoDDView3.hints.Narration.name}" filterable="true"
-                                       sortable="true" headerText="Narration"
+                                       sortable="true" headerText="Remarks"
                                        id="c4" width="500">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Narration}"
@@ -280,7 +281,7 @@
                               </af:inputText>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblPoDView2.hints.SrNo.name}" filterable="true"
-                                       sortable="true" headerText="Serial No." id="c6">
+                                       sortable="true" headerText="Sr No." id="c6" width="50">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.SrNo}"
        id="it19" placeholder="Search ">
@@ -315,7 +316,7 @@
                               </af:selectOneChoice>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblPoDView2.hints.UomId.name}" filterable="true"
-                                       sortable="true" headerText="Unit of Measurement" id="c8" width="120">
+                                       sortable="true" headerText="UOM" id="c8" width="70">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.UomId}"
        id="it21" placeholder="Search ">
@@ -331,7 +332,7 @@
                             </af:column>
                             <af:column sortProperty="#{bindings.TblPoDView2.hints.Description.name}" filterable="true"
                                        sortable="true" headerText="Description"
-                                       id="c9" width="500">
+                                       id="c9" width="250">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Description}"
        id="it22" placeholder="Search ">
@@ -344,6 +345,25 @@
                                             maximumLength="#{bindings.TblPoDView2.hints.Description.precision}"
                                             shortDesc="#{bindings.TblPoDView2.hints.Description.tooltip}" id="it13" readOnly="true">
                                 <f:validator binding="#{row.bindings.Description.validator}"/>
+                              </af:inputText>
+                            </af:column>
+                            
+                            <af:column sortProperty="#{bindings.TblPoDView2.hints.DoQty.name}" filterable="true"
+                                       sortable="true" headerText="DO Qty" id="c11">
+                                        <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.DoQty}"
+       id="it24" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                              <af:inputText value="#{row.bindings.DoQty.inputValue}"
+                                            label="#{bindings.TblPoDView2.hints.DoQty.label}"
+                                            required="#{bindings.TblPoDView2.hints.DoQty.mandatory}"
+                                            columns="#{bindings.TblPoDView2.hints.DoQty.displayWidth}"
+                                            maximumLength="#{bindings.TblPoDView2.hints.DoQty.precision}"
+                                            shortDesc="#{bindings.TblPoDView2.hints.DoQty.tooltip}" id="it16" readOnly="true">
+                                <f:validator binding="#{row.bindings.DoQty.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblPoDView2.hints.DoQty.format}"/>
                               </af:inputText>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblPoDView2.hints.Qty.name}" filterable="true"
@@ -362,24 +382,6 @@
                                 <f:validator binding="#{row.bindings.Qty.validator}"/>
                                 <af:convertNumber groupingUsed="false"
                                                   pattern="#{bindings.TblPoDView2.hints.Qty.format}"/>
-                              </af:inputText>
-                            </af:column>
-                            <af:column sortProperty="#{bindings.TblPoDView2.hints.DoQty.name}" filterable="true"
-                                       sortable="true" headerText="DO Qty" id="c11">
-                                        <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.DoQty}"
-       id="it24" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-                              <af:inputText value="#{row.bindings.DoQty.inputValue}"
-                                            label="#{bindings.TblPoDView2.hints.DoQty.label}"
-                                            required="#{bindings.TblPoDView2.hints.DoQty.mandatory}"
-                                            columns="#{bindings.TblPoDView2.hints.DoQty.displayWidth}"
-                                            maximumLength="#{bindings.TblPoDView2.hints.DoQty.precision}"
-                                            shortDesc="#{bindings.TblPoDView2.hints.DoQty.tooltip}" id="it16" readOnly="true">
-                                <f:validator binding="#{row.bindings.DoQty.validator}"/>
-                                <af:convertNumber groupingUsed="false"
-                                                  pattern="#{bindings.TblPoDView2.hints.DoQty.format}"/>
                               </af:inputText>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblPoDView2.hints.BalQty.name}" filterable="true"
@@ -604,7 +606,7 @@
                   </af:column>
                   
                   <af:column sortProperty="#{bindings.TblPoMView1.hints.Narration.name}" filterable="true"
-                             sortable="true" headerText="Narration" id="c32" width="250">
+                             sortable="true" headerText="Remarks" id="c32" width="250">
                     <f:facet name="filter">
                       <af:inputText value="#{vs.filterCriteria.Narration}" id="it71" placeholder="Search "/>
                     </f:facet>

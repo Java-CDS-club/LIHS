@@ -93,7 +93,16 @@
     PrecisionRule="true"
     EntityAttrName="Dated"
     EntityUsage="TblFgTrnMaster"
-    AliasName="DATED"/>
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblFgTrnMasterView.Dated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblFgTrnMasterView.Dated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ProFgMasterId"
     PrecisionRule="true"
@@ -143,4 +152,8 @@
     ViewLink="model.ERP.VO.FkFgTrnDetailMasterLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

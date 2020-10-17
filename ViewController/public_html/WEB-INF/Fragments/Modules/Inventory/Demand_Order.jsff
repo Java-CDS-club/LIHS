@@ -49,7 +49,7 @@
                             </af:inputDate>
                             <af:spacer  id="s4"/>
                             <af:inputText value="#{bindings.Narration.inputValue}"
-                                          label="Narration"
+                                          label="Remarks"
                                           required="#{bindings.Narration.hints.mandatory}"
                                           columns="20"
                                           maximumLength="#{bindings.Narration.hints.precision}"
@@ -157,7 +157,7 @@
                               </af:inputText>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblDoDView2.hints.SrNo.name}" filterable="true"
-                                       sortable="true" headerText="Serial No." id="c9">
+                                       sortable="true" headerText="Sr No." id="c9" width="50">
                                        <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.SrNo}"
        id="it16" placeholder="Search ">
@@ -176,7 +176,7 @@
                             </af:column>
                             <af:column sortProperty="#{bindings.TblDoDView2.hints.ItemL4Id.name}" filterable="true"
                                        sortable="true" headerText=" Item Level 4"
-                                       id="c10" width="300">
+                                       id="c10" width="200">
                                        <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
        id="it17" placeholder="Search ">
@@ -191,7 +191,7 @@
                               </af:selectOneChoice>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblDoDView2.hints.UomId.name}" filterable="true"
-                                       sortable="true" headerText="Unit of Measurement" id="c11" width="120">
+                                       sortable="true" headerText="UOM" id="c11" width="70">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.UomId}"
        id="it18" placeholder="Search ">
@@ -207,7 +207,7 @@
                             </af:column>
                             <af:column sortProperty="#{bindings.TblDoDView2.hints.Description.name}" filterable="true"
                                        sortable="true" headerText="Description"
-                                       id="c12" width="500">
+                                       id="c12" width="250">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Description}"
        id="it19" placeholder="Search ">
@@ -223,7 +223,7 @@
                               </af:inputText>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblDoDView2.hints.Qty.name}" filterable="true"
-                                       sortable="true" headerText="Quantity" id="c13" width="150">
+                                       sortable="true" headerText="Qty" id="c13" width="100">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Qty}"
        id="it20" placeholder="Search ">
@@ -367,7 +367,7 @@
                     </af:selectOneChoice>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblDoMView1.hints.Narration.name}" filterable="true"
-                             sortable="true" headerText="Narration" id="c7" width="300">
+                             sortable="true" headerText="Remarks" id="c7" width="300">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Narration}"
        id="it11" placeholder="Search ">

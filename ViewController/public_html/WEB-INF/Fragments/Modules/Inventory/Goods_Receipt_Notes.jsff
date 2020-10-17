@@ -64,7 +64,7 @@
                             </af:inputText>
                             <af:spacer  id="s7"/>
                   <af:inputText value="#{bindings.Narration.inputValue}"
-                                          label="Narration"
+                                          label="Remarks"
                                           required="#{bindings.Narration.hints.mandatory}"
                                           columns="20"
                                           maximumLength="#{bindings.Narration.hints.precision}"
@@ -186,7 +186,7 @@
                     </af:inputText>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblGrnDView2.hints.SrNo.name}" filterable="true"
-                             sortable="true" headerText="Serial No." id="c2" align="left">
+                             sortable="true" headerText="Sr No." id="c2" align="left" width="50">
                              <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.SrNo}"
        id="it29" placeholder="Search ">
@@ -221,8 +221,8 @@
                     </af:selectOneChoice>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblGrnDView2.hints.UomId.name}" filterable="true"
-                             sortable="true" headerText="Unit of Measurment"
-                             id="c4" width="120">
+                             sortable="true" headerText="UOM"
+                             id="c4" width="70">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.UomId}"
        id="it31" placeholder="Search ">
@@ -236,7 +236,7 @@
                     </af:selectOneChoice>
                   </af:column>
                                     <af:column headerText="Description" id="c5"
-                             sortable="true" filterable="true" width="500">
+                             sortable="true" filterable="true" width="250">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Description}"
        id="it11" placeholder="Search ">
@@ -507,7 +507,7 @@
                     </af:selectOneChoice>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblGrnMView1.hints.Narration.name}" filterable="true"
-                             sortable="true" headerText="Narration" id="c11" width="300">
+                             sortable="true" headerText="Remarks" id="c11" width="300">
                              <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Narration}"
        id="it7" placeholder="Search ">

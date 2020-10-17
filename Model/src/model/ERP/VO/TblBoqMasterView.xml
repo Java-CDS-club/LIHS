@@ -92,7 +92,16 @@
     PrecisionRule="true"
     EntityAttrName="Dated"
     EntityUsage="TblBoqMaster"
-    AliasName="DATED"/>
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblBoqMasterView.Dated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblBoqMasterView.Dated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ItemL4Id"
     IsNotNull="true"
@@ -149,4 +158,8 @@
     ViewLink="model.ERP.VO.FkBoqDetailMasterLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

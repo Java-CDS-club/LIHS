@@ -50,7 +50,16 @@
     PrecisionRule="true"
     EntityAttrName="Dated"
     EntityUsage="TblOpenBlncInv"
-    AliasName="DATED"/>
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblOpenBlncInvView.Dated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblOpenBlncInvView.Dated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ItemL4Id"
     IsNotNull="true"
@@ -108,4 +117,8 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblOpenBlncInv"
     AliasName="UPDATED_BY"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>
