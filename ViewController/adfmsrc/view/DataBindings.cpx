@@ -119,6 +119,7 @@
     <page path="/WEB-INF/Fragments/Modules/General_Ledger/Cash_Payment.jsff" usageId="view_Cash_PaymentPageDef1"/>
     <page path="/WEB-INF/Fragments/Modules/General_Ledger/Cash_Receipt.jsff" usageId="view_Cash_ReceiptPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/General_Ledger/Journal_Voucher.jsff" usageId="view_Journal_VoucherPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Inventory/Cash_Purchase.jsff" usageId="view_Cash_PurchasePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -223,6 +224,7 @@
     <page id="view_Cash_PaymentPageDef1" path="Fragments.Modules.General_Ledger.Cash_PaymentPageDef"/>
     <page id="view_Cash_ReceiptPageDef" path="Fragments.Modules.General_Ledger.Cash_ReceiptPageDef"/>
     <page id="view_Journal_VoucherPageDef" path="Fragments.Modules.General_Ledger.Journal_VoucherPageDef"/>
+    <page id="view_Cash_PurchasePageDef" path="Fragments.Modules.Inventory.Cash_PurchasePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"

@@ -33,7 +33,16 @@
     PrecisionRule="true"
     EntityAttrName="Dated"
     EntityUsage="TblPoM"
-    AliasName="DATED"/>
+    AliasName="DATED">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.LOV.Inv_PO_Master_LOV.Dated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.LOV.Inv_PO_Master_LOV.Dated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Vno"
     PrecisionRule="true"

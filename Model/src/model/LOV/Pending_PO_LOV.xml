@@ -33,7 +33,16 @@ From Vew_pendingpo]]></SQLQuery>
     ColumnType="DATE"
     AliasName="DATED"
     Expression="DATED"
-    SQLType="DATE"/>
+    SQLType="DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.LOV.Pending_PO_LOV.Dated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.LOV.Pending_PO_LOV.Dated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Id"
     IsUpdateable="false"
