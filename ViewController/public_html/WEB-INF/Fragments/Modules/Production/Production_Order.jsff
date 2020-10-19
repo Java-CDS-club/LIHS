@@ -84,12 +84,12 @@
                     <f:validator binding="#{bindings.Vno.validator}"/>
                   </af:inputText>
                   <af:spacer  id="s7"/>
-                    <af:selectOneChoice value="#{bindings.Vtp1.inputValue}" label="Voucher Type"
-                                      required="#{bindings.Vtp1.hints.mandatory}"
-                                      shortDesc="#{bindings.Vtp1.hints.tooltip}" id="soc1" disabled="true"
+                    <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type"
+                                      required="#{bindings.Vtp.hints.mandatory}"
+                                      shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc1" disabled="true"
                                       contentStyle="width:150px;">
-                    <f:selectItems value="#{bindings.Vtp1.items}" id="si1"/>
-                    <f:validator binding="#{bindings.Vtp1.validator}"/>
+                    <f:selectItems value="#{bindings.Vtp.items}" id="si1"/>
+                    <f:validator binding="#{bindings.Vtp.validator}"/>
                   </af:selectOneChoice>
                   <f:facet name="footer">
                     <af:panelGroupLayout layout="horizontal"  halign="center" id="pgl5">
