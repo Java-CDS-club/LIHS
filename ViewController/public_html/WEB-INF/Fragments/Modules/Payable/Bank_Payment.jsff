@@ -254,6 +254,8 @@
                               </af:inputText>
                             </af:column>
                           </af:table>
+                         
+                          
                         </af:showDetailItem>
                       </af:panelTabbed>
                     </af:gridCell>
@@ -261,7 +263,7 @@
                   <af:gridRow marginTop="5px" height="auto" id="gr6">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                     <af:spacer width="5" height="10" id="s14"/>
-                       <af:panelGroupLayout id="pgl5" halign="center"  layout="horizontal">
+                      <af:panelGroupLayout id="pgl5"  halign="center" layout="horizontal">
                             
                             <af:iterator id="i1" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
@@ -280,7 +282,7 @@
                   </af:gridRow>
                 </af:panelGridLayout>
               </af:showDetailItem>
-              <af:showDetailItem text="Serach" id="sdi1">
+              <af:showDetailItem text="Search" id="sdi1">
                 <af:table value="#{bindings.TblPbpMView1.collectionModel}" var="row"
                           rows="#{bindings.TblPbpMView1.rangeSize}"
                           emptyText="#{bindings.TblPbpMView1.viewable ? 'No data to display.' : 'Access Denied.'}"

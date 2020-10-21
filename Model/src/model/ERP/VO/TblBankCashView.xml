@@ -107,14 +107,4 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblBankCash"
     AliasName="UPDATED_BY"/>
-  <ViewLinkAccessor
-    Name="TblPbpDView"
-    ViewLink="model.ERP.VO.FkPbpDIdLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblPcpDView"
-    ViewLink="model.ERP.VO.FkPcpDIdLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
 </ViewObject>

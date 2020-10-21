@@ -170,20 +170,6 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TBL_BANK_CASH"/>
-  <AccessorAttribute
-    Name="TblPbpD"
-    Association="model.ERP.EO.FkPbpDIdAssoc"
-    AssociationEnd="model.ERP.EO.FkPbpDIdAssoc.TblPbpD"
-    AssociationOtherEnd="model.ERP.EO.FkPbpDIdAssoc.TblBankCash"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="TblPcpD"
-    Association="model.ERP.EO.FkPcpDIdAssoc"
-    AssociationEnd="model.ERP.EO.FkPcpDIdAssoc.TblPcpD"
-    AssociationOtherEnd="model.ERP.EO.FkPcpDIdAssoc.TblBankCash"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
   <Key
     Name="PkBankCashId"
     PrimaryKey="true">

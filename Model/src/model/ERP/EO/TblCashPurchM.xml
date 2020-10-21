@@ -3,23 +3,22 @@
 <!---->
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="TblPcpM"
+  Name="TblCashPurchM"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
   DBObjectType="table"
-  DBObjectName="TBL_PCP_M"
-  AliasName="TblPcpM"
+  DBObjectName="TBL_CASH_PURCH_M"
+  AliasName="TblCashPurchM"
   BindingStyle="OracleName">
   <Attribute
     Name="Id"
+    IsNotNull="true"
     ColumnName="ID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_PCP_M"
-    PrimaryKey="true"
-    RetrievedOnInsert="true"
-    RetrievedOnUpdate="true"/>
+    TableName="TBL_CASH_PURCH_M"
+    PrimaryKey="true"/>
   <Attribute
     Name="Vno"
     Precision="25"
@@ -27,7 +26,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TBL_PCP_M">
+    TableName="TBL_CASH_PURCH_M">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="25"/>
     </DesignTime>
@@ -39,7 +38,7 @@
     SQLType="CHAR"
     Type="java.lang.String"
     ColumnType="CHAR"
-    TableName="TBL_PCP_M"
+    TableName="TBL_CASH_PURCH_M"
     RetrievedOnUpdate="true"
     RetrievedOnInsert="true">
     <DesignTime>
@@ -52,7 +51,7 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_PCP_M"/>
+    TableName="TBL_CASH_PURCH_M"/>
   <Attribute
     Name="Narration"
     Precision="300"
@@ -60,90 +59,108 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TBL_PCP_M">
+    TableName="TBL_CASH_PURCH_M">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="300"/>
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="PblSuppId"
-    ColumnName="PBL_SUPP_ID"
+    Name="DepartmentId"
+    ColumnName="DEPARTMENT_ID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_PCP_M"/>
+    TableName="TBL_CASH_PURCH_M"/>
   <Attribute
-    Name="CreatedDate"
-    ColumnName="CREATED_DATE"
-    SQLType="TIMESTAMP"
-    Type="java.sql.Timestamp"
-    ColumnType="TIMESTAMP"
-    TableName="TBL_PCP_M"/>
-  <Attribute
-    Name="CreatedBy"
-    ColumnName="CREATED_BY"
+    Name="ProjectId"
+    ColumnName="PROJECT_ID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_PCP_M"/>
-  <Attribute
-    Name="UpdatedDate"
-    ColumnName="UPDATED_DATE"
-    SQLType="TIMESTAMP"
-    Type="java.sql.Timestamp"
-    ColumnType="TIMESTAMP"
-    TableName="TBL_PCP_M"/>
-  <Attribute
-    Name="UpdatedBy"
-    ColumnName="UPDATED_BY"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    TableName="TBL_PCP_M"/>
+    TableName="TBL_CASH_PURCH_M"/>
   <Attribute
     Name="BankCashId"
     ColumnName="BANK_CASH_ID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_PCP_M"/>
+    TableName="TBL_CASH_PURCH_M"/>
+  <Attribute
+    Name="CreatedDate"
+    ColumnName="CREATED_DATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="TBL_CASH_PURCH_M"/>
+  <Attribute
+    Name="CreatedBy"
+    ColumnName="CREATED_BY"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_CASH_PURCH_M"/>
+  <Attribute
+    Name="UpdatedDate"
+    ColumnName="UPDATED_DATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="TBL_CASH_PURCH_M"/>
+  <Attribute
+    Name="UpdatedBy"
+    ColumnName="UPDATED_BY"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_CASH_PURCH_M"/>
   <AccessorAttribute
-    Name="TblPcpD"
-    Association="model.ERP.EO.FkPcpDMAssoc"
-    AssociationEnd="model.ERP.EO.FkPcpDMAssoc.TblPcpD"
-    AssociationOtherEnd="model.ERP.EO.FkPcpDMAssoc.TblPcpM"
+    Name="TblCashPurchD"
+    Association="model.ERP.EO.FkCpDMAssoc"
+    AssociationEnd="model.ERP.EO.FkCpDMAssoc.TblCashPurchD"
+    AssociationOtherEnd="model.ERP.EO.FkCpDMAssoc.TblCashPurchM"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key
-    Name="PkPcpMId"
+    Name="PkCashPurchMId"
     PrimaryKey="true">
     <DesignTime>
-      <Attr Name="_DBObjectName" Value="PK_PCP_M_ID"/>
+      <Attr Name="_DBObjectName" Value="PK_Cash_Purch_M_ID"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.ERP.EO.TblPcpM.Id"/>
+      <Item Value="model.ERP.EO.TblCashPurchM.Id"/>
     </AttrArray>
   </Key>
   <Key
-    Name="FkPcpMGrn">
+    Name="FkCpCashBankId">
     <DesignTime>
-      <Attr Name="_referencedKey" Value="PK_GRN_M_ID"/>
+      <Attr Name="_referencedKey" Value="PK_BANK_CASH_ID"/>
       <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="FK_PCP_M_GRN"/>
+      <Attr Name="_DBObjectName" Value="FK_CP_cash_bank_ID"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.ERP.EO.TblPcpM.GrnMId"/>
+      <Item Value="model.ERP.EO.TblCashPurchM.BankCashId"/>
     </AttrArray>
   </Key>
   <Key
-    Name="FkPcpMSupplier">
+    Name="FkCpMDepartment">
     <DesignTime>
-      <Attr Name="_referencedKey" Value="PK_PBL_SUPP_ID"/>
+      <Attr Name="_referencedKey" Value="PK_DEPARTMENT"/>
       <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="FK_PCP_M_SUPPLIER"/>
+      <Attr Name="_DBObjectName" Value="FK_CP_M_DEPARTMENT"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.ERP.EO.TblPcpM.PblSuppId"/>
+      <Item Value="model.ERP.EO.TblCashPurchM.DepartmentId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkCpMProject">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_PROJECT"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_CP_M_PROJECT"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblCashPurchM.ProjectId"/>
     </AttrArray>
   </Key>
 </Entity>

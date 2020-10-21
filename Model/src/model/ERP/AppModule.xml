@@ -281,12 +281,6 @@
     Name="TblPcpDView2"
     ViewObjectName="model.ERP.VO.TblPcpDView"/>
   <ViewUsage
-    Name="TblPbpDView3"
-    ViewObjectName="model.ERP.VO.TblPbpDView"/>
-  <ViewUsage
-    Name="TblPcpDView3"
-    ViewObjectName="model.ERP.VO.TblPcpDView"/>
-  <ViewUsage
     Name="Bank_Setup1"
     ViewObjectName="model.ERP.VO.Bank_Setup"/>
   <ViewUsage
@@ -343,6 +337,15 @@
   <ViewUsage
     Name="TblProjectDdView1"
     ViewObjectName="model.ERP.VO.TblProjectDdView"/>
+  <ViewUsage
+    Name="TblCashPurchDView1"
+    ViewObjectName="model.ERP.VO.TblCashPurchDView"/>
+  <ViewUsage
+    Name="TblCashPurchMView1"
+    ViewObjectName="model.ERP.VO.TblCashPurchMView"/>
+  <ViewUsage
+    Name="TblCashPurchDView2"
+    ViewObjectName="model.ERP.VO.TblCashPurchDView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -596,18 +599,6 @@
     DstViewUsageName="model.ERP.AppModule.TblPcpDView2"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="FkPbpDIdLink1"
-    ViewLinkObjectName="model.ERP.VO.FkPbpDIdLink"
-    SrcViewUsageName="model.ERP.AppModule.TblBankCashView1"
-    DstViewUsageName="model.ERP.AppModule.TblPbpDView3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkPcpDIdLink1"
-    ViewLinkObjectName="model.ERP.VO.FkPcpDIdLink"
-    SrcViewUsageName="model.ERP.AppModule.TblBankCashView1"
-    DstViewUsageName="model.ERP.AppModule.TblPcpDView3"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="FkBpvDMasterLink1"
     ViewLinkObjectName="model.ERP.VO.FkBpvDMasterLink"
     SrcViewUsageName="model.ERP.AppModule.TblBpvMView1"
@@ -648,5 +639,11 @@
     ViewLinkObjectName="model.ERP.VO.FkProjectCenterLink"
     SrcViewUsageName="model.ERP.AppModule.TblProjectDView1"
     DstViewUsageName="model.ERP.AppModule.TblProjectDdView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkCpDMLink1"
+    ViewLinkObjectName="model.ERP.VO.FkCpDMLink"
+    SrcViewUsageName="model.ERP.AppModule.TblCashPurchMView1"
+    DstViewUsageName="model.ERP.AppModule.TblCashPurchDView2"
     Reversed="false"/>
 </AppModule>

@@ -66,25 +66,6 @@
     <DisplayCriteria/>
   </ListBinding>
   <ListBinding
-    Name="LOV_GrnMId"
-    ListVOName="Inv_GRN_Master_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="GrnMId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Id"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Dated"/>
-      <Item Value="Vno"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
     Name="LOV_BankCashId"
     ListVOName="Bank_Cash_Bank_LOV1"
     ListRangeSize="-1"
@@ -196,20 +177,6 @@
     EntityUsage="TblPbpM"
     AliasName="PBL_SUPP_ID"
     LOVName="LOV_PblSuppId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="GrnMId"
-    PrecisionRule="true"
-    EntityAttrName="GrnMId"
-    EntityUsage="TblPbpM"
-    AliasName="GRN_M_ID"
-    LOVName="LOV_GrnMId">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

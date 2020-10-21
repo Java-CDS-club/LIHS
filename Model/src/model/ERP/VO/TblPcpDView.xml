@@ -20,25 +20,15 @@
   <ViewAccessor
     Name="Inv_PO_Master_LOV1"
     ViewObjectName="model.LOV.Inv_PO_Master_LOV"
-    RowLevelBinds="true"/>
-  <ListBinding
-    Name="LOV_BankCashId"
-    ListVOName="Bank_Cash_Cash_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="BankCashId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Id"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="getSuppID">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[PblSuppId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_PoMId"
     ListVOName="Inv_PO_Master_LOV1"
@@ -61,6 +51,25 @@
   <EntityUsage
     Name="TblPcpD"
     Entity="model.ERP.EO.TblPcpD"/>
+  <EntityUsage
+    Name="TblPcpM"
+    Entity="model.ERP.EO.TblPcpM"
+    Association="model.ERP.EO.FkPcpDMAssoc"
+    AssociationEnd="model.ERP.EO.FkPcpDMAssoc.TblPcpM"
+    SourceUsage="model.ERP.VO.TblPcpDView.TblPcpD"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="LEFT OUTER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.ERP.EO.TblPcpM.Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.ERP.EO.TblPcpD.PcpMId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
@@ -87,21 +96,6 @@
     EntityUsage="TblPcpD"
     AliasName="PO_M_ID"
     LOVName="LOV_PoMId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="BankCashId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="BankCashId"
-    EntityUsage="TblPcpD"
-    AliasName="BANK_CASH_ID"
-    LOVName="LOV_BankCashId">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -157,4 +151,19 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblPcpD"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="PblSuppId"
+    PrecisionRule="true"
+    EntityAttrName="PblSuppId"
+    EntityUsage="TblPcpM"
+    AliasName="PBL_SUPP_ID"/>
+  <ViewAttribute
+    Name="Id1"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblPcpM"
+    AliasName="ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Id"/>
+  </AttrArray>
 </ViewObject>

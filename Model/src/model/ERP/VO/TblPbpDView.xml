@@ -6,13 +6,25 @@
   Name="TblPbpDView"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SelectList="TblPbpD.ID, 
+       TblPbpD.PBP_M_ID, 
+       TblPbpD.SR_NO, 
+       TblPbpD.PO_M_ID, 
+       TblPbpD.DESCRIPTION, 
+       TblPbpD.AMOUNT, 
+       TblPbpD.DR, 
+       TblPbpD.CR, 
+       TblPbpD.CREATED_DATE, 
+       TblPbpD.CREATED_BY, 
+       TblPbpD.UPDATED_DATE, 
+       TblPbpD.UPDATED_BY, 
+       TblPbpM.PBL_SUPP_ID, 
+       TblPbpM.ID AS ID1"
+  FromList="TBL_PBP_D TblPbpD, TBL_PBP_M TblPbpM"
+  Where="TblPbpD.PBP_M_ID = TblPbpM.ID(+)">
   <ViewAccessor
     Name="Bank_Cash_Bank_LOV1"
     ViewObjectName="model.LOV.Bank_Cash_Bank_LOV"
@@ -20,25 +32,15 @@
   <ViewAccessor
     Name="Inv_PO_Master_LOV1"
     ViewObjectName="model.LOV.Inv_PO_Master_LOV"
-    RowLevelBinds="true"/>
-  <ListBinding
-    Name="LOV_BankCashId"
-    ListVOName="Bank_Cash_Bank_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="BankCashId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Id"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="getSuppID">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[PblSuppId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_PoMId"
     ListVOName="Inv_PO_Master_LOV1"
@@ -61,6 +63,25 @@
   <EntityUsage
     Name="TblPbpD"
     Entity="model.ERP.EO.TblPbpD"/>
+  <EntityUsage
+    Name="TblPbpM"
+    Entity="model.ERP.EO.TblPbpM"
+    Association="model.ERP.EO.FkPbpDAssoc"
+    AssociationEnd="model.ERP.EO.FkPbpDAssoc.TblPbpM"
+    SourceUsage="model.ERP.VO.TblPbpDView.TblPbpD"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="LEFT OUTER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.ERP.EO.TblPbpM.Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.ERP.EO.TblPbpD.PbpMId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
@@ -80,21 +101,6 @@
     EntityAttrName="SrNo"
     EntityUsage="TblPbpD"
     AliasName="SR_NO"/>
-  <ViewAttribute
-    Name="BankCashId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="BankCashId"
-    EntityUsage="TblPbpD"
-    AliasName="BANK_CASH_ID"
-    LOVName="LOV_BankCashId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
   <ViewAttribute
     Name="PoMId"
     PrecisionRule="true"
@@ -157,4 +163,19 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblPbpD"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="PblSuppId"
+    PrecisionRule="true"
+    EntityAttrName="PblSuppId"
+    EntityUsage="TblPbpM"
+    AliasName="PBL_SUPP_ID"/>
+  <ViewAttribute
+    Name="Id1"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblPbpM"
+    AliasName="ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Id"/>
+  </AttrArray>
 </ViewObject>

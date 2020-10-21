@@ -37,14 +37,6 @@
     ColumnType="NUMBER"
     TableName="TBL_PBP_D"/>
   <Attribute
-    Name="BankCashId"
-    IsNotNull="true"
-    ColumnName="BANK_CASH_ID"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    TableName="TBL_PBP_D"/>
-  <Attribute
     Name="Description"
     Precision="100"
     ColumnName="DESCRIPTION"
@@ -119,13 +111,6 @@
     AssociationOtherEnd="model.ERP.EO.FkPbpDAssoc.TblPbpD"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="TblBankCash"
-    Association="model.ERP.EO.FkPbpDIdAssoc"
-    AssociationEnd="model.ERP.EO.FkPbpDIdAssoc.TblBankCash"
-    AssociationOtherEnd="model.ERP.EO.FkPbpDIdAssoc.TblPbpD"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
   <Key
     Name="PkPbpDId"
     PrimaryKey="true">
@@ -154,8 +139,5 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_PBP_D_ID"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.ERP.EO.TblPbpD.BankCashId"/>
-    </AttrArray>
   </Key>
 </Entity>
