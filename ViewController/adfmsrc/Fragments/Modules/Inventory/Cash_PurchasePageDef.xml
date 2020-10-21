@@ -6,12 +6,14 @@
     <variableIterator id="variables"/>
     <iterator Binds="USERS_CRUD_OPERATIONS1" RangeSize="25" DataControl="AppModuleDataControl"
               id="USERS_CRUD_OPERATIONS1Iterator"/>
-    <iterator Binds="TblGrnMView1" RangeSize="25" DataControl="AppModuleDataControl1" id="TblGrnMView1Iterator"/>
-    <searchRegion Binds="TblGrnMView1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblGrnMView1Query"/>
-    <iterator Binds="TblGrnDView2" RangeSize="25" DataControl="AppModuleDataControl1" id="TblGrnDView2Iterator"/>
-    <searchRegion Binds="TblGrnDView2Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblGrnDView2Query"/>
+    <iterator Binds="TblCashPurchMView1" RangeSize="8" DataControl="AppModuleDataControl1"
+              id="TblCashPurchMView1Iterator"/>
+    <searchRegion Binds="TblCashPurchMView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblCashPurchMView1Query"/>
+    <iterator Binds="TblCashPurchDView2" RangeSize="8" DataControl="AppModuleDataControl1"
+              id="TblCashPurchDView2Iterator"/>
+    <searchRegion Binds="TblCashPurchDView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblCashPurchDView2Query"/>
   </executables>
   <bindings>
     <tree IterBinding="USERS_CRUD_OPERATIONS1Iterator" id="USERS_CRUD_OPERATIONS1">
@@ -25,74 +27,60 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="TblGrnMView1Iterator" id="Id">
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl1"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl1"/>
+    <attributeValues IterBinding="TblCashPurchMView1Iterator" id="Id">
       <AttrNames>
         <Item Value="Id"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblGrnMView1Iterator" id="Vno">
-      <AttrNames>
-        <Item Value="Vno"/>
-      </AttrNames>
-    </attributeValues>
-    <list IterBinding="TblGrnMView1Iterator" StaticList="false" Uses="LOV_Vtp" id="Vtp" DTSupportsMRU="false"
-          SelectItemValueMode="ListObject"/>
-    <attributeValues IterBinding="TblGrnMView1Iterator" id="Dated">
+    <attributeValues IterBinding="TblCashPurchMView1Iterator" id="Dated">
       <AttrNames>
         <Item Value="Dated"/>
       </AttrNames>
     </attributeValues>
-    <list IterBinding="TblGrnMView1Iterator" StaticList="false" Uses="LOV_QcMId" id="QcMId" DTSupportsMRU="false"
-          SelectItemValueMode="ListObject"/>
-    <attributeValues IterBinding="TblGrnMView1Iterator" id="PoMId">
-      <AttrNames>
-        <Item Value="PoMId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="TblGrnMView1Iterator" id="Narration">
+    <list IterBinding="TblCashPurchMView1Iterator" StaticList="false" Uses="LOV_BankCashId" id="BankCashId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="TblCashPurchMView1Iterator" id="Narration">
       <AttrNames>
         <Item Value="Narration"/>
       </AttrNames>
     </attributeValues>
-    <list IterBinding="TblGrnMView1Iterator" StaticList="false" Uses="LOV_DepartmentId" id="DepartmentId"
+    <list IterBinding="TblCashPurchMView1Iterator" StaticList="false" Uses="LOV_ProjectId" id="ProjectId"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <list IterBinding="TblGrnMView1Iterator" StaticList="false" Uses="LOV_ProjectId" id="ProjectId"
+    <list IterBinding="TblCashPurchMView1Iterator" StaticList="false" Uses="LOV_DepartmentId" id="DepartmentId"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <list IterBinding="TblGrnMView1Iterator" StaticList="false" Uses="LOV_PblSuppId" id="PblSuppId"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <attributeValues IterBinding="TblGrnMView1Iterator" id="Carrier">
+    <attributeValues IterBinding="TblCashPurchMView1Iterator" id="Vno">
       <AttrNames>
-        <Item Value="Carrier"/>
+        <Item Value="Vno"/>
       </AttrNames>
     </attributeValues>
-    <action IterBinding="TblGrnMView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
-    <action IterBinding="TblGrnMView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
-    <action IterBinding="TblGrnMView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
-    <action IterBinding="TblGrnMView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
-    <action IterBinding="TblGrnMView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
-    <action IterBinding="TblGrnMView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
-    <action IterBinding="TblGrnMView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl1"/>
-    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl1"/>
-    <tree IterBinding="TblGrnMView1Iterator" id="TblGrnMView1">
-      <nodeDefinition DefName="model.ERP.VO.TblGrnMView" Name="TblGrnMView10">
+    <list IterBinding="TblCashPurchMView1Iterator" StaticList="false" Uses="LOV_Vtp" id="Vtp" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <action IterBinding="TblCashPurchMView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="TblCashPurchMView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="TblCashPurchMView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="TblCashPurchMView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="TblCashPurchMView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblCashPurchMView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblCashPurchMView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="TblCashPurchMView1Iterator" id="TblCashPurchMView1">
+      <nodeDefinition DefName="model.ERP.VO.TblCashPurchMView" Name="TblCashPurchMView10">
         <AttrNames>
           <Item Value="Id"/>
           <Item Value="Vno"/>
           <Item Value="Vtp"/>
           <Item Value="Dated"/>
-          <Item Value="QcMId"/>
-          <Item Value="PoMId"/>
-          <Item Value="Narration"/>
-          <Item Value="DepartmentId"/>
+          <Item Value="BankCashId"/>
           <Item Value="ProjectId"/>
-          <Item Value="PblSuppId"/>
-          <Item Value="Carrier"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="Narration"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <tree IterBinding="TblGrnDView2Iterator" id="TblGrnDView2">
-      <nodeDefinition DefName="model.ERP.VO.TblGrnDView" Name="TblGrnDView20">
+    <tree IterBinding="TblCashPurchDView2Iterator" id="TblCashPurchDView2">
+      <nodeDefinition DefName="model.ERP.VO.TblCashPurchDView" Name="TblCashPurchDView20">
         <AttrNames>
           <Item Value="Id"/>
           <Item Value="SrNo"/>
@@ -105,8 +93,10 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="TblGrnDView2Iterator" id="CreateInsert1" RequiresUpdateModel="true" Action="createInsertRow"/>
-    <action IterBinding="TblGrnDView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
-    <action IterBinding="TblGrnDView2Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="TblCashPurchDView2Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblCashPurchDView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblCashPurchDView2Iterator" id="Delete1" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>
