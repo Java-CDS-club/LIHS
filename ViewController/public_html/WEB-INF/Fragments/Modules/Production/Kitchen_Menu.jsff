@@ -74,7 +74,7 @@
                               <af:convertDateTime pattern="#{bindings.ToDated.format}"/>
                             </af:inputDate>
                             <f:facet name="footer">
-                              <af:panelGroupLayout layout="horizontal" id="pgl6">
+                              <af:panelGroupLayout layout="horizontal" halign="center" id="pgl6">
                                 <af:button actionListener="#{bindings.First.execute}" text="First"
                                            disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b2"/>
                                 <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
@@ -86,10 +86,7 @@
                               </af:panelGroupLayout>
                             </f:facet>
                           </af:panelFormLayout>
-                          
-                        </af:showDetailItem>
-                      </af:panelTabbed>
-                      <af:spacer width="5" height="10" id="s7"/>
+                            <af:spacer width="5" height="10" id="s7"/>
                        <af:panelGroupLayout id="pgl3" halign="center" layout="horizontal">
                             <af:iterator id="i2" var="index" varStatus="status"
                                          value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
@@ -101,6 +98,9 @@
                                 <af:spacer width="5" height="10" id="s3"/>
                             </af:iterator>
                         </af:panelGroupLayout>
+                        </af:showDetailItem>
+                      </af:panelTabbed>
+                    
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -224,7 +224,7 @@
                   </af:gridRow>
                 </af:panelGridLayout>
               </af:showDetailItem>
-              <af:showDetailItem text="Serach" id="sdi1">
+              <af:showDetailItem text="Search" id="sdi1">
                 <af:table value="#{bindings.TblKitchenMenuMView1.collectionModel}" var="row"
                           rows="#{bindings.TblKitchenMenuMView1.rangeSize}"
                           emptyText="#{bindings.TblKitchenMenuMView1.viewable ? 'No data to display.' : 'Access Denied.'}"

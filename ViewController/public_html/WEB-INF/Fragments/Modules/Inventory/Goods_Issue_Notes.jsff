@@ -114,7 +114,7 @@
                               <f:validator binding="#{bindings.Vtp.validator}"/>
                             </af:selectOneChoice>
                             <f:facet name="footer">
-                              <af:panelGroupLayout layout="horizontal" id="pgl6">
+                              <af:panelGroupLayout layout="horizontal" halign="center" id="pgl6">
                                 <af:button actionListener="#{bindings.First.execute}" text="First"
                                            disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b2"/>
                                 <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
