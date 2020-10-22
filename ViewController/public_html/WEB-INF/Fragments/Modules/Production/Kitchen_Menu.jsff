@@ -29,63 +29,119 @@
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3">
                       <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
                         <af:showDetailItem id="tab2" text="Kitchen Menu Master">
-                          <af:panelFormLayout id="pfl1" maxColumns="3" rows="4">
-                            <af:inputText value="#{bindings.Id.inputValue}" label="ID" visible="false"
-                                          required="#{bindings.Id.hints.mandatory}"
-                                          columns="#{bindings.Id.hints.displayWidth}"
-                                          maximumLength="#{bindings.Id.hints.precision}"
-                                          shortDesc="#{bindings.Id.hints.tooltip}" id="it1" disabled="true">
-                              <f:validator binding="#{bindings.Id.validator}"/>
-                              <af:convertNumber groupingUsed="false" pattern="#{bindings.Id.format}"/>
-                            </af:inputText>
-                            <af:inputDate value="#{bindings.Dated.inputValue}" label="Date"
-                                          required="#{bindings.Dated.hints.mandatory}"
-                                          columns="#{bindings.Dated.hints.displayWidth}"
-                                          shortDesc="#{bindings.Dated.hints.tooltip}" id="id1"
-                                          contentStyle="width:150px;">
-                              <f:validator binding="#{bindings.Dated.validator}"/>
-                              <af:convertDateTime pattern="#{bindings.Dated.format}"/>
-                            </af:inputDate>
-                            <af:spacer  id="s4"/>
-                            <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
-                                                label="Project"
-                                                required="#{bindings.ProjectId.hints.mandatory}"
-                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc1"
-                                                contentStyle="width:150px;">
-                              <f:selectItems value="#{bindings.ProjectId.items}" id="si1"/>
-                              <f:validator binding="#{bindings.ProjectId.validator}"/>
-                            </af:selectOneChoice>
-                            <af:spacer  id="s5"/>
-                            <af:inputDate value="#{bindings.FrDated.inputValue}" label="From Date"
-                                          required="#{bindings.FrDated.hints.mandatory}"
-                                          columns="#{bindings.FrDated.hints.displayWidth}"
-                                          shortDesc="#{bindings.FrDated.hints.tooltip}" id="id2"
-                                          contentStyle="width:150px;">
-                              <f:validator binding="#{bindings.FrDated.validator}"/>
-                              <af:convertDateTime pattern="#{bindings.FrDated.format}"/>
-                            </af:inputDate>
-                            <af:spacer  id="s6"/>
-                            <af:inputDate value="#{bindings.ToDated.inputValue}" label="To Date"
-                                          required="#{bindings.ToDated.hints.mandatory}"
-                                          columns="#{bindings.ToDated.hints.displayWidth}"
-                                          shortDesc="#{bindings.ToDated.hints.tooltip}" id="id3"
-                                          contentStyle="width:150px;">
-                              <f:validator binding="#{bindings.ToDated.validator}"/>
-                              <af:convertDateTime pattern="#{bindings.ToDated.format}"/>
-                            </af:inputDate>
-                            <f:facet name="footer">
-                              <af:panelGroupLayout layout="horizontal" halign="center" id="pgl6">
-                                <af:button actionListener="#{bindings.First.execute}" text="First"
-                                           disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b2"/>
-                                <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
-                                           disabled="#{!bindings.Previous.enabled}" partialSubmit="true" id="b3"/>
-                                <af:button actionListener="#{bindings.Next.execute}" text="Next"
-                                           disabled="#{!bindings.Next.enabled}" partialSubmit="true" id="b4"/>
-                                <af:button actionListener="#{bindings.Last.execute}" text="Last"
-                                           disabled="#{!bindings.Last.enabled}" partialSubmit="true" id="b5"/>
-                              </af:panelGroupLayout>
-                            </f:facet>
-                          </af:panelFormLayout>
+                          <af:table value="#{bindings.TblKitchenMenuMView1.collectionModel}" var="row"
+                          rows="#{bindings.TblKitchenMenuMView1.rangeSize}"
+                          emptyText="#{bindings.TblKitchenMenuMView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.TblKitchenMenuMView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.TblKitchenMenuMView1.collectionModel.makeCurrent}"
+                          rowSelection="single" fetchSize="#{bindings.TblKitchenMenuMView1.rangeSize}"
+                          filterModel="#{bindings.TblKitchenMenuMView1Query.queryDescriptor}" filterVisible="true"
+                          queryListener="#{bindings.TblKitchenMenuMView1Query.processQuery}" varStatus="vs" id="t1"
+                          scrollPolicy="page" autoHeightRows="0">
+                  <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.Id.name}" filterable="true"
+                             sortable="true" headerText="#{bindings.TblKitchenMenuMView1.hints.Id.label}" id="c1" visible="false">
+                             <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Id}"
+       id="it8" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+
+                    <af:inputText value="#{row.bindings.Id.inputValue}"
+                                  label="#{bindings.TblKitchenMenuMView1.hints.Id.label}"
+                                  required="#{bindings.TblKitchenMenuMView1.hints.Id.mandatory}"
+                                  columns="#{bindings.TblKitchenMenuMView1.hints.Id.displayWidth}"
+                                  maximumLength="#{bindings.TblKitchenMenuMView1.hints.Id.precision}"
+                                  shortDesc="#{bindings.TblKitchenMenuMView1.hints.Id.tooltip}" id="it2" readOnly="true">
+                      <f:validator binding="#{row.bindings.Id.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.TblKitchenMenuMView1.hints.Id.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  
+                  <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.ProjectId.name}" filterable="true"
+                             sortable="true" headerText="Project"
+                             id="c3" width="150">
+                             <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.ProjectId}"
+       id="it3" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                    <af:selectOneChoice value="#{row.bindings.ProjectId.inputValue}"
+                                        label="#{row.bindings.ProjectId.label}"
+                                        required="#{bindings.TblKitchenMenuMView1.hints.ProjectId.mandatory}"
+                                        shortDesc="#{bindings.TblKitchenMenuMView1.hints.ProjectId.tooltip}" id="soc2" autoSubmit="true" >
+                      <f:selectItems value="#{row.bindings.ProjectId.items}" id="si2"/>
+                      <f:validator binding="#{row.bindings.ProjectId.validator}"/>
+                    </af:selectOneChoice>
+                  </af:column>
+                            <af:column headerText="Centers" id="c10" sortable="true" filterable="true">
+                             <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.ProjectDId}"
+       id="it1" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                              <af:selectOneChoice value="#{row.bindings.ProjectDId.inputValue}"
+                                                  label="#{row.bindings.ProjectDId.label}"
+                                                  required="#{bindings.TblKitchenMenuMView1.hints.ProjectDId.mandatory}"
+                                                  shortDesc="#{bindings.TblKitchenMenuMView1.hints.ProjectDId.tooltip}"
+                                                  id="soc1">
+                                <f:selectItems value="#{row.bindings.ProjectDId.items}" id="si1"/>
+                                <f:validator binding="#{row.bindings.ProjectDId.validator}"/>
+                              </af:selectOneChoice>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.Dated.name}" filterable="true"
+                             sortable="true" headerText="Date" id="c2">
+                    <f:facet name="filter">
+                      <af:inputDate value="#{bindings.TblKitchenMenuMView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
+                                    id="id13" placeholder="Search ">
+                        <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.Dated.format}"/>
+                      </af:inputDate>
+                    </f:facet>
+                    <af:inputDate value="#{row.bindings.Dated.inputValue}"
+                                  label="#{bindings.TblKitchenMenuMView1.hints.Dated.label}"
+                                  required="#{bindings.TblKitchenMenuMView1.hints.Dated.mandatory}"
+                                  columns="#{bindings.TblKitchenMenuMView1.hints.Dated.displayWidth}"
+                                  shortDesc="#{bindings.TblKitchenMenuMView1.hints.Dated.tooltip}" id="id5" >
+                      <f:validator binding="#{row.bindings.Dated.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.Dated.format}"/>
+                    </af:inputDate>
+                  </af:column>
+                            <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.FrDated.name}" filterable="true"
+                             sortable="true" headerText="From Date" id="c4">
+                    <f:facet name="filter">
+                      <af:inputDate value="#{bindings.TblKitchenMenuMView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.FrDated.value}"
+                                    id="id6" placeholder="Search ">
+                        <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.FrDated.format}"/>
+                      </af:inputDate>
+                    </f:facet>
+                    <af:inputDate value="#{row.bindings.FrDated.inputValue}"
+                                  label="#{bindings.TblKitchenMenuMView1.hints.FrDated.label}"
+                                  required="#{bindings.TblKitchenMenuMView1.hints.FrDated.mandatory}"
+                                  columns="#{bindings.TblKitchenMenuMView1.hints.FrDated.displayWidth}"
+                                  shortDesc="#{bindings.TblKitchenMenuMView1.hints.FrDated.tooltip}" id="id7" >
+                      <f:validator binding="#{row.bindings.FrDated.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.FrDated.format}"/>
+                    </af:inputDate>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.ToDated.name}" filterable="true"
+                             sortable="true" headerText="To Date" id="c5">
+                    <f:facet name="filter">
+                      <af:inputDate value="#{bindings.TblKitchenMenuMView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.ToDated.value}"
+                                    id="id8" placeholder="Search ">
+                        <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.ToDated.format}"/>
+                      </af:inputDate>
+                    </f:facet>
+                    <af:inputDate value="#{row.bindings.ToDated.inputValue}"
+                                  label="#{bindings.TblKitchenMenuMView1.hints.ToDated.label}"
+                                  required="#{bindings.TblKitchenMenuMView1.hints.ToDated.mandatory}"
+                                  columns="#{bindings.TblKitchenMenuMView1.hints.ToDated.displayWidth}"
+                                  shortDesc="#{bindings.TblKitchenMenuMView1.hints.ToDated.tooltip}" id="id9">
+                      <f:validator binding="#{row.bindings.ToDated.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.ToDated.format}"/>
+                    </af:inputDate>
+                  </af:column>
+                </af:table>
                             <af:spacer width="5" height="10" id="s7"/>
                        <af:panelGroupLayout id="pgl3" halign="center" layout="horizontal">
                             <af:iterator id="i2" var="index" varStatus="status"
@@ -224,105 +280,7 @@
                   </af:gridRow>
                 </af:panelGridLayout>
               </af:showDetailItem>
-              <af:showDetailItem text="Search" id="sdi1">
-                <af:table value="#{bindings.TblKitchenMenuMView1.collectionModel}" var="row"
-                          rows="#{bindings.TblKitchenMenuMView1.rangeSize}"
-                          emptyText="#{bindings.TblKitchenMenuMView1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                          rowBandingInterval="0"
-                          selectedRowKeys="#{bindings.TblKitchenMenuMView1.collectionModel.selectedRow}"
-                          selectionListener="#{bindings.TblKitchenMenuMView1.collectionModel.makeCurrent}"
-                          rowSelection="single" fetchSize="#{bindings.TblKitchenMenuMView1.rangeSize}"
-                          filterModel="#{bindings.TblKitchenMenuMView1Query.queryDescriptor}" filterVisible="true"
-                          queryListener="#{bindings.TblKitchenMenuMView1Query.processQuery}" varStatus="vs" id="t1"
-                          scrollPolicy="page" autoHeightRows="0">
-                  <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.Id.name}" filterable="true"
-                             sortable="true" headerText="#{bindings.TblKitchenMenuMView1.hints.Id.label}" id="c1" visible="false">
-                             <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.Id}"
-       id="it8" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-
-                    <af:inputText value="#{row.bindings.Id.inputValue}"
-                                  label="#{bindings.TblKitchenMenuMView1.hints.Id.label}"
-                                  required="#{bindings.TblKitchenMenuMView1.hints.Id.mandatory}"
-                                  columns="#{bindings.TblKitchenMenuMView1.hints.Id.displayWidth}"
-                                  maximumLength="#{bindings.TblKitchenMenuMView1.hints.Id.precision}"
-                                  shortDesc="#{bindings.TblKitchenMenuMView1.hints.Id.tooltip}" id="it2" readOnly="true">
-                      <f:validator binding="#{row.bindings.Id.validator}"/>
-                      <af:convertNumber groupingUsed="false"
-                                        pattern="#{bindings.TblKitchenMenuMView1.hints.Id.format}"/>
-                    </af:inputText>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.Dated.name}" filterable="true"
-                             sortable="true" headerText="Date" id="c2">
-                    <f:facet name="filter">
-                      <af:inputDate value="#{bindings.TblKitchenMenuMView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
-                                    id="id13" placeholder="Search ">
-                        <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.Dated.format}"/>
-                      </af:inputDate>
-                    </f:facet>
-                    <af:inputDate value="#{row.bindings.Dated.inputValue}"
-                                  label="#{bindings.TblKitchenMenuMView1.hints.Dated.label}"
-                                  required="#{bindings.TblKitchenMenuMView1.hints.Dated.mandatory}"
-                                  columns="#{bindings.TblKitchenMenuMView1.hints.Dated.displayWidth}"
-                                  shortDesc="#{bindings.TblKitchenMenuMView1.hints.Dated.tooltip}" id="id5" readOnly="true">
-                      <f:validator binding="#{row.bindings.Dated.validator}"/>
-                      <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.Dated.format}"/>
-                    </af:inputDate>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.ProjectId.name}" filterable="true"
-                             sortable="true" headerText="Project"
-                             id="c3" width="150">
-                             <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.ProjectId}"
-       id="it3" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-                    <af:selectOneChoice value="#{row.bindings.ProjectId.inputValue}"
-                                        label="#{row.bindings.ProjectId.label}"
-                                        required="#{bindings.TblKitchenMenuMView1.hints.ProjectId.mandatory}"
-                                        shortDesc="#{bindings.TblKitchenMenuMView1.hints.ProjectId.tooltip}" id="soc2" readOnly="true">
-                      <f:selectItems value="#{row.bindings.ProjectId.items}" id="si2"/>
-                      <f:validator binding="#{row.bindings.ProjectId.validator}"/>
-                    </af:selectOneChoice>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.FrDated.name}" filterable="true"
-                             sortable="true" headerText="From Date" id="c4">
-                    <f:facet name="filter">
-                      <af:inputDate value="#{bindings.TblKitchenMenuMView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.FrDated.value}"
-                                    id="id6" placeholder="Search ">
-                        <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.FrDated.format}"/>
-                      </af:inputDate>
-                    </f:facet>
-                    <af:inputDate value="#{row.bindings.FrDated.inputValue}"
-                                  label="#{bindings.TblKitchenMenuMView1.hints.FrDated.label}"
-                                  required="#{bindings.TblKitchenMenuMView1.hints.FrDated.mandatory}"
-                                  columns="#{bindings.TblKitchenMenuMView1.hints.FrDated.displayWidth}"
-                                  shortDesc="#{bindings.TblKitchenMenuMView1.hints.FrDated.tooltip}" id="id7" readOnly="true">
-                      <f:validator binding="#{row.bindings.FrDated.validator}"/>
-                      <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.FrDated.format}"/>
-                    </af:inputDate>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.ToDated.name}" filterable="true"
-                             sortable="true" headerText="To Date" id="c5">
-                    <f:facet name="filter">
-                      <af:inputDate value="#{bindings.TblKitchenMenuMView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.ToDated.value}"
-                                    id="id8" placeholder="Search ">
-                        <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.ToDated.format}"/>
-                      </af:inputDate>
-                    </f:facet>
-                    <af:inputDate value="#{row.bindings.ToDated.inputValue}"
-                                  label="#{bindings.TblKitchenMenuMView1.hints.ToDated.label}"
-                                  required="#{bindings.TblKitchenMenuMView1.hints.ToDated.mandatory}"
-                                  columns="#{bindings.TblKitchenMenuMView1.hints.ToDated.displayWidth}"
-                                  shortDesc="#{bindings.TblKitchenMenuMView1.hints.ToDated.tooltip}" id="id9" readOnly="true">
-                      <f:validator binding="#{row.bindings.ToDated.validator}"/>
-                      <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.ToDated.format}"/>
-                    </af:inputDate>
-                  </af:column>
-                </af:table>
-              </af:showDetailItem>
+             
             </af:panelTabbed>
           </af:gridCell>
         </af:gridRow>

@@ -201,7 +201,7 @@
                                                   label="#{row.bindings.ItemL4Id.label}"
                                                   required="#{bindings.TblCashPurchDView2.hints.ItemL4Id.mandatory}"
                                                   shortDesc="#{bindings.TblCashPurchDView2.hints.ItemL4Id.tooltip}"
-                                                  id="soc9" readOnly="true">
+                                                  id="soc9" >
                                 <f:selectItems value="#{row.bindings.ItemL4Id.items}" id="si9"/>
                                 <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                               </af:selectOneChoice>
@@ -218,7 +218,7 @@
                                                   label="#{row.bindings.UomId.label}"
                                                   required="#{bindings.TblCashPurchDView2.hints.UomId.mandatory}"
                                                   shortDesc="#{bindings.TblCashPurchDView2.hints.UomId.tooltip}"
-                                                  id="soc10" readOnly="true">
+                                                  id="soc10" readOnly="true" >
                                 <f:selectItems value="#{row.bindings.UomId.items}" id="si10"/>
                                 <f:validator binding="#{row.bindings.UomId.validator}"/>
                               </af:selectOneChoice>
@@ -237,7 +237,7 @@
                                             columns="#{bindings.TblCashPurchDView2.hints.Description.displayWidth}"
                                             maximumLength="#{bindings.TblCashPurchDView2.hints.Description.precision}"
                                             shortDesc="#{bindings.TblCashPurchDView2.hints.Description.tooltip}"
-                                            id="it9" readOnly="true">
+                                            id="it9" >
                                 <f:validator binding="#{row.bindings.Description.validator}"/>
                               </af:inputText>
                             </af:column>

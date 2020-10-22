@@ -16,40 +16,6 @@
               id="USERS_CRUD_OPERATIONS1Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="TblKitchenMenuMView1Iterator" id="Id">
-      <AttrNames>
-        <Item Value="Id"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="TblKitchenMenuMView1Iterator" id="Dated">
-      <AttrNames>
-        <Item Value="Dated"/>
-      </AttrNames>
-    </attributeValues>
-    <list IterBinding="TblKitchenMenuMView1Iterator" StaticList="false" Uses="LOV_ProjectId" id="ProjectId"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <attributeValues IterBinding="TblKitchenMenuMView1Iterator" id="FrDated">
-      <AttrNames>
-        <Item Value="FrDated"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="TblKitchenMenuMView1Iterator" id="ToDated">
-      <AttrNames>
-        <Item Value="ToDated"/>
-      </AttrNames>
-    </attributeValues>
-    <action IterBinding="TblKitchenMenuMView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
-    <action IterBinding="TblKitchenMenuMView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
-    <action IterBinding="TblKitchenMenuMView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
-    <action IterBinding="TblKitchenMenuMView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
-    <action IterBinding="TblKitchenMenuMView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
-    <action IterBinding="TblKitchenMenuMView1Iterator" id="Execute" RequiresUpdateModel="true"
-            Action="iteratorExecute"/>
-    <action IterBinding="TblKitchenMenuMView1Iterator" id="Delete" RequiresUpdateModel="false"
-            Action="removeCurrentRow"/>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl1"/>
-    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl1"/>
     <tree IterBinding="TblKitchenMenuMView1Iterator" id="TblKitchenMenuMView1">
       <nodeDefinition DefName="model.ERP.VO.TblKitchenMenuMView" Name="TblKitchenMenuMView10">
         <AttrNames>
@@ -58,9 +24,18 @@
           <Item Value="ProjectId"/>
           <Item Value="FrDated"/>
           <Item Value="ToDated"/>
+          <Item Value="ProjectDId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action IterBinding="TblKitchenMenuMView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblKitchenMenuMView1Iterator" id="Execute" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblKitchenMenuMView1Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl1"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl1"/>
     <tree IterBinding="TblKitchenMenuDView2Iterator" id="TblKitchenMenuDView2">
       <nodeDefinition DefName="model.ERP.VO.TblKitchenMenuDView" Name="TblKitchenMenuDView20">
         <AttrNames>

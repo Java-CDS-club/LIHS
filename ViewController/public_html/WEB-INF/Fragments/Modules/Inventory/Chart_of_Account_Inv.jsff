@@ -314,7 +314,21 @@
                       <f:validator binding="#{row.bindings.Name.validator}"/>
                     </af:inputText>
                   </af:column>
-                  <af:column headerText="Active" id="c12" sortable="true" filterable="true">
+                            <af:column headerText="UOM" id="c17" sortable="true" filterable="true">
+                          <f:facet name="filter">
+                                  <af:inputText value="#{vs.filterCriteria.UomId}"
+                                   id="it25" placeholder="Search ">
+                                  </af:inputText>
+                            </f:facet>
+                              <af:selectOneChoice value="#{row.bindings.UomId.inputValue}"
+                                                  label="#{row.bindings.UomId.label}"
+                                                  required="#{bindings.TblItemL4View3.hints.UomId.mandatory}"
+                                                  shortDesc="#{bindings.TblItemL4View3.hints.UomId.tooltip}" id="soc8">
+                                <f:selectItems value="#{row.bindings.UomId.items}" id="si8"/>
+                                <f:validator binding="#{row.bindings.UomId.validator}"/>
+                              </af:selectOneChoice>
+                            </af:column>
+                            <af:column headerText="Active" id="c12" sortable="true" filterable="true">
                    <f:facet name="filter">
                                   <af:inputText value="#{vs.filterCriteria.Ast}"
                                    id="it12" placeholder="Search ">
@@ -397,7 +411,21 @@
                       <f:validator binding="#{row.bindings.Name.validator}"/>
                     </af:inputText>
                   </af:column>
-                  <af:column sortProperty="#{bindings.TblItemL4View31.hints.Ast.name}" filterable="true" sortable="true"
+                            <af:column headerText="UOM" id="c14" sortable="true" filterable="true">
+                             <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.UomId}"
+       id="it24" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                              <af:selectOneChoice value="#{row.bindings.UomId.inputValue}"
+                                                  label="#{row.bindings.UomId.label}"
+                                                  required="#{bindings.TblItemL4View31.hints.UomId.mandatory}"
+                                                  shortDesc="#{bindings.TblItemL4View31.hints.UomId.tooltip}" id="soc7" readOnly="true">
+                                <f:selectItems value="#{row.bindings.UomId.items}" id="si7"/>
+                                <f:validator binding="#{row.bindings.UomId.validator}"/>
+                              </af:selectOneChoice>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblItemL4View31.hints.Ast.name}" filterable="true" sortable="true"
                              headerText="Active" id="c16">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Ast}"

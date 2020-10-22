@@ -200,7 +200,7 @@
                               <af:selectOneChoice value="#{row.bindings.UomId.inputValue}"
                                                   label="#{row.bindings.UomId.label}"
                                                   required="#{bindings.TblDoDView2.hints.UomId.mandatory}"
-                                                  shortDesc="#{bindings.TblDoDView2.hints.UomId.tooltip}" id="soc8" >
+                                                  shortDesc="#{bindings.TblDoDView2.hints.UomId.tooltip}" id="soc8" readOnly="true" >
                                 <f:selectItems value="#{row.bindings.UomId.items}" id="si8"/>
                                 <f:validator binding="#{row.bindings.UomId.validator}"/>
                               </af:selectOneChoice>
