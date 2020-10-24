@@ -21,7 +21,12 @@
         </af:gridRow>
         <af:gridRow marginTop="5px" height="auto" id="gr2">
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-            <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
+            <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
+              <af:showDetailItem id="tab3" text="Production Finish Goods">
+                <af:panelGridLayout id="pgl6">
+                  <af:gridRow marginTop="5px" height="auto" id="gr3">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3">
+                       <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="tab1" text="Production Finish Goods Master">
                 <af:panelFormLayout id="pfl1" maxColumns="3" rows="6">
                   <af:inputText value="#{bindings.Id.inputValue}" label="ID" visible="false"
@@ -102,125 +107,16 @@
                             </af:iterator>
                         </af:panelGroupLayout>
               </af:showDetailItem>
-              <af:showDetailItem text="Search" id="sdi1">
-                <af:table value="#{bindings.TblProFgMasterView1.collectionModel}" var="row"
-                          rows="#{bindings.TblProFgMasterView1.rangeSize}"
-                          emptyText="#{bindings.TblProFgMasterView1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                          rowBandingInterval="0"
-                          selectedRowKeys="#{bindings.TblProFgMasterView1.collectionModel.selectedRow}"
-                          selectionListener="#{bindings.TblProFgMasterView1.collectionModel.makeCurrent}"
-                          rowSelection="single" fetchSize="#{bindings.TblProFgMasterView1.rangeSize}"
-                          filterModel="#{bindings.TblProFgMasterView1Query.queryDescriptor}" filterVisible="true"
-                          queryListener="#{bindings.TblProFgMasterView1Query.processQuery}" varStatus="vs" id="t2"
-                          scrollPolicy="page" autoHeightRows="0" partialTriggers="::b6">
-                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.Id.name}" filterable="true"
-                             sortable="true" headerText="ID" id="c8" visible="false">
-                             <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.Id}"
-       id="id4" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-
-                    <af:inputText value="#{row.bindings.Id.inputValue}"
-                                  label="#{bindings.TblProFgMasterView1.hints.Id.label}"
-                                  required="#{bindings.TblProFgMasterView1.hints.Id.mandatory}"
-                                  columns="#{bindings.TblProFgMasterView1.hints.Id.displayWidth}"
-                                  maximumLength="#{bindings.TblProFgMasterView1.hints.Id.precision}"
-                                  shortDesc="#{bindings.TblProFgMasterView1.hints.Id.tooltip}" id="it9" readOnly="true">
-                      <f:validator binding="#{row.bindings.Id.validator}"/>
-                      <af:convertNumber groupingUsed="false" pattern="#{bindings.TblProFgMasterView1.hints.Id.format}"/>
-                    </af:inputText>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.Vno.name}" filterable="true"
-                             sortable="true" headerText="Voucher No." id="c9">
-                             <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.Vno}"
-       id="it18" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-                    <af:inputText value="#{row.bindings.Vno.inputValue}"
-                                  label="#{bindings.TblProFgMasterView1.hints.Vno.label}"
-                                  required="#{bindings.TblProFgMasterView1.hints.Vno.mandatory}"
-                                  columns="#{bindings.TblProFgMasterView1.hints.Vno.displayWidth}"
-                                  maximumLength="#{bindings.TblProFgMasterView1.hints.Vno.precision}"
-                                  shortDesc="#{bindings.TblProFgMasterView1.hints.Vno.tooltip}" id="it10" readOnly="true">
-                      <f:validator binding="#{row.bindings.Vno.validator}"/>
-                    </af:inputText>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.Vtp.name}" filterable="true"
-                             sortable="true" headerText="Voucher Type" id="c10">
-                              <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.Vtp}"
-       id="it19" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-                    <af:selectOneChoice value="#{row.bindings.Vtp.inputValue}" label="#{row.bindings.Vtp.label}"
-                                        required="#{bindings.TblProFgMasterView1.hints.Vtp.mandatory}"
-                                        shortDesc="#{bindings.TblProFgMasterView1.hints.Vtp.tooltip}" id="soc5" readOnly="true">
-                      <f:selectItems value="#{row.bindings.Vtp.items}" id="si5"/>
-                      <f:validator binding="#{row.bindings.Vtp.validator}"/>
-                    </af:selectOneChoice>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.Dated.name}" filterable="true"
-                             sortable="true" headerText="Date" id="c11">
-                    <f:facet name="filter">
-                      <af:inputDate value="#{bindings.TblProFgMasterView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
-                                    id="id2">
-                        <af:convertDateTime pattern="#{bindings.TblProFgMasterView1.hints.Dated.format}"/>
-                      </af:inputDate>
-                    </f:facet>
-                    <af:inputDate value="#{row.bindings.Dated.inputValue}"
-                                  label="#{bindings.TblProFgMasterView1.hints.Dated.label}"
-                                  required="#{bindings.TblProFgMasterView1.hints.Dated.mandatory}"
-                                  columns="#{bindings.TblProFgMasterView1.hints.Dated.displayWidth}"
-                                  shortDesc="#{bindings.TblProFgMasterView1.hints.Dated.tooltip}" id="id3"
-                                  readOnly="true">
-                      <f:validator binding="#{row.bindings.Dated.validator}"/>
-                      <af:convertDateTime pattern="#{bindings.TblProFgMasterView1.hints.Dated.format}"/>
-                    </af:inputDate>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.PorMasterId.name}" filterable="true"
-                             sortable="true" headerText="Production Order"
-                             id="c12" width="200">
-                               <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.PorMasterId}"
-       id="it20" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-                    <af:selectOneChoice value="#{row.bindings.PorMasterId.inputValue}"
-                                        label="#{row.bindings.PorMasterId.label}"
-                                        required="#{bindings.TblProFgMasterView1.hints.PorMasterId.mandatory}"
-                                        shortDesc="#{bindings.TblProFgMasterView1.hints.PorMasterId.tooltip}" id="soc6" readOnly="true">
-                      <f:selectItems value="#{row.bindings.PorMasterId.items}" id="si6"/>
-                      <f:validator binding="#{row.bindings.PorMasterId.validator}"/>
-                    </af:selectOneChoice>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.Narration.name}" filterable="true"
-                             sortable="true" headerText="Remarks"
-                             id="c13" width="300">
-                              <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.Narration}"
-       id="it21" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-                    <af:inputText value="#{row.bindings.Narration.inputValue}"
-                                  label="#{bindings.TblProFgMasterView1.hints.Narration.label}"
-                                  required="#{bindings.TblProFgMasterView1.hints.Narration.mandatory}"
-                                  columns="#{bindings.TblProFgMasterView1.hints.Narration.displayWidth}"
-                                  maximumLength="#{bindings.TblProFgMasterView1.hints.Narration.precision}"
-                                  shortDesc="#{bindings.TblProFgMasterView1.hints.Narration.tooltip}" id="it11" readOnly="true">
-                      <f:validator binding="#{row.bindings.Narration.validator}"/>
-                    </af:inputText>
-                  </af:column>
-                </af:table>
-              </af:showDetailItem>
+             
             </af:panelTabbed>
-          </af:gridCell>
-        </af:gridRow>
-     
-        <af:gridRow marginTop="5px" height="auto" id="gr4">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-            <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr5">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5"/>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                       <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="tab2" text="Detail">
                 <af:table value="#{bindings.TblProFgDetailView2.collectionModel}" var="row"
                           rows="#{bindings.TblProFgDetailView2.rangeSize}"
@@ -365,6 +261,130 @@
                         </af:panelGroupLayout>          
               </af:showDetailItem>
             </af:panelTabbed>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </af:showDetailItem>
+              <af:showDetailItem text="Search" id="sdi2">
+                <af:table value="#{bindings.TblProFgMasterView1.collectionModel}" var="row"
+                          rows="#{bindings.TblProFgMasterView1.rangeSize}"
+                          emptyText="#{bindings.TblProFgMasterView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.TblProFgMasterView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.TblProFgMasterView1.collectionModel.makeCurrent}"
+                          rowSelection="single" fetchSize="#{bindings.TblProFgMasterView1.rangeSize}"
+                          filterModel="#{bindings.TblProFgMasterView1Query.queryDescriptor}" filterVisible="true"
+                          queryListener="#{bindings.TblProFgMasterView1Query.processQuery}" varStatus="vs" id="t2"
+                          scrollPolicy="page" autoHeightRows="0" partialTriggers="::b6">
+                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.Id.name}" filterable="true"
+                             sortable="true" headerText="ID" id="c8" visible="false">
+                             <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Id}"
+       id="id4" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+
+                    <af:inputText value="#{row.bindings.Id.inputValue}"
+                                  label="#{bindings.TblProFgMasterView1.hints.Id.label}"
+                                  required="#{bindings.TblProFgMasterView1.hints.Id.mandatory}"
+                                  columns="#{bindings.TblProFgMasterView1.hints.Id.displayWidth}"
+                                  maximumLength="#{bindings.TblProFgMasterView1.hints.Id.precision}"
+                                  shortDesc="#{bindings.TblProFgMasterView1.hints.Id.tooltip}" id="it9" readOnly="true">
+                      <f:validator binding="#{row.bindings.Id.validator}"/>
+                      <af:convertNumber groupingUsed="false" pattern="#{bindings.TblProFgMasterView1.hints.Id.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.Vno.name}" filterable="true"
+                             sortable="true" headerText="Voucher No." id="c9">
+                             <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Vno}"
+       id="it18" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                    <af:inputText value="#{row.bindings.Vno.inputValue}"
+                                  label="#{bindings.TblProFgMasterView1.hints.Vno.label}"
+                                  required="#{bindings.TblProFgMasterView1.hints.Vno.mandatory}"
+                                  columns="#{bindings.TblProFgMasterView1.hints.Vno.displayWidth}"
+                                  maximumLength="#{bindings.TblProFgMasterView1.hints.Vno.precision}"
+                                  shortDesc="#{bindings.TblProFgMasterView1.hints.Vno.tooltip}" id="it10" readOnly="true">
+                      <f:validator binding="#{row.bindings.Vno.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.Vtp.name}" filterable="true"
+                             sortable="true" headerText="Voucher Type" id="c10">
+                              <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Vtp}"
+       id="it19" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                    <af:selectOneChoice value="#{row.bindings.Vtp.inputValue}" label="#{row.bindings.Vtp.label}"
+                                        required="#{bindings.TblProFgMasterView1.hints.Vtp.mandatory}"
+                                        shortDesc="#{bindings.TblProFgMasterView1.hints.Vtp.tooltip}" id="soc5" readOnly="true">
+                      <f:selectItems value="#{row.bindings.Vtp.items}" id="si5"/>
+                      <f:validator binding="#{row.bindings.Vtp.validator}"/>
+                    </af:selectOneChoice>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.Dated.name}" filterable="true"
+                             sortable="true" headerText="Date" id="c11">
+                    <f:facet name="filter">
+                      <af:inputDate value="#{bindings.TblProFgMasterView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
+                                    id="id2">
+                        <af:convertDateTime pattern="#{bindings.TblProFgMasterView1.hints.Dated.format}"/>
+                      </af:inputDate>
+                    </f:facet>
+                    <af:inputDate value="#{row.bindings.Dated.inputValue}"
+                                  label="#{bindings.TblProFgMasterView1.hints.Dated.label}"
+                                  required="#{bindings.TblProFgMasterView1.hints.Dated.mandatory}"
+                                  columns="#{bindings.TblProFgMasterView1.hints.Dated.displayWidth}"
+                                  shortDesc="#{bindings.TblProFgMasterView1.hints.Dated.tooltip}" id="id3"
+                                  readOnly="true">
+                      <f:validator binding="#{row.bindings.Dated.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.TblProFgMasterView1.hints.Dated.format}"/>
+                    </af:inputDate>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.PorMasterId.name}" filterable="true"
+                             sortable="true" headerText="Production Order"
+                             id="c12" width="200">
+                               <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.PorMasterId}"
+       id="it20" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                    <af:selectOneChoice value="#{row.bindings.PorMasterId.inputValue}"
+                                        label="#{row.bindings.PorMasterId.label}"
+                                        required="#{bindings.TblProFgMasterView1.hints.PorMasterId.mandatory}"
+                                        shortDesc="#{bindings.TblProFgMasterView1.hints.PorMasterId.tooltip}" id="soc6" readOnly="true">
+                      <f:selectItems value="#{row.bindings.PorMasterId.items}" id="si6"/>
+                      <f:validator binding="#{row.bindings.PorMasterId.validator}"/>
+                    </af:selectOneChoice>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.TblProFgMasterView1.hints.Narration.name}" filterable="true"
+                             sortable="true" headerText="Remarks"
+                             id="c13" width="300">
+                              <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Narration}"
+       id="it21" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                    <af:inputText value="#{row.bindings.Narration.inputValue}"
+                                  label="#{bindings.TblProFgMasterView1.hints.Narration.label}"
+                                  required="#{bindings.TblProFgMasterView1.hints.Narration.mandatory}"
+                                  columns="#{bindings.TblProFgMasterView1.hints.Narration.displayWidth}"
+                                  maximumLength="#{bindings.TblProFgMasterView1.hints.Narration.precision}"
+                                  shortDesc="#{bindings.TblProFgMasterView1.hints.Narration.tooltip}" id="it11" readOnly="true">
+                      <f:validator binding="#{row.bindings.Narration.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                </af:table>
+              </af:showDetailItem>
+            </af:panelTabbed>
+           
+          </af:gridCell>
+        </af:gridRow>
+     
+        <af:gridRow marginTop="5px" height="auto" id="gr4">
+          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+           
           </af:gridCell>
         </af:gridRow>
       
