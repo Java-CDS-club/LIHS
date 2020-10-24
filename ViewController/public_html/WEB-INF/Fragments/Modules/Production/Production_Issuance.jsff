@@ -300,7 +300,7 @@
       </af:inputText>
 </f:facet>
                     <af:selectOneChoice value="#{row.bindings.UomId.inputValue}" label="#{row.bindings.UomId.label}"
-                                        required="#{bindings.TblProIssDetailView2.hints.UomId.mandatory}"
+                                        required="#{bindings.TblProIssDetailView2.hints.UomId.mandatory}" readOnly="true"
                                         shortDesc="#{bindings.TblProIssDetailView2.hints.UomId.tooltip}" id="soc4">
                       <f:selectItems value="#{row.bindings.UomId.items}" id="si4"/>
                       <f:validator binding="#{row.bindings.UomId.validator}"/>
@@ -434,7 +434,7 @@
       </af:inputText>
 </f:facet>
                     <af:selectOneChoice value="#{row.bindings.UomId.inputValue}" label="#{row.bindings.UomId.label}"
-                                        required="#{bindings.TblProIssDetailDView3.hints.UomId.mandatory}"
+                                        required="#{bindings.TblProIssDetailDView3.hints.UomId.mandatory}" readOnly="true"
                                         shortDesc="#{bindings.TblProIssDetailDView3.hints.UomId.tooltip}" id="soc6">
                       <f:selectItems value="#{row.bindings.UomId.items}" id="si6"/>
                       <f:validator binding="#{row.bindings.UomId.validator}"/>
