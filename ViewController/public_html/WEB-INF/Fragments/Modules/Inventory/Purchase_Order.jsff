@@ -437,7 +437,7 @@
                     </af:gridCell>
                   </af:gridRow>
                  
-                  <af:gridRow marginTop="5px" height="auto" id="gr8">
+                  <!--<af:gridRow marginTop="5px" height="auto" id="gr8">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8">
                        <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="tab2" text="Purchase Order Detail M">
@@ -469,7 +469,7 @@
                                                   pattern="#{bindings.TblPoDDView3.hints.Id.format}"/>
                               </af:inputText>
                             </af:column>
-                            <!--<af:column sortProperty="#{bindings.TblPoDDView3.hints.PoMId.name}" filterable="true"
+                            --><!--<af:column sortProperty="#{bindings.TblPoDDView3.hints.PoMId.name}" filterable="true"
                                        sortable="true" headerText="PO" id="c2" width="200">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.PoMId}"
@@ -483,7 +483,7 @@
                                 <f:selectItems value="#{row.bindings.PoMId.items}" id="si4"/>
                                 <f:validator binding="#{row.bindings.PoMId.validator}"/>
                               </af:selectOneChoice>
-                            </af:column>-->
+                            </af:column>--><!--
                             <af:column sortProperty="#{bindings.TblPoDDView3.hints.DoMId.name}" filterable="true"
                                        sortable="true" headerText="DO" id="c3" width="100">
                                        <f:facet name="filter">
@@ -548,7 +548,7 @@
                         </af:showDetailItem>
             </af:panelTabbed>
                     </af:gridCell>
-                  </af:gridRow>
+                  </af:gridRow>-->
                   
                   <af:gridRow marginTop="5px" height="auto" id="gr10">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc10">
