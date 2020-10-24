@@ -182,5 +182,7 @@
       </nodeDefinition>
     </tree>
     <action IterBinding="TblDoConDView2Iterator" id="Execute5" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <list IterBinding="TblPoMView1Iterator" StaticList="false" Uses="LOV_DoConMId" id="DoConMId" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

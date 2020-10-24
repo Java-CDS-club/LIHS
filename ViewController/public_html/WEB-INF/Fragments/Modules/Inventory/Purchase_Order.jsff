@@ -94,13 +94,13 @@
                                 </af:selectOneChoice>
                                 <f:facet name="footer">
                                   <af:panelGroupLayout layout="horizontal" halign="center" id="pgl9">
-                                    <af:button actionListener="#{bindings.First1.execute}" text="First1"
+                                    <af:button actionListener="#{bindings.First1.execute}" text="First"
                                                disabled="#{!bindings.First1.enabled}" partialSubmit="true" id="b6"/>
-                                    <af:button actionListener="#{bindings.Previous1.execute}" text="Previous1"
+                                    <af:button actionListener="#{bindings.Previous1.execute}" text="Previous"
                                                disabled="#{!bindings.Previous1.enabled}" partialSubmit="true" id="b7"/>
-                                    <af:button actionListener="#{bindings.Next1.execute}" text="Next1"
+                                    <af:button actionListener="#{bindings.Next1.execute}" text="Next"
                                                disabled="#{!bindings.Next1.enabled}" partialSubmit="true" id="b8"/>
-                                    <af:button actionListener="#{bindings.Last1.execute}" text="Last1"
+                                    <af:button actionListener="#{bindings.Last1.execute}" text="Last"
                                                disabled="#{!bindings.Last1.enabled}" partialSubmit="true" id="b9"/>
                                   </af:panelGroupLayout>
                                 </f:facet>
@@ -331,7 +331,7 @@
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                       <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
                         <af:showDetailItem id="tab3" text="Purchase Order Master">
-                          <af:panelFormLayout id="pfl1" maxColumns="3" rows="6">
+                          <af:panelFormLayout id="pfl1" maxColumns="3" rows="8">
                                 <af:inputText value="#{bindings.Id.inputValue}" label="ID" visible="false"
                                 required="#{bindings.Id.hints.mandatory}" columns="#{bindings.Id.hints.displayWidth}"
                                 maximumLength="#{bindings.Id.hints.precision}" shortDesc="#{bindings.Id.hints.tooltip}"
@@ -365,7 +365,8 @@
                     <f:validator binding="#{bindings.Narration.validator}"/>
                   </af:inputText>
                    <af:spacer  id="s4"/>
-                  <af:selectOneChoice value="#{bindings.ProjectId.inputValue}" label="Project"
+                   <af:spacer  id="s14"/>
+                            <af:selectOneChoice value="#{bindings.ProjectId.inputValue}" label="Project"
                                       required="#{bindings.ProjectId.hints.mandatory}"
                                       shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc6" 
                                       contentStyle="width:135px;" >
@@ -389,7 +390,17 @@
                     <f:validator binding="#{bindings.PblSuppId.validator}"/>
                   </af:selectOneChoice>
                   <af:spacer  id="s10"/>
-                  <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type" disabled="true"
+                            <af:selectOneChoice value="#{bindings.DoConMId.inputValue}"
+                                                label="DO"
+                                                required="#{bindings.DoConMId.hints.mandatory}"
+                                                shortDesc="#{bindings.DoConMId.hints.tooltip}" id="soc5" disabled="true"
+                                                contentStyle="width:135px;">
+                              <f:selectItems value="#{bindings.DoConMId.items}" id="si5"/>
+                              <f:validator binding="#{bindings.DoConMId.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s3"/>
+                            
+                 <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type" disabled="true"
                                       required="#{bindings.Vtp.hints.mandatory}"
                                       shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc2" contentStyle="width:135px;" >
                                       
@@ -400,7 +411,7 @@
                   <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No." disabled="true"
                                 required="#{bindings.Vno.hints.mandatory}" columns="17"
                                 maximumLength="#{bindings.Vno.hints.precision}"
-                                shortDesc="#{bindings.Vno.hints.tooltip}" id="it2" contentStyle='text-align: right' >
+                                shortDesc="#{bindings.Vno.hints.tooltip}" id="it2" contentStyle='width:135px;' >
 
                     <f:validator binding="#{bindings.Vno.validator}"/>
                   </af:inputText>
