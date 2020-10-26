@@ -119,8 +119,9 @@
       <Item Value="Id"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="BalQty"/>
+      <Item Value="Id"/>
       <Item Value="Dated"/>
+      <Item Value="BalQty"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>

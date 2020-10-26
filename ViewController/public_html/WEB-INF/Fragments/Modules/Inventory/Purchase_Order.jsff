@@ -374,7 +374,7 @@
                             <af:selectOneChoice value="#{bindings.DoConMId.inputValue}"
                                                 label="DO"
                                                 required="#{bindings.DoConMId.hints.mandatory}"
-                                                shortDesc="#{bindings.DoConMId.hints.tooltip}" id="soc5" disabled="true"
+                                                shortDesc="#{bindings.DoConMId.hints.tooltip}" id="soc5"
                                                 contentStyle="width:135px;">
                               <f:selectItems value="#{bindings.DoConMId.items}" id="si5"/>
                               <f:validator binding="#{bindings.DoConMId.validator}"/>
@@ -575,6 +575,7 @@
                                                   pattern="#{bindings.TblPoDView2.hints.Id.format}"/>
                               </af:inputText>
                             </af:column>
+                            
                             <af:column sortProperty="#{bindings.TblPoDView2.hints.ItemL4Id.name}" filterable="true"
                                        sortable="true" headerText="Item Level 4"
                                        id="c7" width="200">
@@ -584,11 +585,21 @@
       </af:inputText>
 </f:facet>
                               <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
-                                                  label="#{row.bindings.ItemL4Id.label}"
+                                                  label="#{row.bindings.ItemL4Id.label}" autoSubmit="true"
                                                   required="#{bindings.TblPoDView2.hints.ItemL4Id.mandatory}"
-                                                  shortDesc="#{bindings.TblPoDView2.hints.ItemL4Id.tooltip}" id="soc11" readOnly="true">
+                                                  shortDesc="#{bindings.TblPoDView2.hints.ItemL4Id.tooltip}" id="soc11">
                                 <f:selectItems value="#{row.bindings.ItemL4Id.items}" id="si11"/>
                                 <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
+                              </af:selectOneChoice>
+                            </af:column>
+                            <af:column headerText="#{bindings.TblPoDView2.hints.ItemL4IdStatic.label}" id="c1">
+                              <af:selectOneChoice value="#{row.bindings.ItemL4IdStatic.inputValue}"
+                                                  label="#{row.bindings.ItemL4IdStatic.label}" readOnly="true"
+                                                  required="#{bindings.TblPoDView2.hints.ItemL4IdStatic.mandatory}"
+                                                  shortDesc="#{bindings.TblPoDView2.hints.ItemL4IdStatic.tooltip}"
+                                                  id="soc18">
+                                <f:selectItems value="#{row.bindings.ItemL4IdStatic.items}" id="si18"/>
+                                <f:validator binding="#{row.bindings.ItemL4IdStatic.validator}"/>
                               </af:selectOneChoice>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblPoDView2.hints.UomId.name}" filterable="true"
@@ -619,7 +630,7 @@
                                             required="#{bindings.TblPoDView2.hints.Description.mandatory}"
                                             columns="#{bindings.TblPoDView2.hints.Description.displayWidth}"
                                             maximumLength="#{bindings.TblPoDView2.hints.Description.precision}"
-                                            shortDesc="#{bindings.TblPoDView2.hints.Description.tooltip}" id="it13" readOnly="true">
+                                            shortDesc="#{bindings.TblPoDView2.hints.Description.tooltip}" id="it13">
                                 <f:validator binding="#{row.bindings.Description.validator}"/>
                               </af:inputText>
                             </af:column>

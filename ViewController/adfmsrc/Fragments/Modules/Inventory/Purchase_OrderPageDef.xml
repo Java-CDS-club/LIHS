@@ -119,6 +119,7 @@
           <Item Value="BalQty"/>
           <Item Value="Rate"/>
           <Item Value="Amount"/>
+          <Item Value="ItemL4IdStatic"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

@@ -21,24 +21,18 @@
     Name="Unit_of_Measurements_LOV1"
     ViewObjectName="model.LOV.Unit_of_Measurements_LOV"
     RowLevelBinds="true"/>
-  <ListBinding
-    Name="LOV_ItemL4Id"
-    ListVOName="Item_Level4_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="ItemL4Id"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="ItemL4Id"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
+  <ViewAccessor
+    Name="Item_L4_Depn_DO_Cons_Number1"
+    ViewObjectName="model.LOV.Item_L4_Depn_DO_Cons_Number"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="getconId">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[DoConMId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_UomId"
     ListVOName="Unit_of_Measurements_LOV1"
@@ -57,9 +51,70 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_ItemL4Id"
+    ListVOName="Item_L4_Depn_DO_Cons_Number1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ItemL4Id"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="UomId"/>
+      <Item Value="DoQty"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ItemL4Id"/>
+      <Item Value="UomId"/>
+      <Item Value="DoQty"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ItemL4IdStatic"
+    ListVOName="Item_Level4_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ItemL4IdStatic"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ItemL4Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblPoD"
     Entity="model.ERP.EO.TblPoD"/>
+  <EntityUsage
+    Name="TblPoM"
+    Entity="model.ERP.EO.TblPoM"
+    Association="model.ERP.EO.FkPoDMAssoc"
+    AssociationEnd="model.ERP.EO.FkPoDMAssoc.TblPoM"
+    SourceUsage="model.ERP.VO.TblPoDView.TblPoD"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="LEFT OUTER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.ERP.EO.TblPoM.Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.ERP.EO.TblPoD.PoMId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
@@ -90,7 +145,7 @@
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
-          Value="combo"/>
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -168,4 +223,34 @@
     EntityAttrName="Rate"
     EntityUsage="TblPoD"
     AliasName="RATE"/>
+  <ViewAttribute
+    Name="DoConMId"
+    PrecisionRule="true"
+    EntityAttrName="DoConMId"
+    EntityUsage="TblPoM"
+    AliasName="DO_CON_M_ID"/>
+  <ViewAttribute
+    Name="Id1"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblPoM"
+    AliasName="ID1"/>
+  <ViewAttribute
+    Name="ItemL4IdStatic"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ItemL4Id"
+    EntityUsage="TblPoD"
+    AliasName="ITEM_L4ID1"
+    LOVName="LOV_ItemL4IdStatic">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Id"/>
+  </AttrArray>
 </ViewObject>
