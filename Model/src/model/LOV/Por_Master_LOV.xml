@@ -13,7 +13,8 @@
   FromList="TBL_POR_MASTER TblPorMaster"
   BindingStyle="OracleName"
   CustomQuery="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  Where="ID not in (Select POR_MASTER_ID from TBL_PRO_ISS_MASTER where POR_MASTER_ID is not Null)">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
