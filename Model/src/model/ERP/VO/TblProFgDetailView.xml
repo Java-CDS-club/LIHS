@@ -78,12 +78,6 @@
     EntityUsage="TblProFgDetail"
     AliasName="PRO_FG_MASTER_ID"/>
   <ViewAttribute
-    Name="SrNo"
-    PrecisionRule="true"
-    EntityAttrName="SrNo"
-    EntityUsage="TblProFgDetail"
-    AliasName="SR_NO"/>
-  <ViewAttribute
     Name="ItemL4Id"
     IsNotNull="true"
     PrecisionRule="true"

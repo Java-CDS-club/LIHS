@@ -78,12 +78,6 @@
     EntityUsage="TblIgpD"
     AliasName="IGP_M_ID"/>
   <ViewAttribute
-    Name="SrNo"
-    PrecisionRule="true"
-    EntityAttrName="SrNo"
-    EntityUsage="TblIgpD"
-    AliasName="SR_NO"/>
-  <ViewAttribute
     Name="ItemL4Id"
     IsNotNull="true"
     PrecisionRule="true"

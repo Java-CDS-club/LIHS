@@ -52,12 +52,6 @@
     EntityUsage="TblBpvD"
     AliasName="BPV_M_ID"/>
   <ViewAttribute
-    Name="SrNo"
-    PrecisionRule="true"
-    EntityAttrName="SrNo"
-    EntityUsage="TblBpvD"
-    AliasName="SR_NO"/>
-  <ViewAttribute
     Name="GlL4Id"
     IsNotNull="true"
     PrecisionRule="true"

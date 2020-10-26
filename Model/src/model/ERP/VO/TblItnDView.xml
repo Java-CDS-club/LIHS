@@ -74,12 +74,6 @@
     EntityUsage="TblItnD"
     AliasName="ITN_M_ID"/>
   <ViewAttribute
-    Name="SrNo"
-    PrecisionRule="true"
-    EntityAttrName="SrNo"
-    EntityUsage="TblItnD"
-    AliasName="SR_NO"/>
-  <ViewAttribute
     Name="ItemL4Id"
     IsNotNull="true"
     PrecisionRule="true"

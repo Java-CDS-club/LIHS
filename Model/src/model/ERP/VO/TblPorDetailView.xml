@@ -78,12 +78,6 @@
     EntityUsage="TblPorDetail"
     AliasName="POR_MASTER_ID"/>
   <ViewAttribute
-    Name="SrNo"
-    PrecisionRule="true"
-    EntityAttrName="SrNo"
-    EntityUsage="TblPorDetail"
-    AliasName="SR_NO"/>
-  <ViewAttribute
     Name="ItemL4Id"
     IsNotNull="true"
     PrecisionRule="true"

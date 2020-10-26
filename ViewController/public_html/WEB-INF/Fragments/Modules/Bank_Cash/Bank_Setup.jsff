@@ -25,15 +25,15 @@
             <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="tab1" text="Bank Setup">
                 <af:table value="#{bindings.Bank_Setup1.collectionModel}" var="row"
-                        rows="#{bindings.Bank_Setup1.rangeSize}"
-                        emptyText="#{bindings.Bank_Setup1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                        rowBandingInterval="0" selectedRowKeys="#{bindings.Bank_Setup1.collectionModel.selectedRow}"
-                        selectionListener="#{bindings.Bank_Setup1.collectionModel.makeCurrent}" rowSelection="single"
-                        fetchSize="#{bindings.Bank_Setup1.rangeSize}"
-                        filterModel="#{bindings.Bank_Setup1Query.queryDescriptor}" filterVisible="true"
-                        queryListener="#{bindings.Bank_Setup1Query.processQuery}" varStatus="vs" id="t1"
-                        scrollPolicy="page" autoHeightRows="0">
-                <af:column sortProperty="#{bindings.Bank_Setup1.hints.Id.name}" filterable="true" sortable="true"
+                          rows="#{bindings.Bank_Setup1.rangeSize}"
+                          emptyText="#{bindings.Bank_Setup1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" selectedRowKeys="#{bindings.Bank_Setup1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.Bank_Setup1.collectionModel.makeCurrent}" rowSelection="single"
+                          fetchSize="#{bindings.Bank_Setup1.rangeSize}"
+                          filterModel="#{bindings.Bank_Setup1Query.queryDescriptor}" filterVisible="true"
+                          queryListener="#{bindings.Bank_Setup1Query.processQuery}" varStatus="vs" id="t1"
+                          scrollPolicy="page" autoHeightRows="0">
+                   <af:column sortProperty="#{bindings.Bank_Setup1.hints.Id.name}" filterable="true" sortable="true"
                            headerText="ID" id="c1" visible="false">
                            <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Id}"
@@ -206,7 +206,8 @@
                     <f:validator binding="#{row.bindings.BranchCode.validator}"/>
                   </af:inputText>
                 </af:column>
-              </af:table>
+                </af:table>
+               
                 <af:spacer width="5" height="10" id="s2"/>
                  <af:panelGroupLayout id="pgl3" halign="center" layout="horizontal">
                             <af:iterator id="i2" var="index" varStatus="status"

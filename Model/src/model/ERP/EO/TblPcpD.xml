@@ -28,15 +28,6 @@
     ColumnType="NUMBER"
     TableName="TBL_PCP_D"/>
   <Attribute
-    Name="SrNo"
-    Precision="3"
-    Scale="0"
-    ColumnName="SR_NO"
-    SQLType="NUMERIC"
-    Type="java.lang.Integer"
-    ColumnType="NUMBER"
-    TableName="TBL_PCP_D"/>
-  <Attribute
     Name="Description"
     Precision="100"
     ColumnName="DESCRIPTION"
@@ -128,6 +119,7 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_PCP_D_ID"/>
     </DesignTime>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="FkPcpDM">

@@ -52,12 +52,6 @@
     EntityUsage="TblCpvD"
     AliasName="CPV_M_ID"/>
   <ViewAttribute
-    Name="SrNo"
-    PrecisionRule="true"
-    EntityAttrName="SrNo"
-    EntityUsage="TblCpvD"
-    AliasName="SR_NO"/>
-  <ViewAttribute
     Name="GlL4Id"
     IsNotNull="true"
     PrecisionRule="true"

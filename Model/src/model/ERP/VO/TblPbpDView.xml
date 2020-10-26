@@ -11,7 +11,6 @@
   PageIterMode="Full"
   SelectList="TblPbpD.ID, 
        TblPbpD.PBP_M_ID, 
-       TblPbpD.SR_NO, 
        TblPbpD.PO_M_ID, 
        TblPbpD.DESCRIPTION, 
        TblPbpD.AMOUNT, 
@@ -95,12 +94,6 @@
     EntityAttrName="PbpMId"
     EntityUsage="TblPbpD"
     AliasName="PBP_M_ID"/>
-  <ViewAttribute
-    Name="SrNo"
-    PrecisionRule="true"
-    EntityAttrName="SrNo"
-    EntityUsage="TblPbpD"
-    AliasName="SR_NO"/>
   <ViewAttribute
     Name="PoMId"
     PrecisionRule="true"

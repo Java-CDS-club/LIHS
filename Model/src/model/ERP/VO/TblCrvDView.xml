@@ -52,12 +52,6 @@
     EntityUsage="TblCrvD"
     AliasName="CRV_M_ID"/>
   <ViewAttribute
-    Name="SrNo"
-    PrecisionRule="true"
-    EntityAttrName="SrNo"
-    EntityUsage="TblCrvD"
-    AliasName="SR_NO"/>
-  <ViewAttribute
     Name="GlL4Id"
     IsNotNull="true"
     PrecisionRule="true"

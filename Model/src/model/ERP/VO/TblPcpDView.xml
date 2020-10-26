@@ -84,12 +84,6 @@
     EntityUsage="TblPcpD"
     AliasName="PCP_M_ID"/>
   <ViewAttribute
-    Name="SrNo"
-    PrecisionRule="true"
-    EntityAttrName="SrNo"
-    EntityUsage="TblPcpD"
-    AliasName="SR_NO"/>
-  <ViewAttribute
     Name="PoMId"
     PrecisionRule="true"
     EntityAttrName="PoMId"

@@ -78,12 +78,6 @@
     EntityUsage="TblProIssDetail"
     AliasName="PRO_ISS_MASTER_ID"/>
   <ViewAttribute
-    Name="SrNo"
-    PrecisionRule="true"
-    EntityAttrName="SrNo"
-    EntityUsage="TblProIssDetail"
-    AliasName="SR_NO"/>
-  <ViewAttribute
     Name="ItemL4Id"
     IsNotNull="true"
     PrecisionRule="true"
