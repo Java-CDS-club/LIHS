@@ -84,7 +84,7 @@
         <AttrNames>
           <Item Value="Id"/>
           <Item Value="ProIssMasterId"/>
-          <Item Value="SrNo"/>
+         
           <Item Value="ItemL4Id"/>
           <Item Value="UomId"/>
           <Item Value="Description"/>
@@ -103,7 +103,7 @@
         <AttrNames>
           <Item Value="Id"/>
           <Item Value="ProIssDetailId"/>
-          <Item Value="SrNo"/>
+         
           <Item Value="ItemL4Id"/>
           <Item Value="UomId"/>
           <Item Value="Description"/>

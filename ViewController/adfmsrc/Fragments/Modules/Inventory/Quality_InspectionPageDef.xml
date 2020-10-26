@@ -74,7 +74,7 @@
       <nodeDefinition DefName="model.ERP.VO.TblQcDView" Name="TblQcDView20">
         <AttrNames>
           <Item Value="Id"/>
-          <Item Value="SrNo"/>
+          
           <Item Value="ItemL4Id"/>
           <Item Value="UomId"/>
           <Item Value="Description"/>

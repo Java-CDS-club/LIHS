@@ -84,7 +84,7 @@
         <AttrNames>
           <Item Value="Id"/>
           <Item Value="BoqMasterId"/>
-          <Item Value="SrNo"/>
+         
           <Item Value="ItemL4Id"/>
           <Item Value="UomId"/>
           <Item Value="Description"/>

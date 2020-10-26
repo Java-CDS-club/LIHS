@@ -110,7 +110,7 @@
       <nodeDefinition DefName="model.ERP.VO.TblPoDView" Name="TblPoDView20">
         <AttrNames>
           <Item Value="Id"/>
-          <Item Value="SrNo"/>
+          
           <Item Value="ItemL4Id"/>
           <Item Value="UomId"/>
           <Item Value="Description"/>
@@ -174,7 +174,7 @@
       <nodeDefinition DefName="model.ERP.VO.TblDoConDView" Name="TblDoConDView20">
         <AttrNames>
           <Item Value="Id"/>
-          <Item Value="SrNo"/>
+         
           <Item Value="ItemL4Id"/>
           <Item Value="UomId"/>
           <Item Value="Description"/>

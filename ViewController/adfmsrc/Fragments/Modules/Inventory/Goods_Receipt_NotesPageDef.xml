@@ -95,7 +95,7 @@
       <nodeDefinition DefName="model.ERP.VO.TblGrnDView" Name="TblGrnDView20">
         <AttrNames>
           <Item Value="Id"/>
-          <Item Value="SrNo"/>
+          
           <Item Value="ItemL4Id"/>
           <Item Value="UomId"/>
           <Item Value="Description"/>

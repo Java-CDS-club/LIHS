@@ -83,7 +83,7 @@
       <nodeDefinition DefName="model.ERP.VO.TblGinDView" Name="TblGinDView20">
         <AttrNames>
           <Item Value="Id"/>
-          <Item Value="SrNo"/>
+          
           <Item Value="ItemL4Id"/>
           <Item Value="UomId"/>
           <Item Value="Description"/>

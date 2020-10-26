@@ -147,24 +147,6 @@
                                         pattern="#{bindings.TblProIssDetailView2.hints.Id.format}"/>
                     </af:inputText>
                   </af:column>
-                  <af:column sortProperty="#{bindings.TblProIssDetailView2.hints.SrNo.name}" filterable="true"
-                             sortable="true" headerText="Sr No." id="c2" width="50">
-                             <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.SrNo}"
-       id="it17" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-                    <af:inputText value="#{row.bindings.SrNo.inputValue}"
-                                  label="#{bindings.TblProIssDetailView2.hints.SrNo.label}"
-                                  required="#{bindings.TblProIssDetailView2.hints.SrNo.mandatory}"
-                                  columns="20"
-                                  maximumLength="#{bindings.TblProIssDetailView2.hints.SrNo.precision}"
-                                  shortDesc="#{bindings.TblProIssDetailView2.hints.SrNo.tooltip}" id="it5" readOnly="true">
-                      <f:validator binding="#{row.bindings.SrNo.validator}"/>
-                      <af:convertNumber groupingUsed="false"
-                                        pattern="#{bindings.TblProIssDetailView2.hints.SrNo.format}"/>
-                    </af:inputText>
-                  </af:column>
                   <af:column sortProperty="#{bindings.TblProIssDetailView2.hints.ItemL4Id.name}" filterable="true"
                              sortable="true" headerText="Item" id="c3" width="200">
                               <f:facet name="filter">
@@ -278,24 +260,6 @@
                       <f:validator binding="#{row.bindings.Id.validator}"/>
                       <af:convertNumber groupingUsed="false"
                                         pattern="#{bindings.TblProIssDetailDView3.hints.Id.format}"/>
-                    </af:inputText>
-                  </af:column>
-                  <af:column sortProperty="#{bindings.TblProIssDetailDView3.hints.SrNo.name}" filterable="true"
-                             sortable="true" headerText="Sr No." id="c8" width="50">
-                              <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.SrNo}"
-       id="it23" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-                    <af:inputText value="#{row.bindings.SrNo.inputValue}"
-                                  label="#{bindings.TblProIssDetailDView3.hints.SrNo.label}"
-                                  required="#{bindings.TblProIssDetailDView3.hints.SrNo.mandatory}"
-                                  columns="20"
-                                  maximumLength="#{bindings.TblProIssDetailDView3.hints.SrNo.precision}"
-                                  shortDesc="#{bindings.TblProIssDetailDView3.hints.SrNo.tooltip}" id="it9" readOnly="true">
-                      <f:validator binding="#{row.bindings.SrNo.validator}"/>
-                      <af:convertNumber groupingUsed="false"
-                                        pattern="#{bindings.TblProIssDetailDView3.hints.SrNo.format}"/>
                     </af:inputText>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblProIssDetailDView3.hints.ItemL4Id.name}" filterable="true"

@@ -77,7 +77,7 @@
       <nodeDefinition DefName="model.ERP.VO.TblPcpDView" Name="TblPcpDView20">
         <AttrNames>
           <Item Value="Id"/>
-          <Item Value="SrNo"/>
+          
           <Item Value="PoMId"/>
           <Item Value="Description"/>
           <Item Value="Amount"/>

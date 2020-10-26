@@ -74,7 +74,7 @@
       <nodeDefinition DefName="model.ERP.VO.TblCpvDView" Name="TblCpvDView20">
         <AttrNames>
           <Item Value="Id"/>
-          <Item Value="SrNo"/>
+          
           <Item Value="GlL4Id"/>
           <Item Value="Description"/>
           <Item Value="Dr"/>

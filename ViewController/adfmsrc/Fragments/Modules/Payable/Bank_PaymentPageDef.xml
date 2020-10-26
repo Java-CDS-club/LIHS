@@ -95,7 +95,7 @@
       <nodeDefinition DefName="model.ERP.VO.TblPbpDView" Name="TblPbpDView20">
         <AttrNames>
           <Item Value="Id"/>
-          <Item Value="SrNo"/>
+          
           <Item Value="PoMId"/>
           <Item Value="PblSuppId"/>
           <Item Value="Description"/>

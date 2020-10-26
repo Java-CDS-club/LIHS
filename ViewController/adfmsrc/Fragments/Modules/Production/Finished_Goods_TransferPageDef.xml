@@ -79,7 +79,7 @@
         <AttrNames>
           <Item Value="Id"/>
           <Item Value="FgTrnMasterId"/>
-          <Item Value="SrNo"/>
+          
           <Item Value="ItemL4Id"/>
           <Item Value="UomId"/>
           <Item Value="Description"/>
