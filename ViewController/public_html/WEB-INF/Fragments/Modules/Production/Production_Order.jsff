@@ -45,22 +45,22 @@
                     <af:convertDateTime pattern="#{bindings.Dated.format}"/>
                   </af:inputDate>
                   <af:spacer  id="s2"/>
-                  <af:selectOneChoice value="#{bindings.ItemL3Id.inputValue}" label="Item"
-                                      required="#{bindings.ItemL3Id.hints.mandatory}"
-                                      shortDesc="#{bindings.ItemL3Id.hints.tooltip}" id="soc2"
-                                      contentStyle="width:150px;">
-                    <f:selectItems value="#{bindings.ItemL3Id.items}" id="si2"/>
-                    <f:validator binding="#{bindings.ItemL3Id.validator}"/>
-                  </af:selectOneChoice>
-                  <af:spacer  id="s8"/>
-                  <af:inputText value="#{bindings.Qty.inputValue}" label="Qty"
-                                required="#{bindings.Qty.hints.mandatory}" columns="17"
-                                maximumLength="#{bindings.Qty.hints.precision}"
-                                shortDesc="#{bindings.Qty.hints.tooltip}" id="it3" contentStyle="width:150px;">
-                    <f:validator binding="#{bindings.Qty.validator}"/>
-                    <af:convertNumber groupingUsed="false" pattern="#{bindings.Qty.format}"/>
-                  </af:inputText>
-                  <af:spacer  id="s4"/>
+                            <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
+                                                label="Project"
+                                                required="#{bindings.ProjectId.hints.mandatory}"
+                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc2" contentStyle="width:150px;">
+                              <f:selectItems value="#{bindings.ProjectId.items}" id="si2"/>
+                              <f:validator binding="#{bindings.ProjectId.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s8"/>
+                            <af:selectOneChoice value="#{bindings.DepartmentId.inputValue}"
+                                                label="Department"
+                                                required="#{bindings.DepartmentId.hints.mandatory}"
+                                                shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="soc7" contentStyle="width:150px;">
+                              <f:selectItems value="#{bindings.DepartmentId.items}" id="si7"/>
+                              <f:validator binding="#{bindings.DepartmentId.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s4"/>
                 <af:inputText value="#{bindings.Narration.inputValue}" label="Remarks"
                                 required="#{bindings.Narration.hints.mandatory}"
                                 columns="30"

@@ -21,6 +21,14 @@
     Name="Item_L3_LOV1"
     ViewObjectName="model.LOV.Item_L3_LOV"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Department_Name_LOV1"
+    ViewObjectName="model.LOV.Department_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Project_Name_LOV1"
+    ViewObjectName="model.LOV.Project_Name_LOV"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Vtp"
     ListVOName="Voucher_Type1"
@@ -40,17 +48,35 @@
     <DisplayCriteria/>
   </ListBinding>
   <ListBinding
-    Name="LOV_ItemL3Id"
-    ListVOName="Item_L3_LOV1"
+    Name="LOV_DepartmentId"
+    ListVOName="Department_Name_LOV1"
     ListRangeSize="-1"
     NullValueFlag="none"
     MRUCount="0">
     <AttrArray Name="AttrNames">
-      <Item Value="ItemL3Id"/>
+      <Item Value="DepartmentId"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
-      <Item Value="ItemL3Id"/>
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ProjectId"
+    ListVOName="Project_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProjectId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
@@ -103,13 +129,12 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
-    Name="ItemL3Id"
-    IsNotNull="true"
+    Name="DepartmentId"
     PrecisionRule="true"
-    EntityAttrName="ItemL3Id"
+    EntityAttrName="DepartmentId"
     EntityUsage="TblPorMaster"
-    AliasName="ITEM_L3_ID"
-    LOVName="LOV_ItemL3Id">
+    AliasName="DEPARTMENT_ID"
+    LOVName="LOV_DepartmentId">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -118,11 +143,19 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
-    Name="Qty"
+    Name="ProjectId"
     PrecisionRule="true"
-    EntityAttrName="Qty"
+    EntityAttrName="ProjectId"
     EntityUsage="TblPorMaster"
-    AliasName="QTY"/>
+    AliasName="PROJECT_ID"
+    LOVName="LOV_ProjectId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Narration"
     PrecisionRule="true"

@@ -43,13 +43,8 @@
         <Item Value="Dated"/>
       </AttrNames>
     </attributeValues>
-    <list IterBinding="TblPorMasterView1Iterator" StaticList="false" Uses="LOV_ItemL3Id" id="ItemL3Id"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <attributeValues IterBinding="TblPorMasterView1Iterator" id="Qty">
-      <AttrNames>
-        <Item Value="Qty"/>
-      </AttrNames>
-    </attributeValues>
+    
+    
     <attributeValues IterBinding="TblPorMasterView1Iterator" id="Narration">
       <AttrNames>
         <Item Value="Narration"/>
@@ -72,8 +67,8 @@
           <Item Value="Vno"/>
           <Item Value="Vtp"/>
           <Item Value="Dated"/>
-          <Item Value="ItemL3Id"/>
-          <Item Value="Qty"/>
+         
+          
           <Item Value="Narration"/>
         </AttrNames>
       </nodeDefinition>
@@ -95,5 +90,9 @@
             Action="createInsertRow"/>
     <action IterBinding="TblPorDetailView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblPorDetailView2Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <list IterBinding="TblPorMasterView1Iterator" StaticList="false" Uses="LOV_ProjectId" id="ProjectId"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="TblPorMasterView1Iterator" StaticList="false" Uses="LOV_DepartmentId" id="DepartmentId"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>
