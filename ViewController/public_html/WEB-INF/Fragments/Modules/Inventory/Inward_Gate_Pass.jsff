@@ -178,7 +178,7 @@
                               <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
                                                   label="#{row.bindings.ItemL4Id.label}"
                                                   required="#{bindings.TblIgpDView2.hints.ItemL4Id.mandatory}"
-                                                  shortDesc="#{bindings.TblIgpDView2.hints.ItemL4Id.tooltip}" id="soc3">
+                                                  shortDesc="#{bindings.TblIgpDView2.hints.ItemL4Id.tooltip}" id="soc3" readOnly="true">
                                 <f:selectItems value="#{row.bindings.ItemL4Id.items}" id="si3"/>
                                 <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                               </af:selectOneChoice>
@@ -211,7 +211,7 @@
                                             required="#{bindings.TblIgpDView2.hints.Description.mandatory}"
                                             columns="#{bindings.TblIgpDView2.hints.Description.displayWidth}"
                                             maximumLength="#{bindings.TblIgpDView2.hints.Description.precision}"
-                                            shortDesc="#{bindings.TblIgpDView2.hints.Description.tooltip}" id="it7">
+                                            shortDesc="#{bindings.TblIgpDView2.hints.Description.tooltip}" id="it7" readOnly="true">
                                 <f:validator binding="#{row.bindings.Description.validator}"/>
                               </af:inputText>
                             </af:column>
