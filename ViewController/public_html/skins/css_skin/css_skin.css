@@ -92,7 +92,7 @@ background-color: #14739e;
 /*border-left: 1px solid #BF691E;*/
 }
 
-/*af|table::data-table-VH-lines af|column::data-cell
+af|table::data-table-VH-lines af|column::data-cell
 {
 background-color:#fff;
 color: #7F4614;
@@ -113,26 +113,35 @@ vertical-align: middle;
 text-align: left; 
 }
 
+/*af|table::data-row {
+background-color: #e8f4f8;
+border: 1px solid #A65B1A;
+}*/
+
 af|table::data-row:selected af|column::data-cell
 {  
-background-color: #eeaa00;
+background-color: #a3c8d9; 
+border: 3px solid #14739e;
 color: #ffffff;  
 }
 
 af|table::data-row:selected af|column::banded-data-cell
 {  
-background-color: #eeaa00; 
+background-color: #a3c8d9;  
+border: 3px solid #14739e;
 color: #ffffff;  
 }
 
 af|table::data-row:selected:focused af|column::data-cell
 {  
-background-color: #eeaa00;  
+background-color: #a3c8d9;   
+border: 3px solid #14739e;
 color: #ffffff; 
 }
 
 af|table::data-row:selected:focused af|column::banded-data-cell {
-background-color: #eeaa00;   
+background-color: #a3c8d9;   
+border: 3px solid #14739e;
 color: #ffffff;    
 }
 
@@ -145,4 +154,12 @@ color: #ffffff;
 af|table::data-row:hover af|column::banded-data-cell { 
 background-color: #9bafc8;
 color: #ffffff; 
-}*/
+}
+af|table::data-table-VH-lines af|column::data-cell{ 
+background-color:#e8f4f8;
+}
+
+
+.x14b.p_AFSelected.p_AFInactive .xi9, .xi9.p_AFSelected.p_AFInactive, .x14b.p_AFSelected.p_AFInactive .xia, .xia.p_AFSelected.p_AFInactive {
+    background-color: #a3c8d9;
+}

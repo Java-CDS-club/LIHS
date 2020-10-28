@@ -119,5 +119,11 @@
             Action="iteratorExecute"/>
     <action IterBinding="TblProIssDetailDView3Iterator" id="Delete2" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
+    <list IterBinding="TblProIssMasterView1Iterator" StaticList="false" Uses="LOV_ProjectId" id="ProjectId"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="TblProIssMasterView1Iterator" StaticList="false" Uses="LOV_FrDeptId" id="FrDeptId"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="TblProIssMasterView1Iterator" StaticList="false" Uses="LOV_ToDeptId" id="ToDeptId"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

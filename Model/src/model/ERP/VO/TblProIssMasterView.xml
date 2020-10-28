@@ -21,6 +21,14 @@
     Name="Por_Master_LOV1"
     ViewObjectName="model.LOV.Por_Master_LOV"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Project_Name_LOV1"
+    ViewObjectName="model.LOV.Project_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Department_Name_LOV1"
+    ViewObjectName="model.LOV.Department_Name_LOV"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Vtp"
     ListVOName="Voucher_Type1"
@@ -49,13 +57,73 @@
       <Item Value="PorMasterId"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="ToDeptId"/>
+      <Item Value="ProjectId"/>
+    </AttrArray>
     <AttrArray Name="ListAttrNames">
       <Item Value="Id"/>
+      <Item Value="DepartmentId"/>
+      <Item Value="ProjectId"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Vno"/>
       <Item Value="Dated"/>
       <Item Value="Vtp"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ProjectId"
+    ListVOName="Project_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProjectId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_FrDeptId"
+    ListVOName="Department_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="FrDeptId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ToDeptId"
+    ListVOName="Department_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ToDeptId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -148,6 +216,48 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblProIssMaster"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="TblProIssMaster"
+    AliasName="PROJECT_ID"
+    LOVName="LOV_ProjectId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="FrDeptId"
+    PrecisionRule="true"
+    EntityAttrName="FrDeptId"
+    EntityUsage="TblProIssMaster"
+    AliasName="FR_DEPT_ID"
+    LOVName="LOV_FrDeptId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ToDeptId"
+    PrecisionRule="true"
+    EntityAttrName="ToDeptId"
+    EntityUsage="TblProIssMaster"
+    AliasName="TO_DEPT_ID"
+    LOVName="LOV_ToDeptId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblProIssDetailView"
     ViewLink="model.ERP.VO.FkProIssDetailMasterLink"

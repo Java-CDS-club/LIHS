@@ -91,6 +91,12 @@
   <ViewUsage
     Name="Pages_Bank_Cash1"
     ViewObjectName="model.UserRole.VO.Pages_Bank_Cash"/>
+  <ViewUsage
+    Name="TblRoleDetailModulesView3"
+    ViewObjectName="model.UserRole.VO.TblRoleDetailModulesView"/>
+  <ViewUsage
+    Name="Pages_User_Management1"
+    ViewObjectName="model.UserRole.VO.Pages_User_Management"/>
   <ViewLinkUsage
     Name="FkPagesLink1"
     ViewLinkObjectName="model.UserRole.VO.FkPagesLink"
@@ -150,5 +156,11 @@
     ViewLinkObjectName="model.UserRole.VO.FkUserMasterRoleLink"
     SrcViewUsageName="model.UserRole.AppModule.TblRoleMasterView1"
     DstViewUsageName="model.UserRole.AppModule.TblUserMasterView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkRoleDetailModuleRoleMLink1"
+    ViewLinkObjectName="model.UserRole.VO.FkRoleDetailModuleRoleMLink"
+    SrcViewUsageName="model.UserRole.AppModule.TblRoleMasterView1"
+    DstViewUsageName="model.UserRole.AppModule.TblRoleDetailModulesView3"
     Reversed="false"/>
 </AppModule>

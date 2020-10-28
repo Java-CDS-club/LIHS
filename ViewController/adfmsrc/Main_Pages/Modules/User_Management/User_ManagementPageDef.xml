@@ -6,6 +6,28 @@
     <variableIterator id="variables"/>
     <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.UserManagementSidebarBean.dynamicTaskFlowId}"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="Pages_User_Management1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="Pages_User_Management1Iterator"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <tree IterBinding="Pages_User_Management1Iterator" id="Pages_User_Management1">
+      <nodeDefinition DefName="model.UserRole.VO.Pages_User_Management" Name="Pages_User_Management10">
+        <AttrNames>
+          <Item Value="PagesName"/>
+          <Item Value="Ast"/>
+          <Item Value="PageIcon"/>
+          <Item Value="PageLink"/>
+          <Item Value="SrNo"/>
+          <Item Value="RoleMasterId"/>
+          <Item Value="PagesId"/>
+          <Item Value="RoleMasterId1"/>
+          <Item Value="RView"/>
+          <Item Value="RAdd"/>
+          <Item Value="REdit"/>
+          <Item Value="RDelete"/>
+          <Item Value="RPrint"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>

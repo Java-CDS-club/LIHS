@@ -161,7 +161,7 @@
       </af:inputText>
 </f:facet>
                     <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
-                                        label="#{row.bindings.ItemL4Id.label}"
+                                        label="#{row.bindings.ItemL4Id.label}" autoSubmit="true"
                                         required="#{bindings.TblPorDetailView2.hints.ItemL4Id.mandatory}"
                                         shortDesc="#{bindings.TblPorDetailView2.hints.ItemL4Id.tooltip}" id="soc3">
                       <f:selectItems value="#{row.bindings.ItemL4Id.items}" id="si3"/>

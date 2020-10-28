@@ -9,7 +9,9 @@
   SelectList="TblPorMaster.ID, 
        TblPorMaster.DATED, 
        TblPorMaster.VNO, 
-       TblPorMaster.VTP"
+       TblPorMaster.VTP, 
+       TblPorMaster.PROJECT_ID, 
+       TblPorMaster.DEPARTMENT_ID"
   FromList="TBL_POR_MASTER TblPorMaster"
   BindingStyle="OracleName"
   CustomQuery="false"
@@ -57,6 +59,18 @@
     EntityAttrName="Vtp"
     EntityUsage="TblPorMaster"
     AliasName="VTP"/>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="TblPorMaster"
+    AliasName="PROJECT_ID"/>
+  <ViewAttribute
+    Name="DepartmentId"
+    PrecisionRule="true"
+    EntityAttrName="DepartmentId"
+    EntityUsage="TblPorMaster"
+    AliasName="DEPARTMENT_ID"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>
