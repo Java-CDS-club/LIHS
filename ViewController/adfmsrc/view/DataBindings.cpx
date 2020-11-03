@@ -123,6 +123,24 @@
     <page path="/WEB-INF/Task_Flows/Modules/User_Management/Users_Role_TaskFlow.xml#Users_Role_TaskFlow@ExecuteWithParams"
           usageId="view_Users_Role_TaskFlow_Users_Role_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/User_Management/Users_Role.jsff" usageId="view_Users_RolePageDef"/>
+    <page path="/Main_Pages/Modules/Payroll/Payroll.jsf" usageId="view_PayrollPageDef"/>
+    <page path="/Main_Pages/Modules/Donation/Donation.jsf" usageId="view_DonationPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/General_Ledger/Bank_Payment_TaskFlow.xml#Bank_Payment_TaskFlow@Execute"
+          usageId="view_Bank_Payment_TaskFlow_Bank_Payment_TaskFlow_ExecutePageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/General_Ledger/Bank_Receipt_TaskFlow.xml#Bank_Receipt_TaskFlow@Execute"
+          usageId="view_Bank_Receipt_TaskFlow_Bank_Receipt_TaskFlow_ExecutePageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/General_Ledger/Cash_Payment_TaskFlow.xml#Cash_Payment_TaskFlow@Execute"
+          usageId="view_Cash_Payment_TaskFlow_Cash_Payment_TaskFlow_ExecutePageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/General_Ledger/Cash_Receipt_TaskFlow.xml#Cash_Receipt_TaskFlow@Execute"
+          usageId="view_Cash_Receipt_TaskFlow_Cash_Receipt_TaskFlow_ExecutePageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Donation/Donation_Types_TaskFlow.xml#Donation_Types_TaskFlow@ExecuteWithParams"
+          usageId="view_Donation_Types_TaskFlow_Donation_Types_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Donation/Donor_Setup_TaskFlow.xml#Donor_Setup_TaskFlow@ExecuteWithParams"
+          usageId="view_Donor_Setup_TaskFlow_Donor_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Donation/Cash_Receipt_TaskFlow.xml#Cash_Receipt_TaskFlow@ExecuteWithParams"
+          usageId="view_Cash_Receipt_TaskFlow_Cash_Receipt_TaskFlow_ExecuteWithParamsPageDef1"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Donation/Donation_Inkind_TaskFlow.xml#Donation_Inkind_TaskFlow@ExecuteWithParams"
+          usageId="view_Donation_Inkind_TaskFlow_Donation_Inkind_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -231,6 +249,24 @@
     <page id="view_Users_Role_TaskFlow_Users_Role_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.User_Management.Users_Role_TaskFlow_Users_Role_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Users_RolePageDef" path="Fragments.Modules.User_Management.Users_RolePageDef"/>
+    <page id="view_PayrollPageDef" path="Main_Pages.Modules.Payroll.PayrollPageDef"/>
+    <page id="view_DonationPageDef" path="Main_Pages.Modules.Donation.DonationPageDef"/>
+    <page id="view_Bank_Payment_TaskFlow_Bank_Payment_TaskFlow_ExecutePageDef"
+          path="Task_Flows.Modules.General_Ledger.Bank_Payment_TaskFlow_Bank_Payment_TaskFlow_ExecutePageDef"/>
+    <page id="view_Bank_Receipt_TaskFlow_Bank_Receipt_TaskFlow_ExecutePageDef"
+          path="Task_Flows.Modules.General_Ledger.Bank_Receipt_TaskFlow_Bank_Receipt_TaskFlow_ExecutePageDef"/>
+    <page id="view_Cash_Payment_TaskFlow_Cash_Payment_TaskFlow_ExecutePageDef"
+          path="Task_Flows.Modules.General_Ledger.Cash_Payment_TaskFlow_Cash_Payment_TaskFlow_ExecutePageDef"/>
+    <page id="view_Cash_Receipt_TaskFlow_Cash_Receipt_TaskFlow_ExecutePageDef"
+          path="Task_Flows.Modules.General_Ledger.Cash_Receipt_TaskFlow_Cash_Receipt_TaskFlow_ExecutePageDef"/>
+    <page id="view_Donation_Types_TaskFlow_Donation_Types_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Donation.Donation_Types_TaskFlow_Donation_Types_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Donor_Setup_TaskFlow_Donor_Setup_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Donation.Donor_Setup_TaskFlow_Donor_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Cash_Receipt_TaskFlow_Cash_Receipt_TaskFlow_ExecuteWithParamsPageDef1"
+          path="Task_Flows.Modules.Donation.Cash_Receipt_TaskFlow_Cash_Receipt_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Donation_Inkind_TaskFlow_Donation_Inkind_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Donation.Donation_Inkind_TaskFlow_Donation_Inkind_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"

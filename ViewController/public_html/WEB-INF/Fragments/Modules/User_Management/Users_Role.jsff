@@ -223,7 +223,19 @@
                                                     <f:validator binding="#{row.bindings.UserMasterPwd.validator}"/>
                                                 </af:inputText>
                                             </af:column>
-                                            <!--<af:column sortProperty="#{bindings.TblUserMasterView2.hints.Ast.name}"
+                                                        <af:column headerText="#{bindings.TblUserMasterView2.hints.ProjectId.label}"
+                                                                   id="c4">
+                                                            <af:selectOneChoice value="#{row.bindings.ProjectId.inputValue}"
+                                                                                label="#{row.bindings.ProjectId.label}"
+                                                                                required="#{bindings.TblUserMasterView2.hints.ProjectId.mandatory}"
+                                                                                shortDesc="#{bindings.TblUserMasterView2.hints.ProjectId.tooltip}"
+                                                                                id="soc14">
+                                                                <f:selectItems value="#{row.bindings.ProjectId.items}"
+                                                                               id="si14"/>
+                                                                <f:validator binding="#{row.bindings.ProjectId.validator}"/>
+                                                            </af:selectOneChoice>
+                                                        </af:column>
+                                                        <!--<af:column sortProperty="#{bindings.TblUserMasterView2.hints.Ast.name}"
                                                        filterable="true" sortable="true"
                                                        headerText="#{bindings.TblUserMasterView2.hints.Ast.label}"
                                                        id="c7">

@@ -98,6 +98,14 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TBL_USER_MASTER"/>
+  <Attribute
+    Name="ProjectId"
+    ColumnName="PROJECT_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_USER_MASTER"
+    IsNotNull="true"/>
   <AccessorAttribute
     Name="TblRoleMaster"
     Association="model.UserRole.EO.FkUserMasterRoleAssoc"
@@ -113,6 +121,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.UserRole.EO.TblUserMaster.UserMasterId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblUserMasterProjectIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"PROJECT_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_USER_MASTER_PROJECT_ID_CHE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.UserRole.EO.TblUserMaster.ProjectId"/>
     </AttrArray>
   </Key>
   <Key

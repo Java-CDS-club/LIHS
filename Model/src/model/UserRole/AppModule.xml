@@ -97,6 +97,12 @@
   <ViewUsage
     Name="Pages_User_Management1"
     ViewObjectName="model.UserRole.VO.Pages_User_Management"/>
+  <ViewUsage
+    Name="Pages_Payroll1"
+    ViewObjectName="model.UserRole.VO.Pages_Payroll"/>
+  <ViewUsage
+    Name="Pages_Donation1"
+    ViewObjectName="model.UserRole.VO.Pages_Donation"/>
   <ViewLinkUsage
     Name="FkPagesLink1"
     ViewLinkObjectName="model.UserRole.VO.FkPagesLink"

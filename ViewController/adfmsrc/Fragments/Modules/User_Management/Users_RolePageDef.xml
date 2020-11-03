@@ -48,6 +48,7 @@
           <Item Value="UserMasterName"/>
           <Item Value="UserMasterPwd"/>
           <Item Value="Ast"/>
+          <Item Value="ProjectId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

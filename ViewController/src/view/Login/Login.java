@@ -18,6 +18,7 @@ public class Login {
     // generating static variables to use in different scopes
     private static String role_master_id;
     private static String user_master_id;
+    private static String project_id;
     private static String sessUName;
     
     private RichInputText it1;
@@ -106,15 +107,18 @@ public class Login {
                 //getting data against column from table
                 role_master_id = (rset.getString("role_master_id")).toString();
                 user_master_id = (rset.getString("user_master_id")).toString();
+                project_id = (rset.getString("project_id")).toString();
                 //Storing value in session username from input text field and role_master_id from DB
 
                 System.out.println(".........User Name stored in session is :..." + username + "...");
 //                System.out.println(".........User Password stored in session is :..." + password + "...");
                 System.out.println(".........User Role stored in session is :..." + role_master_id + "...");
                 System.out.println(".........User Master ID stored in session is :..." + user_master_id + "...");
+                System.out.println(".........Project ID stored in session is :..." + project_id + "...");
 
                 storeOnSession("sessRMID", role_master_id);                
-                storeOnSession("sessUMID", user_master_id);
+                storeOnSession("sessUMID", user_master_id);               
+                storeOnSession("sessPrID", project_id);
                 
                 conn.close();
                 return "/faces/Main_Pages/Dashboard.jsf?faces-redirect=true";
@@ -140,6 +144,7 @@ public class Login {
         role_master_id = "";
         storeOnSession("sessUName", "");
         storeOnSession("sessUID", "");
+        storeOnSession("sessPrID", "");
         storeOnSession("sessRID", "");
         //        return "good";
         return "/faces/Main_Pages/Login.jsf?faces-redirect=true";

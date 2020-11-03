@@ -361,6 +361,36 @@
   <ViewUsage
     Name="TblDoConDDView2"
     ViewObjectName="model.ERP.VO.TblDoConDDView"/>
+  <ViewUsage
+    Name="TblDonCrView1"
+    ViewObjectName="model.ERP.VO.TblDonCrView"/>
+  <ViewUsage
+    Name="TblDonKindDView1"
+    ViewObjectName="model.ERP.VO.TblDonKindDView"/>
+  <ViewUsage
+    Name="TblDonKindMView1"
+    ViewObjectName="model.ERP.VO.TblDonKindMView"/>
+  <ViewUsage
+    Name="TblDonSetupView1"
+    ViewObjectName="model.ERP.VO.TblDonSetupView"/>
+  <ViewUsage
+    Name="TblDonTypeView1"
+    ViewObjectName="model.ERP.VO.TblDonTypeView"/>
+  <ViewUsage
+    Name="TblDonKindDView2"
+    ViewObjectName="model.ERP.VO.TblDonKindDView"/>
+  <ViewUsage
+    Name="TblDonCrView2"
+    ViewObjectName="model.ERP.VO.TblDonCrView"/>
+  <ViewUsage
+    Name="TblDonKindMView2"
+    ViewObjectName="model.ERP.VO.TblDonKindMView"/>
+  <ViewUsage
+    Name="TblDonCrView3"
+    ViewObjectName="model.ERP.VO.TblDonCrView"/>
+  <ViewUsage
+    Name="TblDonKindMView3"
+    ViewObjectName="model.ERP.VO.TblDonKindMView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -672,5 +702,35 @@
     ViewLinkObjectName="model.ERP.VO.FkDoConDdMLink"
     SrcViewUsageName="model.ERP.AppModule.TblDoConMView1"
     DstViewUsageName="model.ERP.AppModule.TblDoConDDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkDonKindDMLink1"
+    ViewLinkObjectName="model.ERP.VO.FkDonKindDMLink"
+    SrcViewUsageName="model.ERP.AppModule.TblDonKindMView1"
+    DstViewUsageName="model.ERP.AppModule.TblDonKindDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkDonCrDonSetupLink1"
+    ViewLinkObjectName="model.ERP.VO.FkDonCrDonSetupLink"
+    SrcViewUsageName="model.ERP.AppModule.TblDonSetupView1"
+    DstViewUsageName="model.ERP.AppModule.TblDonCrView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkDonKindMSetupLink1"
+    ViewLinkObjectName="model.ERP.VO.FkDonKindMSetupLink"
+    SrcViewUsageName="model.ERP.AppModule.TblDonSetupView1"
+    DstViewUsageName="model.ERP.AppModule.TblDonKindMView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkDonCrDonTypeLink1"
+    ViewLinkObjectName="model.ERP.VO.FkDonCrDonTypeLink"
+    SrcViewUsageName="model.ERP.AppModule.TblDonTypeView1"
+    DstViewUsageName="model.ERP.AppModule.TblDonCrView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkDonKindMTypeLink1"
+    ViewLinkObjectName="model.ERP.VO.FkDonKindMTypeLink"
+    SrcViewUsageName="model.ERP.AppModule.TblDonTypeView1"
+    DstViewUsageName="model.ERP.AppModule.TblDonKindMView3"
     Reversed="false"/>
 </AppModule>
