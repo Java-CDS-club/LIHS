@@ -6,13 +6,38 @@
   Name="TblDonSetupView"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SelectList="TblDonSetup.ID, 
+       TblDonSetup.DATED, 
+       TblDonSetup.PROJECT_ID, 
+       TblDonSetup.NAME, 
+       TblDonSetup.FAT_NAME, 
+       TblDonSetup.JOB_TITLE, 
+       TblDonSetup.JOB_CO, 
+       TblDonSetup.CO_ADDRESS, 
+       TblDonSetup.HOME_ADDRESS, 
+       TblDonSetup.MOBILE, 
+       TblDonSetup.TEL, 
+       TblDonSetup.EMAIL, 
+       TblDonSetup.DON_REF, 
+       TblDonSetup.NARRATION, 
+       TblDonSetup.CREATED_DATE, 
+       TblDonSetup.CREATED_BY, 
+       TblDonSetup.UPDATED_DATE, 
+       TblDonSetup.UPDATED_BY"
+  FromList="TBL_DON_SETUP TblDonSetup"
+  Where="TblDonSetup.PROJECT_ID = :getProId">
+  <Variable
+    Name="getProId"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblDonSetupView"/>
+  </Variable>
   <ViewAccessor
     Name="Project_Name_LOV1"
     ViewObjectName="model.LOV.Project_Name_LOV"

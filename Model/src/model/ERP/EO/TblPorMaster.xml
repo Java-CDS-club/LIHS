@@ -106,7 +106,12 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_POR_MASTER"/>
+    TableName="TBL_POR_MASTER">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="TblPorMasterRow"/>
+  </Attribute>
   <AccessorAttribute
     Name="TblPorDetail"
     Association="model.ERP.EO.FkPorDetailMasterAssoc"
@@ -145,8 +150,5 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_POR_MASTER_L3"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.ERP.EO.TblPorMaster.ItemL3Id"/>
-    </AttrArray>
   </Key>
 </Entity>

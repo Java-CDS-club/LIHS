@@ -98,7 +98,12 @@
     ColumnType="NUMBER"
     TableName="TBL_GRN_M"
     RetrievedOnInsert="true"
-    RetrievedOnUpdate="true"/>
+    RetrievedOnUpdate="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="TblGrnMRow"/>
+  </Attribute>
   <Attribute
     Name="PblSuppId"
     ColumnName="PBL_SUPP_ID"

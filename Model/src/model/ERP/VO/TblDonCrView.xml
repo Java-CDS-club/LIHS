@@ -6,13 +6,35 @@
   Name="TblDonCrView"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SelectList="TblDonCr.ID, 
+       TblDonCr.DATED, 
+       TblDonCr.PROJECT_ID, 
+       TblDonCr.DON_SETUP_ID, 
+       TblDonCr.DON_TYPE_ID, 
+       TblDonCr.REC_IN, 
+       TblDonCr.CASH_BANK_ID, 
+       TblDonCr.DOC_NO, 
+       TblDonCr.CHQ_DATE, 
+       TblDonCr.AMOUNT, 
+       TblDonCr.NARRATION, 
+       TblDonCr.CREATED_DATE, 
+       TblDonCr.CREATED_BY, 
+       TblDonCr.UPDATED_DATE, 
+       TblDonCr.UPDATED_BY"
+  FromList="TBL_DON_CR TblDonCr"
+  Where="TblDonCr.PROJECT_ID = :getProId">
+  <Variable
+    Name="getProId"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblDonCrView"/>
+  </Variable>
   <ViewAccessor
     Name="Project_Name_LOV1"
     ViewObjectName="model.LOV.Project_Name_LOV"

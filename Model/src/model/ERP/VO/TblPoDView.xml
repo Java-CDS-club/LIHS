@@ -28,7 +28,7 @@
     <ParameterMap>
       <PIMap Variable="getconId">
         <TransientExpression
-          trustMode="untrusted"
+          trustMode="trusted"
           Name="ExpressionScript"><![CDATA[DoConMId]]></TransientExpression>
       </PIMap>
     </ParameterMap>

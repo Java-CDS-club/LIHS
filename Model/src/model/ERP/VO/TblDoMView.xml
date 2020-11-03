@@ -20,7 +20,17 @@
        TblDoM.CREATED_BY, 
        TblDoM.UPDATED_DATE, 
        TblDoM.UPDATED_BY"
-  FromList="TBL_DO_M TblDoM">
+  FromList="TBL_DO_M TblDoM"
+  Where="TblDoM.PROJECT_ID = :getProId">
+  <Variable
+    Name="getProId"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblDoMView"/>
+  </Variable>
   <ViewAccessor
     Name="Voucher_Type1"
     ViewObjectName="model.LOV.Voucher_Type"

@@ -87,7 +87,12 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_CASH_PURCH_M"/>
+    TableName="TBL_CASH_PURCH_M">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="TblCashPurchMRow"/>
+  </Attribute>
   <Attribute
     Name="BankCashId"
     ColumnName="BANK_CASH_ID"

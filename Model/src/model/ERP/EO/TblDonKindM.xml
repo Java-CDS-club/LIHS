@@ -87,7 +87,12 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_DON_KIND_M"/>
+    TableName="TBL_DON_KIND_M">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="TblDonKindMRow"/>
+  </Attribute>
   <Attribute
     Name="DonSetupId"
     ColumnName="DON_SETUP_ID"

@@ -106,7 +106,12 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_DO_CON_M"/>
+    TableName="TBL_DO_CON_M">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="TblDoConMRow"/>
+  </Attribute>
   <AccessorAttribute
     Name="TblDoConD"
     Association="model.ERP.EO.FkDoConDMAssoc"
