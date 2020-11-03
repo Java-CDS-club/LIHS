@@ -141,6 +141,10 @@
           usageId="view_Cash_Receipt_TaskFlow_Cash_Receipt_TaskFlow_ExecuteWithParamsPageDef1"/>
     <page path="/WEB-INF/Task_Flows/Modules/Donation/Donation_Inkind_TaskFlow.xml#Donation_Inkind_TaskFlow@ExecuteWithParams"
           usageId="view_Donation_Inkind_TaskFlow_Donation_Inkind_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Donation/Cash_Receipt.jsff" usageId="view_Cash_ReceiptPageDef1"/>
+    <page path="/WEB-INF/Fragments/Modules/Donation/Donation_Inkind.jsff" usageId="view_Donation_InkindPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Donation/Donation_Types.jsff" usageId="view_Donation_TypesPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Donation/Donor_Setup.jsff" usageId="view_Donor_SetupPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -267,6 +271,10 @@
           path="Task_Flows.Modules.Donation.Cash_Receipt_TaskFlow_Cash_Receipt_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Donation_Inkind_TaskFlow_Donation_Inkind_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Donation.Donation_Inkind_TaskFlow_Donation_Inkind_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Cash_ReceiptPageDef1" path="Fragments.Modules.Donation.Cash_ReceiptPageDef"/>
+    <page id="view_Donation_InkindPageDef" path="Fragments.Modules.Donation.Donation_InkindPageDef"/>
+    <page id="view_Donation_TypesPageDef" path="Fragments.Modules.Donation.Donation_TypesPageDef"/>
+    <page id="view_Donor_SetupPageDef" path="Fragments.Modules.Donation.Donor_SetupPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"

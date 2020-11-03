@@ -13,6 +13,95 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="Project_Name_LOV1"
+    ViewObjectName="model.LOV.Project_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Donation_Setup_LOV1"
+    ViewObjectName="model.LOV.Donation_Setup_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Donation_Type_LOV1"
+    ViewObjectName="model.LOV.Donation_Type_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Bank_Cash_Cash_LOV1"
+    ViewObjectName="model.LOV.Bank_Cash_Cash_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ProjectId"
+    ListVOName="Project_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProjectId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DonSetupId"
+    ListVOName="Donation_Setup_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DonSetupId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Dated"/>
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DonTypeId"
+    ListVOName="Donation_Type_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DonTypeId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Narration"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CashBankId"
+    ListVOName="Bank_Cash_Cash_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CashBankId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblDonCr"
     Entity="model.ERP.EO.TblDonCr"/>
@@ -34,19 +123,43 @@
     PrecisionRule="true"
     EntityAttrName="ProjectId"
     EntityUsage="TblDonCr"
-    AliasName="PROJECT_ID"/>
+    AliasName="PROJECT_ID"
+    LOVName="LOV_ProjectId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DonSetupId"
     PrecisionRule="true"
     EntityAttrName="DonSetupId"
     EntityUsage="TblDonCr"
-    AliasName="DON_SETUP_ID"/>
+    AliasName="DON_SETUP_ID"
+    LOVName="LOV_DonSetupId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DonTypeId"
     PrecisionRule="true"
     EntityAttrName="DonTypeId"
     EntityUsage="TblDonCr"
-    AliasName="DON_TYPE_ID"/>
+    AliasName="DON_TYPE_ID"
+    LOVName="LOV_DonTypeId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="RecIn"
     PrecisionRule="true"
@@ -58,7 +171,15 @@
     PrecisionRule="true"
     EntityAttrName="CashBankId"
     EntityUsage="TblDonCr"
-    AliasName="CASH_BANK_ID"/>
+    AliasName="CASH_BANK_ID"
+    LOVName="LOV_CashBankId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DocNo"
     PrecisionRule="true"
