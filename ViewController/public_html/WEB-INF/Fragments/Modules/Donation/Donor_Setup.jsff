@@ -176,7 +176,7 @@
                               <f:validator binding="#{bindings.Tel.validator}"/>
                             </af:inputText>
                             <af:spacer  id="s8"/>
-                            <af:inputText value="#{bindings.DonRef.inputValue}" label="Donation Refrence"
+                            <af:inputText value="#{bindings.DonRef.inputValue}" label="Donation Reference"
                                            required="#{bindings.DonRef.hints.mandatory}"
                                           columns="#{bindings.DonRef.hints.displayWidth}"
                                           maximumLength="#{bindings.DonRef.hints.precision}"

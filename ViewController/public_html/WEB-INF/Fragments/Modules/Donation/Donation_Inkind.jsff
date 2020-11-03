@@ -217,7 +217,7 @@
                                                   label="#{row.bindings.UomId.label}"
                                                   required="#{bindings.TblDonKindDView2.hints.UomId.mandatory}"
                                                   shortDesc="#{bindings.TblDonKindDView2.hints.UomId.tooltip}"
-                                                  id="soc7">
+                                                  id="soc7" readOnly="true">
                                 <f:selectItems value="#{row.bindings.UomId.items}" id="si7"/>
                                 <f:validator binding="#{row.bindings.UomId.validator}"/>
                               </af:selectOneChoice>
@@ -290,7 +290,8 @@
                                             required="#{bindings.TblDonKindDView2.hints.Amount.mandatory}"
                                             columns="#{bindings.TblDonKindDView2.hints.Amount.displayWidth}"
                                             maximumLength="#{bindings.TblDonKindDView2.hints.Amount.precision}"
-                                            shortDesc="#{bindings.TblDonKindDView2.hints.Amount.tooltip}" id="it9">
+                                            shortDesc="#{bindings.TblDonKindDView2.hints.Amount.tooltip}" id="it9"
+                                            readOnly="true">
                                 <f:validator binding="#{row.bindings.Amount.validator}"/>
                                 <af:convertNumber groupingUsed="false"
                                                   pattern="#{bindings.TblDonKindDView2.hints.Amount.format}"/>
@@ -322,7 +323,7 @@
                   </af:gridRow>
                 </af:panelGridLayout>
               </af:showDetailItem>
-              <af:showDetailItem text="Serach" id="sdi1">
+              <af:showDetailItem text="Search" id="sdi1">
                 <af:table value="#{bindings.TblDonKindMView1.collectionModel}" var="row"
                           rows="#{bindings.TblDonKindMView1.rangeSize}"
                           emptyText="#{bindings.TblDonKindMView1.viewable ? 'No data to display.' : 'Access Denied.'}"
