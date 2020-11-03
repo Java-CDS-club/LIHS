@@ -6,9 +6,9 @@
     <variableIterator id="variables"/>
     <iterator Binds="USERS_CRUD_OPERATIONS1" RangeSize="25" DataControl="AppModuleDataControl"
               id="USERS_CRUD_OPERATIONS1Iterator"/>
-    <iterator Binds="TblDonKindMView1" RangeSize="25" DataControl="AppModuleDataControl1"
+    <iterator Binds="TblDonKindMView1" RangeSize="8" DataControl="AppModuleDataControl1"
               id="TblDonKindMView1Iterator"/>
-    <iterator Binds="TblDonKindDView2" RangeSize="25" DataControl="AppModuleDataControl1"
+    <iterator Binds="TblDonKindDView2" RangeSize="8" DataControl="AppModuleDataControl1"
               id="TblDonKindDView2Iterator"/>
     <searchRegion Binds="TblDonKindDView2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblDonKindDView2Query"/>
