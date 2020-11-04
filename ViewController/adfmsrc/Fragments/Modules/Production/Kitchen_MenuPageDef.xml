@@ -43,6 +43,10 @@
           <Item Value="ItemL4Id"/>
           <Item Value="TotalPerson"/>
           <Item Value="Dated"/>
+          <Item Value="LunchItemL4Id"/>
+          <Item Value="LunchPersons"/>
+          <Item Value="DinnerItemL4Id"/>
+          <Item Value="DinnerPersons"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

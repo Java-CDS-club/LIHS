@@ -89,7 +89,12 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_ADV_LOAN"/>
+    TableName="TBL_ADV_LOAN">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="TblAdvLoanRow"/>
+  </Attribute>
   <Attribute
     Name="EmpId"
     ColumnName="EMP_ID"

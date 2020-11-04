@@ -35,6 +35,42 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_LunchItemL4Id"
+    ListVOName="Item_Level4_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LunchItemL4Id"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ItemL4Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DinnerItemL4Id"
+    ListVOName="Item_Level4_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DinnerItemL4Id"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ItemL4Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblKitchenMenuD"
     Entity="model.ERP.EO.TblKitchenMenuD"/>
@@ -110,6 +146,46 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="LunchItemL4Id"
+    PrecisionRule="true"
+    EntityAttrName="LunchItemL4Id"
+    EntityUsage="TblKitchenMenuD"
+    AliasName="LUNCH_ITEM_L4_ID"
+    LOVName="LOV_LunchItemL4Id">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LunchPersons"
+    PrecisionRule="true"
+    EntityAttrName="LunchPersons"
+    EntityUsage="TblKitchenMenuD"
+    AliasName="LUNCH_PERSONS"/>
+  <ViewAttribute
+    Name="DinnerItemL4Id"
+    PrecisionRule="true"
+    EntityAttrName="DinnerItemL4Id"
+    EntityUsage="TblKitchenMenuD"
+    AliasName="DINNER_ITEM_L4_ID"
+    LOVName="LOV_DinnerItemL4Id">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DinnerPersons"
+    PrecisionRule="true"
+    EntityAttrName="DinnerPersons"
+    EntityUsage="TblKitchenMenuD"
+    AliasName="DINNER_PERSONS"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>
