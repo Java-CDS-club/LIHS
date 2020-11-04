@@ -448,6 +448,15 @@
   <ViewUsage
     Name="TblTransferView1"
     ViewObjectName="model.ERP.VO.TblTransferView"/>
+  <ViewUsage
+    Name="TblSalaryDView1"
+    ViewObjectName="model.ERP.VO.TblSalaryDView"/>
+  <ViewUsage
+    Name="TblSalaryMView1"
+    ViewObjectName="model.ERP.VO.TblSalaryMView"/>
+  <ViewUsage
+    Name="TblSalaryDView2"
+    ViewObjectName="model.ERP.VO.TblSalaryDView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -831,5 +840,11 @@
     ViewLinkObjectName="model.ERP.VO.FkLeaveDMLink"
     SrcViewUsageName="model.ERP.AppModule.TblLeaveMView1"
     DstViewUsageName="model.ERP.AppModule.TblLeaveDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkSalaryDMLink1"
+    ViewLinkObjectName="model.ERP.VO.FkSalaryDMLink"
+    SrcViewUsageName="model.ERP.AppModule.TblSalaryMView1"
+    DstViewUsageName="model.ERP.AppModule.TblSalaryDView2"
     Reversed="false"/>
 </AppModule>
