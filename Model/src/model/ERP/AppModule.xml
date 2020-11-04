@@ -442,6 +442,12 @@
   <ViewUsage
     Name="TblLeaveDView2"
     ViewObjectName="model.ERP.VO.TblLeaveDView"/>
+  <ViewUsage
+    Name="TblPromotionView1"
+    ViewObjectName="model.ERP.VO.TblPromotionView"/>
+  <ViewUsage
+    Name="TblTransferView1"
+    ViewObjectName="model.ERP.VO.TblTransferView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
