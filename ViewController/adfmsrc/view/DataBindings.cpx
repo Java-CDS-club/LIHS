@@ -170,6 +170,8 @@
     <page path="/WEB-INF/Fragments/Modules/Payroll/Leave_Structure.jsff" usageId="view_Leave_StructurePageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Payroll/Employee_Setup.jsff" usageId="view_Employee_SetupPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Payroll/Attendance.jsff" usageId="view_AttendancePageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payroll/Advance_Loan_Request.jsff"
+          usageId="view_Advance_Loan_RequestPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -325,6 +327,7 @@
     <page id="view_Leave_StructurePageDef" path="Fragments.Modules.Payroll.Leave_StructurePageDef"/>
     <page id="view_Employee_SetupPageDef" path="Fragments.Modules.Payroll.Employee_SetupPageDef"/>
     <page id="view_AttendancePageDef" path="Fragments.Modules.Payroll.AttendancePageDef"/>
+    <page id="view_Advance_Loan_RequestPageDef" path="Fragments.Modules.Payroll.Advance_Loan_RequestPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
