@@ -35,7 +35,6 @@
     <ParameterMap>
       <PIMap Variable="getSuppID">
         <TransientExpression
-          trustMode="trusted"
           Name="ExpressionScript"><![CDATA[PblSuppId]]></TransientExpression>
       </PIMap>
     </ParameterMap>
