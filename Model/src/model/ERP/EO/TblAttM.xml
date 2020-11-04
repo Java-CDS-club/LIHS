@@ -12,13 +12,14 @@
   BindingStyle="OracleName">
   <Attribute
     Name="Id"
-    IsNotNull="true"
     ColumnName="ID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TBL_ATT_M"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true"/>
   <Attribute
     Name="Vno"
     Precision="25"
@@ -26,7 +27,9 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TBL_ATT_M">
+    TableName="TBL_ATT_M"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="25"/>
     </DesignTime>
@@ -51,7 +54,16 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_ATT_M"/>
+    TableName="TBL_ATT_M">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.EO.TblAttM.Dated_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.EO.TblAttM.Dated_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Narration"
     Precision="300"
@@ -145,4 +157,8 @@
       <Item Value="model.ERP.EO.TblAttM.ProjectId"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

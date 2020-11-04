@@ -12,13 +12,14 @@
   BindingStyle="OracleName">
   <Attribute
     Name="Id"
-    IsNotNull="true"
     ColumnName="ID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TBL_EMP_EXP"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true"/>
   <Attribute
     Name="EmpId"
     ColumnName="EMP_ID"
@@ -56,14 +57,32 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_EMP_EXP"/>
+    TableName="TBL_EMP_EXP">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="model.ERP.EO.TblEmpExp.StDate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="model.ERP.EO.TblEmpExp.StDate_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="EnDate"
     ColumnName="EN_DATE"
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_EMP_EXP"/>
+    TableName="TBL_EMP_EXP">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.EO.TblEmpExp.EnDate_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.EO.TblEmpExp.EnDate_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="CreatedDate"
     ColumnName="CREATED_DATE"
@@ -120,4 +139,8 @@
       <Item Value="model.ERP.EO.TblEmpExp.EmpId"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

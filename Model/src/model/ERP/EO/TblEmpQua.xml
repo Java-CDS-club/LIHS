@@ -12,13 +12,14 @@
   BindingStyle="OracleName">
   <Attribute
     Name="Id"
-    IsNotNull="true"
     ColumnName="ID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TBL_EMP_QUA"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true"/>
   <Attribute
     Name="EmpId"
     ColumnName="EMP_ID"
@@ -56,14 +57,32 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_EMP_QUA"/>
+    TableName="TBL_EMP_QUA">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="model.ERP.EO.TblEmpQua.StDate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="model.ERP.EO.TblEmpQua.StDate_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="EnDate"
     ColumnName="EN_DATE"
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_EMP_QUA"/>
+    TableName="TBL_EMP_QUA">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.EO.TblEmpQua.EnDate_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.EO.TblEmpQua.EnDate_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="GradePerc"
     Precision="10"
@@ -132,4 +151,8 @@
       <Item Value="model.ERP.EO.TblEmpQua.EmpId"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>
