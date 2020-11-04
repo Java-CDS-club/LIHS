@@ -145,6 +145,26 @@
     <page path="/WEB-INF/Fragments/Modules/Donation/Donation_Inkind.jsff" usageId="view_Donation_InkindPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Donation/Donation_Types.jsff" usageId="view_Donation_TypesPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Donation/Donor_Setup.jsff" usageId="view_Donor_SetupPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payroll/Promotion_TaskFlow.xml#Promotion_TaskFlow@ExecuteWithParams"
+          usageId="view_Promotion_TaskFlow_Promotion_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payroll/Transfer_TaskFlow.xml#Transfer_TaskFlow@ExecuteWithParams"
+          usageId="view_Transfer_TaskFlow_Transfer_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payroll/Salary_Generation_TaskFlow.xml#Salary_Generation_TaskFlow@ExecuteWithParams"
+          usageId="view_Salary_Generation_TaskFlow_Salary_Generation_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payroll/Attendance_TaskFlow.xml#Attendance_TaskFlow@ExecuteWithParams"
+          usageId="view_Attendance_TaskFlow_Attendance_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payroll/Advance_Loan_Request_TaskFlow.xml#Advance_Loan_Request_TaskFlow@ExecuteWithParams"
+          usageId="view_Advance_Loan_Request_TaskFlow_Advance_Loan_Request_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payroll/Employee_Setup_TaskFlow.xml#Employee_Setup_TaskFlow@ExecuteWithParams"
+          usageId="view_Employee_Setup_TaskFlow_Employee_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payroll/Leave_Structure_TaskFlow.xml#Leave_Structure_TaskFlow@ExecuteWithParams"
+          usageId="view_Leave_Structure_TaskFlow_Leave_Structure_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payroll/Income_Tax_TaskFlow.xml#Income_Tax_TaskFlow@ExecuteWithParams"
+          usageId="view_Income_Tax_TaskFlow_Income_Tax_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payroll/Grade_TaskFlow.xml#Grade_TaskFlow@ExecuteWithParams"
+          usageId="view_Grade_TaskFlow_Grade_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payroll/Designation_TaskFlow.xml#Designation_TaskFlow@ExecuteWithParams"
+          usageId="view_Designation_TaskFlow_Designation_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -275,6 +295,26 @@
     <page id="view_Donation_InkindPageDef" path="Fragments.Modules.Donation.Donation_InkindPageDef"/>
     <page id="view_Donation_TypesPageDef" path="Fragments.Modules.Donation.Donation_TypesPageDef"/>
     <page id="view_Donor_SetupPageDef" path="Fragments.Modules.Donation.Donor_SetupPageDef"/>
+    <page id="view_Promotion_TaskFlow_Promotion_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payroll.Promotion_TaskFlow_Promotion_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Transfer_TaskFlow_Transfer_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payroll.Transfer_TaskFlow_Transfer_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Salary_Generation_TaskFlow_Salary_Generation_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payroll.Salary_Generation_TaskFlow_Salary_Generation_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Attendance_TaskFlow_Attendance_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payroll.Attendance_TaskFlow_Attendance_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Advance_Loan_Request_TaskFlow_Advance_Loan_Request_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payroll.Advance_Loan_Request_TaskFlow_Advance_Loan_Request_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Employee_Setup_TaskFlow_Employee_Setup_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payroll.Employee_Setup_TaskFlow_Employee_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Leave_Structure_TaskFlow_Leave_Structure_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payroll.Leave_Structure_TaskFlow_Leave_Structure_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Income_Tax_TaskFlow_Income_Tax_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payroll.Income_Tax_TaskFlow_Income_Tax_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Grade_TaskFlow_Grade_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payroll.Grade_TaskFlow_Grade_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Designation_TaskFlow_Designation_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payroll.Designation_TaskFlow_Designation_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
