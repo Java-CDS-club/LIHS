@@ -165,6 +165,11 @@
           usageId="view_Grade_TaskFlow_Grade_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Payroll/Designation_TaskFlow.xml#Designation_TaskFlow@ExecuteWithParams"
           usageId="view_Designation_TaskFlow_Designation_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payroll/Designation.jsff" usageId="view_DesignationPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payroll/Grade.jsff" usageId="view_GradePageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payroll/Leave_Structure.jsff" usageId="view_Leave_StructurePageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payroll/Employee_Setup.jsff" usageId="view_Employee_SetupPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payroll/Attendance.jsff" usageId="view_AttendancePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -315,6 +320,11 @@
           path="Task_Flows.Modules.Payroll.Grade_TaskFlow_Grade_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Designation_TaskFlow_Designation_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Payroll.Designation_TaskFlow_Designation_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_DesignationPageDef" path="Fragments.Modules.Payroll.DesignationPageDef"/>
+    <page id="view_GradePageDef" path="Fragments.Modules.Payroll.GradePageDef"/>
+    <page id="view_Leave_StructurePageDef" path="Fragments.Modules.Payroll.Leave_StructurePageDef"/>
+    <page id="view_Employee_SetupPageDef" path="Fragments.Modules.Payroll.Employee_SetupPageDef"/>
+    <page id="view_AttendancePageDef" path="Fragments.Modules.Payroll.AttendancePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
