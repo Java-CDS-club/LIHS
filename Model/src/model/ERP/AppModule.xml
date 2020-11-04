@@ -391,6 +391,57 @@
   <ViewUsage
     Name="TblDonKindMView3"
     ViewObjectName="model.ERP.VO.TblDonKindMView"/>
+  <ViewUsage
+    Name="TblAdvLoanView1"
+    ViewObjectName="model.ERP.VO.TblAdvLoanView"/>
+  <ViewUsage
+    Name="TblAttDView1"
+    ViewObjectName="model.ERP.VO.TblAttDView"/>
+  <ViewUsage
+    Name="TblAttMView1"
+    ViewObjectName="model.ERP.VO.TblAttMView"/>
+  <ViewUsage
+    Name="TblDesignationView1"
+    ViewObjectName="model.ERP.VO.TblDesignationView"/>
+  <ViewUsage
+    Name="TblEmpExpView1"
+    ViewObjectName="model.ERP.VO.TblEmpExpView"/>
+  <ViewUsage
+    Name="TblEmpQuaView1"
+    ViewObjectName="model.ERP.VO.TblEmpQuaView"/>
+  <ViewUsage
+    Name="TblEmpView1"
+    ViewObjectName="model.ERP.VO.TblEmpView"/>
+  <ViewUsage
+    Name="TblGradeView1"
+    ViewObjectName="model.ERP.VO.TblGradeView"/>
+  <ViewUsage
+    Name="TblLeaveDView1"
+    ViewObjectName="model.ERP.VO.TblLeaveDView"/>
+  <ViewUsage
+    Name="TblLeaveMView1"
+    ViewObjectName="model.ERP.VO.TblLeaveMView"/>
+  <ViewUsage
+    Name="TblAttDView2"
+    ViewObjectName="model.ERP.VO.TblAttDView"/>
+  <ViewUsage
+    Name="TblAdvLoanView2"
+    ViewObjectName="model.ERP.VO.TblAdvLoanView"/>
+  <ViewUsage
+    Name="TblEmpView2"
+    ViewObjectName="model.ERP.VO.TblEmpView"/>
+  <ViewUsage
+    Name="TblEmpExpView2"
+    ViewObjectName="model.ERP.VO.TblEmpExpView"/>
+  <ViewUsage
+    Name="TblEmpQuaView2"
+    ViewObjectName="model.ERP.VO.TblEmpQuaView"/>
+  <ViewUsage
+    Name="TblEmpView3"
+    ViewObjectName="model.ERP.VO.TblEmpView"/>
+  <ViewUsage
+    Name="TblLeaveDView2"
+    ViewObjectName="model.ERP.VO.TblLeaveDView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -732,5 +783,47 @@
     ViewLinkObjectName="model.ERP.VO.FkDonKindMTypeLink"
     SrcViewUsageName="model.ERP.AppModule.TblDonTypeView1"
     DstViewUsageName="model.ERP.AppModule.TblDonKindMView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkAttDMLink1"
+    ViewLinkObjectName="model.ERP.VO.FkAttDMLink"
+    SrcViewUsageName="model.ERP.AppModule.TblAttMView1"
+    DstViewUsageName="model.ERP.AppModule.TblAttDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkAdvLoanEmpLink1"
+    ViewLinkObjectName="model.ERP.VO.FkAdvLoanEmpLink"
+    SrcViewUsageName="model.ERP.AppModule.TblEmpView1"
+    DstViewUsageName="model.ERP.AppModule.TblAdvLoanView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkEmpDesigLink1"
+    ViewLinkObjectName="model.ERP.VO.FkEmpDesigLink"
+    SrcViewUsageName="model.ERP.AppModule.TblDesignationView1"
+    DstViewUsageName="model.ERP.AppModule.TblEmpView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkEmpExpMLink1"
+    ViewLinkObjectName="model.ERP.VO.FkEmpExpMLink"
+    SrcViewUsageName="model.ERP.AppModule.TblEmpView1"
+    DstViewUsageName="model.ERP.AppModule.TblEmpExpView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkEmpQuaLink1"
+    ViewLinkObjectName="model.ERP.VO.FkEmpQuaLink"
+    SrcViewUsageName="model.ERP.AppModule.TblEmpView1"
+    DstViewUsageName="model.ERP.AppModule.TblEmpQuaView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkEmpGradeLink1"
+    ViewLinkObjectName="model.ERP.VO.FkEmpGradeLink"
+    SrcViewUsageName="model.ERP.AppModule.TblGradeView1"
+    DstViewUsageName="model.ERP.AppModule.TblEmpView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkLeaveDMLink1"
+    ViewLinkObjectName="model.ERP.VO.FkLeaveDMLink"
+    SrcViewUsageName="model.ERP.AppModule.TblLeaveMView1"
+    DstViewUsageName="model.ERP.AppModule.TblLeaveDView2"
     Reversed="false"/>
 </AppModule>
