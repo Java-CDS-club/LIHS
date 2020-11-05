@@ -7,11 +7,11 @@
     <iterator Binds="USERS_CRUD_OPERATIONS1" RangeSize="25" DataControl="AppModuleDataControl"
               id="USERS_CRUD_OPERATIONS1Iterator"/>
     <iterator Binds="TblSalaryMView1" RangeSize="8" DataControl="AppModuleDataControl1" id="TblSalaryMView1Iterator"/>
+    <searchRegion Binds="TblSalaryMView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblSalaryMView1Query"/>
     <iterator Binds="TblSalaryDView2" RangeSize="8" DataControl="AppModuleDataControl1" id="TblSalaryDView2Iterator"/>
     <searchRegion Binds="TblSalaryDView2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblSalaryDView2Query"/>
-    <searchRegion Binds="TblSalaryMView1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblSalaryMView1Query"/>
   </executables>
   <bindings>
     <tree IterBinding="USERS_CRUD_OPERATIONS1Iterator" id="USERS_CRUD_OPERATIONS1">
@@ -65,6 +65,21 @@
     <action IterBinding="TblSalaryMView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
     <action IterBinding="TblSalaryMView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
     <action IterBinding="TblSalaryMView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <tree IterBinding="TblSalaryMView1Iterator" id="TblSalaryMView1">
+      <nodeDefinition DefName="model.ERP.VO.TblSalaryMView" Name="TblSalaryMView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Vno"/>
+          <Item Value="Vtp"/>
+          <Item Value="Dated"/>
+          <Item Value="ProjectId"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="SalMonth"/>
+          <Item Value="SalYear"/>
+          <Item Value="Narration"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
     <action IterBinding="TblSalaryMView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
             Action="createInsertRow"/>
     <action IterBinding="TblSalaryMView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
@@ -100,20 +115,5 @@
             Action="createInsertRow"/>
     <action IterBinding="TblSalaryDView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblSalaryDView2Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <tree IterBinding="TblSalaryMView1Iterator" id="TblSalaryMView1">
-      <nodeDefinition DefName="model.ERP.VO.TblSalaryMView" Name="TblSalaryMView10">
-        <AttrNames>
-          <Item Value="Id"/>
-          <Item Value="Vno"/>
-          <Item Value="Vtp"/>
-          <Item Value="Dated"/>
-          <Item Value="ProjectId"/>
-          <Item Value="DepartmentId"/>
-          <Item Value="SalMonth"/>
-          <Item Value="SalYear"/>
-          <Item Value="Narration"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
   </bindings>
 </pageDefinition>
