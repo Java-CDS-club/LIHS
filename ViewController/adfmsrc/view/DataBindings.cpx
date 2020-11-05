@@ -172,6 +172,9 @@
     <page path="/WEB-INF/Fragments/Modules/Payroll/Attendance.jsff" usageId="view_AttendancePageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Payroll/Advance_Loan_Request.jsff"
           usageId="view_Advance_Loan_RequestPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payroll/Transfer.jsff" usageId="view_TransferPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payroll/Promotion.jsff" usageId="view_PromotionPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Payroll/Salary_Generation.jsff" usageId="view_Salary_GenerationPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -328,6 +331,9 @@
     <page id="view_Employee_SetupPageDef" path="Fragments.Modules.Payroll.Employee_SetupPageDef"/>
     <page id="view_AttendancePageDef" path="Fragments.Modules.Payroll.AttendancePageDef"/>
     <page id="view_Advance_Loan_RequestPageDef" path="Fragments.Modules.Payroll.Advance_Loan_RequestPageDef"/>
+    <page id="view_TransferPageDef" path="Fragments.Modules.Payroll.TransferPageDef"/>
+    <page id="view_PromotionPageDef" path="Fragments.Modules.Payroll.PromotionPageDef"/>
+    <page id="view_Salary_GenerationPageDef" path="Fragments.Modules.Payroll.Salary_GenerationPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
