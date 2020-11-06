@@ -256,22 +256,7 @@
                           filterModel="#{bindings.TblDoMView1Query.queryDescriptor}" filterVisible="true"
                           queryListener="#{bindings.TblDoMView1Query.processQuery}" varStatus="vs" id="t1"
                           scrollPolicy="page" autoHeightRows="0">
-                  <af:column sortProperty="#{bindings.TblDoMView1.hints.Id.name}" filterable="true" sortable="true"
-                             headerText="ID" id="c1" visible="false">
-                             <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.Id}"
-       id="it21" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-                    <af:inputText value="#{row.bindings.Id.inputValue}" label="#{bindings.TblDoMView1.hints.Id.label}"
-                                  required="#{bindings.TblDoMView1.hints.Id.mandatory}"
-                                  columns="#{bindings.TblDoMView1.hints.Id.displayWidth}"
-                                  maximumLength="#{bindings.TblDoMView1.hints.Id.precision}"
-                                  shortDesc="#{bindings.TblDoMView1.hints.Id.tooltip}" id="it4" readOnly="true">
-                      <f:validator binding="#{row.bindings.Id.validator}"/>
-                      <af:convertNumber groupingUsed="false" pattern="#{bindings.TblDoMView1.hints.Id.format}"/>
-                    </af:inputText>
-                  </af:column>
+                  
                   <af:column sortProperty="#{bindings.TblDoMView1.hints.Vno.name}" filterable="true" sortable="true"
                              headerText="Voucher No." id="c2">
                               <f:facet name="filter">
@@ -364,6 +349,22 @@
                       <f:validator binding="#{row.bindings.Narration.validator}"/>
                     </af:inputText>
                   </af:column>
+                  
+                  
+                  
+                  <af:column sortProperty="#{bindings.TblDoMView1.hints.Id.name}" filterable="true" sortable="true"
+                             headerText="Get Report" id="c1">
+                    <af:link shortDesc="#{bindings.TblDoMView1.hints.Id.tooltip}" id="it4"
+                    icon="#{resource['images:get_report.png']}"
+                             actionListener="#{backingBeanScope.VoucherPrintBean.getDOReport}">
+                   <f:attribute name="sendDOID" value="#{row.bindings.Id.inputValue}"/>
+                </af:link>
+                    
+                  </af:column>
+                  
+                  
+                  
+                  
                 </af:table>
               </af:showDetailItem>
             </af:panelTabbed>

@@ -10,6 +10,11 @@
       <managed-bean-class>view.VoucherType.GLvoucherType</managed-bean-class>
       <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
+    <managed-bean id="__5">
+      <managed-bean-name>VoucherPrintBean</managed-bean-name>
+      <managed-bean-class>view.Report.VoucherPrint</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+    </managed-bean>
     <view id="Demand_Order">
       <page>/WEB-INF/Fragments/Modules/Inventory/Demand_Order.jsff</page>
     </view>
