@@ -57,27 +57,7 @@
                     <f:selectItems value="#{bindings.PorMasterId.items}" id="si2"/>
                     <f:validator binding="#{bindings.PorMasterId.validator}"/>
                   </af:selectOneChoice>
-                            <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
-                                                label="#{bindings.ProjectId.label}" readOnly="true"
-                                                required="#{bindings.ProjectId.hints.mandatory}"
-                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc9">
-                              <f:selectItems value="#{bindings.ProjectId.items}" id="si9"/>
-                              <f:validator binding="#{bindings.ProjectId.validator}"/>
-                            </af:selectOneChoice>
-                            <af:selectOneChoice value="#{bindings.FrDeptId.inputValue}"
-                                                label="#{bindings.FrDeptId.label}"
-                                                required="#{bindings.FrDeptId.hints.mandatory}"
-                                                shortDesc="#{bindings.FrDeptId.hints.tooltip}" id="soc10">
-                              <f:selectItems value="#{bindings.FrDeptId.items}" id="si10"/>
-                              <f:validator binding="#{bindings.FrDeptId.validator}"/>
-                            </af:selectOneChoice>
-                            <af:selectOneChoice value="#{bindings.ToDeptId.inputValue}"
-                                                label="#{bindings.ToDeptId.label}" readOnly="true"
-                                                required="#{bindings.ToDeptId.hints.mandatory}"
-                                                shortDesc="#{bindings.ToDeptId.hints.tooltip}" id="soc11">
-                              <f:selectItems value="#{bindings.ToDeptId.items}" id="si11"/>
-                              <f:validator binding="#{bindings.ToDeptId.validator}"/>
-                            </af:selectOneChoice>
+                            
                             <af:spacer  id="s8"/>
                   <af:inputText value="#{bindings.Narration.inputValue}" label="Remarks"
                                 required="#{bindings.Narration.hints.mandatory}"
@@ -88,8 +68,31 @@
                     <f:validator binding="#{bindings.Narration.validator}"/>
                   </af:inputText>
                   <af:spacer  id="s6"/>
-                  
-                  <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No."
+                  <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
+                                                label="Project" readOnly="true"
+                                                required="#{bindings.ProjectId.hints.mandatory}"
+                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc9" disabled="true">
+                              <f:selectItems value="#{bindings.ProjectId.items}" id="si9"/>
+                              <f:validator binding="#{bindings.ProjectId.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s11"/>
+                            <af:selectOneChoice value="#{bindings.FrDeptId.inputValue}"
+                                                label="From Department"
+                                                required="#{bindings.FrDeptId.hints.mandatory}"
+                                                shortDesc="#{bindings.FrDeptId.hints.tooltip}" id="soc10">
+                              <f:selectItems value="#{bindings.FrDeptId.items}" id="si10"/>
+                              <f:validator binding="#{bindings.FrDeptId.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s12"/>
+                            <af:selectOneChoice value="#{bindings.ToDeptId.inputValue}"
+                                                label="To Department" readOnly="true"
+                                                required="#{bindings.ToDeptId.hints.mandatory}"
+                                                shortDesc="#{bindings.ToDeptId.hints.tooltip}" id="soc11">
+                              <f:selectItems value="#{bindings.ToDeptId.items}" id="si11"/>
+                              <f:validator binding="#{bindings.ToDeptId.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s15"/>
+                            <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No."
                                 required="#{bindings.Vno.hints.mandatory}" columns="17"
                                 maximumLength="#{bindings.Vno.hints.precision}"
                                 shortDesc="#{bindings.Vno.hints.tooltip}" id="it2"   disabled="true"

@@ -88,7 +88,7 @@
                                                   label="#{row.bindings.ProjectId.label}"
                                                   required="#{bindings.TblDonSetupView1.hints.ProjectId.mandatory}"
                                                   shortDesc="#{bindings.TblDonSetupView1.hints.ProjectId.tooltip}"
-                                                  id="soc1">
+                                                  id="soc1" readOnly="true" >
                                 <f:selectItems value="#{row.bindings.ProjectId.items}" id="si1"/>
                                 <f:validator binding="#{row.bindings.ProjectId.validator}"/>
                               </af:selectOneChoice>
