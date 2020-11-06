@@ -52,7 +52,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_CPV_M"/>
+    TableName="TBL_CPV_M"
+    IsNotNull="true"/>
   <Attribute
     Name="Narration"
     Precision="300"
@@ -74,7 +75,6 @@
     TableName="TBL_CPV_M">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblCpvMRow"/>
   </Attribute>
   <Attribute
@@ -120,6 +120,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblCpvM.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblCpvMDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_CPV_MDATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblCpvM.Dated"/>
     </AttrArray>
   </Key>
   <Key

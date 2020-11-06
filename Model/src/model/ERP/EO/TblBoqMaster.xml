@@ -52,7 +52,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_BOQ_MASTER"/>
+    TableName="TBL_BOQ_MASTER"
+    IsNotNull="true"/>
   <Attribute
     Name="ItemL4Id"
     IsNotNull="true"
@@ -123,6 +124,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblBoqMaster.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblBoqMasterDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_BOQ_MASTER_DATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblBoqMaster.Dated"/>
     </AttrArray>
   </Key>
   <Key

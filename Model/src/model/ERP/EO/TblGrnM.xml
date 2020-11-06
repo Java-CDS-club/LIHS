@@ -52,7 +52,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_GRN_M"/>
+    TableName="TBL_GRN_M"
+    IsNotNull="true"/>
   <Attribute
     Name="QcMId"
     ColumnName="QC_M_ID"
@@ -101,7 +102,6 @@
     RetrievedOnUpdate="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblGrnMRow"/>
   </Attribute>
   <Attribute
@@ -191,6 +191,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblGrnM.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblGrnMDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_GRN_MDATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblGrnM.Dated"/>
     </AttrArray>
   </Key>
   <Key

@@ -52,7 +52,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_POR_MASTER"/>
+    TableName="TBL_POR_MASTER"
+    IsNotNull="true"/>
   <Attribute
     Name="Narration"
     Precision="300"
@@ -109,7 +110,6 @@
     TableName="TBL_POR_MASTER">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblPorMasterRow"/>
   </Attribute>
   <AccessorAttribute
@@ -144,11 +144,24 @@
     </AttrArray>
   </Key>
   <Key
+    Name="TblPorMasterDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_POR_MASTER_DATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblPorMaster.Dated"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="FkPorMasterL3">
     <DesignTime>
       <Attr Name="_referencedKey" Value="PK_TBL_ITEM_L3_PK"/>
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_POR_MASTER_L3"/>
     </DesignTime>
+    <AttrArray Name="Attributes"/>
   </Key>
 </Entity>

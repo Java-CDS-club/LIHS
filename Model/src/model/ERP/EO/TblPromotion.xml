@@ -54,7 +54,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_PROMOTION">
+    TableName="TBL_PROMOTION"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <FMT_FORMAT
@@ -154,6 +155,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblPromotion.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblPromotionDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_PROMOTION_DATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblPromotion.Dated"/>
     </AttrArray>
   </Key>
   <Key

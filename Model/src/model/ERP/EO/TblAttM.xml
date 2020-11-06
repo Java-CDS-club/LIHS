@@ -54,7 +54,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_ATT_M">
+    TableName="TBL_ATT_M"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <FMT_FORMAT
@@ -92,7 +93,6 @@
     TableName="TBL_ATT_M">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblAttMRow"/>
   </Attribute>
   <Attribute
@@ -138,6 +138,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblAttM.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblAttMDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_ATT_MDATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblAttM.Dated"/>
     </AttrArray>
   </Key>
   <Key

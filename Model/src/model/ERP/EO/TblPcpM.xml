@@ -52,7 +52,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_PCP_M"/>
+    TableName="TBL_PCP_M"
+    IsNotNull="true"/>
   <Attribute
     Name="Narration"
     Precision="300"
@@ -125,15 +126,24 @@
     </AttrArray>
   </Key>
   <Key
+    Name="TblPcpMDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_PCP_MDATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblPcpM.Dated"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="FkPcpMGrn">
     <DesignTime>
       <Attr Name="_referencedKey" Value="PK_GRN_M_ID"/>
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_PCP_M_GRN"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.ERP.EO.TblPcpM.GrnMId"/>
-    </AttrArray>
   </Key>
   <Key
     Name="FkPcpMSupplier">

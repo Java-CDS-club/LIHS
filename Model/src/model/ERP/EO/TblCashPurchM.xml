@@ -52,7 +52,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_CASH_PURCH_M">
+    TableName="TBL_CASH_PURCH_M"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <FMT_FORMAT
@@ -90,7 +91,6 @@
     TableName="TBL_CASH_PURCH_M">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblCashPurchMRow"/>
   </Attribute>
   <Attribute
@@ -143,6 +143,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblCashPurchM.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblCashPurchMDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_CASH_PURCH_MDATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblCashPurchM.Dated"/>
     </AttrArray>
   </Key>
   <Key

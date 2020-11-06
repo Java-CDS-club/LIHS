@@ -54,7 +54,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_TRANSFER">
+    TableName="TBL_TRANSFER"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <FMT_FORMAT
@@ -147,6 +148,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblTransfer.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblTransferDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_TRANSFER_DATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblTransfer.Dated"/>
     </AttrArray>
   </Key>
   <Key

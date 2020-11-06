@@ -52,7 +52,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_PBP_M"/>
+    TableName="TBL_PBP_M"
+    IsNotNull="true"/>
   <Attribute
     Name="ChqNo"
     Precision="20"
@@ -151,15 +152,24 @@
     </AttrArray>
   </Key>
   <Key
+    Name="TblPbpMDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_PBP_MDATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblPbpM.Dated"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="FkPbpGrn">
     <DesignTime>
       <Attr Name="_referencedKey" Value="PK_GRN_M_ID"/>
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_PBP_GRN"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.ERP.EO.TblPbpM.GrnMId"/>
-    </AttrArray>
   </Key>
   <Key
     Name="FkPbpSupplier">

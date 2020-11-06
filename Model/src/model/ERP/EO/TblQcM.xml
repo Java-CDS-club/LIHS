@@ -54,7 +54,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_QC_M"/>
+    TableName="TBL_QC_M"
+    IsNotNull="true"/>
   <Attribute
     Name="IgpMId"
     ColumnName="IGP_M_ID"
@@ -131,6 +132,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblQcM.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblQcMDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_QC_MDATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblQcM.Dated"/>
     </AttrArray>
   </Key>
   <Key

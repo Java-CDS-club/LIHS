@@ -52,7 +52,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_PRO_FG_MASTER"/>
+    TableName="TBL_PRO_FG_MASTER"
+    IsNotNull="true"/>
   <Attribute
     Name="PorMasterId"
     ColumnName="POR_MASTER_ID"
@@ -129,6 +130,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblProFgMaster.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblProFgMasterDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_PRO_FG_MASTER_DATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblProFgMaster.Dated"/>
     </AttrArray>
   </Key>
   <Key

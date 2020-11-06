@@ -54,7 +54,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_PO_M"/>
+    TableName="TBL_PO_M"
+    IsNotNull="true"/>
   <Attribute
     Name="DepartmentId"
     ColumnName="DEPARTMENT_ID"
@@ -71,7 +72,6 @@
     TableName="TBL_PO_M">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblPoMRow"/>
   </Attribute>
   <Attribute
@@ -176,6 +176,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblPoM.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblPoMDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_PO_MDATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblPoM.Dated"/>
     </AttrArray>
   </Key>
   <Key

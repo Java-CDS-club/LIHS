@@ -52,7 +52,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_GIN_M"/>
+    TableName="TBL_GIN_M"
+    IsNotNull="true"/>
   <Attribute
     Name="Narration"
     Precision="300"
@@ -136,6 +137,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblGinM.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblGinMDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_GIN_MDATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblGinM.Dated"/>
     </AttrArray>
   </Key>
   <Key

@@ -54,7 +54,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_DO_M"/>
+    TableName="TBL_DO_M"
+    IsNotNull="true"/>
   <Attribute
     Name="DepartmentId"
     ColumnName="DEPARTMENT_ID"
@@ -71,7 +72,6 @@
     TableName="TBL_DO_M">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblDoMRow"/>
   </Attribute>
   <Attribute
@@ -136,6 +136,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblDoM.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblDoMDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_DO_MDATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblDoM.Dated"/>
     </AttrArray>
   </Key>
   <Key

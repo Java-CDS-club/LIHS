@@ -52,7 +52,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_BRV_M"/>
+    TableName="TBL_BRV_M"
+    IsNotNull="true"/>
   <Attribute
     Name="ChqNo"
     Precision="20"
@@ -100,7 +101,6 @@
     TableName="TBL_BRV_M">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblBrvMRow"/>
   </Attribute>
   <Attribute
@@ -146,6 +146,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblBrvM.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblBrvMDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_BRV_MDATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblBrvM.Dated"/>
     </AttrArray>
   </Key>
   <Key

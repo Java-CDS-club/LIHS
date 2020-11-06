@@ -52,7 +52,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_PRO_ISS_MASTER"/>
+    TableName="TBL_PRO_ISS_MASTER"
+    IsNotNull="true"/>
   <Attribute
     Name="PorMasterId"
     ColumnName="POR_MASTER_ID"
@@ -116,7 +117,6 @@
     TableName="TBL_PRO_ISS_MASTER">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblProIssMasterRow"/>
   </Attribute>
   <Attribute
@@ -148,6 +148,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblProIssMaster.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblProIssMasterDatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_PRO_ISS_MASTER_DATED_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.ERP.EO.TblProIssMaster.Dated"/>
     </AttrArray>
   </Key>
   <Key
