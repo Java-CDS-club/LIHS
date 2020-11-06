@@ -28,6 +28,7 @@
                 <af:panelGridLayout id="pgl11">
                   <af:gridRow marginTop="5px" height="auto" id="gr14">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc14">
+                     
                       <af:panelTabbed position="above" id="pt6">
                         <af:showDetailItem id="tab3" text="Level 1">
                            <af:table value="#{bindings.TblItemL1View1.collectionModel}" var="row"
@@ -367,6 +368,9 @@
                 <af:panelGridLayout id="pgl10">
                   <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr13">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc13">
+                     <af:button text="Get Report" id="b2" icon="#{resource['images:get_report.png']}"
+                                 actionListener="#{backingBeanScope.VoucherPrintBean.getCOAReport}"
+                                 inlineStyle="float: right;"/>
                       <af:panelTabbed position="above" id="pt5">
                         <af:showDetailItem id="tab2" text="Search">
                           <af:table value="#{bindings.TblItemL4View31.collectionModel}" var="row"
