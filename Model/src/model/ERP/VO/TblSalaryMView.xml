@@ -6,13 +6,33 @@
   Name="TblSalaryMView"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SelectList="TblSalaryM.ID, 
+       TblSalaryM.VNO, 
+       TblSalaryM.VTP, 
+       TblSalaryM.DATED, 
+       TblSalaryM.NARRATION, 
+       TblSalaryM.DEPARTMENT_ID, 
+       TblSalaryM.PROJECT_ID, 
+       TblSalaryM.SAL_MONTH, 
+       TblSalaryM.SAL_YEAR, 
+       TblSalaryM.CREATED_DATE, 
+       TblSalaryM.CREATED_BY, 
+       TblSalaryM.UPDATED_DATE, 
+       TblSalaryM.UPDATED_BY"
+  FromList="TBL_SALARY_M TblSalaryM"
+  Where="TblSalaryM.PROJECT_ID = :getProID">
+  <Variable
+    Name="getProID"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblSalaryMView"/>
+  </Variable>
   <ViewAccessor
     Name="Voucher_Type1"
     ViewObjectName="model.LOV.Voucher_Type"

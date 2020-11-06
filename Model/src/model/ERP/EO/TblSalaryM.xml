@@ -90,7 +90,12 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_SALARY_M"/>
+    TableName="TBL_SALARY_M">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="TblSalaryMRow"/>
+  </Attribute>
   <Attribute
     Name="SalMonth"
     Precision="3"
