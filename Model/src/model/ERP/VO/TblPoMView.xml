@@ -18,12 +18,12 @@
        TblPoM.PBL_SUPP_ID, 
        TblPoM.CARRIER, 
        TblPoM.NARRATION, 
-       TblPoM.DO_CON_M_ID, 
        TblPoM.CREATED_DATE, 
        TblPoM.CREATED_BY, 
        TblPoM.UPDATED_DATE, 
        TblPoM.UPDATED_BY, 
-       TblPoM.DO_M_ID"
+       TblPoM.DO_M_ID, 
+       TblPoM.DO_M_ID AS DO_MID1"
   FromList="TBL_PO_M TblPoM"
   Where="TblPoM.PROJECT_ID = :getProId">
   <Variable
@@ -53,6 +53,18 @@
   <ViewAccessor
     Name="pending_DO_LOV1"
     ViewObjectName="model.LOV.pending_DO_LOV"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="getProjectID">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[ProjectId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="DO_LOV1"
+    ViewObjectName="model.LOV.DO_LOV"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Vtp"
@@ -127,26 +139,6 @@
     <DisplayCriteria/>
   </ListBinding>
   <ListBinding
-    Name="LOV_DoConMId"
-    ListVOName="pending_DO_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="DoConMId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Id"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Id"/>
-      <Item Value="Dated"/>
-      <Item Value="BalQty"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
     Name="LOV_DoMId"
     ListVOName="pending_DO_LOV1"
     ListRangeSize="-1"
@@ -160,8 +152,27 @@
       <Item Value="Id"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Id"/>
       <Item Value="Dated"/>
       <Item Value="BalQty"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_staticDoMId1"
+    ListVOName="DO_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="staticDoMId1"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Id"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -265,20 +276,6 @@
     EntityUsage="TblPoM"
     AliasName="NARRATION"/>
   <ViewAttribute
-    Name="DoConMId"
-    PrecisionRule="true"
-    EntityAttrName="DoConMId"
-    EntityUsage="TblPoM"
-    AliasName="DO_CON_M_ID"
-    LOVName="LOV_DoConMId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
     Name="CreatedDate"
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
@@ -311,6 +308,20 @@
     EntityUsage="TblPoM"
     AliasName="DO_M_ID"
     LOVName="LOV_DoMId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="staticDoMId1"
+    PrecisionRule="true"
+    EntityAttrName="DoMId"
+    EntityUsage="TblPoM"
+    AliasName="DO_MID1"
+    LOVName="LOV_staticDoMId1">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

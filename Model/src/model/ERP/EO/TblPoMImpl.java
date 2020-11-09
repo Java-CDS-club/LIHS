@@ -36,13 +36,13 @@ public class TblPoMImpl extends EntityImpl {
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
-        DoConMId,
         DoMId,
         TblPoD,
         TblIgpM,
         TblGrnM,
         TblPoDD;
-        private static AttributesEnum[] vals = null;
+        static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         public int index() {
@@ -65,6 +65,7 @@ public class TblPoMImpl extends EntityImpl {
         }
     }
 
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int VNO = AttributesEnum.Vno.index();
     public static final int VTP = AttributesEnum.Vtp.index();
@@ -78,7 +79,6 @@ public class TblPoMImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
-    public static final int DOCONMID = AttributesEnum.DoConMId.index();
     public static final int DOMID = AttributesEnum.DoMId.index();
     public static final int TBLPOD = AttributesEnum.TblPoD.index();
     public static final int TBLIGPM = AttributesEnum.TblIgpM.index();
@@ -97,6 +97,7 @@ public class TblPoMImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("model.ERP.EO.TblPoM");
     }
+
 
     /**
      * Gets the attribute value for Id, using the alias name Id.
@@ -290,21 +291,6 @@ public class TblPoMImpl extends EntityImpl {
         setAttributeInternal(UPDATEDBY, value);
     }
 
-    /**
-     * Gets the attribute value for DoConMId, using the alias name DoConMId.
-     * @return the value of DoConMId
-     */
-    public BigDecimal getDoConMId() {
-        return (BigDecimal) getAttributeInternal(DOCONMID);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for DoConMId.
-     * @param value value to set the DoConMId
-     */
-    public void setDoConMId(BigDecimal value) {
-        setAttributeInternal(DOCONMID, value);
-    }
 
     /**
      * Gets the attribute value for DoMId, using the alias name DoMId.

@@ -348,8 +348,8 @@
                    <af:spacer  id="s4"/>
                    <af:spacer  id="s14"/>
                             <af:selectOneChoice value="#{bindings.ProjectId.inputValue}" label="Project"
-                                      required="#{bindings.ProjectId.hints.mandatory}"
-                                      shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc6" 
+                                      required="#{bindings.ProjectId.hints.mandatory}" autoSubmit="true"
+                                      shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc6" disabled="true"
                                       contentStyle="width:135px;" >
                     <f:selectItems value="#{bindings.ProjectId.items}" id="si6"/>
                     <f:validator binding="#{bindings.ProjectId.validator}"/>
@@ -379,8 +379,15 @@
                               <f:validator binding="#{bindings.DoMId.validator}"/>
                             </af:selectOneChoice>
                             <af:spacer  id="s3"/>
-                            
-                 <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type" disabled="true"
+                            <af:selectOneChoice value="#{bindings.staticDoMId1.inputValue}"
+                                                label="DO" disabled="true"
+                                                required="#{bindings.staticDoMId1.hints.mandatory}"
+                                                shortDesc="#{bindings.staticDoMId1.hints.tooltip}" id="soc5">
+                              <f:selectItems value="#{bindings.staticDoMId1.items}" id="si5"/>
+                              <f:validator binding="#{bindings.staticDoMId1.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s32"/>
+                            <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type" disabled="true"
                                       required="#{bindings.Vtp.hints.mandatory}"
                                       shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc2" contentStyle="width:135px;" >
                                       

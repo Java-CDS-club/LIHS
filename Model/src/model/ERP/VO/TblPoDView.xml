@@ -23,11 +23,8 @@
        TblPoD.UPDATED_BY, 
        TblPoD.AMOUNT, 
        TblPoD.RATE, 
-       TblPoM.ID AS ID1, 
-       TblPoD.ITEM_L4_ID AS ITEM_L4ID1, 
-       TblPoM.DO_M_ID"
-  FromList="TBL_PO_D TblPoD, TBL_PO_M TblPoM"
-  Where="TblPoD.PO_M_ID = TblPoM.ID(+)">
+       TblPoD.ITEM_L4_ID AS ITEM_L4ID1"
+  FromList="TBL_PO_D TblPoD">
   <ViewAccessor
     Name="Item_Level4_LOV1"
     ViewObjectName="model.LOV.Item_Level4_LOV"
@@ -97,25 +94,6 @@
   <EntityUsage
     Name="TblPoD"
     Entity="model.ERP.EO.TblPoD"/>
-  <EntityUsage
-    Name="TblPoM"
-    Entity="model.ERP.EO.TblPoM"
-    Association="model.ERP.EO.FkPoDMAssoc"
-    AssociationEnd="model.ERP.EO.FkPoDMAssoc.TblPoM"
-    SourceUsage="model.ERP.VO.TblPoDView.TblPoD"
-    ReadOnly="true"
-    Reference="true"
-    DeleteParticipant="false"
-    JoinType="LEFT OUTER JOIN">
-    <DesignTime>
-      <AttrArray Name="_dstAttributes">
-        <Item Value="model.ERP.EO.TblPoM.Id"/>
-      </AttrArray>
-      <AttrArray Name="_srcAttributes">
-        <Item Value="model.ERP.EO.TblPoD.PoMId"/>
-      </AttrArray>
-    </DesignTime>
-  </EntityUsage>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
@@ -221,12 +199,6 @@
     EntityUsage="TblPoD"
     AliasName="RATE"/>
   <ViewAttribute
-    Name="Id1"
-    PrecisionRule="true"
-    EntityAttrName="Id"
-    EntityUsage="TblPoM"
-    AliasName="ID1"/>
-  <ViewAttribute
     Name="ItemL4IdStatic"
     IsNotNull="true"
     PrecisionRule="true"
@@ -241,12 +213,6 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
-  <ViewAttribute
-    Name="DoMId"
-    PrecisionRule="true"
-    EntityAttrName="DoMId"
-    EntityUsage="TblPoM"
-    AliasName="DO_M_ID"/>
   <AttrArray Name="KeyAttributes">
     <Item Value="Id"/>
   </AttrArray>

@@ -120,5 +120,7 @@
     <action IterBinding="TblPoDView2Iterator" id="Delete2" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <list IterBinding="TblPoMView1Iterator" StaticList="false" Uses="LOV_DoMId" id="DoMId" DTSupportsMRU="true"
           SelectItemValueMode="ListObject"/>
+    <list IterBinding="TblPoMView1Iterator" StaticList="false" Uses="LOV_staticDoMId1" id="staticDoMId1"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

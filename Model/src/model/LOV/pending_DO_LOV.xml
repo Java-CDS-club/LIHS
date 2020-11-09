@@ -18,11 +18,17 @@
         ResId="model.LOV.pending_DO_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[Select  
-ID, 
-Dated, 
-Bal_Qty 
-From Vew_Pendingdo]]></SQLQuery>
+  <Variable
+    Name="getProjectID"
+    Kind="where"
+    Type="java.math.BigDecimal"/>
+  <SQLQuery><![CDATA[Select    
+ID,   
+Dated,   
+Bal_Qty ,  
+Project_id  
+From Vew_Pendingdo 
+where Project_id=:getProjectID]]></SQLQuery>
   <ViewAttribute
     Name="Id"
     IsUpdateable="false"
@@ -61,6 +67,16 @@ From Vew_Pendingdo]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="BAL_QTY"
     Expression="BAL_QTY"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="ProjectId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="PROJECT_ID"
+    Expression="PROJECT_ID"
     SQLType="NUMERIC"/>
   <AttrArray Name="KeyAttributes">
     <Item Value="Id"/>
