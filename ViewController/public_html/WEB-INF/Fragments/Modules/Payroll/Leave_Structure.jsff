@@ -59,7 +59,7 @@
                             </af:column>
                             <af:column sortProperty="#{bindings.TblLeaveMView1.hints.Dated.name}" filterable="true"
                                        sortable="true" headerText="Date"
-                                       id="c2">
+                                       id="c2" width="105">
                               <f:facet name="filter">
                                 <af:inputDate value="#{bindings.TblLeaveMView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
                                               id="id1" placeholder="Search ">

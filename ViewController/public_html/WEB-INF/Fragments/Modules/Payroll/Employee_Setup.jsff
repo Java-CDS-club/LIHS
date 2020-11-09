@@ -90,7 +90,7 @@
                               </af:selectOneChoice>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblEmpView1.hints.Dated.name}" filterable="true"
-                                       sortable="true" headerText="Date" id="c4">
+                                       sortable="true" headerText="Date" id="c4" width="105">
                               <f:facet name="filter">
                                 <af:inputDate value="#{bindings.TblEmpView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
                                               id="id1" placeholder="Search ">
@@ -413,7 +413,7 @@
                             </af:column>
                             <af:column sortProperty="#{bindings.TblEmpExpView2.hints.StDate.name}" filterable="true"
                                        sortable="true" headerText="Start Date"
-                                       id="c14">
+                                       id="c14" width="105">
                               <f:facet name="filter">
                                 <af:inputDate value="#{bindings.TblEmpExpView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StDate.value}"
                                               id="id6" placeholder="Search ">
@@ -431,7 +431,7 @@
                             </af:column>
                             <af:column sortProperty="#{bindings.TblEmpExpView2.hints.EnDate.name}" filterable="true"
                                        sortable="true" headerText="End Date"
-                                       id="c15">
+                                       id="c15" width="105">
                               <f:facet name="filter">
                                 <af:inputDate value="#{bindings.TblEmpExpView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EnDate.value}"
                                               id="id8" placeholder="Search ">
@@ -545,7 +545,7 @@
                             </af:column>
                             <af:column sortProperty="#{bindings.TblEmpQuaView2.hints.StDate.name}" filterable="true"
                                        sortable="true" headerText="Start Date"
-                                       id="c20">
+                                       id="c20" width="105">
                               <f:facet name="filter">
                                 <af:inputDate value="#{bindings.TblEmpQuaView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StDate.value}"
                                               id="id10" placeholder="Search ">
@@ -563,7 +563,7 @@
                             </af:column>
                             <af:column sortProperty="#{bindings.TblEmpQuaView2.hints.EnDate.name}" filterable="true"
                                        sortable="true" headerText="End Date"
-                                       id="c21">
+                                       id="c21" width="105">
                               <f:facet name="filter">
                                 <af:inputDate value="#{bindings.TblEmpQuaView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EnDate.value}"
                                               id="id12" placeholder="Search ">

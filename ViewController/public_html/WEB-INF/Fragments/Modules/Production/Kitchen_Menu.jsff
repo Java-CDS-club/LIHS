@@ -97,7 +97,7 @@
                                                         </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.Dated.name}"
                                                                    filterable="true" sortable="true" headerText="Date"
-                                                                   id="c2">
+                                                                   id="c2" width="105">
                                                             <f:facet name="filter">
                                                                 <af:inputDate value="#{bindings.TblKitchenMenuMView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
                                                                               id="id13" placeholder="Search ">
@@ -116,7 +116,7 @@
                                                         </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.FrDated.name}"
                                                                    filterable="true" sortable="true"
-                                                                   headerText="From Date" id="c4">
+                                                                   headerText="From Date" id="c4" width="105">
                                                             <f:facet name="filter">
                                                                 <af:inputDate value="#{bindings.TblKitchenMenuMView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.FrDated.value}"
                                                                               id="id6" placeholder="Search ">
@@ -135,7 +135,7 @@
                                                         </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.ToDated.name}"
                                                                    filterable="true" sortable="true"
-                                                                   headerText="To Date" id="c5">
+                                                                   headerText="To Date" id="c5" width="105">
                                                             <f:facet name="filter">
                                                                 <af:inputDate value="#{bindings.TblKitchenMenuMView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.ToDated.value}"
                                                                               id="id8" placeholder="Search ">
@@ -212,7 +212,7 @@
                                                             </af:inputText>
                                                         </af:column>
                                                         <af:column headerText="Date" id="c9" sortable="true"
-                                                                   filterable="true">
+                                                                   filterable="true" width="105">
                                                             <f:facet name="filter">
                                                                 <af:inputDate value="#{bindings.TblKitchenMenuDView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
                                                                               id="id10" placeholder="Search ">
