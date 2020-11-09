@@ -347,21 +347,6 @@
     Name="TblCashPurchDView2"
     ViewObjectName="model.ERP.VO.TblCashPurchDView"/>
   <ViewUsage
-    Name="TblDoConDDView1"
-    ViewObjectName="model.ERP.VO.TblDoConDDView"/>
-  <ViewUsage
-    Name="TblDoConDView1"
-    ViewObjectName="model.ERP.VO.TblDoConDView"/>
-  <ViewUsage
-    Name="TblDoConMView1"
-    ViewObjectName="model.ERP.VO.TblDoConMView"/>
-  <ViewUsage
-    Name="TblDoConDView2"
-    ViewObjectName="model.ERP.VO.TblDoConDView"/>
-  <ViewUsage
-    Name="TblDoConDDView2"
-    ViewObjectName="model.ERP.VO.TblDoConDDView"/>
-  <ViewUsage
     Name="TblDonCrView1"
     ViewObjectName="model.ERP.VO.TblDonCrView"/>
   <ViewUsage
@@ -756,18 +741,6 @@
     ViewLinkObjectName="model.ERP.VO.FkCpDMLink"
     SrcViewUsageName="model.ERP.AppModule.TblCashPurchMView1"
     DstViewUsageName="model.ERP.AppModule.TblCashPurchDView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkDoConDMLink1"
-    ViewLinkObjectName="model.ERP.VO.FkDoConDMLink"
-    SrcViewUsageName="model.ERP.AppModule.TblDoConMView1"
-    DstViewUsageName="model.ERP.AppModule.TblDoConDView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkDoConDdMLink1"
-    ViewLinkObjectName="model.ERP.VO.FkDoConDdMLink"
-    SrcViewUsageName="model.ERP.AppModule.TblDoConMView1"
-    DstViewUsageName="model.ERP.AppModule.TblDoConDDView2"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FkDonKindDMLink1"

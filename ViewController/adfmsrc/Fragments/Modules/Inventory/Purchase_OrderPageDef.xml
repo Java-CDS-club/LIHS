@@ -15,13 +15,6 @@
     <iterator Binds="TblPoDView2" RangeSize="8" DataControl="AppModuleDataControl1" id="TblPoDView2Iterator"/>
     <searchRegion Binds="TblPoDView2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblPoDView2Query"/>
-    <iterator Binds="TblDoConMView1" RangeSize="25" DataControl="AppModuleDataControl1" id="TblDoConMView1Iterator"/>
-    <iterator Binds="TblDoConDDView2" RangeSize="8" DataControl="AppModuleDataControl1" id="TblDoConDDView2Iterator"/>
-    <searchRegion Binds="TblDoConDDView2Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblDoConDDView2Query"/>
-    <iterator Binds="TblDoConDView2" RangeSize="8" DataControl="AppModuleDataControl1" id="TblDoConDView2Iterator"/>
-    <searchRegion Binds="TblDoConDView2Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblDoConDView2Query"/>
   </executables>
   <bindings>
     <tree IterBinding="USERS_CRUD_OPERATIONS1Iterator" id="USERS_CRUD_OPERATIONS1">
@@ -97,7 +90,6 @@
         <AttrNames>
           <Item Value="Id"/>
           <Item Value="PoMId"/>
-          <Item Value="DoMId"/>
           <Item Value="Narration"/>
           <Item Value="Dated"/>
         </AttrNames>
@@ -126,64 +118,5 @@
     <action IterBinding="TblPoDView2Iterator" id="CreateInsert2" RequiresUpdateModel="true" Action="createInsertRow"/>
     <action IterBinding="TblPoDView2Iterator" id="Execute2" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblPoDView2Iterator" id="Delete2" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <attributeValues IterBinding="TblDoConMView1Iterator" id="Id1">
-      <AttrNames>
-        <Item Value="Id"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="TblDoConMView1Iterator" id="Dated1">
-      <AttrNames>
-        <Item Value="Dated"/>
-      </AttrNames>
-    </attributeValues>
-    <list IterBinding="TblDoConMView1Iterator" StaticList="false" Uses="LOV_ProjectId" id="ProjectId1"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <list IterBinding="TblDoConMView1Iterator" StaticList="false" Uses="LOV_DepartmentId" id="DepartmentId1"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <attributeValues IterBinding="TblDoConMView1Iterator" id="Narration1">
-      <AttrNames>
-        <Item Value="Narration"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="TblDoConMView1Iterator" id="Vno1">
-      <AttrNames>
-        <Item Value="Vno"/>
-      </AttrNames>
-    </attributeValues>
-    <list IterBinding="TblDoConMView1Iterator" StaticList="false" Uses="LOV_Vtp" id="Vtp1" DTSupportsMRU="false"
-          SelectItemValueMode="ListObject"/>
-    <action IterBinding="TblDoConMView1Iterator" id="First1" RequiresUpdateModel="true" Action="first"/>
-    <action IterBinding="TblDoConMView1Iterator" id="Previous1" RequiresUpdateModel="true" Action="previous"/>
-    <action IterBinding="TblDoConMView1Iterator" id="Next1" RequiresUpdateModel="true" Action="next"/>
-    <action IterBinding="TblDoConMView1Iterator" id="Last1" RequiresUpdateModel="true" Action="last"/>
-    <action IterBinding="TblDoConMView1Iterator" id="CreateInsert3" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
-    <action IterBinding="TblDoConMView1Iterator" id="Execute3" RequiresUpdateModel="true" Action="iteratorExecute"/>
-    <action IterBinding="TblDoConMView1Iterator" id="Delete3" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <tree IterBinding="TblDoConDDView2Iterator" id="TblDoConDDView2">
-      <nodeDefinition DefName="model.ERP.VO.TblDoConDDView" Name="TblDoConDDView20">
-        <AttrNames>
-          <Item Value="Id"/>
-          <Item Value="DoMId"/>
-          <Item Value="Narration"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <action IterBinding="TblDoConDDView2Iterator" id="Execute4" RequiresUpdateModel="true" Action="iteratorExecute"/>
-    <tree IterBinding="TblDoConDView2Iterator" id="TblDoConDView2">
-      <nodeDefinition DefName="model.ERP.VO.TblDoConDView" Name="TblDoConDView20">
-        <AttrNames>
-          <Item Value="Id"/>
-         
-          <Item Value="ItemL4Id"/>
-          <Item Value="UomId"/>
-          <Item Value="Description"/>
-          <Item Value="Qty"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <action IterBinding="TblDoConDView2Iterator" id="Execute5" RequiresUpdateModel="true" Action="iteratorExecute"/>
-    <list IterBinding="TblPoMView1Iterator" StaticList="false" Uses="LOV_DoConMId" id="DoConMId" DTSupportsMRU="true"
-          SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

@@ -22,7 +22,7 @@
         <af:gridRow marginTop="5px" height="auto" id="gr2">
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
             <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
-              <af:showDetailItem text="Consolidated Demand Order" id="sdi2">
+              <!--<af:showDetailItem text="Consolidated Demand Order" id="sdi2">
                 
                     <af:panelGridLayout id="pgl8">
                   <af:gridRow marginTop="5px" height="auto" id="gr3">
@@ -305,7 +305,7 @@
                 </af:panelGridLayout>
                  
                
-              </af:showDetailItem>
+              </af:showDetailItem>-->
               <af:showDetailItem id="tab1" text="Purchase Order">
                 <af:panelGridLayout id="pgl5">
                   <af:gridRow marginTop="5px" height="auto" id="gr6">
@@ -371,14 +371,14 @@
                     <f:validator binding="#{bindings.PblSuppId.validator}"/>
                   </af:selectOneChoice>
                   <af:spacer  id="s10"/>
-                            <af:selectOneChoice value="#{bindings.DoConMId.inputValue}"
+                            <!--<af:selectOneChoice value="#{bindings.DoConMId.inputValue}"
                                                 label="DO"
                                                 required="#{bindings.DoConMId.hints.mandatory}"
                                                 shortDesc="#{bindings.DoConMId.hints.tooltip}" id="soc5"
                                                 contentStyle="width:135px;">
                               <f:selectItems value="#{bindings.DoConMId.items}" id="si5"/>
                               <f:validator binding="#{bindings.DoConMId.validator}"/>
-                            </af:selectOneChoice>
+                            </af:selectOneChoice>-->
                             <af:spacer  id="s3"/>
                             
                  <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type" disabled="true"
