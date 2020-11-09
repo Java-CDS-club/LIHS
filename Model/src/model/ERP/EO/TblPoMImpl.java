@@ -37,6 +37,7 @@ public class TblPoMImpl extends EntityImpl {
         UpdatedDate,
         UpdatedBy,
         DoConMId,
+        DoMId,
         TblPoD,
         TblIgpM,
         TblGrnM,
@@ -63,6 +64,7 @@ public class TblPoMImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int VNO = AttributesEnum.Vno.index();
     public static final int VTP = AttributesEnum.Vtp.index();
@@ -77,6 +79,7 @@ public class TblPoMImpl extends EntityImpl {
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
     public static final int DOCONMID = AttributesEnum.DoConMId.index();
+    public static final int DOMID = AttributesEnum.DoMId.index();
     public static final int TBLPOD = AttributesEnum.TblPoD.index();
     public static final int TBLIGPM = AttributesEnum.TblIgpM.index();
     public static final int TBLGRNM = AttributesEnum.TblGrnM.index();
@@ -86,6 +89,13 @@ public class TblPoMImpl extends EntityImpl {
      * This is the default constructor (do not remove).
      */
     public TblPoMImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblPoM");
     }
 
     /**
@@ -297,6 +307,22 @@ public class TblPoMImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for DoMId, using the alias name DoMId.
+     * @return the value of DoMId
+     */
+    public BigDecimal getDoMId() {
+        return (BigDecimal) getAttributeInternal(DOMID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for DoMId.
+     * @param value value to set the DoMId
+     */
+    public void setDoMId(BigDecimal value) {
+        setAttributeInternal(DOMID, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getTblPoD() {
@@ -324,6 +350,7 @@ public class TblPoMImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(TBLPODD);
     }
 
+
     /**
      * @param id key constituent
 
@@ -331,13 +358,6 @@ public class TblPoMImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblPoM");
     }
 
     /**

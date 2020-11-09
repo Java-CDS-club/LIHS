@@ -22,7 +22,8 @@
        TblPoM.CREATED_DATE, 
        TblPoM.CREATED_BY, 
        TblPoM.UPDATED_DATE, 
-       TblPoM.UPDATED_BY"
+       TblPoM.UPDATED_BY, 
+       TblPoM.DO_M_ID"
   FromList="TBL_PO_M TblPoM"
   Where="TblPoM.PROJECT_ID = :getProId">
   <Variable
@@ -31,7 +32,6 @@
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblPoMView"/>
   </Variable>
   <ViewAccessor
@@ -141,6 +141,25 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Id"/>
+      <Item Value="Dated"/>
+      <Item Value="BalQty"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DoMId"
+    ListVOName="pending_DO_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DoMId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Dated"/>
       <Item Value="BalQty"/>
     </AttrArray>
@@ -264,7 +283,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblPoM"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -276,13 +296,28 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblPoM"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
     EntityUsage="TblPoM"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="DoMId"
+    PrecisionRule="true"
+    EntityAttrName="DoMId"
+    EntityUsage="TblPoM"
+    AliasName="DO_M_ID"
+    LOVName="LOV_DoMId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblPoDView"
     ViewLink="model.ERP.VO.FkPoDMLink"

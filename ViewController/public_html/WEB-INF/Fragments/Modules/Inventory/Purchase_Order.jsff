@@ -371,14 +371,13 @@
                     <f:validator binding="#{bindings.PblSuppId.validator}"/>
                   </af:selectOneChoice>
                   <af:spacer  id="s10"/>
-                            <!--<af:selectOneChoice value="#{bindings.DoConMId.inputValue}"
-                                                label="DO"
-                                                required="#{bindings.DoConMId.hints.mandatory}"
-                                                shortDesc="#{bindings.DoConMId.hints.tooltip}" id="soc5"
+                            <af:selectOneChoice value="#{bindings.DoMId.inputValue}" label="DO"
+                                                required="#{bindings.DoMId.hints.mandatory}"
+                                                shortDesc="#{bindings.DoMId.hints.tooltip}" id="soc4"
                                                 contentStyle="width:135px;">
-                              <f:selectItems value="#{bindings.DoConMId.items}" id="si5"/>
-                              <f:validator binding="#{bindings.DoConMId.validator}"/>
-                            </af:selectOneChoice>-->
+                              <f:selectItems value="#{bindings.DoMId.items}" id="si4"/>
+                              <f:validator binding="#{bindings.DoMId.validator}"/>
+                            </af:selectOneChoice>
                             <af:spacer  id="s3"/>
                             
                  <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type" disabled="true"
