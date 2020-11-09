@@ -32,6 +32,8 @@ public class TblOpenBlncInvImpl extends EntityImpl {
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
+        ProjectId,
+        UomId,
         TblItemL4;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
@@ -55,6 +57,7 @@ public class TblOpenBlncInvImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int DATED = AttributesEnum.Dated.index();
     public static final int ITEML4ID = AttributesEnum.ItemL4Id.index();
@@ -65,12 +68,21 @@ public class TblOpenBlncInvImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int PROJECTID = AttributesEnum.ProjectId.index();
+    public static final int UOMID = AttributesEnum.UomId.index();
     public static final int TBLITEML4 = AttributesEnum.TblItemL4.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public TblOpenBlncInvImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblOpenBlncInv");
     }
 
     /**
@@ -218,6 +230,38 @@ public class TblOpenBlncInvImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for ProjectId, using the alias name ProjectId.
+     * @return the value of ProjectId
+     */
+    public BigDecimal getProjectId() {
+        return (BigDecimal) getAttributeInternal(PROJECTID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ProjectId.
+     * @param value value to set the ProjectId
+     */
+    public void setProjectId(BigDecimal value) {
+        setAttributeInternal(PROJECTID, value);
+    }
+
+    /**
+     * Gets the attribute value for UomId, using the alias name UomId.
+     * @return the value of UomId
+     */
+    public BigDecimal getUomId() {
+        return (BigDecimal) getAttributeInternal(UOMID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for UomId.
+     * @param value value to set the UomId
+     */
+    public void setUomId(BigDecimal value) {
+        setAttributeInternal(UOMID, value);
+    }
+
+    /**
      * @return the associated entity TblItemL4Impl.
      */
     public TblItemL4Impl getTblItemL4() {
@@ -231,6 +275,7 @@ public class TblOpenBlncInvImpl extends EntityImpl {
         setAttributeInternal(TBLITEML4, value);
     }
 
+
     /**
      * @param id key constituent
 
@@ -238,13 +283,6 @@ public class TblOpenBlncInvImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblOpenBlncInv");
     }
 
     /**

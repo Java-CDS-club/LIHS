@@ -24,7 +24,7 @@
         <af:gridRow marginTop="5px" height="auto" id="gr2">
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
             <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
-              <af:showDetailItem id="tab1" text="Chart of Account">
+              <af:showDetailItem id="tab1" text="Level 1">
                 <af:panelGridLayout id="pgl11">
                   <af:gridRow marginTop="5px" height="auto" id="gr14">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc14">
@@ -107,9 +107,13 @@
                     </af:gridCell>
                   </af:gridRow>
                  
-                  <af:gridRow marginTop="5px" height="auto" id="gr16">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc16">
-                      <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
+                  
+                  
+                </af:panelGridLayout>
+               
+              </af:showDetailItem>
+              <af:showDetailItem text="Level 2" id="sdi5">
+                <af:panelTabbed position="above" id="pt2" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="sdi1" text="Level 2">
                 <af:table value="#{bindings.TblItemL2View2.collectionModel}" var="row"
                           rows="#{bindings.TblItemL2View2.rangeSize}"
@@ -184,12 +188,9 @@
                         </af:panelGroupLayout>
               </af:showDetailItem>
             </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                 
-                  <af:gridRow marginTop="5px" height="auto" id="gr18">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc18">
-                       <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
+              </af:showDetailItem>
+              <af:showDetailItem text="Level 3" id="sdi6">
+                <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="sdi2" text="Level 3">
                 <af:table value="#{bindings.TblItemL3View3.collectionModel}" var="row"
                           rows="#{bindings.TblItemL3View3.rangeSize}"
@@ -264,12 +265,9 @@
                         </af:panelGroupLayout>
               </af:showDetailItem>
             </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                  
-                  <af:gridRow marginTop="5px" height="auto" id="gr20">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc20">
-                       <af:panelTabbed position="above" id="pt4" styleClass="tabel_pannel_tab">
+              </af:showDetailItem>
+              <af:showDetailItem text="Level 4" id="sdi7">
+                <af:panelTabbed position="above" id="pt4" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="sdi3" text="Level 4">
                 <af:table value="#{bindings.TblItemL4View3.collectionModel}" var="row"
                           rows="#{bindings.TblItemL4View3.rangeSize}"
@@ -358,11 +356,6 @@
                         </af:panelGroupLayout>
               </af:showDetailItem>
             </af:panelTabbed>
-                    </af:gridCell>
-                  </af:gridRow>
-                  
-                </af:panelGridLayout>
-               
               </af:showDetailItem>
               <af:showDetailItem text="Search" id="sdi4">
                 <af:panelGridLayout id="pgl10">

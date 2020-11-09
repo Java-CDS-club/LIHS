@@ -32,6 +32,8 @@
           <Item Value="Qty"/>
           <Item Value="Rate"/>
           <Item Value="Amount"/>
+          <Item Value="UomId"/>
+          <Item Value="ProjectId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
