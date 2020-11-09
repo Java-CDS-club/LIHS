@@ -207,6 +207,8 @@
           usageId="view_Cash_Receipt_TaskFlow_Cash_Receipt_TaskFlow_ExecutePageDef1"/>
     <page path="/WEB-INF/Task_Flows/Modules/Donation/Donation_Inkind_TaskFlow.xml#Donation_Inkind_TaskFlow@Execute"
           usageId="view_Donation_Inkind_TaskFlow_Donation_Inkind_TaskFlow_ExecutePageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Inventory/Opening_Balance_TaskFlow.xml#Opening_Balance_TaskFlow@Execute"
+          usageId="view_Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecutePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -398,6 +400,8 @@
           path="Task_Flows.Modules.Donation.Cash_Receipt_TaskFlow_Cash_Receipt_TaskFlow_ExecutePageDef"/>
     <page id="view_Donation_Inkind_TaskFlow_Donation_Inkind_TaskFlow_ExecutePageDef"
           path="Task_Flows.Modules.Donation.Donation_Inkind_TaskFlow_Donation_Inkind_TaskFlow_ExecutePageDef"/>
+    <page id="view_Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecutePageDef"
+          path="Task_Flows.Modules.Inventory.Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecutePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"

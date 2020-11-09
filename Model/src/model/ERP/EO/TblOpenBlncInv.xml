@@ -100,7 +100,12 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_OPEN_BLNC_INV"/>
+    TableName="TBL_OPEN_BLNC_INV">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="TblOpenBlncInvRow"/>
+  </Attribute>
   <Attribute
     Name="UomId"
     ColumnName="UOM_ID"
