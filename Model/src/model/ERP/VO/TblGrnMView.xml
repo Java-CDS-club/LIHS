@@ -15,6 +15,7 @@
        TblGrnM.DATED, 
        TblGrnM.QC_M_ID, 
        TblGrnM.PO_M_ID, 
+       TblGrnM.QC_M_ID AS QC_MID1, 
        TblGrnM.NARRATION, 
        TblGrnM.DEPARTMENT_ID, 
        TblGrnM.PROJECT_ID, 
@@ -32,7 +33,6 @@
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblGrnMView"/>
   </Variable>
   <ViewAccessor
@@ -52,9 +52,21 @@
     ViewObjectName="model.LOV.Pbl_Supplier_Name_LOV"
     RowLevelBinds="true"/>
   <ViewAccessor
-    Name="Inv_QC_Master_LOV1"
-    ViewObjectName="model.LOV.Inv_QC_Master_LOV"
+    Name="QC_M_LOV1"
+    ViewObjectName="model.LOV.QC_M_LOV"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="QC_Project_Dep_LOV1"
+    ViewObjectName="model.LOV.QC_Project_Dep_LOV"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="projid">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[ProjectId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_Vtp"
     ListVOName="Voucher_Type1"
@@ -128,8 +140,27 @@
     <DisplayCriteria/>
   </ListBinding>
   <ListBinding
+    Name="LOV_StaticQcMId1"
+    ListVOName="QC_M_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="StaticQcMId1"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Id"/>
+      <Item Value="Dated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
     Name="LOV_QcMId"
-    ListVOName="Inv_QC_Master_LOV1"
+    ListVOName="QC_Project_Dep_LOV1"
     ListRangeSize="-1"
     NullValueFlag="none"
     MRUCount="0">
@@ -212,6 +243,20 @@
     EntityUsage="TblGrnM"
     AliasName="PO_M_ID"/>
   <ViewAttribute
+    Name="StaticQcMId1"
+    PrecisionRule="true"
+    EntityAttrName="QcMId"
+    EntityUsage="TblGrnM"
+    AliasName="QC_MID1"
+    LOVName="LOV_StaticQcMId1">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
     Name="Narration"
     PrecisionRule="true"
     EntityAttrName="Narration"
@@ -270,7 +315,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblGrnM"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -282,7 +328,8 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblGrnM"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"

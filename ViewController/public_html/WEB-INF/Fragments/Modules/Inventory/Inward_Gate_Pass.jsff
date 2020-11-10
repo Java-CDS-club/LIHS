@@ -68,6 +68,25 @@
                                           contentStyle="width:150px;" rows="10">
                               <f:validator binding="#{bindings.Narration.validator}"/>
                             </af:inputText>
+                             <af:spacer  id="s12"/>
+                            <af:selectOneChoice value="#{bindings.ProjectId.inputValue}" autoSubmit="true"
+                                                label="Project"
+                                                required="#{bindings.ProjectId.hints.mandatory}"
+                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc7" disabled="true"
+                                                contentStyle="width:150px;">
+                              <f:selectItems value="#{bindings.ProjectId.items}" id="si7"/>
+                              <f:validator binding="#{bindings.ProjectId.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s11"/>
+                            <af:selectOneChoice value="#{bindings.StaticPoMId1.inputValue}"
+                                                label="PO"
+                                                required="#{bindings.StaticPoMId1.hints.mandatory}"
+                                                shortDesc="#{bindings.StaticPoMId1.hints.tooltip}" id="soc6" disabled="true"
+                                                contentStyle="width:150px;">
+                              <f:selectItems value="#{bindings.StaticPoMId1.items}" id="si6"/>
+                              <f:validator binding="#{bindings.StaticPoMId1.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s13"/>
                             <af:spacer  id="s8"/>
                             <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No."
                                           required="#{bindings.Vno.hints.mandatory}"

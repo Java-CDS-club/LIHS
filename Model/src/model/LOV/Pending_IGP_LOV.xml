@@ -18,11 +18,16 @@
         ResId="model.LOV.Pending_IGP_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[Select  
-DATED, 
-ID, 
-BAL_QTY 
-From VEW_PENDINGIGP]]></SQLQuery>
+  <Variable
+    Name="projid"
+    Kind="where"
+    Type="java.math.BigDecimal"/>
+  <SQLQuery><![CDATA[Select      
+DATED,     
+ID,     
+BAL_QTY  
+From VEW_PENDINGIGP    
+Where VEW_PENDINGIGP.Project_ID=:projid]]></SQLQuery>
   <ViewAttribute
     Name="Dated"
     IsUpdateable="false"
