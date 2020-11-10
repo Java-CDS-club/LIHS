@@ -24,8 +24,8 @@ public class DatabaseConnection {
         /* Database credentials >> username , password , hostname , port , SID  */
         setUNamee("lihs");
         setUpasss("lihs");
-        setUipp("62.171.154.170");
-//        setUipp("192.168.1.2");
+//        setUipp("62.171.154.170");
+        setUipp("192.168.1.2");
         setUportADF("1521");
         setUSID("orcl");
         /* END  */
