@@ -34,6 +34,8 @@ public class TblPorMasterImpl extends EntityImpl {
         UpdatedBy,
         DepartmentId,
         ProjectId,
+        ProjectDId,
+        MenuType,
         TblPorDetail,
         TblProFgMaster,
         TblProIssMaster;
@@ -59,6 +61,8 @@ public class TblPorMasterImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int VNO = AttributesEnum.Vno.index();
     public static final int VTP = AttributesEnum.Vtp.index();
@@ -70,6 +74,8 @@ public class TblPorMasterImpl extends EntityImpl {
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
     public static final int DEPARTMENTID = AttributesEnum.DepartmentId.index();
     public static final int PROJECTID = AttributesEnum.ProjectId.index();
+    public static final int PROJECTDID = AttributesEnum.ProjectDId.index();
+    public static final int MENUTYPE = AttributesEnum.MenuType.index();
     public static final int TBLPORDETAIL = AttributesEnum.TblPorDetail.index();
     public static final int TBLPROFGMASTER = AttributesEnum.TblProFgMaster.index();
     public static final int TBLPROISSMASTER = AttributesEnum.TblProIssMaster.index();
@@ -79,6 +85,14 @@ public class TblPorMasterImpl extends EntityImpl {
      */
     public TblPorMasterImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblPorMaster");
+    }
+
 
     /**
      * Gets the attribute value for Id, using the alias name Id.
@@ -241,6 +255,38 @@ public class TblPorMasterImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for ProjectDId, using the alias name ProjectDId.
+     * @return the value of ProjectDId
+     */
+    public BigDecimal getProjectDId() {
+        return (BigDecimal) getAttributeInternal(PROJECTDID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ProjectDId.
+     * @param value value to set the ProjectDId
+     */
+    public void setProjectDId(BigDecimal value) {
+        setAttributeInternal(PROJECTDID, value);
+    }
+
+    /**
+     * Gets the attribute value for MenuType, using the alias name MenuType.
+     * @return the value of MenuType
+     */
+    public String getMenuType() {
+        return (String) getAttributeInternal(MENUTYPE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for MenuType.
+     * @param value value to set the MenuType
+     */
+    public void setMenuType(String value) {
+        setAttributeInternal(MENUTYPE, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getTblPorDetail() {
@@ -261,6 +307,7 @@ public class TblPorMasterImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(TBLPROISSMASTER);
     }
 
+
     /**
      * @param id key constituent
 
@@ -268,13 +315,6 @@ public class TblPorMasterImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblPorMaster");
     }
 
     /**

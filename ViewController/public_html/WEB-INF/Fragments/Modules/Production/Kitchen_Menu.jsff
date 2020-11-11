@@ -230,7 +230,7 @@
                                                             </af:inputDate>
                                                         </af:column>
                                                         <af:column headerText="#{bindings.TblKitchenMenuDView2.hints.MenuType.label}"
-                                                                   id="c7">
+                                                                   id="c7" width="143">
                                                             <af:selectOneChoice value="#{row.bindings.MenuType.inputValue}"
                                                                                 label="#{row.bindings.MenuType.label}"
                                                                                 required="#{bindings.TblKitchenMenuDView2.hints.MenuType.mandatory}"
@@ -397,7 +397,7 @@
                                                                                   pattern="#{bindings.TblKitchenMenuDDView2.hints.Id.format}"/>
                                                             </af:inputText>
                                                         </af:column>
-                                                        <af:column sortProperty="#{bindings.TblKitchenMenuDDView2.hints.Dated.name}"
+                                                        <!--<af:column sortProperty="#{bindings.TblKitchenMenuDDView2.hints.Dated.name}"
                                                                    filterable="true" sortable="true"
                                                                    headerText="#{bindings.TblKitchenMenuDDView2.hints.Dated.label}"
                                                                    id="c11" width="112">
@@ -416,19 +416,31 @@
                                                                 <f:validator binding="#{row.bindings.Dated.validator}"/>
                                                                 <af:convertDateTime pattern="#{bindings.TblKitchenMenuDDView2.hints.Dated.format}"/>
                                                             </af:inputDate>
-                                                        </af:column>
+                                                        </af:column>-->
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDDView2.hints.ItemL4Id.name}"
                                                                    filterable="true" sortable="true"
                                                                    headerText="#{bindings.TblKitchenMenuDDView2.hints.ItemL4Id.label}"
                                                                    id="c12" width="228">
                                                             <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
-                                                                                label="#{row.bindings.ItemL4Id.label}"
+                                                                                label="#{row.bindings.ItemL4Id.label}" autoSubmit="true"
                                                                                 required="#{bindings.TblKitchenMenuDDView2.hints.ItemL4Id.mandatory}"
                                                                                 shortDesc="#{bindings.TblKitchenMenuDDView2.hints.ItemL4Id.tooltip}"
                                                                                 id="soc4">
                                                                 <f:selectItems value="#{row.bindings.ItemL4Id.items}"
                                                                                id="si4"/>
                                                                 <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
+                                                            </af:selectOneChoice>
+                                                        </af:column>
+                                                        <af:column headerText="#{bindings.TblKitchenMenuDDView2.hints.UomId.label}"
+                                                                   id="c11">
+                                                            <af:selectOneChoice value="#{row.bindings.UomId.inputValue}"
+                                                                                label="#{row.bindings.UomId.label}" readOnly="true"
+                                                                                required="#{bindings.TblKitchenMenuDDView2.hints.UomId.mandatory}"
+                                                                                shortDesc="#{bindings.TblKitchenMenuDDView2.hints.UomId.tooltip}"
+                                                                                id="soc5">
+                                                                <f:selectItems value="#{row.bindings.UomId.items}"
+                                                                               id="si5"/>
+                                                                <f:validator binding="#{row.bindings.UomId.validator}"/>
                                                             </af:selectOneChoice>
                                                         </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDDView2.hints.TotalPerson.name}"

@@ -44,9 +44,17 @@
                     <f:validator binding="#{bindings.Dated.validator}"/>
                     <af:convertDateTime pattern="#{bindings.Dated.format}"/>
                   </af:inputDate>
-                  <af:spacer  id="s2"/>
+                            <af:spacer  id="s2"/>
+                            <af:selectOneChoice value="#{bindings.MenuType.inputValue}"
+                                                label="Menu Type" contentStyle="width:150px;"
+                                                required="#{bindings.MenuType.hints.mandatory}"
+                                                shortDesc="#{bindings.MenuType.hints.tooltip}" id="soc9">
+                              <f:selectItems value="#{bindings.MenuType.items}" id="si9"/>
+                              <f:validator binding="#{bindings.MenuType.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s12"/>
                             <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
-                                                label="Project"
+                                                label="Project" autoSubmit="true"
                                                 required="#{bindings.ProjectId.hints.mandatory}"
                                                 shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc2"  disabled="true"
                                                 contentStyle="width:150px;">
@@ -54,6 +62,15 @@
                               <f:validator binding="#{bindings.ProjectId.validator}"/>
                             </af:selectOneChoice>
                             <af:spacer  id="s8"/>
+                            <af:selectOneChoice value="#{bindings.ProjectDId.inputValue}"
+                                                label="Project Centers"
+                                                required="#{bindings.ProjectDId.hints.mandatory}"
+                                                shortDesc="#{bindings.ProjectDId.hints.tooltip}" id="soc8"
+                                                contentStyle="width:150px;">
+                              <f:selectItems value="#{bindings.ProjectDId.items}" id="si8"/>
+                              <f:validator binding="#{bindings.ProjectDId.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s6"/>
                             <af:selectOneChoice value="#{bindings.DepartmentId.inputValue}"
                                                 label="Department"
                                                 required="#{bindings.DepartmentId.hints.mandatory}"
@@ -161,7 +178,7 @@
        id="it10" placeholder="Search ">
       </af:inputText>
 </f:facet>
-                    <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
+                    <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}" readOnly="true"
                                         label="#{row.bindings.ItemL4Id.label}" autoSubmit="true"
                                         required="#{bindings.TblPorDetailView2.hints.ItemL4Id.mandatory}"
                                         shortDesc="#{bindings.TblPorDetailView2.hints.ItemL4Id.tooltip}" id="soc3">
