@@ -7,6 +7,7 @@ import java.sql.Timestamp;
 import oracle.adf.share.ADFContext;
 
 import oracle.jbo.Key;
+import oracle.jbo.RowIterator;
 import oracle.jbo.domain.Number;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
@@ -24,18 +25,14 @@ public class TblKitchenMenuDImpl extends EntityImpl {
     public enum AttributesEnum {
         Id,
         KitchenMenuMId,
-        ItemL4Id,
-        TotalPerson,
         CreatedDate,
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
         Dated,
-        DinnerItemL4Id,
-        DinnerPersons,
-        LunchItemL4Id,
-        LunchPersons,
-        TblKitchenMenuM;
+        MenuType,
+        TblKitchenMenuM,
+        TblKitchenMenuDD;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -58,26 +55,32 @@ public class TblKitchenMenuDImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int KITCHENMENUMID = AttributesEnum.KitchenMenuMId.index();
-    public static final int ITEML4ID = AttributesEnum.ItemL4Id.index();
-    public static final int TOTALPERSON = AttributesEnum.TotalPerson.index();
     public static final int CREATEDDATE = AttributesEnum.CreatedDate.index();
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
     public static final int DATED = AttributesEnum.Dated.index();
-    public static final int DINNERITEML4ID = AttributesEnum.DinnerItemL4Id.index();
-    public static final int DINNERPERSONS = AttributesEnum.DinnerPersons.index();
-    public static final int LUNCHITEML4ID = AttributesEnum.LunchItemL4Id.index();
-    public static final int LUNCHPERSONS = AttributesEnum.LunchPersons.index();
+    public static final int MENUTYPE = AttributesEnum.MenuType.index();
     public static final int TBLKITCHENMENUM = AttributesEnum.TblKitchenMenuM.index();
+    public static final int TBLKITCHENMENUDD = AttributesEnum.TblKitchenMenuDD.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public TblKitchenMenuDImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblKitchenMenuD");
+    }
+
 
     /**
      * Gets the attribute value for Id, using the alias name Id.
@@ -111,37 +114,6 @@ public class TblKitchenMenuDImpl extends EntityImpl {
         setAttributeInternal(KITCHENMENUMID, value);
     }
 
-    /**
-     * Gets the attribute value for ItemL4Id, using the alias name ItemL4Id.
-     * @return the value of ItemL4Id
-     */
-    public BigDecimal getItemL4Id() {
-        return (BigDecimal) getAttributeInternal(ITEML4ID);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for ItemL4Id.
-     * @param value value to set the ItemL4Id
-     */
-    public void setItemL4Id(BigDecimal value) {
-        setAttributeInternal(ITEML4ID, value);
-    }
-
-    /**
-     * Gets the attribute value for TotalPerson, using the alias name TotalPerson.
-     * @return the value of TotalPerson
-     */
-    public BigDecimal getTotalPerson() {
-        return (BigDecimal) getAttributeInternal(TOTALPERSON);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for TotalPerson.
-     * @param value value to set the TotalPerson
-     */
-    public void setTotalPerson(BigDecimal value) {
-        setAttributeInternal(TOTALPERSON, value);
-    }
 
     /**
      * Gets the attribute value for CreatedDate, using the alias name CreatedDate.
@@ -207,83 +179,45 @@ public class TblKitchenMenuDImpl extends EntityImpl {
         setAttributeInternal(DATED, value);
     }
 
+
     /**
-     * Gets the attribute value for DinnerItemL4Id, using the alias name DinnerItemL4Id.
-     * @return the value of DinnerItemL4Id
+     * Gets the attribute value for MenuType, using the alias name MenuType.
+     * @return the value of MenuType
      */
-    public BigDecimal getDinnerItemL4Id() {
-        return (BigDecimal) getAttributeInternal(DINNERITEML4ID);
+    public String getMenuType() {
+        return (String) getAttributeInternal(MENUTYPE);
     }
 
     /**
-     * Sets <code>value</code> as the attribute value for DinnerItemL4Id.
-     * @param value value to set the DinnerItemL4Id
+     * Sets <code>value</code> as the attribute value for MenuType.
+     * @param value value to set the MenuType
      */
-    public void setDinnerItemL4Id(BigDecimal value) {
-        setAttributeInternal(DINNERITEML4ID, value);
-    }
-
-    /**
-     * Gets the attribute value for DinnerPersons, using the alias name DinnerPersons.
-     * @return the value of DinnerPersons
-     */
-    public BigDecimal getDinnerPersons() {
-        return (BigDecimal) getAttributeInternal(DINNERPERSONS);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for DinnerPersons.
-     * @param value value to set the DinnerPersons
-     */
-    public void setDinnerPersons(BigDecimal value) {
-        setAttributeInternal(DINNERPERSONS, value);
-    }
-
-    /**
-     * Gets the attribute value for LunchItemL4Id, using the alias name LunchItemL4Id.
-     * @return the value of LunchItemL4Id
-     */
-    public BigDecimal getLunchItemL4Id() {
-        return (BigDecimal) getAttributeInternal(LUNCHITEML4ID);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for LunchItemL4Id.
-     * @param value value to set the LunchItemL4Id
-     */
-    public void setLunchItemL4Id(BigDecimal value) {
-        setAttributeInternal(LUNCHITEML4ID, value);
-    }
-
-    /**
-     * Gets the attribute value for LunchPersons, using the alias name LunchPersons.
-     * @return the value of LunchPersons
-     */
-    public BigDecimal getLunchPersons() {
-        return (BigDecimal) getAttributeInternal(LUNCHPERSONS);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for LunchPersons.
-     * @param value value to set the LunchPersons
-     */
-    public void setLunchPersons(BigDecimal value) {
-        setAttributeInternal(LUNCHPERSONS, value);
+    public void setMenuType(String value) {
+        setAttributeInternal(MENUTYPE, value);
     }
 
     /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
-    public EntityImpl getTblKitchenMenuM() {
-        return (EntityImpl) getAttributeInternal(TBLKITCHENMENUM);
+    public TblKitchenMenuMImpl getTblKitchenMenuM() {
+        return (TblKitchenMenuMImpl) getAttributeInternal(TBLKITCHENMENUM);
     }
 
     /**
      * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
      */
-    public void setTblKitchenMenuM(EntityImpl value) {
+    public void setTblKitchenMenuM(TblKitchenMenuMImpl value) {
         setAttributeInternal(TBLKITCHENMENUM, value);
     }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getTblKitchenMenuDD() {
+        return (RowIterator) getAttributeInternal(TBLKITCHENMENUDD);
+    }
+
 
     /**
      * @param id key constituent
@@ -292,13 +226,6 @@ public class TblKitchenMenuDImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblKitchenMenuD");
     }
 
     /**

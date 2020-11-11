@@ -14,6 +14,10 @@
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblKitchenMenuDView2Query"/>
     <iterator Binds="USERS_CRUD_OPERATIONS1" RangeSize="25" DataControl="AppModuleDataControl"
               id="USERS_CRUD_OPERATIONS1Iterator"/>
+    <iterator Binds="TblKitchenMenuDDView2" RangeSize="25" DataControl="AppModuleDataControl1"
+              id="TblKitchenMenuDDView2Iterator"/>
+    <searchRegion Binds="TblKitchenMenuDDView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblKitchenMenuDDView2Query"/>
   </executables>
   <bindings>
     <tree IterBinding="TblKitchenMenuMView1Iterator" id="TblKitchenMenuMView1">
@@ -40,13 +44,8 @@
       <nodeDefinition DefName="model.ERP.VO.TblKitchenMenuDView" Name="TblKitchenMenuDView20">
         <AttrNames>
           <Item Value="Id"/>
-          <Item Value="ItemL4Id"/>
-          <Item Value="TotalPerson"/>
           <Item Value="Dated"/>
-          <Item Value="LunchItemL4Id"/>
-          <Item Value="LunchPersons"/>
-          <Item Value="DinnerItemL4Id"/>
-          <Item Value="DinnerPersons"/>
+          <Item Value="MenuType"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -67,5 +66,21 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <tree IterBinding="TblKitchenMenuDDView2Iterator" id="TblKitchenMenuDDView2">
+      <nodeDefinition DefName="model.ERP.VO.TblKitchenMenuDDView" Name="TblKitchenMenuDDView20">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Dated"/>
+          <Item Value="ItemL4Id"/>
+          <Item Value="TotalPerson"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblKitchenMenuDDView2Iterator" id="CreateInsert2" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblKitchenMenuDDView2Iterator" id="Execute2" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblKitchenMenuDDView2Iterator" id="Delete2" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>

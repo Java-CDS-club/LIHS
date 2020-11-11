@@ -17,57 +17,25 @@
     Name="Item_Level4_LOV1"
     ViewObjectName="model.LOV.Item_Level4_LOV"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Menu_Type_LOV1"
+    ViewObjectName="model.LOV.Menu_Type_LOV"
+    RowLevelBinds="true"/>
   <ListBinding
-    Name="LOV_ItemL4Id"
-    ListVOName="Item_Level4_LOV1"
+    Name="LOV_MenuType"
+    ListVOName="Menu_Type_LOV1"
     ListRangeSize="-1"
     NullValueFlag="none"
     MRUCount="0">
     <AttrArray Name="AttrNames">
-      <Item Value="ItemL4Id"/>
+      <Item Value="MenuType"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
-      <Item Value="ItemL4Id"/>
+      <Item Value="DbAttr"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_LunchItemL4Id"
-    ListVOName="Item_Level4_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="LunchItemL4Id"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="ItemL4Id"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_DinnerItemL4Id"
-    ListVOName="Item_Level4_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="DinnerItemL4Id"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="ItemL4Id"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
+      <Item Value="ViewAttr"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -88,31 +56,12 @@
     EntityUsage="TblKitchenMenuD"
     AliasName="KITCHEN_MENU_M_ID"/>
   <ViewAttribute
-    Name="ItemL4Id"
-    PrecisionRule="true"
-    EntityAttrName="ItemL4Id"
-    EntityUsage="TblKitchenMenuD"
-    AliasName="ITEM_L4_ID"
-    LOVName="LOV_ItemL4Id">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="TotalPerson"
-    PrecisionRule="true"
-    EntityAttrName="TotalPerson"
-    EntityUsage="TblKitchenMenuD"
-    AliasName="TOTAL_PERSON"/>
-  <ViewAttribute
     Name="CreatedDate"
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblKitchenMenuD"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -124,7 +73,8 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblKitchenMenuD"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
@@ -147,12 +97,12 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
-    Name="LunchItemL4Id"
+    Name="MenuType"
     PrecisionRule="true"
-    EntityAttrName="LunchItemL4Id"
+    EntityAttrName="MenuType"
     EntityUsage="TblKitchenMenuD"
-    AliasName="LUNCH_ITEM_L4_ID"
-    LOVName="LOV_LunchItemL4Id">
+    AliasName="MENU_TYPE"
+    LOVName="LOV_MenuType">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -160,32 +110,11 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
-  <ViewAttribute
-    Name="LunchPersons"
-    PrecisionRule="true"
-    EntityAttrName="LunchPersons"
-    EntityUsage="TblKitchenMenuD"
-    AliasName="LUNCH_PERSONS"/>
-  <ViewAttribute
-    Name="DinnerItemL4Id"
-    PrecisionRule="true"
-    EntityAttrName="DinnerItemL4Id"
-    EntityUsage="TblKitchenMenuD"
-    AliasName="DINNER_ITEM_L4_ID"
-    LOVName="LOV_DinnerItemL4Id">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="DinnerPersons"
-    PrecisionRule="true"
-    EntityAttrName="DinnerPersons"
-    EntityUsage="TblKitchenMenuD"
-    AliasName="DINNER_PERSONS"/>
+  <ViewLinkAccessor
+    Name="TblKitchenMenuDDView"
+    ViewLink="model.ERP.VO.FKTblKitchenMenuDDFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

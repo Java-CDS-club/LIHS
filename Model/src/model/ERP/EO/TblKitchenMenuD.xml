@@ -33,20 +33,6 @@
     ColumnType="NUMBER"
     TableName="TBL_KITCHEN_MENU_D"/>
   <Attribute
-    Name="ItemL4Id"
-    ColumnName="ITEM_L4_ID"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    TableName="TBL_KITCHEN_MENU_D"/>
-  <Attribute
-    Name="TotalPerson"
-    ColumnName="TOTAL_PERSON"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    TableName="TBL_KITCHEN_MENU_D"/>
-  <Attribute
     Name="CreatedDate"
     ColumnName="CREATED_DATE"
     SQLType="TIMESTAMP"
@@ -85,33 +71,19 @@
     ColumnType="DATE"
     TableName="TBL_KITCHEN_MENU_D"/>
   <Attribute
-    Name="DinnerItemL4Id"
-    ColumnName="DINNER_ITEM_L4_ID"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    TableName="TBL_KITCHEN_MENU_D"/>
-  <Attribute
-    Name="DinnerPersons"
-    ColumnName="DINNER_PERSONS"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    TableName="TBL_KITCHEN_MENU_D"/>
-  <Attribute
-    Name="LunchItemL4Id"
-    ColumnName="LUNCH_ITEM_L4_ID"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    TableName="TBL_KITCHEN_MENU_D"/>
-  <Attribute
-    Name="LunchPersons"
-    ColumnName="LUNCH_PERSONS"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    TableName="TBL_KITCHEN_MENU_D"/>
+    Name="MenuType"
+    Precision="1"
+    ColumnName="MENU_TYPE"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_KITCHEN_MENU_D"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="TblKitchenMenuM"
     Association="model.ERP.EO.FkKitchenMenuDAssoc"
@@ -119,6 +91,13 @@
     AssociationOtherEnd="model.ERP.EO.FkKitchenMenuDAssoc.TblKitchenMenuD"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblKitchenMenuDD"
+    Association="model.ERP.EO.FKTblKitchenMenuDDFKAssoc"
+    AssociationEnd="model.ERP.EO.FKTblKitchenMenuDDFKAssoc.TblKitchenMenuDD"
+    AssociationOtherEnd="model.ERP.EO.FKTblKitchenMenuDDFKAssoc.TblKitchenMenuD"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="PkKitchenMenuDId"
     PrimaryKey="true">
@@ -147,8 +126,6 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_KITCHEN_MENU_D2"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.ERP.EO.TblKitchenMenuD.ItemL4Id"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
 </Entity>
