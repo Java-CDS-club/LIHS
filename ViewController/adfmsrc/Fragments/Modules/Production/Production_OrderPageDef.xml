@@ -70,6 +70,10 @@
          
           
           <Item Value="Narration"/>
+          <Item Value="MenuType"/>
+          <Item Value="ProjectId"/>
+          <Item Value="ProjectDId"/>
+          <Item Value="DepartmentId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

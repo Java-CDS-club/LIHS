@@ -230,7 +230,12 @@
                                                             </af:inputDate>
                                                         </af:column>
                                                         <af:column headerText="Day"
-                                                                   id="c7">
+                                                                   id="c7" sortable="true" filterable="true">
+                                                                    <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.DatedweekDay}"
+                                                                              id="it12"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:inputDate value="#{row.bindings.DatedweekDay.inputValue}" readOnly="true"
                                                                           label="#{bindings.TblKitchenMenuDView2.hints.DatedweekDay.label}"
                                                                           required="#{bindings.TblKitchenMenuDView2.hints.DatedweekDay.mandatory}"
@@ -380,18 +385,24 @@
                                                               filterModel="#{bindings.TblKitchenMenuDDView2Query.queryDescriptor}"
                                                               filterVisible="true"
                                                               queryListener="#{bindings.TblKitchenMenuDDView2Query.processQuery}"
-                                                              varStatus="vs" id="t3">
+                                                              varStatus="vs" id="t3" scrollPolicy="page"
+                                                              autoHeightRows="0">
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDDView2.hints.Id.name}"
                                                                    filterable="true" sortable="true" visible="false"
-                                                                   headerText="#{bindings.TblKitchenMenuDDView2.hints.Id.label}"
+                                                                   headerText="ID"
                                                                    id="c8">
+                                                                    <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                              id="it13"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                           label="#{bindings.TblKitchenMenuDDView2.hints.Id.label}"
                                                                           required="#{bindings.TblKitchenMenuDDView2.hints.Id.mandatory}"
                                                                           columns="#{bindings.TblKitchenMenuDDView2.hints.Id.displayWidth}"
                                                                           maximumLength="#{bindings.TblKitchenMenuDDView2.hints.Id.precision}"
                                                                           shortDesc="#{bindings.TblKitchenMenuDDView2.hints.Id.tooltip}"
-                                                                          id="it5">
+                                                                          id="it5" readOnly="true">
                                                                 <f:validator binding="#{row.bindings.Id.validator}"/>
                                                                 <af:convertNumber groupingUsed="false"
                                                                                   pattern="#{bindings.TblKitchenMenuDDView2.hints.Id.format}"/>
@@ -419,8 +430,13 @@
                                                         </af:column>-->
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDDView2.hints.ItemL4Id.name}"
                                                                    filterable="true" sortable="true"
-                                                                   headerText="#{bindings.TblKitchenMenuDDView2.hints.ItemL4Id.label}"
+                                                                   headerText="Item Level 4"
                                                                    id="c12" width="228">
+                                                                    <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
+                                                                              id="it14"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
                                                                                 label="#{row.bindings.ItemL4Id.label}" autoSubmit="true"
                                                                                 required="#{bindings.TblKitchenMenuDDView2.hints.ItemL4Id.mandatory}"
@@ -431,8 +447,14 @@
                                                                 <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                                                             </af:selectOneChoice>
                                                         </af:column>
-                                                        <af:column headerText="#{bindings.TblKitchenMenuDDView2.hints.UomId.label}"
-                                                                   id="c11">
+                                                        <af:column headerText="UOM"
+                                                                   id="c11" sortable="true" filterable="true"
+                                                                   width="50">
+                                                                    <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.UomId}"
+                                                                              id="it15"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:selectOneChoice value="#{row.bindings.UomId.inputValue}"
                                                                                 label="#{row.bindings.UomId.label}" readOnly="true"
                                                                                 required="#{bindings.TblKitchenMenuDDView2.hints.UomId.mandatory}"
@@ -445,8 +467,13 @@
                                                         </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDDView2.hints.TotalPerson.name}"
                                                                    filterable="true" sortable="true"
-                                                                   headerText="#{bindings.TblKitchenMenuDDView2.hints.TotalPerson.label}"
+                                                                   headerText="Total Person"
                                                                    id="c13" width="71">
+                                                                    <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.TotalPerson}"
+                                                                              id="it16"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:inputText value="#{row.bindings.TotalPerson.inputValue}"
                                                                           label="#{bindings.TblKitchenMenuDDView2.hints.TotalPerson.label}"
                                                                           required="#{bindings.TblKitchenMenuDDView2.hints.TotalPerson.mandatory}"
@@ -488,18 +515,23 @@
                                                               filterModel="#{bindings.TblKitchenMenuDLunchView2Query.queryDescriptor}"
                                                               filterVisible="true"
                                                               queryListener="#{bindings.TblKitchenMenuDLunchView2Query.processQuery}"
-                                                              varStatus="vs" id="t4">
+                                                              varStatus="vs" id="t4" scrollPolicy="page" autoHeightRows="0">
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDLunchView2.hints.Id.name}"
                                                                    filterable="true" sortable="true" visible="false"
-                                                                   headerText="#{bindings.TblKitchenMenuDLunchView2.hints.Id.label}"
+                                                                   headerText="ID"
                                                                    id="c14">
+                                                                   <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                              id="it17"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                           label="#{bindings.TblKitchenMenuDLunchView2.hints.Id.label}"
                                                                           required="#{bindings.TblKitchenMenuDLunchView2.hints.Id.mandatory}"
                                                                           columns="#{bindings.TblKitchenMenuDLunchView2.hints.Id.displayWidth}"
                                                                           maximumLength="#{bindings.TblKitchenMenuDLunchView2.hints.Id.precision}"
                                                                           shortDesc="#{bindings.TblKitchenMenuDLunchView2.hints.Id.tooltip}"
-                                                                          id="it7">
+                                                                          id="it7" readOnly="true">
                                                                 <f:validator binding="#{row.bindings.Id.validator}"/>
                                                                 <af:convertNumber groupingUsed="false"
                                                                                   pattern="#{bindings.TblKitchenMenuDLunchView2.hints.Id.format}"/>
@@ -507,8 +539,13 @@
                                                         </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDLunchView2.hints.ItemL4Id.name}"
                                                                    filterable="true" sortable="true"
-                                                                   headerText="#{bindings.TblKitchenMenuDLunchView2.hints.ItemL4Id.label}"
-                                                                   id="c15">
+                                                                   headerText="Item Level 4"
+                                                                   id="c15" width="200">
+                                                                    <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
+                                                                              id="it18"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
                                                                                 label="#{row.bindings.ItemL4Id.label}" autoSubmit="true"
                                                                                 required="#{bindings.TblKitchenMenuDLunchView2.hints.ItemL4Id.mandatory}"
@@ -521,8 +558,13 @@
                                                         </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDLunchView2.hints.UomId.name}"
                                                                    filterable="true" sortable="true"
-                                                                   headerText="#{bindings.TblKitchenMenuDLunchView2.hints.UomId.label}"
-                                                                   id="c18">
+                                                                   headerText="UOM"
+                                                                   id="c18" width="50">
+                                                                     <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.UomId}"
+                                                                              id="it19"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:selectOneChoice value="#{row.bindings.UomId.inputValue}"
                                                                                 label="#{row.bindings.UomId.label}" readOnly="true"
                                                                                 required="#{bindings.TblKitchenMenuDLunchView2.hints.UomId.mandatory}"
@@ -535,8 +577,13 @@
                                                         </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.name}"
                                                                    filterable="true" sortable="true"
-                                                                   headerText="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.label}"
+                                                                   headerText="Total Person"
                                                                    id="c16">
+                                                                    <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.TotalPerson}"
+                                                                              id="it20"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:inputText value="#{row.bindings.TotalPerson.inputValue}"
                                                                           label="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.label}"
                                                                           required="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.mandatory}"
@@ -598,18 +645,23 @@
                                                               filterModel="#{bindings.TblKitchenMenuDDinnerView3Query.queryDescriptor}"
                                                               filterVisible="true"
                                                               queryListener="#{bindings.TblKitchenMenuDDinnerView3Query.processQuery}"
-                                                              varStatus="vs" id="t5">
+                                                              varStatus="vs" id="t5" scrollPolicy="page" autoHeightRows="0">
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.name}"
                                                                    filterable="true" sortable="true" visible="false"
-                                                                   headerText="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.label}"
+                                                                   headerText="ID"
                                                                    id="c19">
+                                                                    <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.Id}"
+                                                                              id="it21"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:inputText value="#{row.bindings.Id.inputValue}"
                                                                           label="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.label}"
                                                                           required="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.mandatory}"
                                                                           columns="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.displayWidth}"
                                                                           maximumLength="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.precision}"
                                                                           shortDesc="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.tooltip}"
-                                                                          id="it10">
+                                                                          id="it10" readOnly="true">
                                                                 <f:validator binding="#{row.bindings.Id.validator}"/>
                                                                 <af:convertNumber groupingUsed="false"
                                                                                   pattern="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.format}"/>
@@ -617,8 +669,13 @@
                                                         </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDDinnerView3.hints.ItemL4Id.name}"
                                                                    filterable="true" sortable="true"
-                                                                   headerText="#{bindings.TblKitchenMenuDDinnerView3.hints.ItemL4Id.label}"
-                                                                   id="c20">
+                                                                   headerText="Item level 4"
+                                                                   id="c20" width="200">
+                                                                    <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
+                                                                              id="it22"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
                                                                                 label="#{row.bindings.ItemL4Id.label}" autoSubmit="true"
                                                                                 required="#{bindings.TblKitchenMenuDDinnerView3.hints.ItemL4Id.mandatory}"
@@ -631,8 +688,13 @@
                                                         </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDDinnerView3.hints.UomId.name}"
                                                                    filterable="true" sortable="true"
-                                                                   headerText="#{bindings.TblKitchenMenuDDinnerView3.hints.UomId.label}"
-                                                                   id="c21">
+                                                                   headerText="UOM"
+                                                                   id="c21" width="50">
+                                                                    <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.UomId}"
+                                                                              id="it23"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:selectOneChoice value="#{row.bindings.UomId.inputValue}"
                                                                                 label="#{row.bindings.UomId.label}" readOnly="true"
                                                                                 required="#{bindings.TblKitchenMenuDDinnerView3.hints.UomId.mandatory}"
@@ -645,8 +707,13 @@
                                                         </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.name}"
                                                                    filterable="true" sortable="true"
-                                                                   headerText="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.label}"
+                                                                   headerText="Total Person"
                                                                    id="c22">
+                                                                    <f:facet name="filter">
+                                                                <af:inputText value="#{vs.filterCriteria.TotalPerson}"
+                                                                              id="it24"
+                                                                              placeholder="Search "></af:inputText>
+                                                            </f:facet>
                                                             <af:inputText value="#{row.bindings.TotalPerson.inputValue}"
                                                                           label="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.label}"
                                                                           required="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.mandatory}"

@@ -191,7 +191,7 @@
                                                   label="#{row.bindings.ItemL4Id.label}"
                                                   required="#{bindings.TblItnDView2.hints.ItemL4Id.mandatory}"
                                                   shortDesc="#{bindings.TblItnDView2.hints.ItemL4Id.tooltip}"
-                                                  id="soc11" readOnly="true">
+                                                  id="soc11" >
                                 <f:selectItems value="#{row.bindings.ItemL4Id.items}" id="si11"/>
                                 <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                               </af:selectOneChoice>
@@ -224,7 +224,7 @@
                                             required="#{bindings.TblItnDView2.hints.Description.mandatory}"
                                             columns="#{bindings.TblItnDView2.hints.Description.displayWidth}"
                                             maximumLength="#{bindings.TblItnDView2.hints.Description.precision}"
-                                            shortDesc="#{bindings.TblItnDView2.hints.Description.tooltip}" id="it16" readOnly="true">
+                                            shortDesc="#{bindings.TblItnDView2.hints.Description.tooltip}" id="it16" >
                                 <f:validator binding="#{row.bindings.Description.validator}"/>
                               </af:inputText>
                             </af:column>
