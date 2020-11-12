@@ -53,6 +53,7 @@
         <AttrNames>
           <Item Value="Id"/>
           <Item Value="Dated"/>
+          <Item Value="DatedweekDay"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

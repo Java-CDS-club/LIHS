@@ -229,7 +229,18 @@
                                                                 <af:convertDateTime pattern="#{bindings.TblKitchenMenuDView2.hints.Dated.format}"/>
                                                             </af:inputDate>
                                                         </af:column>
-                                                        
+                                                        <af:column headerText="Day"
+                                                                   id="c7">
+                                                            <af:inputDate value="#{row.bindings.DatedweekDay.inputValue}" readOnly="true"
+                                                                          label="#{bindings.TblKitchenMenuDView2.hints.DatedweekDay.label}"
+                                                                          required="#{bindings.TblKitchenMenuDView2.hints.DatedweekDay.mandatory}"
+                                                                          columns="#{bindings.TblKitchenMenuDView2.hints.DatedweekDay.displayWidth}"
+                                                                          shortDesc="#{bindings.TblKitchenMenuDView2.hints.DatedweekDay.tooltip}"
+                                                                          id="id1">
+                                                                <f:validator binding="#{row.bindings.DatedweekDay.validator}"/>
+                                                                <af:convertDateTime pattern="#{bindings.TblKitchenMenuDView2.hints.DatedweekDay.format}"/>
+                                                            </af:inputDate>
+                                                        </af:column>
                                                         <!--<af:column sortProperty="#{bindings.TblKitchenMenuDView2.hints.ItemL4Id.name}"
                                                                    filterable="true" sortable="true"
                                                                    headerText="Breakfast Item" id="c7" width="200">

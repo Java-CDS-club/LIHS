@@ -71,10 +71,25 @@
     AliasName="DATED">
     <Properties>
       <SchemaBasedProperties>
-        <FMT_FORMAT
-          ResId="model.ERP.VO.TblKitchenMenuDView.Dated_FMT_FORMAT"/>
         <FMT_FORMATTER
           ResId="model.ERP.VO.TblKitchenMenuDView.Dated_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblKitchenMenuDView.Dated_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DatedweekDay"
+    PrecisionRule="true"
+    EntityAttrName="Dated"
+    EntityUsage="TblKitchenMenuD"
+    AliasName="DATED1">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.ERP.VO.TblKitchenMenuDView.DatedweekDay_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.ERP.VO.TblKitchenMenuDView.DatedweekDay_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
