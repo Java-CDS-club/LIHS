@@ -73,7 +73,7 @@
                                                                                 label="#{row.bindings.ProjectId.label}"
                                                                                 required="#{bindings.TblKitchenMenuMView1.hints.ProjectId.mandatory}"
                                                                                 shortDesc="#{bindings.TblKitchenMenuMView1.hints.ProjectId.tooltip}"
-                                                                                id="soc2" autoSubmit="true">
+                                                                                id="soc2" autoSubmit="true" readOnly="true">
                                                                 <f:selectItems value="#{row.bindings.ProjectId.items}"
                                                                                id="si2"/>
                                                                 <f:validator binding="#{row.bindings.ProjectId.validator}"/>
@@ -229,18 +229,7 @@
                                                                 <af:convertDateTime pattern="#{bindings.TblKitchenMenuDView2.hints.Dated.format}"/>
                                                             </af:inputDate>
                                                         </af:column>
-                                                        <af:column headerText="#{bindings.TblKitchenMenuDView2.hints.MenuType.label}"
-                                                                   id="c7" width="143">
-                                                            <af:selectOneChoice value="#{row.bindings.MenuType.inputValue}"
-                                                                                label="#{row.bindings.MenuType.label}"
-                                                                                required="#{bindings.TblKitchenMenuDView2.hints.MenuType.mandatory}"
-                                                                                shortDesc="#{bindings.TblKitchenMenuDView2.hints.MenuType.tooltip}"
-                                                                                id="soc3">
-                                                                <f:selectItems value="#{row.bindings.MenuType.items}"
-                                                                               id="si3"/>
-                                                                <f:validator binding="#{row.bindings.MenuType.validator}"/>
-                                                            </af:selectOneChoice>
-                                                        </af:column>
+                                                        
                                                         <!--<af:column sortProperty="#{bindings.TblKitchenMenuDView2.hints.ItemL4Id.name}"
                                                                    filterable="true" sortable="true"
                                                                    headerText="Breakfast Item" id="c7" width="200">
@@ -367,7 +356,7 @@
                                     <af:gridRow marginTop="5px" height="auto" id="gr6">
                                         <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                          <af:panelTabbed position="above" id="pt4" styleClass="tabel_pannel_tab">
-                                                <af:showDetailItem id="sdi1" text="Kitchen Menu Detail">
+                                                <af:showDetailItem id="sdi1" text="Breakfast">
                                                     <af:table value="#{bindings.TblKitchenMenuDDView2.collectionModel}"
                                                               var="row"
                                                               rows="#{bindings.TblKitchenMenuDDView2.rangeSize}"
@@ -472,6 +461,226 @@
                                                                              value="#{index.bindings.Bindingname.inputValue}2"/>
                                                             </af:button>
                                                             <af:spacer width="5" height="10" id="s5"/>
+                                                        </af:iterator>
+                                                    </af:panelGroupLayout>
+                                                </af:showDetailItem>
+                                                <af:showDetailItem text="Lunch" id="sdi2">
+                                                    <af:table value="#{bindings.TblKitchenMenuDLunchView2.collectionModel}"
+                                                              var="row"
+                                                              rows="#{bindings.TblKitchenMenuDLunchView2.rangeSize}"
+                                                              emptyText="#{bindings.TblKitchenMenuDLunchView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                              rowBandingInterval="0"
+                                                              selectedRowKeys="#{bindings.TblKitchenMenuDLunchView2.collectionModel.selectedRow}"
+                                                              selectionListener="#{bindings.TblKitchenMenuDLunchView2.collectionModel.makeCurrent}"
+                                                              rowSelection="single"
+                                                              fetchSize="#{bindings.TblKitchenMenuDLunchView2.rangeSize}"
+                                                              filterModel="#{bindings.TblKitchenMenuDLunchView2Query.queryDescriptor}"
+                                                              filterVisible="true"
+                                                              queryListener="#{bindings.TblKitchenMenuDLunchView2Query.processQuery}"
+                                                              varStatus="vs" id="t4">
+                                                        <af:column sortProperty="#{bindings.TblKitchenMenuDLunchView2.hints.Id.name}"
+                                                                   filterable="true" sortable="true" visible="false"
+                                                                   headerText="#{bindings.TblKitchenMenuDLunchView2.hints.Id.label}"
+                                                                   id="c14">
+                                                            <af:inputText value="#{row.bindings.Id.inputValue}"
+                                                                          label="#{bindings.TblKitchenMenuDLunchView2.hints.Id.label}"
+                                                                          required="#{bindings.TblKitchenMenuDLunchView2.hints.Id.mandatory}"
+                                                                          columns="#{bindings.TblKitchenMenuDLunchView2.hints.Id.displayWidth}"
+                                                                          maximumLength="#{bindings.TblKitchenMenuDLunchView2.hints.Id.precision}"
+                                                                          shortDesc="#{bindings.TblKitchenMenuDLunchView2.hints.Id.tooltip}"
+                                                                          id="it7">
+                                                                <f:validator binding="#{row.bindings.Id.validator}"/>
+                                                                <af:convertNumber groupingUsed="false"
+                                                                                  pattern="#{bindings.TblKitchenMenuDLunchView2.hints.Id.format}"/>
+                                                            </af:inputText>
+                                                        </af:column>
+                                                        <af:column sortProperty="#{bindings.TblKitchenMenuDLunchView2.hints.ItemL4Id.name}"
+                                                                   filterable="true" sortable="true"
+                                                                   headerText="#{bindings.TblKitchenMenuDLunchView2.hints.ItemL4Id.label}"
+                                                                   id="c15">
+                                                            <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
+                                                                                label="#{row.bindings.ItemL4Id.label}" autoSubmit="true"
+                                                                                required="#{bindings.TblKitchenMenuDLunchView2.hints.ItemL4Id.mandatory}"
+                                                                                shortDesc="#{bindings.TblKitchenMenuDLunchView2.hints.ItemL4Id.tooltip}"
+                                                                                id="soc6">
+                                                                <f:selectItems value="#{row.bindings.ItemL4Id.items}"
+                                                                               id="si6"/>
+                                                                <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
+                                                            </af:selectOneChoice>
+                                                        </af:column>
+                                                        <af:column sortProperty="#{bindings.TblKitchenMenuDLunchView2.hints.UomId.name}"
+                                                                   filterable="true" sortable="true"
+                                                                   headerText="#{bindings.TblKitchenMenuDLunchView2.hints.UomId.label}"
+                                                                   id="c18">
+                                                            <af:selectOneChoice value="#{row.bindings.UomId.inputValue}"
+                                                                                label="#{row.bindings.UomId.label}" readOnly="true"
+                                                                                required="#{bindings.TblKitchenMenuDLunchView2.hints.UomId.mandatory}"
+                                                                                shortDesc="#{bindings.TblKitchenMenuDLunchView2.hints.UomId.tooltip}"
+                                                                                id="soc7">
+                                                                <f:selectItems value="#{row.bindings.UomId.items}"
+                                                                               id="si7"/>
+                                                                <f:validator binding="#{row.bindings.UomId.validator}"/>
+                                                            </af:selectOneChoice>
+                                                        </af:column>
+                                                        <af:column sortProperty="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.name}"
+                                                                   filterable="true" sortable="true"
+                                                                   headerText="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.label}"
+                                                                   id="c16">
+                                                            <af:inputText value="#{row.bindings.TotalPerson.inputValue}"
+                                                                          label="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.label}"
+                                                                          required="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.mandatory}"
+                                                                          columns="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.displayWidth}"
+                                                                          maximumLength="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.precision}"
+                                                                          shortDesc="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.tooltip}"
+                                                                          id="it9">
+                                                                <f:validator binding="#{row.bindings.TotalPerson.validator}"/>
+                                                                <af:convertNumber groupingUsed="false"
+                                                                                  pattern="#{bindings.TblKitchenMenuDLunchView2.hints.TotalPerson.format}"/>
+                                                            </af:inputText>
+                                                        </af:column>
+                                                        <!--<af:column sortProperty="#{bindings.TblKitchenMenuDLunchView2.hints.Dated.name}"
+                                                                   filterable="true" sortable="true"
+                                                                   headerText="#{bindings.TblKitchenMenuDLunchView2.hints.Dated.label}"
+                                                                   id="c17">
+                                                            <f:facet name="filter">
+                                                                <af:inputDate value="#{bindings.TblKitchenMenuDLunchView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
+                                                                              id="id1">
+                                                                    <af:convertDateTime pattern="#{bindings.TblKitchenMenuDLunchView2.hints.Dated.format}"/>
+                                                                </af:inputDate>
+                                                            </f:facet>
+                                                            <af:inputDate value="#{row.bindings.Dated.inputValue}"
+                                                                          label="#{bindings.TblKitchenMenuDLunchView2.hints.Dated.label}"
+                                                                          required="#{bindings.TblKitchenMenuDLunchView2.hints.Dated.mandatory}"
+                                                                          columns="#{bindings.TblKitchenMenuDLunchView2.hints.Dated.displayWidth}"
+                                                                          shortDesc="#{bindings.TblKitchenMenuDLunchView2.hints.Dated.tooltip}"
+                                                                          id="id2">
+                                                                <f:validator binding="#{row.bindings.Dated.validator}"/>
+                                                                <af:convertDateTime pattern="#{bindings.TblKitchenMenuDLunchView2.hints.Dated.format}"/>
+                                                            </af:inputDate>
+                                                        </af:column>-->
+                                                    </af:table>
+                                                <af:spacer width="5" height="10" id="s6"/>
+                                                    <af:panelGroupLayout id="pgl7" halign="center" layout="horizontal">
+                                                        <af:iterator id="i4" var="index" varStatus="status"
+                                                                     value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
+                                                            <af:button id="btn#{status.index+1}"
+                                                                       text="#{index.Operation}"
+                                                                       icon="/LIHS/faces/javax.faces.resource/#{index.bindings.icon.inputValue}?ln=images"
+                                                                       actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
+                                                                <f:attribute name="AcLslink"
+                                                                             value="#{index.bindings.Bindingname.inputValue}3"/>
+                                                            </af:button>
+                                                            <af:spacer width="5" height="10" id="s10"/>
+                                                        </af:iterator>
+                                                    </af:panelGroupLayout>
+                                                </af:showDetailItem>
+                                                <af:showDetailItem text="Dinner" id="sdi3">
+                                                    <af:table value="#{bindings.TblKitchenMenuDDinnerView3.collectionModel}"
+                                                              var="row"
+                                                              rows="#{bindings.TblKitchenMenuDDinnerView3.rangeSize}"
+                                                              emptyText="#{bindings.TblKitchenMenuDDinnerView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                              rowBandingInterval="0"
+                                                              selectedRowKeys="#{bindings.TblKitchenMenuDDinnerView3.collectionModel.selectedRow}"
+                                                              selectionListener="#{bindings.TblKitchenMenuDDinnerView3.collectionModel.makeCurrent}"
+                                                              rowSelection="single"
+                                                              fetchSize="#{bindings.TblKitchenMenuDDinnerView3.rangeSize}"
+                                                              filterModel="#{bindings.TblKitchenMenuDDinnerView3Query.queryDescriptor}"
+                                                              filterVisible="true"
+                                                              queryListener="#{bindings.TblKitchenMenuDDinnerView3Query.processQuery}"
+                                                              varStatus="vs" id="t5">
+                                                        <af:column sortProperty="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.name}"
+                                                                   filterable="true" sortable="true" visible="false"
+                                                                   headerText="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.label}"
+                                                                   id="c19">
+                                                            <af:inputText value="#{row.bindings.Id.inputValue}"
+                                                                          label="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.label}"
+                                                                          required="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.mandatory}"
+                                                                          columns="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.displayWidth}"
+                                                                          maximumLength="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.precision}"
+                                                                          shortDesc="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.tooltip}"
+                                                                          id="it10">
+                                                                <f:validator binding="#{row.bindings.Id.validator}"/>
+                                                                <af:convertNumber groupingUsed="false"
+                                                                                  pattern="#{bindings.TblKitchenMenuDDinnerView3.hints.Id.format}"/>
+                                                            </af:inputText>
+                                                        </af:column>
+                                                        <af:column sortProperty="#{bindings.TblKitchenMenuDDinnerView3.hints.ItemL4Id.name}"
+                                                                   filterable="true" sortable="true"
+                                                                   headerText="#{bindings.TblKitchenMenuDDinnerView3.hints.ItemL4Id.label}"
+                                                                   id="c20">
+                                                            <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
+                                                                                label="#{row.bindings.ItemL4Id.label}" autoSubmit="true"
+                                                                                required="#{bindings.TblKitchenMenuDDinnerView3.hints.ItemL4Id.mandatory}"
+                                                                                shortDesc="#{bindings.TblKitchenMenuDDinnerView3.hints.ItemL4Id.tooltip}"
+                                                                                id="soc8">
+                                                                <f:selectItems value="#{row.bindings.ItemL4Id.items}"
+                                                                               id="si8"/>
+                                                                <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
+                                                            </af:selectOneChoice>
+                                                        </af:column>
+                                                        <af:column sortProperty="#{bindings.TblKitchenMenuDDinnerView3.hints.UomId.name}"
+                                                                   filterable="true" sortable="true"
+                                                                   headerText="#{bindings.TblKitchenMenuDDinnerView3.hints.UomId.label}"
+                                                                   id="c21">
+                                                            <af:selectOneChoice value="#{row.bindings.UomId.inputValue}"
+                                                                                label="#{row.bindings.UomId.label}" readOnly="true"
+                                                                                required="#{bindings.TblKitchenMenuDDinnerView3.hints.UomId.mandatory}"
+                                                                                shortDesc="#{bindings.TblKitchenMenuDDinnerView3.hints.UomId.tooltip}"
+                                                                                id="soc9">
+                                                                <f:selectItems value="#{row.bindings.UomId.items}"
+                                                                               id="si9"/>
+                                                                <f:validator binding="#{row.bindings.UomId.validator}"/>
+                                                            </af:selectOneChoice>
+                                                        </af:column>
+                                                        <af:column sortProperty="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.name}"
+                                                                   filterable="true" sortable="true"
+                                                                   headerText="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.label}"
+                                                                   id="c22">
+                                                            <af:inputText value="#{row.bindings.TotalPerson.inputValue}"
+                                                                          label="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.label}"
+                                                                          required="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.mandatory}"
+                                                                          columns="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.displayWidth}"
+                                                                          maximumLength="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.precision}"
+                                                                          shortDesc="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.tooltip}"
+                                                                          id="it11">
+                                                                <f:validator binding="#{row.bindings.TotalPerson.validator}"/>
+                                                                <af:convertNumber groupingUsed="false"
+                                                                                  pattern="#{bindings.TblKitchenMenuDDinnerView3.hints.TotalPerson.format}"/>
+                                                            </af:inputText>
+                                                        </af:column>
+                                                        <!--<af:column sortProperty="#{bindings.TblKitchenMenuDDinnerView3.hints.Dated.name}"
+                                                                   filterable="true" sortable="true"
+                                                                   headerText="#{bindings.TblKitchenMenuDDinnerView3.hints.Dated.label}"
+                                                                   id="c23">
+                                                            <f:facet name="filter">
+                                                                <af:inputDate value="#{bindings.TblKitchenMenuDDinnerView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
+                                                                              id="id3">
+                                                                    <af:convertDateTime pattern="#{bindings.TblKitchenMenuDDinnerView3.hints.Dated.format}"/>
+                                                                </af:inputDate>
+                                                            </f:facet>
+                                                            <af:inputDate value="#{row.bindings.Dated.inputValue}"
+                                                                          label="#{bindings.TblKitchenMenuDDinnerView3.hints.Dated.label}"
+                                                                          required="#{bindings.TblKitchenMenuDDinnerView3.hints.Dated.mandatory}"
+                                                                          columns="#{bindings.TblKitchenMenuDDinnerView3.hints.Dated.displayWidth}"
+                                                                          shortDesc="#{bindings.TblKitchenMenuDDinnerView3.hints.Dated.tooltip}"
+                                                                          id="id12">
+                                                                <f:validator binding="#{row.bindings.Dated.validator}"/>
+                                                                <af:convertDateTime pattern="#{bindings.TblKitchenMenuDDinnerView3.hints.Dated.format}"/>
+                                                            </af:inputDate>
+                                                        </af:column>-->
+                                                    </af:table>
+                                                 <af:spacer width="5" height="10" id="s11"/>
+                                                    <af:panelGroupLayout id="pgl8" halign="center" layout="horizontal">
+                                                        <af:iterator id="i5" var="index" varStatus="status"
+                                                                     value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
+                                                            <af:button id="btn#{status.index+1}"
+                                                                       text="#{index.Operation}"
+                                                                       icon="/LIHS/faces/javax.faces.resource/#{index.bindings.icon.inputValue}?ln=images"
+                                                                       actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
+                                                                <f:attribute name="AcLslink"
+                                                                             value="#{index.bindings.Bindingname.inputValue}4"/>
+                                                            </af:button>
+                                                            <af:spacer width="5" height="10" id="s12"/>
                                                         </af:iterator>
                                                     </af:panelGroupLayout>
                                                 </af:showDetailItem>

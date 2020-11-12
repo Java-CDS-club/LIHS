@@ -70,20 +70,6 @@
     Type="java.sql.Timestamp"
     ColumnType="DATE"
     TableName="TBL_KITCHEN_MENU_D"/>
-  <Attribute
-    Name="MenuType"
-    Precision="1"
-    ColumnName="MENU_TYPE"
-    SQLType="CHAR"
-    Type="java.lang.String"
-    ColumnType="CHAR"
-    TableName="TBL_KITCHEN_MENU_D"
-    RetrievedOnUpdate="true"
-    RetrievedOnInsert="true">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="1"/>
-    </DesignTime>
-  </Attribute>
   <AccessorAttribute
     Name="TblKitchenMenuM"
     Association="model.ERP.EO.FkKitchenMenuDAssoc"
@@ -96,6 +82,20 @@
     Association="model.ERP.EO.FKTblKitchenMenuDDFKAssoc"
     AssociationEnd="model.ERP.EO.FKTblKitchenMenuDDFKAssoc.TblKitchenMenuDD"
     AssociationOtherEnd="model.ERP.EO.FKTblKitchenMenuDDFKAssoc.TblKitchenMenuD"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblKitchenMenuDLunch"
+    Association="model.ERP.EO.FkKitchenLunchFkAssoc"
+    AssociationEnd="model.ERP.EO.FkKitchenLunchFkAssoc.TblKitchenMenuDLunch"
+    AssociationOtherEnd="model.ERP.EO.FkKitchenLunchFkAssoc.TblKitchenMenuD"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblKitchenMenuDDinner"
+    Association="model.ERP.EO.FkKitchenDinnerFkAssoc"
+    AssociationEnd="model.ERP.EO.FkKitchenDinnerFkAssoc.TblKitchenMenuDDinner"
+    AssociationOtherEnd="model.ERP.EO.FkKitchenDinnerFkAssoc.TblKitchenMenuD"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

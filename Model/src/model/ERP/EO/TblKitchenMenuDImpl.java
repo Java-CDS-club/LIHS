@@ -30,10 +30,12 @@ public class TblKitchenMenuDImpl extends EntityImpl {
         UpdatedDate,
         UpdatedBy,
         Dated,
-        MenuType,
         TblKitchenMenuM,
-        TblKitchenMenuDD;
-        private static AttributesEnum[] vals = null;
+        TblKitchenMenuDD,
+        TblKitchenMenuDLunch,
+        TblKitchenMenuDDinner;
+        static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         public int index() {
@@ -64,9 +66,10 @@ public class TblKitchenMenuDImpl extends EntityImpl {
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
     public static final int DATED = AttributesEnum.Dated.index();
-    public static final int MENUTYPE = AttributesEnum.MenuType.index();
     public static final int TBLKITCHENMENUM = AttributesEnum.TblKitchenMenuM.index();
     public static final int TBLKITCHENMENUDD = AttributesEnum.TblKitchenMenuDD.index();
+    public static final int TBLKITCHENMENUDLUNCH = AttributesEnum.TblKitchenMenuDLunch.index();
+    public static final int TBLKITCHENMENUDDINNER = AttributesEnum.TblKitchenMenuDDinner.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -181,22 +184,6 @@ public class TblKitchenMenuDImpl extends EntityImpl {
 
 
     /**
-     * Gets the attribute value for MenuType, using the alias name MenuType.
-     * @return the value of MenuType
-     */
-    public String getMenuType() {
-        return (String) getAttributeInternal(MENUTYPE);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for MenuType.
-     * @param value value to set the MenuType
-     */
-    public void setMenuType(String value) {
-        setAttributeInternal(MENUTYPE, value);
-    }
-
-    /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
     public TblKitchenMenuMImpl getTblKitchenMenuM() {
@@ -216,6 +203,21 @@ public class TblKitchenMenuDImpl extends EntityImpl {
      */
     public RowIterator getTblKitchenMenuDD() {
         return (RowIterator) getAttributeInternal(TBLKITCHENMENUDD);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getTblKitchenMenuDLunch() {
+        return (RowIterator) getAttributeInternal(TBLKITCHENMENUDLUNCH);
+    }
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getTblKitchenMenuDDinner() {
+        return (RowIterator) getAttributeInternal(TBLKITCHENMENUDDINNER);
     }
 
 

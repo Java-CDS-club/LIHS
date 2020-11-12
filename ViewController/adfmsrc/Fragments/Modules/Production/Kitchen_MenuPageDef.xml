@@ -18,6 +18,14 @@
               id="TblKitchenMenuDDView2Iterator"/>
     <searchRegion Binds="TblKitchenMenuDDView2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblKitchenMenuDDView2Query"/>
+    <iterator Binds="TblKitchenMenuDLunchView2" RangeSize="25" DataControl="AppModuleDataControl1"
+              id="TblKitchenMenuDLunchView2Iterator"/>
+    <searchRegion Binds="TblKitchenMenuDLunchView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblKitchenMenuDLunchView2Query"/>
+    <iterator Binds="TblKitchenMenuDDinnerView3" RangeSize="25" DataControl="AppModuleDataControl1"
+              id="TblKitchenMenuDDinnerView3Iterator"/>
+    <searchRegion Binds="TblKitchenMenuDDinnerView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblKitchenMenuDDinnerView3Query"/>
   </executables>
   <bindings>
     <tree IterBinding="TblKitchenMenuMView1Iterator" id="TblKitchenMenuMView1">
@@ -45,7 +53,6 @@
         <AttrNames>
           <Item Value="Id"/>
           <Item Value="Dated"/>
-          <Item Value="MenuType"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -82,6 +89,40 @@
     <action IterBinding="TblKitchenMenuDDView2Iterator" id="Execute2" RequiresUpdateModel="true"
             Action="iteratorExecute"/>
     <action IterBinding="TblKitchenMenuDDView2Iterator" id="Delete2" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <tree IterBinding="TblKitchenMenuDLunchView2Iterator" id="TblKitchenMenuDLunchView2">
+      <nodeDefinition DefName="model.ERP.VO.TblKitchenMenuDLunchView" Name="TblKitchenMenuDLunchView20">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="ItemL4Id"/>
+          <Item Value="TotalPerson"/>
+          <Item Value="Dated"/>
+          <Item Value="UomId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblKitchenMenuDDinnerView3Iterator" id="TblKitchenMenuDDinnerView3">
+      <nodeDefinition DefName="model.ERP.VO.TblKitchenMenuDDinnerView" Name="TblKitchenMenuDDinnerView30">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="ItemL4Id"/>
+          <Item Value="UomId"/>
+          <Item Value="TotalPerson"/>
+          <Item Value="Dated"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblKitchenMenuDLunchView2Iterator" id="CreateInsert3" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblKitchenMenuDLunchView2Iterator" id="Execute3" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblKitchenMenuDLunchView2Iterator" id="Delete3" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action IterBinding="TblKitchenMenuDDinnerView3Iterator" id="CreateInsert4" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblKitchenMenuDDinnerView3Iterator" id="Execute4" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblKitchenMenuDDinnerView3Iterator" id="Delete4" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>

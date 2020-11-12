@@ -21,24 +21,6 @@
     Name="Menu_Type_LOV1"
     ViewObjectName="model.LOV.Menu_Type_LOV"
     RowLevelBinds="true"/>
-  <ListBinding
-    Name="LOV_MenuType"
-    ListVOName="Menu_Type_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="MenuType"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="DbAttr"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="ViewAttr"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
   <EntityUsage
     Name="TblKitchenMenuD"
     Entity="model.ERP.EO.TblKitchenMenuD"/>
@@ -96,23 +78,19 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
-  <ViewAttribute
-    Name="MenuType"
-    PrecisionRule="true"
-    EntityAttrName="MenuType"
-    EntityUsage="TblKitchenMenuD"
-    AliasName="MENU_TYPE"
-    LOVName="LOV_MenuType">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblKitchenMenuDDView"
     ViewLink="model.ERP.VO.FKTblKitchenMenuDDFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblKitchenMenuDLunchView"
+    ViewLink="model.ERP.VO.FkKitchenLunchFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblKitchenMenuDDinnerView"
+    ViewLink="model.ERP.VO.FkKitchenDinnerFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ResourceBundle>

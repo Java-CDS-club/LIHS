@@ -448,6 +448,18 @@
   <ViewUsage
     Name="TblKitchenMenuDDView2"
     ViewObjectName="model.ERP.VO.TblKitchenMenuDDView"/>
+  <ViewUsage
+    Name="TblKitchenMenuDDinnerView1"
+    ViewObjectName="model.ERP.VO.TblKitchenMenuDDinnerView"/>
+  <ViewUsage
+    Name="TblKitchenMenuDLunchView1"
+    ViewObjectName="model.ERP.VO.TblKitchenMenuDLunchView"/>
+  <ViewUsage
+    Name="TblKitchenMenuDLunchView2"
+    ViewObjectName="model.ERP.VO.TblKitchenMenuDLunchView"/>
+  <ViewUsage
+    Name="TblKitchenMenuDDinnerView3"
+    ViewObjectName="model.ERP.VO.TblKitchenMenuDDinnerView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -831,5 +843,17 @@
     ViewLinkObjectName="model.ERP.VO.FKTblKitchenMenuDDFKLink"
     SrcViewUsageName="model.ERP.AppModule.TblKitchenMenuDView2"
     DstViewUsageName="model.ERP.AppModule.TblKitchenMenuDDView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkKitchenLunchFkLink1"
+    ViewLinkObjectName="model.ERP.VO.FkKitchenLunchFkLink"
+    SrcViewUsageName="model.ERP.AppModule.TblKitchenMenuDView2"
+    DstViewUsageName="model.ERP.AppModule.TblKitchenMenuDLunchView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkKitchenDinnerFkLink2"
+    ViewLinkObjectName="model.ERP.VO.FkKitchenDinnerFkLink"
+    SrcViewUsageName="model.ERP.AppModule.TblKitchenMenuDView2"
+    DstViewUsageName="model.ERP.AppModule.TblKitchenMenuDDinnerView3"
     Reversed="false"/>
 </AppModule>
