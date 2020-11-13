@@ -23,7 +23,7 @@
                     <af:link text="#{item.bindings.ModuleMenuName.inputValue}" id="l17"
                     icon="/LIHS/faces/javax.faces.resource/#{item.bindings.ModuleMenuIcon.inputValue}?ln=images"
                              destination="/faces/#{item.bindings.ModuleMenuLink.inputValue}"
-                             inlineStyle="font-size:x-large; color: #008442;font-weight: bold;" iconPosition="top"/>
+                             inlineStyle="font-size:x-large; color: #075890;font-weight: bold;" iconPosition="top"/>
                 </af:panelGroupLayout>
         </af:iterator>
     </af:panelFormLayout>

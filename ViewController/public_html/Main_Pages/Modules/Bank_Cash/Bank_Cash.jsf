@@ -13,17 +13,17 @@
                 </af:gridRow>
                 <af:gridRow height="100%" id="gr1">
                     <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2" styleClass="backColor">
-                        <af:panelSplitter orientation="horizontal" splitterPosition="215" id="ps1">
+                        <af:panelSplitter orientation="horizontal" splitterPosition="228" id="ps1">
                             <f:facet name="first">
                                 <!-- Left -->
-                                <af:panelAccordion discloseMany="false" id="pa4" inlineStyle="width:210px; ">
-                                    <af:showDetailItem id="sdi1" text="Bank / Cash">
+                                <af:panelAccordion discloseMany="false" id="pa4" styleClass="sidebar_style">
+                                    <af:showDetailItem id="sdi1" text="Bank / Cash" styleClass="theme_color sidebar_detailitem_Style">
                                         <af:spacer width="190" height="10" id="s1"/>
                                         <af:iterator id="i2" value="#{bindings.Pages_Bank_Cash1.collectionModel}" var="item"
                                                      varStatus="status">
                                             <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="padding: 4%;">
                                                 <af:button text="#{item.bindings.PagesName.inputValue}" id="b1"
-                                                           inlineStyle="width:190px;"
+                                                           styleClass="sidebar_button"
                                                            icon="/LIHS/faces/javax.faces.resource/#{item.bindings.PageIcon.inputValue}?ln=images"
                                                            actionListener="#{viewScope.BankCashSidebarBean.fragmentCall}">
                                                     <f:attribute name="link" value="#{item.bindings.PageLink.inputValue}"/>

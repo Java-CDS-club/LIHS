@@ -31,11 +31,11 @@
 }
 
 .theme_color {
-    background-color: #D6EAF8;
+    background-color: #075890;
 }
 
 .sidebar_style {
-    width: 220px;
+    width: 223px !important;
 }
 
 .sidebar_detailitem_Style {
@@ -65,7 +65,7 @@ af|panelFormLayout af|inputDate::label, af|inputText::label, af|selectOneChoice:
     /*border:1px solid black;*/ 
     text-align:left !important;
     width:150px !important;
-    color: #14739e;
+    color: #075890;
     background-color: #e8f4f8 !important;
 }
 
@@ -87,7 +87,7 @@ color:white;
 font-size: 12px;
 font-weight: bold;
 /*background-image: none;*/
-background-color: #14739e;
+background-color: #075890;
 /*vertical-align: middle;*/
 /*border-left: 1px solid #BF691E;*/
 }
@@ -121,27 +121,27 @@ border: 1px solid #A65B1A;
 af|table::data-row:selected af|column::data-cell
 {  
 background-color: #a3c8d9; 
-border: 3px solid #14739e;
+border: 3px solid #075890;
 color: #ffffff;  
 }
 
 af|table::data-row:selected af|column::banded-data-cell
 {  
 background-color: #a3c8d9;  
-border: 3px solid #14739e;
+border: 3px solid #075890;
 color: #ffffff;  
 }
 
 af|table::data-row:selected:focused af|column::data-cell
 {  
 background-color: #a3c8d9;   
-border: 3px solid #14739e;
+border: 3px solid #075890;
 color: #ffffff; 
 }
 
 af|table::data-row:selected:focused af|column::banded-data-cell {
 background-color: #a3c8d9;   
-border: 3px solid #14739e;
+border: 3px solid #075890;
 color: #ffffff;    
 }
 
