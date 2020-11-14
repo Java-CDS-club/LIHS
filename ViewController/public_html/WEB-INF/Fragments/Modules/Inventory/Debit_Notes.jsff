@@ -48,7 +48,7 @@
                             </af:inputDate>
                             <af:spacer  id="s6"/>
                            <af:selectOneChoice value="#{bindings.GrnMId.inputValue}" label="GRN"
-                                                required="#{bindings.GrnMId.hints.mandatory}"
+                                                required="#{bindings.GrnMId.hints.mandatory}" autoSubmit="true"
                                                 shortDesc="#{bindings.GrnMId.hints.tooltip}" id="soc5"
                                                 contentStyle="width:150px;">
                               <f:selectItems value="#{bindings.GrnMId.items}" id="si5"/>
@@ -181,7 +181,7 @@
       </af:inputText>
 </f:facet>
                               <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
-                                                  label="#{row.bindings.ItemL4Id.label}"
+                                                  label="#{row.bindings.ItemL4Id.label}" autoSubmit="true"
                                                   required="#{bindings.TblDnDView2.hints.ItemL4Id.mandatory}"
                                                   shortDesc="#{bindings.TblDnDView2.hints.ItemL4Id.tooltip}" id="soc11">
                                 <f:selectItems value="#{row.bindings.ItemL4Id.items}" id="si11"/>
@@ -220,6 +220,18 @@
                                 <f:validator binding="#{row.bindings.Description.validator}"/>
                               </af:inputText>
                             </af:column>
+                            <af:column headerText="GRN Qty" id="c11">
+                              <af:inputText value="#{row.bindings.GrndQty.inputValue}" readOnly="true"
+                                            label="#{bindings.TblDnDView2.hints.GrndQty.label}"
+                                            required="#{bindings.TblDnDView2.hints.GrndQty.mandatory}"
+                                            columns="#{bindings.TblDnDView2.hints.GrndQty.displayWidth}"
+                                            maximumLength="#{bindings.TblDnDView2.hints.GrndQty.precision}"
+                                            shortDesc="#{bindings.TblDnDView2.hints.GrndQty.tooltip}" id="it8">
+                                <f:validator binding="#{row.bindings.GrndQty.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblDnDView2.hints.GrndQty.format}"/>
+                              </af:inputText>
+                            </af:column>
                             <af:column sortProperty="#{bindings.TblDnDView2.hints.Qty.name}" filterable="true"
                                        sortable="true" headerText="Qty" id="c15">
                                         <f:facet name="filter">
@@ -245,7 +257,7 @@
        id="it18" placeholder="Search ">
       </af:inputText>
 </f:facet>
-                              <af:inputText value="#{row.bindings.Rate.inputValue}"
+                              <af:inputText value="#{row.bindings.Rate.inputValue}" readOnly="true"
                                             label="#{bindings.TblDnDView2.hints.Rate.label}"
                                             required="#{bindings.TblDnDView2.hints.Rate.mandatory}"
                                             columns="#{bindings.TblDnDView2.hints.Rate.displayWidth}"

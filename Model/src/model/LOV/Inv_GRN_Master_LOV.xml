@@ -8,17 +8,31 @@
   InheritPersonalization="merge"
   SelectList="TblGrnM.ID, 
        TblGrnM.DATED, 
-       TblGrnM.VNO"
+       TblGrnM.VNO, 
+       TblGrnM.VTP, 
+       TblGrnM.DEPARTMENT_ID, 
+       TblGrnM.PBL_SUPP_ID, 
+       TblGrnM.PROJECT_ID"
   FromList="TBL_GRN_M TblGrnM"
   BindingStyle="OracleName"
   CustomQuery="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  Where="TblGrnM.PROJECT_ID = :getProId">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
         ResId="model.LOV.Inv_GRN_Master_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <Variable
+    Name="getProId"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="Inv_GRN_Master_LOV"/>
+  </Variable>
   <EntityUsage
     Name="TblGrnM"
     Entity="model.ERP.EO.TblGrnM"/>
@@ -49,6 +63,30 @@
     EntityAttrName="Vno"
     EntityUsage="TblGrnM"
     AliasName="VNO"/>
+  <ViewAttribute
+    Name="Vtp"
+    PrecisionRule="true"
+    EntityAttrName="Vtp"
+    EntityUsage="TblGrnM"
+    AliasName="VTP"/>
+  <ViewAttribute
+    Name="DepartmentId"
+    PrecisionRule="true"
+    EntityAttrName="DepartmentId"
+    EntityUsage="TblGrnM"
+    AliasName="DEPARTMENT_ID"/>
+  <ViewAttribute
+    Name="PblSuppId"
+    PrecisionRule="true"
+    EntityAttrName="PblSuppId"
+    EntityUsage="TblGrnM"
+    AliasName="PBL_SUPP_ID"/>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="TblGrnM"
+    AliasName="PROJECT_ID"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

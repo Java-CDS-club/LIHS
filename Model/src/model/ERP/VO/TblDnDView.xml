@@ -21,28 +21,18 @@
     Name="Unit_of_Measurements_LOV1"
     ViewObjectName="model.LOV.Unit_of_Measurements_LOV"
     RowLevelBinds="true"/>
-  <ListBinding
-    Name="LOV_ItemL4Id"
-    ListVOName="Item_Level4_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="ItemL4Id"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="DerivedAttrNames">
-      <Item Value="UomId"/>
-    </AttrArray>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="ItemL4Id"/>
-      <Item Value="UomId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
+  <ViewAccessor
+    Name="Item_l4_grnM_Depn_LOV1"
+    ViewObjectName="model.LOV.Item_l4_grnM_Depn_LOV"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="getGRNMID">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[GrnMId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_UomId"
     ListVOName="Unit_of_Measurements_LOV1"
@@ -61,9 +51,54 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_ItemL4Id"
+    ListVOName="Item_l4_grnM_Depn_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ItemL4Id"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Rate"/>
+      <Item Value="UomId"/>
+      <Item Value="GrndQty"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ItemL4Id"/>
+      <Item Value="Rate"/>
+      <Item Value="UomId"/>
+      <Item Value="Qty"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblDnD"
     Entity="model.ERP.EO.TblDnD"/>
+  <EntityUsage
+    Name="TblDnM"
+    Entity="model.ERP.EO.TblDnM"
+    Association="model.ERP.EO.FkDnDMAssoc"
+    AssociationEnd="model.ERP.EO.FkDnDMAssoc.TblDnM"
+    SourceUsage="model.ERP.VO.TblDnDView.TblDnD"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="LEFT OUTER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.ERP.EO.TblDnM.Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.ERP.EO.TblDnD.DnMId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
@@ -88,7 +123,7 @@
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
-          Value="combo"/>
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -156,4 +191,25 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblDnD"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="GrnMId"
+    PrecisionRule="true"
+    EntityAttrName="GrnMId"
+    EntityUsage="TblDnM"
+    AliasName="GRN_M_ID"/>
+  <ViewAttribute
+    Name="Id1"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblDnM"
+    AliasName="ID1"/>
+  <ViewAttribute
+    Name="GrndQty"
+    PrecisionRule="true"
+    EntityAttrName="GrndQty"
+    EntityUsage="TblDnD"
+    AliasName="GRND_QTY"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Id"/>
+  </AttrArray>
 </ViewObject>

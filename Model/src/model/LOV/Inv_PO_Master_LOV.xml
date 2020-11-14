@@ -14,10 +14,12 @@
        TblPoM.VNO, 
        TblPoM.PBL_SUPP_ID, 
        TblPblSupp.NAME, 
-       TblPblSupp.ID AS ID1"
+       TblPblSupp.ID AS ID1, 
+       TblPoM.PROJECT_ID"
   FromList="TBL_PO_M TblPoM, TBL_PBL_SUPP TblPblSupp"
-  Where="TblPoM.PBL_SUPP_ID = TblPblSupp.ID    
-and TblPblSupp.ID = :getSuppID">
+  Where="TblPoM.PBL_SUPP_ID = TblPblSupp.ID      
+and TblPblSupp.ID = :getSuppID  
+and TblPoM.PROJECT_ID = :getProID">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
@@ -28,6 +30,15 @@ and TblPblSupp.ID = :getSuppID">
     Name="getSuppID"
     Kind="where"
     Type="java.math.BigDecimal"/>
+  <Variable
+    Name="getProID"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="Inv_PO_Master_LOV"/>
+  </Variable>
   <EntityUsage
     Name="TblPoM"
     Entity="model.ERP.EO.TblPoM"/>
@@ -85,6 +96,12 @@ and TblPblSupp.ID = :getSuppID">
     EntityAttrName="Id"
     EntityUsage="TblPblSupp"
     AliasName="ID1"/>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="TblPoM"
+    AliasName="PROJECT_ID"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

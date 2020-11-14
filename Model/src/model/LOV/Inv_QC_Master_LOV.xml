@@ -11,15 +11,26 @@
   PageIterMode="Full"
   SelectList="TblQcM.ID, 
        TblQcM.DATED, 
-       TblQcM.VNO"
+       TblQcM.VNO, 
+       TblQcM.PROJECT_ID"
   FromList="TBL_QC_M TblQcM"
-  Where="tblqcm.id not in (select QC_M_ID From Tbl_GRN_M Where QC_M_ID is not null)">
+  Where="tblqcm.id not in (select QC_M_ID From Tbl_GRN_M Where QC_M_ID is not null)  
+and TblQcM.PROJECT_ID = :getProID">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
         ResId="model.LOV.Inv_QC_Master_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <Variable
+    Name="getProID"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="Inv_QC_Master_LOV"/>
+  </Variable>
   <EntityUsage
     Name="TblQcM"
     Entity="model.ERP.EO.TblQcM"/>
@@ -50,6 +61,12 @@
     EntityAttrName="Vno"
     EntityUsage="TblQcM"
     AliasName="VNO"/>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="TblQcM"
+    AliasName="PROJECT_ID"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

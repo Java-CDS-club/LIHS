@@ -16,13 +16,23 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   PageIterMode="Full"
-  Where="ID not in (Select POR_MASTER_ID from TBL_PRO_ISS_MASTER where POR_MASTER_ID is not Null)">
+  Where="ID not in (Select POR_MASTER_ID from TBL_PRO_ISS_MASTER where POR_MASTER_ID is not Null)   
+and TblPorMaster.PROJECT_ID = :getProID">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
         ResId="model.LOV.Por_Master_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <Variable
+    Name="getProID"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="Por_Master_LOV"/>
+  </Variable>
   <EntityUsage
     Name="TblPorMaster"
     Entity="model.ERP.EO.TblPorMaster"/>
