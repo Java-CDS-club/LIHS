@@ -11,7 +11,7 @@
     <action IterBinding="USERS_CRUD_OPERATIONS1Iterator" id="ExecuteWithParams" RequiresUpdateModel="true"
             Action="executeWithParams">
       
-      <NamedData NDName="PAGEIDGET" NDValue="9" NDType="java.math.BigDecimal"/>
+      <NamedData NDName="PAGEIDGET" NDValue="7" NDType="java.math.BigDecimal"/>
     </action>
   </bindings>
 </pageDefinition>
