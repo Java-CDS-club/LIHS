@@ -363,6 +363,9 @@
                       <f:validator binding="#{row.bindings.Narration.validator}"/>
                     </af:inputText>
                   </af:column>
+                  
+                  
+                  
                 </af:table>
               </af:showDetailItem>
             </af:panelTabbed>
