@@ -42,26 +42,6 @@
                                                               queryListener="#{bindings.TblKitchenMenuMView1Query.processQuery}"
                                                               varStatus="vs" id="t1" scrollPolicy="page"
                                                               autoHeightRows="0">
-                                                        <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.Id.name}"
-                                                                   filterable="true" sortable="true"
-                                                                   headerText="#{bindings.TblKitchenMenuMView1.hints.Id.label}"
-                                                                   id="c1" visible="false">
-                                                            <f:facet name="filter">
-                                                                <af:inputText value="#{vs.filterCriteria.Id}" id="it8"
-                                                                              placeholder="Search "></af:inputText>
-                                                            </f:facet>
-                                                            <af:inputText value="#{row.bindings.Id.inputValue}"
-                                                                          label="#{bindings.TblKitchenMenuMView1.hints.Id.label}"
-                                                                          required="#{bindings.TblKitchenMenuMView1.hints.Id.mandatory}"
-                                                                          columns="#{bindings.TblKitchenMenuMView1.hints.Id.displayWidth}"
-                                                                          maximumLength="#{bindings.TblKitchenMenuMView1.hints.Id.precision}"
-                                                                          shortDesc="#{bindings.TblKitchenMenuMView1.hints.Id.tooltip}"
-                                                                          id="it2" readOnly="true">
-                                                                <f:validator binding="#{row.bindings.Id.validator}"/>
-                                                                <af:convertNumber groupingUsed="false"
-                                                                                  pattern="#{bindings.TblKitchenMenuMView1.hints.Id.format}"/>
-                                                            </af:inputText>
-                                                        </af:column>
                                                         <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.ProjectId.name}"
                                                                    filterable="true" sortable="true"
                                                                    headerText="Project" id="c3" width="150">
@@ -152,6 +132,16 @@
                                                                 <af:convertDateTime pattern="#{bindings.TblKitchenMenuMView1.hints.ToDated.format}"/>
                                                             </af:inputDate>
                                                         </af:column>
+                                                        
+                                                        <af:column sortProperty="#{bindings.TblKitchenMenuMView1.hints.Id.name}" filterable="true" sortable="true"
+                             headerText="Get Report" id="c1">
+                    <af:link shortDesc="#{bindings.TblKitchenMenuMView1.hints.Id.tooltip}" id="it4"
+                    icon="#{resource['images:get_report.png']}"
+                             actionListener="#{backingBeanScope.VoucherPrintBean.get_KM_Report}">
+                   <f:attribute name="sendKMMID" value="#{row.bindings.Id.inputValue}"/>
+                </af:link>
+                    
+                  </af:column>
                                                     </af:table>
                                                     <af:spacer width="5" height="10" id="s7"/>
                                                     <af:panelGroupLayout id="pgl3" halign="center" layout="horizontal">
