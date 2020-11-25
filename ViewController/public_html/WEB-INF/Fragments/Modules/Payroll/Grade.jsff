@@ -116,7 +116,111 @@
             </af:panelTabbed>
           </af:gridCell>
         </af:gridRow>
-        
+        <af:gridRow id="gr3">
+          <af:gridCell id="gc3">
+             <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
+                        <af:showDetailItem id="tab3" text="Grade Allowance">
+                <af:table value="#{bindings.TblGradeAllowanceView3.collectionModel}" var="row"
+                          rows="#{bindings.TblGradeAllowanceView3.rangeSize}"
+                          emptyText="#{bindings.TblGradeAllowanceView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.TblGradeAllowanceView3.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.TblGradeAllowanceView3.collectionModel.makeCurrent}"
+                          rowSelection="single" fetchSize="#{bindings.TblGradeAllowanceView3.rangeSize}"
+                          filterModel="#{bindings.TblGradeAllowanceView3Query.queryDescriptor}" filterVisible="true"
+                          queryListener="#{bindings.TblGradeAllowanceView3Query.processQuery}" varStatus="vs" id="t2"
+                          scrollPolicy="page" autoHeightRows="0">
+                  <af:column sortProperty="#{bindings.TblGradeAllowanceView3.hints.Id.name}" filterable="true"
+                             sortable="true" headerText="ID" id="c5" visible="false">
+                             <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Id}"
+       id="it11" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                    <af:inputText value="#{row.bindings.Id.inputValue}"
+                                  label="#{bindings.TblGradeAllowanceView3.hints.Id.label}"
+                                  required="#{bindings.TblGradeAllowanceView3.hints.Id.mandatory}"
+                                  columns="#{bindings.TblGradeAllowanceView3.hints.Id.displayWidth}"
+                                  maximumLength="#{bindings.TblGradeAllowanceView3.hints.Id.precision}"
+                                  shortDesc="#{bindings.TblGradeAllowanceView3.hints.Id.tooltip}" id="it8" readOnly="true">
+                      <f:validator binding="#{row.bindings.Id.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.TblGradeAllowanceView3.hints.Id.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.TblGradeAllowanceView3.hints.AllowanceId.name}" filterable="true"
+                             sortable="true" headerText="Allowance"
+                             id="c6" width="200">
+                              <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.AllowanceId}"
+       id="it12" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                    <af:selectOneChoice value="#{row.bindings.AllowanceId.inputValue}"
+                                        label="#{row.bindings.AllowanceId.label}"
+                                        required="#{bindings.TblGradeAllowanceView3.hints.AllowanceId.mandatory}"
+                                        shortDesc="#{bindings.TblGradeAllowanceView3.hints.AllowanceId.tooltip}"
+                                        id="soc1">
+                      <f:selectItems value="#{row.bindings.AllowanceId.items}" id="si1"/>
+                      <f:validator binding="#{row.bindings.AllowanceId.validator}"/>
+                    </af:selectOneChoice>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.TblGradeAllowanceView3.hints.Qty.name}" filterable="true"
+                             sortable="true" headerText="Qty" id="c7">
+                              <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Qty}"
+       id="it13" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                    <af:inputText value="#{row.bindings.Qty.inputValue}"
+                                  label="#{bindings.TblGradeAllowanceView3.hints.Qty.label}"
+                                  required="#{bindings.TblGradeAllowanceView3.hints.Qty.mandatory}"
+                                  columns="#{bindings.TblGradeAllowanceView3.hints.Qty.displayWidth}"
+                                  maximumLength="#{bindings.TblGradeAllowanceView3.hints.Qty.precision}"
+                                  shortDesc="#{bindings.TblGradeAllowanceView3.hints.Qty.tooltip}" id="it9">
+                      <f:validator binding="#{row.bindings.Qty.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.TblGradeAllowanceView3.hints.Qty.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.TblGradeAllowanceView3.hints.Amount.name}" filterable="true"
+                             sortable="true" headerText="Amount" id="c8">
+                              <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Amount}"
+       id="it14" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                    <af:inputText value="#{row.bindings.Amount.inputValue}"
+                                  label="#{bindings.TblGradeAllowanceView3.hints.Amount.label}"
+                                  required="#{bindings.TblGradeAllowanceView3.hints.Amount.mandatory}"
+                                  columns="#{bindings.TblGradeAllowanceView3.hints.Amount.displayWidth}"
+                                  maximumLength="#{bindings.TblGradeAllowanceView3.hints.Amount.precision}"
+                                  shortDesc="#{bindings.TblGradeAllowanceView3.hints.Amount.tooltip}" id="it10">
+                      <f:validator binding="#{row.bindings.Amount.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.TblGradeAllowanceView3.hints.Amount.format}"/>
+                    </af:inputText>
+                  </af:column>
+                </af:table>
+                
+                <af:spacer width="5" height="10" id="s4"/>
+                          <af:panelGroupLayout id="pgl5" halign="center" layout="horizontal">
+                            
+                            <af:iterator id="i1" var="index" varStatus="status"
+                                         value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
+                                <af:button id="btn#{status.index+1}" text="#{index.Operation}"
+                                           icon="/LIHS/faces/javax.faces.resource/#{index.bindings.icon.inputValue}?ln=images"
+                                           actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
+                                    <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}1"/>
+                                </af:button>
+                                <af:spacer width="5" height="10" id="s2"/>
+                            </af:iterator>
+                            
+                        </af:panelGroupLayout>
+                         </af:showDetailItem>
+                      </af:panelTabbed>
+          </af:gridCell>
+        </af:gridRow>
         <af:gridRow marginTop="5px" height="auto" id="gr4">
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"/>
         </af:gridRow>
