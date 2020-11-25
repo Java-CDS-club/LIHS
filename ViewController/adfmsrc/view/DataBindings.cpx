@@ -209,6 +209,8 @@
           usageId="view_Donation_Inkind_TaskFlow_Donation_Inkind_TaskFlow_ExecutePageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Inventory/Opening_Balance_TaskFlow.xml#Opening_Balance_TaskFlow@Execute"
           usageId="view_Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecutePageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/Payroll/Allowance_Setup_TaskFlow.xml#Allowance_Setup_TaskFlow@ExecuteWithParams"
+          usageId="view_Allowance_Setup_TaskFlow_Allowance_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -402,6 +404,8 @@
           path="Task_Flows.Modules.Donation.Donation_Inkind_TaskFlow_Donation_Inkind_TaskFlow_ExecutePageDef"/>
     <page id="view_Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecutePageDef"
           path="Task_Flows.Modules.Inventory.Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecutePageDef"/>
+    <page id="view_Allowance_Setup_TaskFlow_Allowance_Setup_TaskFlow_ExecuteWithParamsPageDef"
+          path="Task_Flows.Modules.Payroll.Allowance_Setup_TaskFlow_Allowance_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"

@@ -460,6 +460,18 @@
   <ViewUsage
     Name="TblKitchenMenuDDinnerView3"
     ViewObjectName="model.ERP.VO.TblKitchenMenuDDinnerView"/>
+  <ViewUsage
+    Name="TblAllowanceView1"
+    ViewObjectName="model.ERP.VO.TblAllowanceView"/>
+  <ViewUsage
+    Name="TblGradeAllowanceView1"
+    ViewObjectName="model.ERP.VO.TblGradeAllowanceView"/>
+  <ViewUsage
+    Name="TblGradeAllowanceView2"
+    ViewObjectName="model.ERP.VO.TblGradeAllowanceView"/>
+  <ViewUsage
+    Name="TblGradeAllowanceView3"
+    ViewObjectName="model.ERP.VO.TblGradeAllowanceView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -855,5 +867,17 @@
     ViewLinkObjectName="model.ERP.VO.FkKitchenDinnerFkLink"
     SrcViewUsageName="model.ERP.AppModule.TblKitchenMenuDView2"
     DstViewUsageName="model.ERP.AppModule.TblKitchenMenuDDinnerView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkGradeAllAllIdLink1"
+    ViewLinkObjectName="model.ERP.VO.FkGradeAllAllIdLink"
+    SrcViewUsageName="model.ERP.AppModule.TblAllowanceView1"
+    DstViewUsageName="model.ERP.AppModule.TblGradeAllowanceView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTBLGradeAllowanceFkLink1"
+    ViewLinkObjectName="model.ERP.VO.FKTBLGradeAllowanceFkLink"
+    SrcViewUsageName="model.ERP.AppModule.TblGradeView1"
+    DstViewUsageName="model.ERP.AppModule.TblGradeAllowanceView3"
     Reversed="false"/>
 </AppModule>

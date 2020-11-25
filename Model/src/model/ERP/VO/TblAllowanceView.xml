@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="TblGradeView"
+  Name="TblAllowanceView"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
   SelectListFlags="1"
@@ -14,67 +14,48 @@
   SelectAllAttributes="false"
   PageIterMode="Full">
   <EntityUsage
-    Name="TblGrade"
-    Entity="model.ERP.EO.TblGrade"/>
+    Name="TblAllowance"
+    Entity="model.ERP.EO.TblAllowance"/>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Id"
-    EntityUsage="TblGrade"
+    EntityUsage="TblAllowance"
     AliasName="ID"/>
   <ViewAttribute
     Name="Name"
     PrecisionRule="true"
     EntityAttrName="Name"
-    EntityUsage="TblGrade"
+    EntityUsage="TblAllowance"
     AliasName="NAME"/>
-  <ViewAttribute
-    Name="FrSal"
-    PrecisionRule="true"
-    EntityAttrName="FrSal"
-    EntityUsage="TblGrade"
-    AliasName="FR_SAL"/>
-  <ViewAttribute
-    Name="ToSal"
-    PrecisionRule="true"
-    EntityAttrName="ToSal"
-    EntityUsage="TblGrade"
-    AliasName="TO_SAL"/>
   <ViewAttribute
     Name="CreatedDate"
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
-    EntityUsage="TblGrade"
-    AliasName="CREATED_DATE"
-    IsUpdateable="false"/>
+    EntityUsage="TblAllowance"
+    AliasName="CREATED_DATE"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
-    EntityUsage="TblGrade"
+    EntityUsage="TblAllowance"
     AliasName="CREATED_BY"/>
   <ViewAttribute
     Name="UpdatedDate"
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
-    EntityUsage="TblGrade"
-    AliasName="UPDATED_DATE"
-    IsUpdateable="false"/>
+    EntityUsage="TblAllowance"
+    AliasName="UPDATED_DATE"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
-    EntityUsage="TblGrade"
+    EntityUsage="TblAllowance"
     AliasName="UPDATED_BY"/>
   <ViewLinkAccessor
-    Name="TblEmpView"
-    ViewLink="model.ERP.VO.FkEmpGradeLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="TblGradeAllowanceView"
-    ViewLink="model.ERP.VO.FKTBLGradeAllowanceFkLink"
+    ViewLink="model.ERP.VO.FkGradeAllAllIdLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
 </ViewObject>

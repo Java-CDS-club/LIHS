@@ -89,6 +89,13 @@
     AssociationOtherEnd="model.ERP.EO.FkEmpGradeAssoc.TblGrade"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblGradeAllowance"
+    Association="model.ERP.EO.FKTBLGradeAllowanceFkAssoc"
+    AssociationEnd="model.ERP.EO.FKTBLGradeAllowanceFkAssoc.TblGradeAllowance"
+    AssociationOtherEnd="model.ERP.EO.FKTBLGradeAllowanceFkAssoc.TblGrade"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="PkGradeId"
     PrimaryKey="true">

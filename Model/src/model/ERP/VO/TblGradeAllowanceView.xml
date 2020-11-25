@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="TblGradeView"
+  Name="TblGradeAllowanceView"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
   SelectListFlags="1"
@@ -14,67 +14,61 @@
   SelectAllAttributes="false"
   PageIterMode="Full">
   <EntityUsage
-    Name="TblGrade"
-    Entity="model.ERP.EO.TblGrade"/>
+    Name="TblGradeAllowance"
+    Entity="model.ERP.EO.TblGradeAllowance"/>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Id"
-    EntityUsage="TblGrade"
+    EntityUsage="TblGradeAllowance"
     AliasName="ID"/>
   <ViewAttribute
-    Name="Name"
+    Name="GradeId"
     PrecisionRule="true"
-    EntityAttrName="Name"
-    EntityUsage="TblGrade"
-    AliasName="NAME"/>
+    EntityAttrName="GradeId"
+    EntityUsage="TblGradeAllowance"
+    AliasName="GRADE_ID"/>
   <ViewAttribute
-    Name="FrSal"
+    Name="AllowanceId"
     PrecisionRule="true"
-    EntityAttrName="FrSal"
-    EntityUsage="TblGrade"
-    AliasName="FR_SAL"/>
+    EntityAttrName="AllowanceId"
+    EntityUsage="TblGradeAllowance"
+    AliasName="ALLOWANCE_ID"/>
   <ViewAttribute
-    Name="ToSal"
+    Name="Amount"
     PrecisionRule="true"
-    EntityAttrName="ToSal"
-    EntityUsage="TblGrade"
-    AliasName="TO_SAL"/>
+    EntityAttrName="Amount"
+    EntityUsage="TblGradeAllowance"
+    AliasName="AMOUNT"/>
+  <ViewAttribute
+    Name="Qty"
+    PrecisionRule="true"
+    EntityAttrName="Qty"
+    EntityUsage="TblGradeAllowance"
+    AliasName="QTY"/>
   <ViewAttribute
     Name="CreatedDate"
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
-    EntityUsage="TblGrade"
-    AliasName="CREATED_DATE"
-    IsUpdateable="false"/>
+    EntityUsage="TblGradeAllowance"
+    AliasName="CREATED_DATE"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
-    EntityUsage="TblGrade"
+    EntityUsage="TblGradeAllowance"
     AliasName="CREATED_BY"/>
   <ViewAttribute
     Name="UpdatedDate"
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
-    EntityUsage="TblGrade"
-    AliasName="UPDATED_DATE"
-    IsUpdateable="false"/>
+    EntityUsage="TblGradeAllowance"
+    AliasName="UPDATED_DATE"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
-    EntityUsage="TblGrade"
+    EntityUsage="TblGradeAllowance"
     AliasName="UPDATED_BY"/>
-  <ViewLinkAccessor
-    Name="TblEmpView"
-    ViewLink="model.ERP.VO.FkEmpGradeLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblGradeAllowanceView"
-    ViewLink="model.ERP.VO.FKTBLGradeAllowanceFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
 </ViewObject>

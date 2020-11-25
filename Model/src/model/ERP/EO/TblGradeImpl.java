@@ -31,7 +31,8 @@ public class TblGradeImpl extends EntityImpl {
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
-        TblEmp;
+        TblEmp,
+        TblGradeAllowance;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -54,6 +55,8 @@ public class TblGradeImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int NAME = AttributesEnum.Name.index();
     public static final int FRSAL = AttributesEnum.FrSal.index();
@@ -63,12 +66,21 @@ public class TblGradeImpl extends EntityImpl {
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
     public static final int TBLEMP = AttributesEnum.TblEmp.index();
+    public static final int TBLGRADEALLOWANCE = AttributesEnum.TblGradeAllowance.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public TblGradeImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblGrade");
+    }
+
 
     /**
      * Gets the attribute value for Id, using the alias name Id.
@@ -190,19 +202,20 @@ public class TblGradeImpl extends EntityImpl {
     }
 
     /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getTblGradeAllowance() {
+        return (RowIterator) getAttributeInternal(TBLGRADEALLOWANCE);
+    }
+
+
+    /**
      * @param id key constituent
 
      * @return a Key object based on given key constituents.
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblGrade");
     }
 
     /**
