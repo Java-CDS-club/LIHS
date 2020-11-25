@@ -210,7 +210,7 @@
                       <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                     </af:selectOneChoice>
                   </af:column>
-                  <af:column sortProperty="#{bindings.TblGrnDView2.hints.UomId.name}" filterable="true"
+                  <!--<af:column sortProperty="#{bindings.TblGrnDView2.hints.UomId.name}" filterable="true"
                              sortable="true" headerText="UOM"
                              id="c4" width="70">
                               <f:facet name="filter">
@@ -224,8 +224,18 @@
                       <f:selectItems value="#{row.bindings.UomId.items}" id="si14"/>
                       <f:validator binding="#{row.bindings.UomId.validator}"/>
                     </af:selectOneChoice>
-                  </af:column>
-                                    <af:column headerText="Description" id="c5"
+                  </af:column>-->
+                            <af:column headerText="UOM" id="c7">
+                              <af:inputText value="#{row.bindings.uomName.inputValue}" readOnly="true"
+                                            label="#{bindings.TblGrnDView2.hints.uomName.label}"
+                                            required="#{bindings.TblGrnDView2.hints.uomName.mandatory}"
+                                            columns="#{bindings.TblGrnDView2.hints.uomName.displayWidth}"
+                                            maximumLength="#{bindings.TblGrnDView2.hints.uomName.precision}"
+                                            shortDesc="#{bindings.TblGrnDView2.hints.uomName.tooltip}" id="it14">
+                                <f:validator binding="#{row.bindings.uomName.validator}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column headerText="Description" id="c5"
                              sortable="true" filterable="true" width="250">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Description}"

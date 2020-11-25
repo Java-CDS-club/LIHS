@@ -91,6 +91,7 @@
           <Item Value="Rate"/>
           <Item Value="Amount"/>
           <Item Value="GrndQty"/>
+          <Item Value="uomName"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

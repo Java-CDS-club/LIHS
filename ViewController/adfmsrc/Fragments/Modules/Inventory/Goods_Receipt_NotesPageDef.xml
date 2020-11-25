@@ -103,6 +103,7 @@
           <Item Value="GrnMId"/>
           <Item Value="Rate"/>
           <Item Value="Amount"/>
+          <Item Value="uomName"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

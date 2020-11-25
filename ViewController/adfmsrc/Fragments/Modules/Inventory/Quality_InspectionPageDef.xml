@@ -81,6 +81,7 @@
           <Item Value="Qty"/>
           <Item Value="IgpQty"/>
           <Item Value="BalQty"/>
+          <Item Value="uomName"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

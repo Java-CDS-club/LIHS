@@ -82,6 +82,7 @@
           <Item Value="IgpMId"/>
           <Item Value="PoQty"/>
           <Item Value="BalQty"/>
+          <Item Value="uomName"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

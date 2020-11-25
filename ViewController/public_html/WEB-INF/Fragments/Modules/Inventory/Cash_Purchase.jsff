@@ -187,7 +187,7 @@
                                 <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                               </af:selectOneChoice>
                             </af:column>
-                            <af:column sortProperty="#{bindings.TblCashPurchDView2.hints.UomId.name}" filterable="true"
+                            <!--<af:column sortProperty="#{bindings.TblCashPurchDView2.hints.UomId.name}" filterable="true"
                                        sortable="true" headerText="UOM"
                                        id="c12" width="70">
                                         <f:facet name="filter">
@@ -203,6 +203,16 @@
                                 <f:selectItems value="#{row.bindings.UomId.items}" id="si10"/>
                                 <f:validator binding="#{row.bindings.UomId.validator}"/>
                               </af:selectOneChoice>
+                            </af:column>-->
+                            <af:column headerText="UOM" id="c10">
+                              <af:inputText value="#{row.bindings.uomName.inputValue}" readOnly="true"
+                                            label="#{bindings.TblCashPurchDView2.hints.uomName.label}"
+                                            required="#{bindings.TblCashPurchDView2.hints.uomName.mandatory}"
+                                            columns="#{bindings.TblCashPurchDView2.hints.uomName.displayWidth}"
+                                            maximumLength="#{bindings.TblCashPurchDView2.hints.uomName.precision}"
+                                            shortDesc="#{bindings.TblCashPurchDView2.hints.uomName.tooltip}" id="it8">
+                                <f:validator binding="#{row.bindings.uomName.validator}"/>
+                              </af:inputText>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblCashPurchDView2.hints.Description.name}"
                                        filterable="true" sortable="true"

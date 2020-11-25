@@ -6,13 +6,28 @@
   Name="TblQcDView"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SelectList="TblQcD.ID, 
+       TblQcD.QC_M_ID, 
+       TblQcD.ITEM_L4_ID, 
+       TblQcD.UOM_ID, 
+       TblQcD.DESCRIPTION, 
+       TblQcD.IGP_QTY, 
+       TblQcD.QTY, 
+       TblQcD.BAL_QTY, 
+       TblQcD.CREATED_DATE, 
+       TblQcD.CREATED_BY, 
+       TblQcD.UPDATED_DATE, 
+       TblQcD.UPDATED_BY, 
+       TblItemL4.UOM_ID AS UOM_ID1, 
+       TblItemL4.ITEM_L4_ID AS ITEM_L4ID1, 
+       TblUom.NAME, 
+       TblUom.ID AS ID1"
+  FromList="TBL_QC_D TblQcD, TBL_ITEM_L4 TblItemL4, TBL_UOM TblUom"
+  Where="TblQcD.ITEM_L4_ID = TblItemL4.ITEM_L4_ID      
+and TblItemL4.UOM_ID = TblUom.ID">
   <ViewAccessor
     Name="Inv_QC_Master_LOV1"
     ViewObjectName="model.LOV.Inv_QC_Master_LOV"
@@ -87,6 +102,24 @@
   <EntityUsage
     Name="TblQcD"
     Entity="model.ERP.EO.TblQcD"/>
+  <EntityUsage
+    Name="TblItemL4"
+    Entity="model.ERP.EO.TblItemL4"
+    ReadOnly="true"
+    DeleteParticipant="false">
+    <DesignTime>
+      <Attr Name="_customjoin" Value="true"/>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="TblUom"
+    Entity="model.ERP.EO.TblUom"
+    ReadOnly="true"
+    DeleteParticipant="false">
+    <DesignTime>
+      <Attr Name="_customjoin" Value="true"/>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
@@ -166,7 +199,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblQcD"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -178,11 +212,36 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblQcD"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
     EntityUsage="TblQcD"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="UomId1"
+    PrecisionRule="true"
+    EntityAttrName="UomId"
+    EntityUsage="TblItemL4"
+    AliasName="UOM_ID1"/>
+  <ViewAttribute
+    Name="ItemL4Id1"
+    PrecisionRule="true"
+    EntityAttrName="ItemL4Id"
+    EntityUsage="TblItemL4"
+    AliasName="ITEM_L4ID1"/>
+  <ViewAttribute
+    Name="uomName"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblUom"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="Id1"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblUom"
+    AliasName="ID1"/>
 </ViewObject>

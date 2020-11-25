@@ -71,6 +71,7 @@
           <Item Value="UomId"/>
           <Item Value="Description"/>
           <Item Value="Qty"/>
+          <Item Value="uomName"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

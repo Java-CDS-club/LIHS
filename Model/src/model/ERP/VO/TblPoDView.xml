@@ -23,8 +23,14 @@
        TblPoD.UPDATED_BY, 
        TblPoD.AMOUNT, 
        TblPoD.RATE, 
-       TblPoD.ITEM_L4_ID AS ITEM_L4ID1"
-  FromList="TBL_PO_D TblPoD">
+       TblPoD.ITEM_L4_ID AS ITEM_L4ID1, 
+       TblItemL4.UOM_ID AS UOM_ID1, 
+       TblItemL4.ITEM_L4_ID AS ITEM_L4_ID1, 
+       TblUom.NAME, 
+       TblUom.ID AS ID1"
+  FromList="TBL_PO_D TblPoD, TBL_ITEM_L4 TblItemL4, TBL_UOM TblUom"
+  Where="TblPoD.ITEM_L4_ID = TblItemL4.ITEM_L4_ID     
+and TblItemL4.UOM_ID = TblUom.ID">
   <ViewAccessor
     Name="Item_Level4_LOV1"
     ViewObjectName="model.LOV.Item_Level4_LOV"
@@ -94,6 +100,24 @@
   <EntityUsage
     Name="TblPoD"
     Entity="model.ERP.EO.TblPoD"/>
+  <EntityUsage
+    Name="TblItemL4"
+    Entity="model.ERP.EO.TblItemL4"
+    ReadOnly="true"
+    DeleteParticipant="false">
+    <DesignTime>
+      <Attr Name="_customjoin" Value="true"/>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="TblUom"
+    Entity="model.ERP.EO.TblUom"
+    ReadOnly="true"
+    DeleteParticipant="false">
+    <DesignTime>
+      <Attr Name="_customjoin" Value="true"/>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
@@ -213,6 +237,30 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="UomId1"
+    PrecisionRule="true"
+    EntityAttrName="UomId"
+    EntityUsage="TblItemL4"
+    AliasName="UOM_ID1"/>
+  <ViewAttribute
+    Name="ItemL4Id1"
+    PrecisionRule="true"
+    EntityAttrName="ItemL4Id"
+    EntityUsage="TblItemL4"
+    AliasName="ITEM_L4_ID1"/>
+  <ViewAttribute
+    Name="uomName"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblUom"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="Id1"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblUom"
+    AliasName="ID1"/>
   <AttrArray Name="KeyAttributes">
     <Item Value="Id"/>
   </AttrArray>

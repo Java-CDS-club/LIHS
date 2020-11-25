@@ -196,7 +196,7 @@
                                 <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                               </af:selectOneChoice>
                             </af:column>
-                            <af:column sortProperty="#{bindings.TblItnDView2.hints.UomId.name}" filterable="true"
+                            <!--<af:column sortProperty="#{bindings.TblItnDView2.hints.UomId.name}" filterable="true"
                                        sortable="true" headerText="UOM" id="c13" width="70">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.UomId}"
@@ -210,6 +210,16 @@
                                 <f:selectItems value="#{row.bindings.UomId.items}" id="si12"/>
                                 <f:validator binding="#{row.bindings.UomId.validator}"/>
                               </af:selectOneChoice>
+                            </af:column>-->
+                            <af:column headerText="UOM" id="c11">
+                              <af:inputText value="#{row.bindings.uomName.inputValue}" readOnly="true"
+                                            label="#{bindings.TblItnDView2.hints.uomName.label}"
+                                            required="#{bindings.TblItnDView2.hints.uomName.mandatory}"
+                                            columns="#{bindings.TblItnDView2.hints.uomName.displayWidth}"
+                                            maximumLength="#{bindings.TblItnDView2.hints.uomName.precision}"
+                                            shortDesc="#{bindings.TblItnDView2.hints.uomName.tooltip}" id="it15">
+                                <f:validator binding="#{row.bindings.uomName.validator}"/>
+                              </af:inputText>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblItnDView2.hints.Description.name}" filterable="true"
                                        sortable="true" headerText="Description"
