@@ -42,7 +42,6 @@
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblEmpView"/>
   </Variable>
   <ViewAccessor
@@ -64,6 +63,10 @@
   <ViewAccessor
     Name="Grade_Name_LOV1"
     ViewObjectName="model.LOV.Grade_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Gender_Name_LOV1"
+    ViewObjectName="model.LOV.Gender_Name_LOV"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Vtp"
@@ -152,6 +155,24 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Gender"
+    ListVOName="Gender_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Gender"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -294,7 +315,15 @@
     PrecisionRule="true"
     EntityAttrName="Gender"
     EntityUsage="TblEmp"
-    AliasName="GENDER"/>
+    AliasName="GENDER"
+    LOVName="LOV_Gender">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="HomeAddress"
     PrecisionRule="true"
@@ -330,7 +359,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblEmp"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -342,7 +372,8 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblEmp"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"

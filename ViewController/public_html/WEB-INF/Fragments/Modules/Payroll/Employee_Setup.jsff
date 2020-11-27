@@ -232,14 +232,13 @@
                       <af:panelTabbed position="above" id="pt3" styleClass="tabel_pannel_tab">
                         <af:showDetailItem id="tab3" text="Detail">
                           <af:panelFormLayout id="pfl1" maxColumns="3" rows="8">
-                            <af:inputText value="#{bindings.Gender.inputValue}" label="Gender"
-                                          required="#{bindings.Gender.hints.mandatory}"
-                                          columns="#{bindings.Gender.hints.displayWidth}"
-                                          maximumLength="#{bindings.Gender.hints.precision}"
-                                          shortDesc="#{bindings.Gender.hints.tooltip}" id="it6"
-                                          contentStyle="width:150px;">
+                            <af:selectOneChoice value="#{bindings.Gender.inputValue}" label="Gender"
+                                                required="#{bindings.Gender.hints.mandatory}"
+                                                shortDesc="#{bindings.Gender.hints.tooltip}" id="soc6"
+                                                contentStyle="width:150px;">
+                              <f:selectItems value="#{bindings.Gender.items}" id="si6"/>
                               <f:validator binding="#{bindings.Gender.validator}"/>
-                            </af:inputText>
+                            </af:selectOneChoice>
                             <af:spacer  id="s2"/>
                             <af:inputDate value="#{bindings.Dob.inputValue}" label="DOB"
                                           required="#{bindings.Dob.hints.mandatory}"
