@@ -61,12 +61,19 @@ af|table::navbar {
     text-align:left;
 }*/
 
+span.xf{
+    color: white !important;
+}
+af_selectOneChoice_label-text{
+    color: white !important;
+}
+
 af|panelFormLayout af|inputDate::label, af|inputText::label, af|selectOneChoice::label{
     /*border:1px solid black;*/ 
     text-align:left !important;
     width:150px !important;
-    color: #075890;
-    background-color: #e8f4f8 !important;
+    color: white !important;
+    background-color: #075890 !important;
 }
 
 /*af|panelFormLayout af|selectOneChoice::label{

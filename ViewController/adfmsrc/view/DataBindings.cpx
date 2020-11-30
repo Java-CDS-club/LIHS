@@ -212,6 +212,7 @@
     <page path="/WEB-INF/Task_Flows/Modules/Payroll/Allowance_Setup_TaskFlow.xml#Allowance_Setup_TaskFlow@ExecuteWithParams"
           usageId="view_Allowance_Setup_TaskFlow_Allowance_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Payroll/Allowance_Setup.jsff" usageId="view_Allowance_SetupPageDef"/>
+    <page path="/Main_Pages/Modules/Reports/Reports.jsf" usageId="view_ReportsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -408,6 +409,7 @@
     <page id="view_Allowance_Setup_TaskFlow_Allowance_Setup_TaskFlow_ExecuteWithParamsPageDef"
           path="Task_Flows.Modules.Payroll.Allowance_Setup_TaskFlow_Allowance_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Allowance_SetupPageDef" path="Fragments.Modules.Payroll.Allowance_SetupPageDef"/>
+    <page id="view_ReportsPageDef" path="Main_Pages.Modules.Reports.ReportsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
