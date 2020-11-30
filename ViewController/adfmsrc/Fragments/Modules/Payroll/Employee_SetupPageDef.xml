@@ -44,11 +44,8 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="TblEmpView1Iterator" id="Gender">
-      <AttrNames>
-        <Item Value="Gender"/>
-      </AttrNames>
-    </attributeValues>
+    <list IterBinding="TblEmpView1Iterator" StaticList="false" Uses="LOV_Gender" id="Gender" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="TblEmpView1Iterator" id="Dob">
       <AttrNames>
         <Item Value="Dob"/>
