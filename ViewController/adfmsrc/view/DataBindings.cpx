@@ -213,6 +213,8 @@
           usageId="view_Allowance_Setup_TaskFlow_Allowance_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Payroll/Allowance_Setup.jsff" usageId="view_Allowance_SetupPageDef"/>
     <page path="/Main_Pages/Modules/Reports/Reports.jsf" usageId="view_ReportsPageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Reports/Item_Wise.jsff" usageId="view_Item_WisePageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Reports/Party_Wise.jsff" usageId="view_Party_WisePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -410,6 +412,8 @@
           path="Task_Flows.Modules.Payroll.Allowance_Setup_TaskFlow_Allowance_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Allowance_SetupPageDef" path="Fragments.Modules.Payroll.Allowance_SetupPageDef"/>
     <page id="view_ReportsPageDef" path="Main_Pages.Modules.Reports.ReportsPageDef"/>
+    <page id="view_Item_WisePageDef" path="Fragments.Modules.Reports.Item_WisePageDef"/>
+    <page id="view_Party_WisePageDef" path="Fragments.Modules.Reports.Party_WisePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
