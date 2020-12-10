@@ -91,6 +91,7 @@
           <Item Value="Rate"/>
           <Item Value="Amount"/>
           <Item Value="uomName"/>
+          <Item Value="ItemL4Id2"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

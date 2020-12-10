@@ -24,9 +24,15 @@
        TblItemL4.UOM_ID AS UOM_ID1, 
        TblItemL4.ITEM_L4_ID AS ITEM_L4ID1, 
        TblUom.NAME, 
-       TblUom.ID AS ID1"
-  FromList="TBL_GIN_D TblGinD, TBL_ITEM_L4 TblItemL4, TBL_UOM TblUom"
-  Where="TblGinD.ITEM_L4_ID = TblItemL4.ITEM_L4_ID           
+       TblUom.ID AS ID1, 
+       TblGinD.GRN_M_ID, 
+       TblGinM.FROM_PROJECT_ID, 
+       TblGinM.ID AS ID2, 
+       TblGinM.FROM_DEPARTMENT_ID, 
+       TblGinD.ITEM_L4_ID AS ITEM_L4ID2"
+  FromList="TBL_GIN_D TblGinD, TBL_ITEM_L4 TblItemL4, TBL_UOM TblUom, TBL_GIN_M TblGinM"
+  Where="TblGinD.GIN_M_ID = TblGinM.ID(+) 
+AND TblGinD.ITEM_L4_ID = TblItemL4.ITEM_L4_ID            
 and TblItemL4.UOM_ID = TblUom.ID">
   <ViewAccessor
     Name="Item_Level4_LOV1"
@@ -36,28 +42,23 @@ and TblItemL4.UOM_ID = TblUom.ID">
     Name="Unit_of_Measurements_LOV1"
     ViewObjectName="model.LOV.Unit_of_Measurements_LOV"
     RowLevelBinds="true"/>
-  <ListBinding
-    Name="LOV_ItemL4Id"
-    ListVOName="Item_Level4_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="ItemL4Id"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="DerivedAttrNames">
-      <Item Value="UomId"/>
-    </AttrArray>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="ItemL4Id"/>
-      <Item Value="UomId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
+  <ViewAccessor
+    Name="FIFO_LOV1"
+    ViewObjectName="model.LOV.FIFO_LOV"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="get_Proj_ID">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[FromProjectId]]></TransientExpression>
+      </PIMap>
+      <PIMap Variable="get_dept_ID">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[FromDepartmentId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_UomId"
     ListVOName="Unit_of_Measurements_LOV1"
@@ -70,6 +71,48 @@ and TblItemL4.UOM_ID = TblUom.ID">
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
       <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ItemL4Id"
+    ListVOName="FIFO_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ItemL4Id"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Qty"/>
+      <Item Value="Rate"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ItemL4Id"/>
+      <Item Value="BalQty"/>
+      <Item Value="Rate"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ItemName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ItemL4Id2"
+    ListVOName="Item_Level4_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ItemL4Id2"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ItemL4Id"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
@@ -97,6 +140,25 @@ and TblItemL4.UOM_ID = TblUom.ID">
       <Attr Name="_customjoin" Value="true"/>
     </DesignTime>
   </EntityUsage>
+  <EntityUsage
+    Name="TblGinM"
+    Entity="model.ERP.EO.TblGinM"
+    Association="model.ERP.EO.FkGinDMAssoc"
+    AssociationEnd="model.ERP.EO.FkGinDMAssoc.TblGinM"
+    SourceUsage="model.ERP.VO.TblGinDView.TblGinD"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="LEFT OUTER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.ERP.EO.TblGinM.Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.ERP.EO.TblGinD.GinMId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
@@ -121,7 +183,7 @@ and TblItemL4.UOM_ID = TblUom.ID">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
-          Value="combo"/>
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -213,4 +275,47 @@ and TblItemL4.UOM_ID = TblUom.ID">
     EntityAttrName="Id"
     EntityUsage="TblUom"
     AliasName="ID1"/>
+  <ViewAttribute
+    Name="GrnMId"
+    PrecisionRule="true"
+    EntityAttrName="GrnMId"
+    EntityUsage="TblGinD"
+    AliasName="GRN_M_ID"/>
+  <ViewAttribute
+    Name="FromProjectId"
+    PrecisionRule="true"
+    EntityAttrName="FromProjectId"
+    EntityUsage="TblGinM"
+    AliasName="FROM_PROJECT_ID"/>
+  <ViewAttribute
+    Name="Id2"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblGinM"
+    AliasName="ID2"/>
+  <ViewAttribute
+    Name="FromDepartmentId"
+    PrecisionRule="true"
+    EntityAttrName="FromDepartmentId"
+    EntityUsage="TblGinM"
+    AliasName="FROM_DEPARTMENT_ID"/>
+  <ViewAttribute
+    Name="ItemL4Id2"
+    PrecisionRule="true"
+    EntityAttrName="ItemL4Id"
+    EntityUsage="TblGinD"
+    AliasName="ITEM_L4ID2"
+    LOVName="LOV_ItemL4Id2">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Id"/>
+    <Item Value="ItemL4Id1"/>
+    <Item Value="Id1"/>
+  </AttrArray>
 </ViewObject>

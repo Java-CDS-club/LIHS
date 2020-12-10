@@ -34,6 +34,7 @@ public class TblGinDImpl extends EntityImpl {
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
+        GrnMId,
         TblGinM;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
@@ -57,6 +58,7 @@ public class TblGinDImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int GINMID = AttributesEnum.GinMId.index();
     public static final int ITEML4ID = AttributesEnum.ItemL4Id.index();
@@ -69,12 +71,20 @@ public class TblGinDImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int GRNMID = AttributesEnum.GrnMId.index();
     public static final int TBLGINM = AttributesEnum.TblGinM.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public TblGinDImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblGinD");
     }
 
     /**
@@ -254,18 +264,35 @@ public class TblGinDImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for GrnDId, using the alias name GrnDId.
+     * @return the value of GrnDId
+     */
+    public BigDecimal getGrnMId() {
+        return (BigDecimal) getAttributeInternal(GRNMID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for GrnDId.
+     * @param value value to set the GrnDId
+     */
+    public void setGrnMId(BigDecimal value) {
+        setAttributeInternal(GRNMID, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
-    public EntityImpl getTblGinM() {
-        return (EntityImpl) getAttributeInternal(TBLGINM);
+    public TblGinMImpl getTblGinM() {
+        return (TblGinMImpl) getAttributeInternal(TBLGINM);
     }
 
     /**
      * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
      */
-    public void setTblGinM(EntityImpl value) {
+    public void setTblGinM(TblGinMImpl value) {
         setAttributeInternal(TBLGINM, value);
     }
+
 
     /**
      * @param id key constituent
@@ -274,13 +301,6 @@ public class TblGinDImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblGinD");
     }
 
     /**
