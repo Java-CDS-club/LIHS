@@ -166,7 +166,7 @@
                     </af:selectOneChoice>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblGradeAllowanceView3.hints.Qty.name}" filterable="true"
-                             sortable="true" headerText="Qty" id="c7">
+                             sortable="true" headerText="From Qty/Amount" id="c7">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Qty}"
        id="it13" placeholder="Search ">
@@ -184,7 +184,7 @@
                     </af:inputText>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblGradeAllowanceView3.hints.Amount.name}" filterable="true"
-                             sortable="true" headerText="Amount" id="c8">
+                             sortable="true" headerText="To Qty/Amount" id="c8">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Amount}"
        id="it14" placeholder="Search ">

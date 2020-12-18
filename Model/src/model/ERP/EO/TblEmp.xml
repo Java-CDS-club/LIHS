@@ -311,6 +311,13 @@
     AssociationOtherEnd="model.ERP.EO.FkEmpGradeAssoc.TblEmp"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblEmpKin"
+    Association="model.ERP.EO.FkTblEmpKinFkAssoc"
+    AssociationEnd="model.ERP.EO.FkTblEmpKinFkAssoc.TblEmpKin"
+    AssociationOtherEnd="model.ERP.EO.FkTblEmpKinFkAssoc.TblEmp"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="PkEmpId"
     PrimaryKey="true">

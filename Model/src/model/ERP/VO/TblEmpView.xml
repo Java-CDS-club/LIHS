@@ -395,4 +395,9 @@
     ViewLink="model.ERP.VO.FkEmpQuaLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblEmpKinView"
+    ViewLink="model.ERP.VO.FkTblEmpKinFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

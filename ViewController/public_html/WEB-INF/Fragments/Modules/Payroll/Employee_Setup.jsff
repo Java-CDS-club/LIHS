@@ -593,6 +593,118 @@
                             </af:iterator>
                         </af:panelGroupLayout>
                         </af:showDetailItem>
+                        <af:showDetailItem text="Employee Kin" id="sdi3">
+                          <af:table value="#{bindings.TblEmpKinView2.collectionModel}" var="row"
+                                    rows="#{bindings.TblEmpKinView2.rangeSize}"
+                                    emptyText="#{bindings.TblEmpKinView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                    rowBandingInterval="0"
+                                    selectedRowKeys="#{bindings.TblEmpKinView2.collectionModel.selectedRow}"
+                                    selectionListener="#{bindings.TblEmpKinView2.collectionModel.makeCurrent}"
+                                    rowSelection="single" fetchSize="#{bindings.TblEmpKinView2.rangeSize}"
+                                    filterModel="#{bindings.TblEmpKinView2Query.queryDescriptor}" filterVisible="true"
+                                    queryListener="#{bindings.TblEmpKinView2Query.processQuery}" varStatus="vs" id="t4"
+                                    scrollPolicy="page" autoHeightRows="0">
+                            <af:column sortProperty="#{bindings.TblEmpKinView2.hints.Id.name}" filterable="true"
+                                       sortable="true" headerText="ID" id="c22" visible="false">
+                                       <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Id}"
+       id="it40" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+
+                              <af:inputText value="#{row.bindings.Id.inputValue}"
+                                            label="#{bindings.TblEmpKinView2.hints.Id.label}"
+                                            required="#{bindings.TblEmpKinView2.hints.Id.mandatory}"
+                                            columns="#{bindings.TblEmpKinView2.hints.Id.displayWidth}"
+                                            maximumLength="#{bindings.TblEmpKinView2.hints.Id.precision}"
+                                            shortDesc="#{bindings.TblEmpKinView2.hints.Id.tooltip}" id="it6" readOnly="true" >
+                                <f:validator binding="#{row.bindings.Id.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblEmpKinView2.hints.Id.format}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblEmpKinView2.hints.Name.name}" filterable="true"
+                                       sortable="true" headerText="Name"
+                                       id="c23" width="300">
+                                        <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Name}"
+       id="it41" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                              <af:inputText value="#{row.bindings.Name.inputValue}"
+                                            label="#{bindings.TblEmpKinView2.hints.Name.label}"
+                                            required="#{bindings.TblEmpKinView2.hints.Name.mandatory}"
+                                            columns="#{bindings.TblEmpKinView2.hints.Name.displayWidth}"
+                                            maximumLength="#{bindings.TblEmpKinView2.hints.Name.precision}"
+                                            shortDesc="#{bindings.TblEmpKinView2.hints.Name.tooltip}" id="it36">
+                                <f:validator binding="#{row.bindings.Name.validator}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblEmpKinView2.hints.Mob.name}" filterable="true"
+                                       sortable="true" headerText="Mobile" id="c24">
+                                       <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Mob}"
+       id="it42" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                              <af:inputText value="#{row.bindings.Mob.inputValue}"
+                                            label="#{bindings.TblEmpKinView2.hints.Mob.label}"
+                                            required="#{bindings.TblEmpKinView2.hints.Mob.mandatory}"
+                                            columns="#{bindings.TblEmpKinView2.hints.Mob.displayWidth}"
+                                            maximumLength="#{bindings.TblEmpKinView2.hints.Mob.precision}"
+                                            shortDesc="#{bindings.TblEmpKinView2.hints.Mob.tooltip}" id="it37">
+                                <f:validator binding="#{row.bindings.Mob.validator}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblEmpKinView2.hints.EmpRel.name}" filterable="true"
+                                       sortable="true" headerText="Employee Relation"
+                                       id="c25">
+                                        <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.EmpRel}"
+       id="it43" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                              <af:inputText value="#{row.bindings.EmpRel.inputValue}"
+                                            label="#{bindings.TblEmpKinView2.hints.EmpRel.label}"
+                                            required="#{bindings.TblEmpKinView2.hints.EmpRel.mandatory}"
+                                            columns="#{bindings.TblEmpKinView2.hints.EmpRel.displayWidth}"
+                                            maximumLength="#{bindings.TblEmpKinView2.hints.EmpRel.precision}"
+                                            shortDesc="#{bindings.TblEmpKinView2.hints.EmpRel.tooltip}" id="it38">
+                                <f:validator binding="#{row.bindings.EmpRel.validator}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblEmpKinView2.hints.Address.name}" filterable="true"
+                                       sortable="true" headerText="Address"
+                                       id="c26" width="300">
+                                        <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Address}"
+       id="it44" placeholder="Search ">
+      </af:inputText>
+</f:facet>
+                              <af:inputText value="#{row.bindings.Address.inputValue}"
+                                            label="#{bindings.TblEmpKinView2.hints.Address.label}"
+                                            required="#{bindings.TblEmpKinView2.hints.Address.mandatory}"
+                                            columns="50"
+                                            maximumLength="#{bindings.TblEmpKinView2.hints.Address.precision}"
+                                            shortDesc="#{bindings.TblEmpKinView2.hints.Address.tooltip}" id="it39">
+                                <f:validator binding="#{row.bindings.Address.validator}"/>
+                              </af:inputText>
+                            </af:column>
+                          </af:table>
+                           <af:spacer width="5" height="10" id="s19"/>
+                        
+			<af:panelGroupLayout id="pgl8" halign="center" layout="horizontal">
+                            <af:iterator id="i4" var="index" varStatus="status"
+                                         value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
+                                <af:button id="btn#{status.index+1}" text="#{index.Operation}"
+                                           icon="/LIHS/faces/javax.faces.resource/#{index.bindings.icon.inputValue}?ln=images"
+                                           actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
+                                    <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}3"/>
+                                </af:button>
+                                <af:spacer width="5" height="10" id="s20"/>
+                            </af:iterator>
+                        </af:panelGroupLayout>
+                        </af:showDetailItem>
                       </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>

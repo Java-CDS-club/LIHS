@@ -52,7 +52,8 @@ public class TblEmpImpl extends EntityImpl {
         TblDesignation,
         TblEmpExp,
         TblEmpQua,
-        TblGrade;
+        TblGrade,
+        TblEmpKin;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -75,6 +76,8 @@ public class TblEmpImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int VNO = AttributesEnum.Vno.index();
     public static final int VTP = AttributesEnum.Vtp.index();
@@ -105,12 +108,21 @@ public class TblEmpImpl extends EntityImpl {
     public static final int TBLEMPEXP = AttributesEnum.TblEmpExp.index();
     public static final int TBLEMPQUA = AttributesEnum.TblEmpQua.index();
     public static final int TBLGRADE = AttributesEnum.TblGrade.index();
+    public static final int TBLEMPKIN = AttributesEnum.TblEmpKin.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public TblEmpImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblEmp");
+    }
+
 
     /**
      * Gets the attribute value for Id, using the alias name Id.
@@ -534,16 +546,24 @@ public class TblEmpImpl extends EntityImpl {
     /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
-    public EntityImpl getTblGrade() {
-        return (EntityImpl) getAttributeInternal(TBLGRADE);
+    public TblGradeImpl getTblGrade() {
+        return (TblGradeImpl) getAttributeInternal(TBLGRADE);
     }
 
     /**
      * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
      */
-    public void setTblGrade(EntityImpl value) {
+    public void setTblGrade(TblGradeImpl value) {
         setAttributeInternal(TBLGRADE, value);
     }
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getTblEmpKin() {
+        return (RowIterator) getAttributeInternal(TBLEMPKIN);
+    }
+
 
     /**
      * @param id key constituent
@@ -552,13 +572,6 @@ public class TblEmpImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblEmp");
     }
 
     /**

@@ -472,6 +472,12 @@
   <ViewUsage
     Name="TblGradeAllowanceView3"
     ViewObjectName="model.ERP.VO.TblGradeAllowanceView"/>
+  <ViewUsage
+    Name="TblEmpKinView1"
+    ViewObjectName="model.ERP.VO.TblEmpKinView"/>
+  <ViewUsage
+    Name="TblEmpKinView2"
+    ViewObjectName="model.ERP.VO.TblEmpKinView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -879,5 +885,11 @@
     ViewLinkObjectName="model.ERP.VO.FKTBLGradeAllowanceFkLink"
     SrcViewUsageName="model.ERP.AppModule.TblGradeView1"
     DstViewUsageName="model.ERP.AppModule.TblGradeAllowanceView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkTblEmpKinFkLink1"
+    ViewLinkObjectName="model.ERP.VO.FkTblEmpKinFkLink"
+    SrcViewUsageName="model.ERP.AppModule.TblEmpView1"
+    DstViewUsageName="model.ERP.AppModule.TblEmpKinView2"
     Reversed="false"/>
 </AppModule>
