@@ -14,6 +14,10 @@
               id="TblFgTrnDetailView2Iterator"/>
     <searchRegion Binds="TblFgTrnDetailView2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFgTrnDetailView2Query"/>
+    <iterator Binds="TblFgTrnDetailDView2" RangeSize="25" DataControl="AppModuleDataControl1"
+              id="TblFgTrnDetailDView2Iterator"/>
+    <searchRegion Binds="TblFgTrnDetailDView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFgTrnDetailDView2Query"/>
   </executables>
   <bindings>
     <tree IterBinding="USERS_CRUD_OPERATIONS1Iterator" id="USERS_CRUD_OPERATIONS1">
@@ -94,6 +98,27 @@
     <action IterBinding="TblFgTrnDetailView2Iterator" id="Execute1" RequiresUpdateModel="true"
             Action="iteratorExecute"/>
     <action IterBinding="TblFgTrnDetailView2Iterator" id="Delete1" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <list IterBinding="TblFgTrnMasterView1Iterator" StaticList="false" Uses="LOV_ProjectId" id="ProjectId"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="TblFgTrnMasterView1Iterator" StaticList="false" Uses="LOV_ProjectDId" id="ProjectDId"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="TblFgTrnMasterView1Iterator" StaticList="false" Uses="LOV_DepartmentId" id="DepartmentId"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <tree IterBinding="TblFgTrnDetailDView2Iterator" id="TblFgTrnDetailDView2">
+      <nodeDefinition DefName="model.ERP.VO.TblFgTrnDetailDView" Name="TblFgTrnDetailDView20">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="ProjectDDId"/>
+          <Item Value="Qty"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblFgTrnDetailDView2Iterator" id="CreateInsert2" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblFgTrnDetailDView2Iterator" id="Execute2" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblFgTrnDetailDView2Iterator" id="Delete2" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>

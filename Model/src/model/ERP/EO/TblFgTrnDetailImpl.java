@@ -7,6 +7,7 @@ import java.sql.Timestamp;
 import oracle.adf.share.ADFContext;
 
 import oracle.jbo.Key;
+import oracle.jbo.RowIterator;
 import oracle.jbo.domain.Number;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
@@ -34,7 +35,8 @@ public class TblFgTrnDetailImpl extends EntityImpl {
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
-        TblFgTrnMaster;
+        TblFgTrnMaster,
+        TblFgTrnDetailD;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -57,6 +59,8 @@ public class TblFgTrnDetailImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int FGTRNMASTERID = AttributesEnum.FgTrnMasterId.index();
     public static final int ITEML4ID = AttributesEnum.ItemL4Id.index();
@@ -70,12 +74,21 @@ public class TblFgTrnDetailImpl extends EntityImpl {
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
     public static final int TBLFGTRNMASTER = AttributesEnum.TblFgTrnMaster.index();
+    public static final int TBLFGTRNDETAILD = AttributesEnum.TblFgTrnDetailD.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public TblFgTrnDetailImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblFgTrnDetail");
+    }
+
 
     /**
      * Gets the attribute value for Id, using the alias name Id.
@@ -256,16 +269,24 @@ public class TblFgTrnDetailImpl extends EntityImpl {
     /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
-    public EntityImpl getTblFgTrnMaster() {
-        return (EntityImpl) getAttributeInternal(TBLFGTRNMASTER);
+    public TblFgTrnMasterImpl getTblFgTrnMaster() {
+        return (TblFgTrnMasterImpl) getAttributeInternal(TBLFGTRNMASTER);
     }
 
     /**
      * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
      */
-    public void setTblFgTrnMaster(EntityImpl value) {
+    public void setTblFgTrnMaster(TblFgTrnMasterImpl value) {
         setAttributeInternal(TBLFGTRNMASTER, value);
     }
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getTblFgTrnDetailD() {
+        return (RowIterator) getAttributeInternal(TBLFGTRNDETAILD);
+    }
+
 
     /**
      * @param id key constituent
@@ -274,13 +295,6 @@ public class TblFgTrnDetailImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblFgTrnDetail");
     }
 
     /**

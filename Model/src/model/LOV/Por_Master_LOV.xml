@@ -11,7 +11,8 @@
        TblPorMaster.VNO, 
        TblPorMaster.VTP, 
        TblPorMaster.PROJECT_ID, 
-       TblPorMaster.DEPARTMENT_ID"
+       TblPorMaster.DEPARTMENT_ID, 
+       TblPorMaster.PROJECT_D_ID"
   FromList="TBL_POR_MASTER TblPorMaster"
   BindingStyle="OracleName"
   CustomQuery="false"
@@ -30,7 +31,6 @@ and TblPorMaster.PROJECT_ID = :getProID">
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="Por_Master_LOV"/>
   </Variable>
   <EntityUsage
@@ -81,6 +81,12 @@ and TblPorMaster.PROJECT_ID = :getProID">
     EntityAttrName="DepartmentId"
     EntityUsage="TblPorMaster"
     AliasName="DEPARTMENT_ID"/>
+  <ViewAttribute
+    Name="ProjectDId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectDId"
+    EntityUsage="TblPorMaster"
+    AliasName="PROJECT_D_ID"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

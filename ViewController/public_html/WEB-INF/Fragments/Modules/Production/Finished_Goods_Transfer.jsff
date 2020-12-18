@@ -46,7 +46,7 @@
                   
                   <af:spacer  id="s4"/>
                   <af:selectOneChoice value="#{bindings.ProFgMasterId.inputValue}"
-                                      label="Production FG"
+                                      label="Production FG" autoSubmit="true"
                                       required="#{bindings.ProFgMasterId.hints.mandatory}"
                                       shortDesc="#{bindings.ProFgMasterId.hints.tooltip}" id="soc2"
                                       contentStyle="width:150px;">
@@ -64,7 +64,31 @@
                     <f:validator binding="#{bindings.Narration.validator}"/>
                   </af:inputText>
                    <af:spacer  id="s6"/>
-                  <af:spacer  id="s7"/>
+                   <af:spacer  id="s67"/>
+                            <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
+                                                label="Project"
+                                                required="#{bindings.ProjectId.hints.mandatory}"
+                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc7">
+                              <f:selectItems value="#{bindings.ProjectId.items}" id="si7"/>
+                              <f:validator binding="#{bindings.ProjectId.validator}"/>
+                            </af:selectOneChoice>
+                   <af:spacer  id="s126"/>
+                            <af:selectOneChoice value="#{bindings.ProjectDId.inputValue}"
+                                                label="Project Centers"
+                                                required="#{bindings.ProjectDId.hints.mandatory}"
+                                                shortDesc="#{bindings.ProjectDId.hints.tooltip}" id="soc8">
+                              <f:selectItems value="#{bindings.ProjectDId.items}" id="si8"/>
+                              <f:validator binding="#{bindings.ProjectDId.validator}"/>
+                            </af:selectOneChoice>
+                   <af:spacer  id="s36"/>
+                            <af:selectOneChoice value="#{bindings.DepartmentId.inputValue}"
+                                                label="Department"
+                                                required="#{bindings.DepartmentId.hints.mandatory}"
+                                                shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="soc9">
+                              <f:selectItems value="#{bindings.DepartmentId.items}" id="si9"/>
+                              <f:validator binding="#{bindings.DepartmentId.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s7"/>
                   <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No."
                                 required="#{bindings.Vno.hints.mandatory}" columns="17"
                                 maximumLength="#{bindings.Vno.hints.precision}"
@@ -260,6 +284,79 @@
                             </af:iterator>
                         </af:panelGroupLayout>
               </af:showDetailItem>
+            </af:panelTabbed>
+                    </af:gridCell>
+                  </af:gridRow>
+                  
+                  <af:gridRow marginTop="5px" height="auto" id="gr25">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc55">
+                       <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
+              <af:showDetailItem id="sdi1" text="Detail D">
+                          <af:table value="#{bindings.TblFgTrnDetailDView2.collectionModel}" var="row"
+                                    rows="#{bindings.TblFgTrnDetailDView2.rangeSize}"
+                                    emptyText="#{bindings.TblFgTrnDetailDView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                    rowBandingInterval="0"
+                                    selectedRowKeys="#{bindings.TblFgTrnDetailDView2.collectionModel.selectedRow}"
+                                    selectionListener="#{bindings.TblFgTrnDetailDView2.collectionModel.makeCurrent}"
+                                    rowSelection="single" fetchSize="#{bindings.TblFgTrnDetailDView2.rangeSize}"
+                                    filterModel="#{bindings.TblFgTrnDetailDView2Query.queryDescriptor}"
+                                    filterVisible="true"
+                                    queryListener="#{bindings.TblFgTrnDetailDView2Query.processQuery}" varStatus="vs"
+                                    id="t3">
+                            <af:column sortProperty="#{bindings.TblFgTrnDetailDView2.hints.Id.name}" filterable="true"
+                                       sortable="true" headerText="#{bindings.TblFgTrnDetailDView2.hints.Id.label}"
+                                       id="c9">
+                              <af:inputText value="#{row.bindings.Id.inputValue}" readOnly="true" visible="false"
+                                            label="#{bindings.TblFgTrnDetailDView2.hints.Id.label}"
+                                            required="#{bindings.TblFgTrnDetailDView2.hints.Id.mandatory}"
+                                            columns="#{bindings.TblFgTrnDetailDView2.hints.Id.displayWidth}"
+                                            maximumLength="#{bindings.TblFgTrnDetailDView2.hints.Id.precision}"
+                                            shortDesc="#{bindings.TblFgTrnDetailDView2.hints.Id.tooltip}" id="it5">
+                                <f:validator binding="#{row.bindings.Id.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblFgTrnDetailDView2.hints.Id.format}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblFgTrnDetailDView2.hints.ProjectDDId.name}"
+                                       filterable="true" sortable="true"
+                                       headerText="Sub Centers" id="c15">
+                              <af:selectOneChoice value="#{row.bindings.ProjectDDId.inputValue}"
+                                                  label="#{row.bindings.ProjectDDId.label}"
+                                                  required="#{bindings.TblFgTrnDetailDView2.hints.ProjectDDId.mandatory}"
+                                                  shortDesc="#{bindings.TblFgTrnDetailDView2.hints.ProjectDDId.tooltip}"
+                                                  id="soc10">
+                                <f:selectItems value="#{row.bindings.ProjectDDId.items}" id="si10"/>
+                                <f:validator binding="#{row.bindings.ProjectDDId.validator}"/>
+                              </af:selectOneChoice>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblFgTrnDetailDView2.hints.Qty.name}" filterable="true"
+                                       sortable="true" headerText="Qty"
+                                       id="c16">
+                              <af:inputText value="#{row.bindings.Qty.inputValue}"
+                                            label="#{bindings.TblFgTrnDetailDView2.hints.Qty.label}"
+                                            required="#{bindings.TblFgTrnDetailDView2.hints.Qty.mandatory}"
+                                            columns="#{bindings.TblFgTrnDetailDView2.hints.Qty.displayWidth}"
+                                            maximumLength="#{bindings.TblFgTrnDetailDView2.hints.Qty.precision}"
+                                            shortDesc="#{bindings.TblFgTrnDetailDView2.hints.Qty.tooltip}" id="it10">
+                                <f:validator binding="#{row.bindings.Qty.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblFgTrnDetailDView2.hints.Qty.format}"/>
+                              </af:inputText>
+                            </af:column>
+                          </af:table>
+                        <af:spacer width="5" height="10" id="s12"/>
+                <af:panelGroupLayout id="pgl7"  halign="center" layout="horizontal">
+                            <af:iterator id="i3" var="index" varStatus="status"
+                                         value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
+                                <af:button id="btn#{status.index+1}" text="#{index.Operation}"
+                                           icon="/LIHS/faces/javax.faces.resource/#{index.bindings.icon.inputValue}?ln=images"
+                                           actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
+                                    <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}2"/>
+                                </af:button>
+                                <af:spacer width="5" height="10" id="s13"/>
+                            </af:iterator>
+                        </af:panelGroupLayout>
+                        </af:showDetailItem>
             </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>

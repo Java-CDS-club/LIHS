@@ -33,6 +33,10 @@ public class TblFgTrnMasterImpl extends EntityImpl {
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
+        DepartmentId,
+        ProjectDDId,
+        ProjectDId,
+        ProjectId,
         TblFgTrnDetail,
         TblProFgMaster;
         private static AttributesEnum[] vals = null;
@@ -57,6 +61,7 @@ public class TblFgTrnMasterImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int VNO = AttributesEnum.Vno.index();
     public static final int VTP = AttributesEnum.Vtp.index();
@@ -67,6 +72,10 @@ public class TblFgTrnMasterImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int DEPARTMENTID = AttributesEnum.DepartmentId.index();
+    public static final int PROJECTDDID = AttributesEnum.ProjectDDId.index();
+    public static final int PROJECTDID = AttributesEnum.ProjectDId.index();
+    public static final int PROJECTID = AttributesEnum.ProjectId.index();
     public static final int TBLFGTRNDETAIL = AttributesEnum.TblFgTrnDetail.index();
     public static final int TBLPROFGMASTER = AttributesEnum.TblProFgMaster.index();
 
@@ -74,6 +83,13 @@ public class TblFgTrnMasterImpl extends EntityImpl {
      * This is the default constructor (do not remove).
      */
     public TblFgTrnMasterImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblFgTrnMaster");
     }
 
     /**
@@ -221,6 +237,70 @@ public class TblFgTrnMasterImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for DepartmentId, using the alias name DepartmentId.
+     * @return the value of DepartmentId
+     */
+    public BigDecimal getDepartmentId() {
+        return (BigDecimal) getAttributeInternal(DEPARTMENTID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for DepartmentId.
+     * @param value value to set the DepartmentId
+     */
+    public void setDepartmentId(BigDecimal value) {
+        setAttributeInternal(DEPARTMENTID, value);
+    }
+
+    /**
+     * Gets the attribute value for ProjectDDId, using the alias name ProjectDDId.
+     * @return the value of ProjectDDId
+     */
+    public BigDecimal getProjectDDId() {
+        return (BigDecimal) getAttributeInternal(PROJECTDDID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ProjectDDId.
+     * @param value value to set the ProjectDDId
+     */
+    public void setProjectDDId(BigDecimal value) {
+        setAttributeInternal(PROJECTDDID, value);
+    }
+
+    /**
+     * Gets the attribute value for ProjectDId, using the alias name ProjectDId.
+     * @return the value of ProjectDId
+     */
+    public BigDecimal getProjectDId() {
+        return (BigDecimal) getAttributeInternal(PROJECTDID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ProjectDId.
+     * @param value value to set the ProjectDId
+     */
+    public void setProjectDId(BigDecimal value) {
+        setAttributeInternal(PROJECTDID, value);
+    }
+
+    /**
+     * Gets the attribute value for ProjectId, using the alias name ProjectId.
+     * @return the value of ProjectId
+     */
+    public BigDecimal getProjectId() {
+        return (BigDecimal) getAttributeInternal(PROJECTID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ProjectId.
+     * @param value value to set the ProjectId
+     */
+    public void setProjectId(BigDecimal value) {
+        setAttributeInternal(PROJECTID, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getTblFgTrnDetail() {
@@ -230,16 +310,17 @@ public class TblFgTrnMasterImpl extends EntityImpl {
     /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
-    public EntityImpl getTblProFgMaster() {
-        return (EntityImpl) getAttributeInternal(TBLPROFGMASTER);
+    public TblProFgMasterImpl getTblProFgMaster() {
+        return (TblProFgMasterImpl) getAttributeInternal(TBLPROFGMASTER);
     }
 
     /**
      * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
      */
-    public void setTblProFgMaster(EntityImpl value) {
+    public void setTblProFgMaster(TblProFgMasterImpl value) {
         setAttributeInternal(TBLPROFGMASTER, value);
     }
+
 
     /**
      * @param id key constituent
@@ -248,13 +329,6 @@ public class TblFgTrnMasterImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblFgTrnMaster");
     }
 
     /**

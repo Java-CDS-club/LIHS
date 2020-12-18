@@ -69,13 +69,21 @@
                   </af:inputText>
                   <af:spacer  id="s6"/>
                   <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
-                                                label="Project" readOnly="true"
+                                                label="Project" readOnly="true" autoSubmit="true"
                                                 required="#{bindings.ProjectId.hints.mandatory}"
                                                 shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc9" disabled="true">
                               <f:selectItems value="#{bindings.ProjectId.items}" id="si9"/>
                               <f:validator binding="#{bindings.ProjectId.validator}"/>
                             </af:selectOneChoice>
                             <af:spacer  id="s11"/>
+                            <af:selectOneChoice value="#{bindings.ProjectDId.inputValue}"
+                                                label="Project Centers" readOnly="true"
+                                                required="#{bindings.ProjectDId.hints.mandatory}"
+                                                shortDesc="#{bindings.ProjectDId.hints.tooltip}" id="soc12">
+                              <f:selectItems value="#{bindings.ProjectDId.items}" id="si12"/>
+                              <f:validator binding="#{bindings.ProjectDId.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s151"/>
                             <af:selectOneChoice value="#{bindings.FrDeptId.inputValue}"
                                                 label="From Department"
                                                 required="#{bindings.FrDeptId.hints.mandatory}"

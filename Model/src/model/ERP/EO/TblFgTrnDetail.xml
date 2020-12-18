@@ -118,6 +118,13 @@
     AssociationOtherEnd="model.ERP.EO.FkFgTrnDetailMasterAssoc.TblFgTrnDetail"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblFgTrnDetailD"
+    Association="model.ERP.EO.FkTblFgTrnDetailDFkAssoc"
+    AssociationEnd="model.ERP.EO.FkTblFgTrnDetailDFkAssoc.TblFgTrnDetailD"
+    AssociationOtherEnd="model.ERP.EO.FkTblFgTrnDetailDFkAssoc.TblFgTrnDetail"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="PkFgTrnDetailId"
     PrimaryKey="true">

@@ -8,7 +8,10 @@
   InheritPersonalization="merge"
   SelectList="TblProFgMaster.ID, 
        TblProFgMaster.VTP, 
-       TblProFgMaster.VNO"
+       TblProFgMaster.VNO, 
+       TblProFgMaster.PROJECT_ID, 
+       TblProFgMaster.PROJECT_D_ID, 
+       TblProFgMaster.DEPARTMENT_ID"
   FromList="TBL_PRO_FG_MASTER TblProFgMaster"
   BindingStyle="OracleName"
   CustomQuery="false"
@@ -40,6 +43,24 @@
     EntityAttrName="Vno"
     EntityUsage="TblProFgMaster"
     AliasName="VNO"/>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="TblProFgMaster"
+    AliasName="PROJECT_ID"/>
+  <ViewAttribute
+    Name="ProjectDId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectDId"
+    EntityUsage="TblProFgMaster"
+    AliasName="PROJECT_D_ID"/>
+  <ViewAttribute
+    Name="DepartmentId"
+    PrecisionRule="true"
+    EntityAttrName="DepartmentId"
+    EntityUsage="TblProFgMaster"
+    AliasName="DEPARTMENT_ID"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

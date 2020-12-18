@@ -478,6 +478,12 @@
   <ViewUsage
     Name="TblEmpKinView2"
     ViewObjectName="model.ERP.VO.TblEmpKinView"/>
+  <ViewUsage
+    Name="TblFgTrnDetailDView1"
+    ViewObjectName="model.ERP.VO.TblFgTrnDetailDView"/>
+  <ViewUsage
+    Name="TblFgTrnDetailDView2"
+    ViewObjectName="model.ERP.VO.TblFgTrnDetailDView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
@@ -891,5 +897,11 @@
     ViewLinkObjectName="model.ERP.VO.FkTblEmpKinFkLink"
     SrcViewUsageName="model.ERP.AppModule.TblEmpView1"
     DstViewUsageName="model.ERP.AppModule.TblEmpKinView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkTblFgTrnDetailDFkLink1"
+    ViewLinkObjectName="model.ERP.VO.FkTblFgTrnDetailDFkLink"
+    SrcViewUsageName="model.ERP.AppModule.TblFgTrnDetailView2"
+    DstViewUsageName="model.ERP.AppModule.TblFgTrnDetailDView2"
     Reversed="false"/>
 </AppModule>

@@ -135,7 +135,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblFgTrnDetail"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -147,11 +148,17 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblFgTrnDetail"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
     EntityUsage="TblFgTrnDetail"
     AliasName="UPDATED_BY"/>
+  <ViewLinkAccessor
+    Name="TblFgTrnDetailDView"
+    ViewLink="model.ERP.VO.FkTblFgTrnDetailDFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

@@ -36,6 +36,7 @@ public class TblProIssMasterImpl extends EntityImpl {
         FrDeptId,
         ProjectId,
         ToDeptId,
+        ProjectDId,
         TblProIssDetail,
         TblPorMaster;
         private static AttributesEnum[] vals = null;
@@ -60,6 +61,7 @@ public class TblProIssMasterImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int VNO = AttributesEnum.Vno.index();
     public static final int VTP = AttributesEnum.Vtp.index();
@@ -73,6 +75,7 @@ public class TblProIssMasterImpl extends EntityImpl {
     public static final int FRDEPTID = AttributesEnum.FrDeptId.index();
     public static final int PROJECTID = AttributesEnum.ProjectId.index();
     public static final int TODEPTID = AttributesEnum.ToDeptId.index();
+    public static final int PROJECTDID = AttributesEnum.ProjectDId.index();
     public static final int TBLPROISSDETAIL = AttributesEnum.TblProIssDetail.index();
     public static final int TBLPORMASTER = AttributesEnum.TblPorMaster.index();
 
@@ -80,6 +83,13 @@ public class TblProIssMasterImpl extends EntityImpl {
      * This is the default constructor (do not remove).
      */
     public TblProIssMasterImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblProIssMaster");
     }
 
     /**
@@ -275,6 +285,22 @@ public class TblProIssMasterImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for ProjectDId, using the alias name ProjectDId.
+     * @return the value of ProjectDId
+     */
+    public BigDecimal getProjectDId() {
+        return (BigDecimal) getAttributeInternal(PROJECTDID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ProjectDId.
+     * @param value value to set the ProjectDId
+     */
+    public void setProjectDId(BigDecimal value) {
+        setAttributeInternal(PROJECTDID, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getTblProIssDetail() {
@@ -295,6 +321,7 @@ public class TblProIssMasterImpl extends EntityImpl {
         setAttributeInternal(TBLPORMASTER, value);
     }
 
+
     /**
      * @param id key constituent
 
@@ -302,13 +329,6 @@ public class TblProIssMasterImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblProIssMaster");
     }
 
     /**

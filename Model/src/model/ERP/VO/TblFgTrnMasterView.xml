@@ -21,6 +21,26 @@
     Name="Pro_FG_Master_LOV1"
     ViewObjectName="model.LOV.Pro_FG_Master_LOV"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Department_Name_LOV1"
+    ViewObjectName="model.LOV.Department_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Project_Name_LOV1"
+    ViewObjectName="model.LOV.Project_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Project_Centers_Dep_LOV1"
+    ViewObjectName="model.LOV.Project_Centers_Dep_LOV"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="Projtid">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[ProjectId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_Vtp"
     ListVOName="Voucher_Type1"
@@ -49,12 +69,74 @@
       <Item Value="ProFgMasterId"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="ProjectId"/>
+      <Item Value="ProjectDId"/>
+      <Item Value="DepartmentId"/>
+    </AttrArray>
     <AttrArray Name="ListAttrNames">
       <Item Value="Id"/>
+      <Item Value="ProjectId"/>
+      <Item Value="ProjectDId"/>
+      <Item Value="DepartmentId"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Vno"/>
       <Item Value="Vtp"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DepartmentId"
+    ListVOName="Department_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DepartmentId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ProjectId"
+    ListVOName="Project_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProjectId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ProjectDId"
+    ListVOName="Project_Centers_Dep_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProjectDId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -128,7 +210,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblFgTrnMaster"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -140,13 +223,62 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblFgTrnMaster"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
     EntityUsage="TblFgTrnMaster"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="ProjectDId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectDId"
+    EntityUsage="TblFgTrnMaster"
+    AliasName="PROJECT_D_ID"
+    LOVName="LOV_ProjectDId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ProjectDDId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectDDId"
+    EntityUsage="TblFgTrnMaster"
+    AliasName="PROJECT_D_D_ID"/>
+  <ViewAttribute
+    Name="DepartmentId"
+    PrecisionRule="true"
+    EntityAttrName="DepartmentId"
+    EntityUsage="TblFgTrnMaster"
+    AliasName="DEPARTMENT_ID"
+    LOVName="LOV_DepartmentId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="TblFgTrnMaster"
+    AliasName="PROJECT_ID"
+    LOVName="LOV_ProjectId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblFgTrnDetailView"
     ViewLink="model.ERP.VO.FkFgTrnDetailMasterLink"
