@@ -85,6 +85,8 @@
           <Item Value="Description"/>
           <Item Value="PorQty"/>
           <Item Value="Qty"/>
+          <Item Value="Rate"/>
+          <Item Value="Amount"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -100,5 +102,7 @@
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <list IterBinding="TblProFgMasterView1Iterator" StaticList="false" Uses="LOV_DepartmentId" id="DepartmentId"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="TblProFgMasterView1Iterator" StaticList="false" Uses="LOV_PorMasterIdStatic"
+          id="PorMasterIdStatic" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

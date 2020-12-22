@@ -33,6 +33,8 @@ public class TblProFgDetailImpl extends EntityImpl {
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
+        Amount,
+        Rate,
         TblProFgMaster;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
@@ -56,6 +58,7 @@ public class TblProFgDetailImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int PROFGMASTERID = AttributesEnum.ProFgMasterId.index();
     public static final int ITEML4ID = AttributesEnum.ItemL4Id.index();
@@ -67,12 +70,21 @@ public class TblProFgDetailImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int AMOUNT = AttributesEnum.Amount.index();
+    public static final int RATE = AttributesEnum.Rate.index();
     public static final int TBLPROFGMASTER = AttributesEnum.TblProFgMaster.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public TblProFgDetailImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblProFgDetail");
     }
 
     /**
@@ -236,18 +248,51 @@ public class TblProFgDetailImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for Amount, using the alias name Amount.
+     * @return the value of Amount
+     */
+    public BigDecimal getAmount() {
+        return (BigDecimal) getAttributeInternal(AMOUNT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Amount.
+     * @param value value to set the Amount
+     */
+    public void setAmount(BigDecimal value) {
+        setAttributeInternal(AMOUNT, value);
+    }
+
+    /**
+     * Gets the attribute value for Rate, using the alias name Rate.
+     * @return the value of Rate
+     */
+    public BigDecimal getRate() {
+        return (BigDecimal) getAttributeInternal(RATE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Rate.
+     * @param value value to set the Rate
+     */
+    public void setRate(BigDecimal value) {
+        setAttributeInternal(RATE, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
-    public EntityImpl getTblProFgMaster() {
-        return (EntityImpl) getAttributeInternal(TBLPROFGMASTER);
+    public TblProFgMasterImpl getTblProFgMaster() {
+        return (TblProFgMasterImpl) getAttributeInternal(TBLPROFGMASTER);
     }
 
     /**
      * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
      */
-    public void setTblProFgMaster(EntityImpl value) {
+    public void setTblProFgMaster(TblProFgMasterImpl value) {
         setAttributeInternal(TBLPROFGMASTER, value);
     }
+
 
     /**
      * @param id key constituent
@@ -256,13 +301,6 @@ public class TblProFgDetailImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblProFgDetail");
     }
 
     /**

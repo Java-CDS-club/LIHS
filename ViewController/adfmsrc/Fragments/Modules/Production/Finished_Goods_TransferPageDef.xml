@@ -120,5 +120,7 @@
             Action="iteratorExecute"/>
     <action IterBinding="TblFgTrnDetailDView2Iterator" id="Delete2" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
+    <list IterBinding="TblFgTrnMasterView1Iterator" StaticList="false" Uses="LOV_ProFgMasterIdStatic"
+          id="ProFgMasterIdStatic" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

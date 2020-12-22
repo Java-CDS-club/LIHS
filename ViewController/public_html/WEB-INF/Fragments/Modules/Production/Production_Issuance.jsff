@@ -33,7 +33,7 @@
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8">
             <af:panelTabbed position="above" id="pt4" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="sdi3" text="Production Issuance Master">
-                <af:panelFormLayout id="pfl1" maxColumns="3" rows="6">
+                <af:panelFormLayout id="pfl1" maxColumns="3" rows="8">
                   <af:inputText value="#{bindings.Id.inputValue}" label="ID" visible="false"
                                 required="#{bindings.Id.hints.mandatory}" columns="#{bindings.Id.hints.displayWidth}"
                                 maximumLength="#{bindings.Id.hints.precision}" shortDesc="#{bindings.Id.hints.tooltip}"
@@ -50,7 +50,7 @@
                   </af:inputDate>
                   
                   <af:spacer id="s4"/>
-                  <af:selectOneChoice value="#{bindings.PorMasterId.inputValue}" label="Production Order"
+                  <af:selectOneChoice value="#{bindings.PorMasterId.inputValue}" label="Select Production Order"
                                       required="#{bindings.PorMasterId.hints.mandatory}" autoSubmit="true"
                                       shortDesc="#{bindings.PorMasterId.hints.tooltip}" id="soc2"
                                       contentStyle="Width:150px;">
@@ -59,7 +59,15 @@
                   </af:selectOneChoice>
                             
                             <af:spacer  id="s8"/>
-                  <af:inputText value="#{bindings.Narration.inputValue}" label="Remarks"
+                            <af:selectOneChoice value="#{bindings.PorMasterIdstatic.inputValue}"
+                                                label="Production Order" readOnly="true"
+                                                required="#{bindings.PorMasterIdstatic.hints.mandatory}"
+                                                shortDesc="#{bindings.PorMasterIdstatic.hints.tooltip}" id="soc13">
+                              <f:selectItems value="#{bindings.PorMasterIdstatic.items}" id="si13"/>
+                              <f:validator binding="#{bindings.PorMasterIdstatic.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s82"/>
+                            <af:inputText value="#{bindings.Narration.inputValue}" label="Remarks"
                                 required="#{bindings.Narration.hints.mandatory}"
                                 columns="20"
                                 maximumLength="#{bindings.Narration.hints.precision}"
@@ -341,7 +349,20 @@
                       <f:validator binding="#{row.bindings.Description.validator}"/>
                     </af:inputText>
                   </af:column>
-                  <af:column sortProperty="#{bindings.TblProIssDetailDView3.hints.Qty.name}" filterable="true"
+                            <af:column headerText="#{bindings.TblProIssDetailDView3.hints.BatchQty.label}" id="c8">
+                              <af:inputText value="#{row.bindings.BatchQty.inputValue}" readOnly="true"
+                                            label="#{bindings.TblProIssDetailDView3.hints.BatchQty.label}"
+                                            required="#{bindings.TblProIssDetailDView3.hints.BatchQty.mandatory}"
+                                            columns="#{bindings.TblProIssDetailDView3.hints.BatchQty.displayWidth}"
+                                            maximumLength="#{bindings.TblProIssDetailDView3.hints.BatchQty.precision}"
+                                            shortDesc="#{bindings.TblProIssDetailDView3.hints.BatchQty.tooltip}"
+                                            id="it5">
+                                <f:validator binding="#{row.bindings.BatchQty.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblProIssDetailDView3.hints.BatchQty.format}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblProIssDetailDView3.hints.Qty.name}" filterable="true"
                              sortable="true" headerText="Qty" id="c12">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Qty}"
@@ -366,7 +387,7 @@
        id="it28" placeholder="Search ">
       </af:inputText>
 </f:facet>
-                    <af:inputText value="#{row.bindings.Rate.inputValue}"
+                    <af:inputText value="#{row.bindings.Rate.inputValue}" readOnly="true"
                                   label="#{bindings.TblProIssDetailDView3.hints.Rate.label}"
                                   required="#{bindings.TblProIssDetailDView3.hints.Rate.mandatory}"
                                   columns="#{bindings.TblProIssDetailDView3.hints.Rate.displayWidth}"
@@ -385,7 +406,7 @@
       </af:inputText>
 </f:facet>
                     <af:inputText value="#{row.bindings.Amount.inputValue}"
-                                  label="#{bindings.TblProIssDetailDView3.hints.Amount.label}"
+                                  label="#{bindings.TblProIssDetailDView3.hints.Amount.label}" readOnly="true"
                                   required="#{bindings.TblProIssDetailDView3.hints.Amount.mandatory}"
                                   columns="#{bindings.TblProIssDetailDView3.hints.Amount.displayWidth}"
                                   maximumLength="#{bindings.TblProIssDetailDView3.hints.Amount.precision}"

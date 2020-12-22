@@ -22,7 +22,8 @@
        TblProIssMaster.PROJECT_ID, 
        TblProIssMaster.FR_DEPT_ID, 
        TblProIssMaster.TO_DEPT_ID, 
-       TblProIssMaster.PROJECT_D_ID"
+       TblProIssMaster.PROJECT_D_ID, 
+       TblProIssMaster.POR_MASTER_ID AS POR_MASTER_ID1"
   FromList="TBL_PRO_ISS_MASTER TblProIssMaster"
   Where="TblProIssMaster.PROJECT_ID = :getProId">
   <Variable
@@ -61,6 +62,10 @@
       </PIMap>
     </ParameterMap>
   </ViewAccessor>
+  <ViewAccessor
+    Name="Por_Master_NotIn_LOV1"
+    ViewObjectName="model.LOV.Por_Master_NotIn_LOV"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Vtp"
     ListVOName="Voucher_Type1"
@@ -76,34 +81,6 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="ViewAttr"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_PorMasterId"
-    ListVOName="Por_Master_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="PorMasterId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="DerivedAttrNames">
-      <Item Value="ToDeptId"/>
-      <Item Value="ProjectId"/>
-      <Item Value="ProjectDId"/>
-    </AttrArray>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Id"/>
-      <Item Value="DepartmentId"/>
-      <Item Value="ProjectId"/>
-      <Item Value="ProjectDId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Vno"/>
-      <Item Value="Dated"/>
-      <Item Value="Vtp"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -176,6 +153,54 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_PorMasterIdstatic"
+    ListVOName="Por_Master_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PorMasterIdstatic"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Vno"/>
+      <Item Value="Dated"/>
+      <Item Value="Vtp"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_PorMasterId"
+    ListVOName="Por_Master_NotIn_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PorMasterId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="ToDeptId"/>
+      <Item Value="ProjectId"/>
+      <Item Value="ProjectDId"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+      <Item Value="DepartmentId"/>
+      <Item Value="ProjectId"/>
+      <Item Value="ProjectDId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Vno"/>
+      <Item Value="Dated"/>
+      <Item Value="Vtp"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -319,6 +344,20 @@
     EntityUsage="TblProIssMaster"
     AliasName="PROJECT_D_ID"
     LOVName="LOV_ProjectDId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="PorMasterIdstatic"
+    PrecisionRule="true"
+    EntityAttrName="PorMasterId"
+    EntityUsage="TblProIssMaster"
+    AliasName="POR_MASTER_ID1"
+    LOVName="LOV_PorMasterIdstatic">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

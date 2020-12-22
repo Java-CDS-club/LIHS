@@ -28,7 +28,7 @@
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3">
                        <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="tab1" text="Production Finish Goods Master">
-                <af:panelFormLayout id="pfl1" maxColumns="3" rows="6">
+                <af:panelFormLayout id="pfl1" maxColumns="3" rows="8">
                   <af:inputText value="#{bindings.Id.inputValue}" label="ID" visible="false"
                                 required="#{bindings.Id.hints.mandatory}" columns="#{bindings.Id.hints.displayWidth}"
                                 maximumLength="#{bindings.Id.hints.precision}" shortDesc="#{bindings.Id.hints.tooltip}"
@@ -47,7 +47,7 @@
                   </af:inputDate>
                   
                   <af:spacer id="s4"/>
-                  <af:selectOneChoice value="#{bindings.PorMasterId.inputValue}" label="Production Order"
+                  <af:selectOneChoice value="#{bindings.PorMasterId.inputValue}" label="Select Production Order"
                                       required="#{bindings.PorMasterId.hints.mandatory}" autoSubmit="true"
                                       shortDesc="#{bindings.PorMasterId.hints.tooltip}" id="soc2"
                                       contentStyle="Width:150px;">
@@ -55,7 +55,15 @@
                     <f:validator binding="#{bindings.PorMasterId.validator}"/>
                   </af:selectOneChoice>
                   <af:spacer  id="s8"/>
-                  <af:inputText value="#{bindings.Narration.inputValue}" label="Remarks"
+                            <af:selectOneChoice value="#{bindings.PorMasterIdStatic.inputValue}"
+                                                label="Production Order" readOnly="true"
+                                                required="#{bindings.PorMasterIdStatic.hints.mandatory}"
+                                                shortDesc="#{bindings.PorMasterIdStatic.hints.tooltip}" id="soc10">
+                              <f:selectItems value="#{bindings.PorMasterIdStatic.items}" id="si10"/>
+                              <f:validator binding="#{bindings.PorMasterIdStatic.validator}"/>
+                            </af:selectOneChoice>
+                  <af:spacer  id="s68"/>
+                            <af:inputText value="#{bindings.Narration.inputValue}" label="Remarks"
                                 required="#{bindings.Narration.hints.mandatory}"
                                 columns="20"
                                 maximumLength="#{bindings.Narration.hints.precision}"
@@ -221,7 +229,7 @@
        id="it16" placeholder="Search ">
       </af:inputText>
 </f:facet>
-                    <af:inputText value="#{row.bindings.PorQty.inputValue}"
+                    <af:inputText value="#{row.bindings.PorQty.inputValue}" readOnly="true"
                                   label="#{bindings.TblProFgDetailView2.hints.PorQty.label}"
                                   required="#{bindings.TblProFgDetailView2.hints.PorQty.mandatory}"
                                   columns="#{bindings.TblProFgDetailView2.hints.PorQty.displayWidth}"
@@ -250,7 +258,31 @@
                                         pattern="#{bindings.TblProFgDetailView2.hints.Qty.format}"/>
                     </af:inputText>
                   </af:column>
-                </af:table>
+                            <af:column headerText="Rate" id="c8">
+                              <af:inputText value="#{row.bindings.Rate.inputValue}"
+                                            label="#{bindings.TblProFgDetailView2.hints.Rate.label}"
+                                            required="#{bindings.TblProFgDetailView2.hints.Rate.mandatory}"
+                                            columns="#{bindings.TblProFgDetailView2.hints.Rate.displayWidth}"
+                                            maximumLength="#{bindings.TblProFgDetailView2.hints.Rate.precision}"
+                                            shortDesc="#{bindings.TblProFgDetailView2.hints.Rate.tooltip}" id="it5">
+                                <f:validator binding="#{row.bindings.Rate.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblProFgDetailView2.hints.Rate.format}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column headerText="Amount" id="c14">
+                              <af:inputText value="#{row.bindings.Amount.inputValue}"
+                                            label="#{bindings.TblProFgDetailView2.hints.Amount.label}"
+                                            required="#{bindings.TblProFgDetailView2.hints.Amount.mandatory}"
+                                            columns="#{bindings.TblProFgDetailView2.hints.Amount.displayWidth}"
+                                            maximumLength="#{bindings.TblProFgDetailView2.hints.Amount.precision}"
+                                            shortDesc="#{bindings.TblProFgDetailView2.hints.Amount.tooltip}" id="it9">
+                                <f:validator binding="#{row.bindings.Amount.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblProFgDetailView2.hints.Amount.format}"/>
+                              </af:inputText>
+                            </af:column>
+                          </af:table>
                   <af:spacer width="5" height="10" id="s3"/>
       <af:panelGroupLayout id="pgl2" halign="center"  layout="horizontal">
                             

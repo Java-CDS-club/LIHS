@@ -41,6 +41,14 @@
       </PIMap>
     </ParameterMap>
   </ViewAccessor>
+  <ViewAccessor
+    Name="Por_Master_NotIn_LOV1"
+    ViewObjectName="model.LOV.Por_Master_NotIn_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Por_Master_IN_NotIn_LOV1"
+    ViewObjectName="model.LOV.Por_Master_IN_NotIn_LOV"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Vtp"
     ListVOName="Voucher_Type1"
@@ -56,34 +64,6 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="ViewAttr"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_PorMasterId"
-    ListVOName="Por_Master_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="PorMasterId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="DerivedAttrNames">
-      <Item Value="ProjectId"/>
-      <Item Value="ProjectDId"/>
-      <Item Value="DepartmentId"/>
-    </AttrArray>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Id"/>
-      <Item Value="ProjectId"/>
-      <Item Value="ProjectDId"/>
-      <Item Value="DepartmentId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Vno"/>
-      <Item Value="Dated"/>
-      <Item Value="Vtp"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -138,6 +118,54 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_PorMasterIdStatic"
+    ListVOName="Por_Master_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PorMasterIdStatic"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Vno"/>
+      <Item Value="Dated"/>
+      <Item Value="Vtp"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_PorMasterId"
+    ListVOName="Por_Master_IN_NotIn_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PorMasterId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="DepartmentId"/>
+      <Item Value="ProjectId"/>
+      <Item Value="ProjectDId"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+      <Item Value="DepartmentId"/>
+      <Item Value="ProjectId"/>
+      <Item Value="ProjectDId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Vno"/>
+      <Item Value="Dated"/>
+      <Item Value="Vtp"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -267,6 +295,20 @@
     EntityUsage="TblProFgMaster"
     AliasName="DEPARTMENT_ID"
     LOVName="LOV_DepartmentId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="PorMasterIdStatic"
+    PrecisionRule="true"
+    EntityAttrName="PorMasterId"
+    EntityUsage="TblProFgMaster"
+    AliasName="POR_MASTER_ID1"
+    LOVName="LOV_PorMasterIdStatic">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

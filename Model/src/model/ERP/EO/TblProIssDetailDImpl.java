@@ -34,6 +34,7 @@ public class TblProIssDetailDImpl extends EntityImpl {
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
+        BatchQty,
         TblProIssDetail;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
@@ -57,6 +58,7 @@ public class TblProIssDetailDImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int PROISSDETAILID = AttributesEnum.ProIssDetailId.index();
     public static final int ITEML4ID = AttributesEnum.ItemL4Id.index();
@@ -69,12 +71,20 @@ public class TblProIssDetailDImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int BATCHQTY = AttributesEnum.BatchQty.index();
     public static final int TBLPROISSDETAIL = AttributesEnum.TblProIssDetail.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public TblProIssDetailDImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblProIssDetailD");
     }
 
     /**
@@ -254,6 +264,22 @@ public class TblProIssDetailDImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for BatchQty, using the alias name BatchQty.
+     * @return the value of BatchQty
+     */
+    public BigDecimal getBatchQty() {
+        return (BigDecimal) getAttributeInternal(BATCHQTY);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for BatchQty.
+     * @param value value to set the BatchQty
+     */
+    public void setBatchQty(BigDecimal value) {
+        setAttributeInternal(BATCHQTY, value);
+    }
+
+    /**
      * @return the associated entity TblProIssDetailImpl.
      */
     public TblProIssDetailImpl getTblProIssDetail() {
@@ -267,6 +293,7 @@ public class TblProIssDetailDImpl extends EntityImpl {
         setAttributeInternal(TBLPROISSDETAIL, value);
     }
 
+
     /**
      * @param id key constituent
 
@@ -274,13 +301,6 @@ public class TblProIssDetailDImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblProIssDetailD");
     }
 
     /**
