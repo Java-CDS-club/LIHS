@@ -34,7 +34,6 @@
     TableName="TBL_PRO_ISS_DETAIL_D"/>
   <Attribute
     Name="ItemL4Id"
-    IsNotNull="true"
     ColumnName="ITEM_L4_ID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"

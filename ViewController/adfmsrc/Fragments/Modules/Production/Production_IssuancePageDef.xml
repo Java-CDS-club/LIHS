@@ -111,6 +111,7 @@
           <Item Value="Rate"/>
           <Item Value="Amount"/>
           <Item Value="BatchQty"/>
+          <Item Value="ItemL4IdStatic"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

@@ -303,7 +303,7 @@
                     </af:inputText>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblProIssDetailDView3.hints.ItemL4Id.name}" filterable="true"
-                             sortable="true" headerText="Item"
+                             sortable="true" headerText="Select Item"
                              id="c9" width="200">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
@@ -318,7 +318,18 @@
                       <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                     </af:selectOneChoice>
                   </af:column>
-                  <af:column sortProperty="#{bindings.TblProIssDetailDView3.hints.UomId.name}" filterable="true"
+                            <af:column headerText="Item"
+                                       id="c15">
+                              <af:selectOneChoice value="#{row.bindings.ItemL4IdStatic.inputValue}"
+                                                  label="#{row.bindings.ItemL4IdStatic.label}" readOnly="true"
+                                                  required="#{bindings.TblProIssDetailDView3.hints.ItemL4IdStatic.mandatory}"
+                                                  shortDesc="#{bindings.TblProIssDetailDView3.hints.ItemL4IdStatic.tooltip}"
+                                                  id="soc14">
+                                <f:selectItems value="#{row.bindings.ItemL4IdStatic.items}" id="si14"/>
+                                <f:validator binding="#{row.bindings.ItemL4IdStatic.validator}"/>
+                              </af:selectOneChoice>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblProIssDetailDView3.hints.UomId.name}" filterable="true"
                              sortable="true" headerText="UOM" id="c10" width="70">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.UomId}"
