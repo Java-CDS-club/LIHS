@@ -87,5 +87,15 @@
     <action IterBinding="TblPcpDView2Iterator" id="CreateInsert1" RequiresUpdateModel="true" Action="createInsertRow"/>
     <action IterBinding="TblPcpDView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblPcpDView2Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <attributeValues IterBinding="TblPcpMView1Iterator" id="Frdate">
+      <AttrNames>
+        <Item Value="Frdate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblPcpMView1Iterator" id="Todate">
+      <AttrNames>
+        <Item Value="Todate"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

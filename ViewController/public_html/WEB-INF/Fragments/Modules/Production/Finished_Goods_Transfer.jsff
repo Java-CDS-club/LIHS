@@ -185,7 +185,7 @@
       </af:inputText>
 </f:facet>
                     <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
-                                        label="#{row.bindings.ItemL4Id.label}"
+                                        label="#{row.bindings.ItemL4Id.label}" readOnly="true"
                                         required="#{bindings.TblFgTrnDetailView2.hints.ItemL4Id.mandatory}"
                                         shortDesc="#{bindings.TblFgTrnDetailView2.hints.ItemL4Id.tooltip}" id="soc3">
                       <f:selectItems value="#{row.bindings.ItemL4Id.items}" id="si3"/>
@@ -214,7 +214,7 @@
        id="it16" placeholder="Search ">
       </af:inputText>
 </f:facet>
-                    <af:inputText value="#{row.bindings.Description.inputValue}"
+                    <af:inputText value="#{row.bindings.Description.inputValue}" readOnly="true"
                                   label="#{bindings.TblFgTrnDetailView2.hints.Description.label}"
                                   required="#{bindings.TblFgTrnDetailView2.hints.Description.mandatory}"
                                   columns="#{bindings.TblFgTrnDetailView2.hints.Description.displayWidth}"
@@ -230,7 +230,7 @@
        id="it17" placeholder="Search ">
       </af:inputText>
 </f:facet>
-                    <af:inputText value="#{row.bindings.Qty.inputValue}"
+                    <af:inputText value="#{row.bindings.Qty.inputValue}" readOnly="true"
                                   label="#{bindings.TblFgTrnDetailView2.hints.Qty.label}"
                                   required="#{bindings.TblFgTrnDetailView2.hints.Qty.mandatory}"
                                   columns="#{bindings.TblFgTrnDetailView2.hints.Qty.displayWidth}"
@@ -248,7 +248,7 @@
        id="it18" placeholder="Search ">
       </af:inputText>
 </f:facet>
-                    <af:inputText value="#{row.bindings.Rate.inputValue}"
+                    <af:inputText value="#{row.bindings.Rate.inputValue}" readOnly="true"
                                   label="#{bindings.TblFgTrnDetailView2.hints.Rate.label}"
                                   required="#{bindings.TblFgTrnDetailView2.hints.Rate.mandatory}"
                                   columns="#{bindings.TblFgTrnDetailView2.hints.Rate.displayWidth}"
@@ -266,7 +266,7 @@
        id="it19" placeholder="Search ">
       </af:inputText>
 </f:facet>
-                    <af:inputText value="#{row.bindings.Amount.inputValue}"
+                    <af:inputText value="#{row.bindings.Amount.inputValue}" readOnly="true"
                                   label="#{bindings.TblFgTrnDetailView2.hints.Amount.label}"
                                   required="#{bindings.TblFgTrnDetailView2.hints.Amount.mandatory}"
                                   columns="#{bindings.TblFgTrnDetailView2.hints.Amount.displayWidth}"

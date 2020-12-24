@@ -106,5 +106,15 @@
     <action IterBinding="TblPbpDView2Iterator" id="CreateInsert1" RequiresUpdateModel="true" Action="createInsertRow"/>
     <action IterBinding="TblPbpDView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblPbpDView2Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <attributeValues IterBinding="TblPbpMView1Iterator" id="Frdate">
+      <AttrNames>
+        <Item Value="Frdate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblPbpMView1Iterator" id="Todate">
+      <AttrNames>
+        <Item Value="Todate"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

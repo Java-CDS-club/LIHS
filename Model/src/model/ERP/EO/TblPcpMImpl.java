@@ -34,6 +34,9 @@ public class TblPcpMImpl extends EntityImpl {
         UpdatedDate,
         UpdatedBy,
         BankCashId,
+        Frdate,
+        ProjectId,
+        Todate,
         TblPcpD;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
@@ -57,6 +60,7 @@ public class TblPcpMImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int VNO = AttributesEnum.Vno.index();
     public static final int VTP = AttributesEnum.Vtp.index();
@@ -68,12 +72,22 @@ public class TblPcpMImpl extends EntityImpl {
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
     public static final int BANKCASHID = AttributesEnum.BankCashId.index();
+    public static final int FRDATE = AttributesEnum.Frdate.index();
+    public static final int PROJECTID = AttributesEnum.ProjectId.index();
+    public static final int TODATE = AttributesEnum.Todate.index();
     public static final int TBLPCPD = AttributesEnum.TblPcpD.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public TblPcpMImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblPcpM");
     }
 
     /**
@@ -237,11 +251,60 @@ public class TblPcpMImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for Frdate, using the alias name Frdate.
+     * @return the value of Frdate
+     */
+    public Timestamp getFrdate() {
+        return (Timestamp) getAttributeInternal(FRDATE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Frdate.
+     * @param value value to set the Frdate
+     */
+    public void setFrdate(Timestamp value) {
+        setAttributeInternal(FRDATE, value);
+    }
+
+    /**
+     * Gets the attribute value for ProjectId, using the alias name ProjectId.
+     * @return the value of ProjectId
+     */
+    public BigDecimal getProjectId() {
+        return (BigDecimal) getAttributeInternal(PROJECTID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ProjectId.
+     * @param value value to set the ProjectId
+     */
+    public void setProjectId(BigDecimal value) {
+        setAttributeInternal(PROJECTID, value);
+    }
+
+    /**
+     * Gets the attribute value for Todate, using the alias name Todate.
+     * @return the value of Todate
+     */
+    public Timestamp getTodate() {
+        return (Timestamp) getAttributeInternal(TODATE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Todate.
+     * @param value value to set the Todate
+     */
+    public void setTodate(Timestamp value) {
+        setAttributeInternal(TODATE, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getTblPcpD() {
         return (RowIterator) getAttributeInternal(TBLPCPD);
     }
+
 
     /**
      * @param id key constituent
@@ -250,13 +313,6 @@ public class TblPcpMImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblPcpM");
     }
 
     /**

@@ -15,36 +15,33 @@
        TblPoM.PBL_SUPP_ID, 
        TblPblSupp.NAME, 
        TblPblSupp.ID AS ID1, 
-       TblPoM.PROJECT_ID"
-  FromList="TBL_PO_M TblPoM, TBL_PBL_SUPP TblPblSupp"
-  Where="TblPoM.PBL_SUPP_ID = TblPblSupp.ID      
-and TblPblSupp.ID = :getSuppID  
-and TblPoM.PROJECT_ID = :getProID">
+       TblPoM.PROJECT_ID, 
+       TblProject.NAME AS NAME1, 
+       TblProject.ID AS ID2"
+  FromList="TBL_PO_M TblPoM, TBL_PBL_SUPP TblPblSupp, TBL_PROJECT TblProject"
+  Where="TblPoM.PBL_SUPP_ID = TblPblSupp.ID       
+and  TblPoM.PROJECT_ID = TblProject.ID">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
         ResId="model.LOV.Inv_PO_Master_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <Variable
-    Name="getSuppID"
-    Kind="where"
-    Type="java.math.BigDecimal"/>
-  <Variable
-    Name="getProID"
-    Kind="where"
-    Type="java.math.BigDecimal">
-    <TransientExpression
-      Name="VariableScript"
-      trustMode="trusted"
-      CodeSourceName="Inv_PO_Master_LOV"/>
-  </Variable>
   <EntityUsage
     Name="TblPoM"
     Entity="model.ERP.EO.TblPoM"/>
   <EntityUsage
     Name="TblPblSupp"
     Entity="model.ERP.EO.TblPblSupp"
+    ReadOnly="true"
+    DeleteParticipant="false">
+    <DesignTime>
+      <Attr Name="_customjoin" Value="true"/>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="TblProject"
+    Entity="model.ERP.EO.TblProject"
     ReadOnly="true"
     DeleteParticipant="false">
     <DesignTime>
@@ -102,6 +99,19 @@ and TblPoM.PROJECT_ID = :getProID">
     EntityAttrName="ProjectId"
     EntityUsage="TblPoM"
     AliasName="PROJECT_ID"/>
+  <ViewAttribute
+    Name="Name1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblProject"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="Id2"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblProject"
+    AliasName="ID2"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

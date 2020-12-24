@@ -1,6 +1,6 @@
-//Groovy Scripts for model.LOV.Inv_PO_Master_LOV
+//Groovy Scripts for model.ERP.VO.TblPcpMView
 
-package model.LOV
+package model.ERP.VO
 
 import oracle.jbo.script.annotation.VariableExpression;
 

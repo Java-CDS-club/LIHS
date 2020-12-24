@@ -91,6 +91,20 @@
                               <f:selectItems value="#{bindings.Vtp.items}" id="si3"/>
                               <f:validator binding="#{bindings.Vtp.validator}"/>
                             </af:selectOneChoice>
+                            <af:inputDate value="#{bindings.Frdate.inputValue}" label="From Date"
+                                          required="#{bindings.Frdate.hints.mandatory}"
+                                          columns="#{bindings.Frdate.hints.displayWidth}"
+                                          shortDesc="#{bindings.Frdate.hints.tooltip}" id="id2">
+                              <f:validator binding="#{bindings.Frdate.validator}"/>
+                              <af:convertDateTime pattern="#{bindings.Frdate.format}"/>
+                            </af:inputDate>
+                            <af:inputDate value="#{bindings.Todate.inputValue}" label="To Date"
+                                          required="#{bindings.Todate.hints.mandatory}"
+                                          columns="#{bindings.Todate.hints.displayWidth}"
+                                          shortDesc="#{bindings.Todate.hints.tooltip}" id="id3">
+                              <f:validator binding="#{bindings.Todate.validator}"/>
+                              <af:convertDateTime pattern="#{bindings.Todate.format}"/>
+                            </af:inputDate>
                             <f:facet name="footer">
                               <af:panelGroupLayout layout="horizontal" halign="center" id="pgl6">
                                 <af:button actionListener="#{bindings.First.execute}" text="First"
@@ -165,7 +179,7 @@
       </af:inputText>
 </f:facet>
                               <af:selectOneChoice value="#{row.bindings.PoMId.inputValue}"
-                                                  label="#{row.bindings.PoMId.label}"
+                                                  label="#{row.bindings.PoMId.label}" readOnly="true"
                                                   required="#{bindings.TblPcpDView2.hints.PoMId.mandatory}"
                                                   shortDesc="#{bindings.TblPcpDView2.hints.PoMId.tooltip}" id="soc7">
                                 <f:selectItems value="#{row.bindings.PoMId.items}" id="si7"/>
@@ -180,7 +194,7 @@
        id="it23" placeholder="Search ">
       </af:inputText>
 </f:facet>
-                              <af:inputText value="#{row.bindings.Description.inputValue}"
+                              <af:inputText value="#{row.bindings.Description.inputValue}" readOnly="true"
                                             label="#{bindings.TblPcpDView2.hints.Description.label}"
                                             required="#{bindings.TblPcpDView2.hints.Description.mandatory}"
                                             columns="#{bindings.TblPcpDView2.hints.Description.displayWidth}"

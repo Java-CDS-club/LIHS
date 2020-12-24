@@ -6,13 +6,37 @@
   Name="TblPbpMView"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SelectList="TblPbpM.ID, 
+       TblPbpM.VNO, 
+       TblPbpM.VTP, 
+       TblPbpM.DATED, 
+       TblPbpM.CHQ_NO, 
+       TblPbpM.CHQ_DATE, 
+       TblPbpM.CLR_DATE, 
+       TblPbpM.NARRATION, 
+       TblPbpM.PBL_SUPP_ID, 
+       TblPbpM.BANK_CASH_ID, 
+       TblPbpM.CREATED_DATE, 
+       TblPbpM.CREATED_BY, 
+       TblPbpM.UPDATED_DATE, 
+       TblPbpM.UPDATED_BY, 
+       TblPbpM.PROJECT_ID, 
+       TblPbpM.TODATE, 
+       TblPbpM.FRDATE"
+  FromList="TBL_PBP_M TblPbpM"
+  Where="TblPbpM.PROJECT_ID = :getProID">
+  <Variable
+    Name="getProID"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblPbpMView"/>
+  </Variable>
   <ViewAccessor
     Name="Voucher_Type1"
     ViewObjectName="model.LOV.Voucher_Type"
@@ -28,6 +52,10 @@
   <ViewAccessor
     Name="Bank_Cash_Bank_LOV1"
     ViewObjectName="model.LOV.Bank_Cash_Bank_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Project_Name_LOV1"
+    ViewObjectName="model.LOV.Project_Name_LOV"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Vtp"
@@ -73,6 +101,24 @@
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="BankCashId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ProjectId"
+    ListVOName="Project_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProjectId"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
@@ -203,7 +249,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblPbpM"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -215,13 +262,40 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblPbpM"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
     EntityUsage="TblPbpM"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="TblPbpM"
+    AliasName="PROJECT_ID"
+    LOVName="LOV_ProjectId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Todate"
+    PrecisionRule="true"
+    EntityAttrName="Todate"
+    EntityUsage="TblPbpM"
+    AliasName="TODATE"/>
+  <ViewAttribute
+    Name="Frdate"
+    PrecisionRule="true"
+    EntityAttrName="Frdate"
+    EntityUsage="TblPbpM"
+    AliasName="FRDATE"/>
   <ViewLinkAccessor
     Name="TblPbpDView"
     ViewLink="model.ERP.VO.FkPbpDLink"

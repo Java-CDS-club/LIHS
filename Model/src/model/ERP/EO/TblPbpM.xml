@@ -142,6 +142,32 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TBL_PBP_M"/>
+  <Attribute
+    Name="Frdate"
+    ColumnName="FRDATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TBL_PBP_M"/>
+  <Attribute
+    Name="Todate"
+    ColumnName="TODATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TBL_PBP_M"/>
+  <Attribute
+    Name="ProjectId"
+    ColumnName="PROJECT_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_PBP_M">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="TblPbpMRow"/>
+  </Attribute>
   <AccessorAttribute
     Name="TblPbpD"
     Association="model.ERP.EO.FkPbpDAssoc"

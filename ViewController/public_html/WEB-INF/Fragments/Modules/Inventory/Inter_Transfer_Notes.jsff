@@ -198,7 +198,7 @@
                             </af:column>
                             <af:column headerText="Item Level 4" id="c13">
                               <af:selectOneChoice value="#{row.bindings.ItemL4IdStatic.inputValue}"
-                                                  label="#{row.bindings.ItemL4IdStatic.label}"
+                                                  label="#{row.bindings.ItemL4IdStatic.label}" readOnly="true"
                                                   required="#{bindings.TblItnDView2.hints.ItemL4IdStatic.mandatory}"
                                                   shortDesc="#{bindings.TblItnDView2.hints.ItemL4IdStatic.tooltip}"
                                                   id="soc12">

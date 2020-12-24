@@ -129,7 +129,12 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_PRO_FG_MASTER"/>
+    TableName="TBL_PRO_FG_MASTER">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="TblProFgMasterRow"/>
+  </Attribute>
   <AccessorAttribute
     Name="TblProFgDetail"
     Association="model.ERP.EO.FkProFgDetailMasterAssoc"
