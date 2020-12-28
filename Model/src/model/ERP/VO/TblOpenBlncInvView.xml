@@ -20,7 +20,8 @@
        TblOpenBlncInv.CREATED_DATE, 
        TblOpenBlncInv.CREATED_BY, 
        TblOpenBlncInv.UPDATED_DATE, 
-       TblOpenBlncInv.UPDATED_BY"
+       TblOpenBlncInv.UPDATED_BY, 
+       TblOpenBlncInv.DEPARTMENT_ID"
   FromList="TBL_OPEN_BLNC_INV TblOpenBlncInv"
   Where="TblOpenBlncInv.PROJECT_ID = :getProId">
   <Variable
@@ -29,7 +30,6 @@
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblOpenBlncInvView"/>
   </Variable>
   <ViewAccessor
@@ -43,6 +43,10 @@
   <ViewAccessor
     Name="Unit_of_Measurements_LOV1"
     ViewObjectName="model.LOV.Unit_of_Measurements_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Department_Name_LOV1"
+    ViewObjectName="model.LOV.Department_Name_LOV"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_ItemL4Id"
@@ -92,6 +96,24 @@
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="UomId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DepartmentId"
+    ListVOName="Department_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DepartmentId"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
@@ -214,6 +236,20 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblOpenBlncInv"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="DepartmentId"
+    PrecisionRule="true"
+    EntityAttrName="DepartmentId"
+    EntityUsage="TblOpenBlncInv"
+    AliasName="DEPARTMENT_ID"
+    LOVName="LOV_DepartmentId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

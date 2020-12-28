@@ -34,6 +34,7 @@ public class TblOpenBlncInvImpl extends EntityImpl {
         UpdatedBy,
         ProjectId,
         UomId,
+        DepartmentId,
         TblItemL4;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
@@ -58,6 +59,7 @@ public class TblOpenBlncInvImpl extends EntityImpl {
         }
     }
 
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int DATED = AttributesEnum.Dated.index();
     public static final int ITEML4ID = AttributesEnum.ItemL4Id.index();
@@ -70,6 +72,7 @@ public class TblOpenBlncInvImpl extends EntityImpl {
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
     public static final int PROJECTID = AttributesEnum.ProjectId.index();
     public static final int UOMID = AttributesEnum.UomId.index();
+    public static final int DEPARTMENTID = AttributesEnum.DepartmentId.index();
     public static final int TBLITEML4 = AttributesEnum.TblItemL4.index();
 
     /**
@@ -84,6 +87,7 @@ public class TblOpenBlncInvImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("model.ERP.EO.TblOpenBlncInv");
     }
+
 
     /**
      * Gets the attribute value for Id, using the alias name Id.
@@ -259,6 +263,22 @@ public class TblOpenBlncInvImpl extends EntityImpl {
      */
     public void setUomId(BigDecimal value) {
         setAttributeInternal(UOMID, value);
+    }
+
+    /**
+     * Gets the attribute value for DepartmentId, using the alias name DepartmentId.
+     * @return the value of DepartmentId
+     */
+    public BigDecimal getDepartmentId() {
+        return (BigDecimal) getAttributeInternal(DEPARTMENTID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for DepartmentId.
+     * @param value value to set the DepartmentId
+     */
+    public void setDepartmentId(BigDecimal value) {
+        setAttributeInternal(DEPARTMENTID, value);
     }
 
     /**

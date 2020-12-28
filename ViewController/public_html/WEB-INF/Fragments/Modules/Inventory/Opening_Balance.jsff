@@ -85,6 +85,16 @@
                       <f:validator binding="#{row.bindings.ProjectId.validator}"/>
                     </af:selectOneChoice>
                   </af:column>
+                  <af:column headerText="Department" id="c9">
+                    <af:selectOneChoice value="#{row.bindings.DepartmentId.inputValue}"
+                                        label="#{row.bindings.DepartmentId.label}"
+                                        required="#{bindings.TblOpenBlncInvView1.hints.DepartmentId.mandatory}"
+                                        shortDesc="#{bindings.TblOpenBlncInvView1.hints.DepartmentId.tooltip}"
+                                        id="soc4">
+                      <f:selectItems value="#{row.bindings.DepartmentId.items}" id="si4"/>
+                      <f:validator binding="#{row.bindings.DepartmentId.validator}"/>
+                    </af:selectOneChoice>
+                  </af:column>
                   <af:column sortProperty="#{bindings.TblOpenBlncInvView1.hints.ItemL4Id.name}" filterable="true"
                              sortable="true" headerText="General Legder L4"
                              id="c3" width="200">
