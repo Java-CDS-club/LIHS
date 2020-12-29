@@ -400,4 +400,9 @@
     ViewLink="model.ERP.VO.FkTblEmpKinFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblEmpAllView"
+    ViewLink="model.ERP.VO.FkTblEmpAllFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

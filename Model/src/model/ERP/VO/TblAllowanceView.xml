@@ -34,7 +34,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblAllowance"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -46,13 +47,20 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblAllowance"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
     EntityUsage="TblAllowance"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="Rate"
+    PrecisionRule="true"
+    EntityAttrName="Rate"
+    EntityUsage="TblAllowance"
+    AliasName="RATE"/>
   <ViewLinkAccessor
     Name="TblGradeAllowanceView"
     ViewLink="model.ERP.VO.FkGradeAllAllIdLink"

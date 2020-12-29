@@ -18,6 +18,9 @@
     <iterator Binds="TblEmpKinView2" RangeSize="8" DataControl="AppModuleDataControl1" id="TblEmpKinView2Iterator"/>
     <searchRegion Binds="TblEmpKinView2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblEmpKinView2Query"/>
+    <iterator Binds="TblEmpAllView2" RangeSize="25" DataControl="AppModuleDataControl1" id="TblEmpAllView2Iterator"/>
+    <searchRegion Binds="TblEmpAllView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblEmpAllView2Query"/>
   </executables>
   <bindings>
     <tree IterBinding="USERS_CRUD_OPERATIONS1Iterator" id="USERS_CRUD_OPERATIONS1">
@@ -151,5 +154,15 @@
             Action="createInsertRow"/>
     <action IterBinding="TblEmpKinView2Iterator" id="Execute3" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblEmpKinView2Iterator" id="Delete3" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="TblEmpAllView2Iterator" id="TblEmpAllView2">
+      <nodeDefinition DefName="model.ERP.VO.TblEmpAllView" Name="TblEmpAllView20">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="EmpId"/>
+          <Item Value="AllowanceId"/>
+          <Item Value="QtyAmt"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

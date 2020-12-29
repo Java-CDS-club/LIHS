@@ -28,6 +28,7 @@
         <AttrNames>
           <Item Value="Id"/>
           <Item Value="Name"/>
+          <Item Value="Rate"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

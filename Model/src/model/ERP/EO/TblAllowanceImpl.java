@@ -29,6 +29,7 @@ public class TblAllowanceImpl extends EntityImpl {
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
+        Rate,
         TblGradeAllowance;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
@@ -52,18 +53,27 @@ public class TblAllowanceImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int NAME = AttributesEnum.Name.index();
     public static final int CREATEDDATE = AttributesEnum.CreatedDate.index();
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int RATE = AttributesEnum.Rate.index();
     public static final int TBLGRADEALLOWANCE = AttributesEnum.TblGradeAllowance.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public TblAllowanceImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblAllowance");
     }
 
     /**
@@ -147,11 +157,28 @@ public class TblAllowanceImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for Rate, using the alias name Rate.
+     * @return the value of Rate
+     */
+    public BigDecimal getRate() {
+        return (BigDecimal) getAttributeInternal(RATE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Rate.
+     * @param value value to set the Rate
+     */
+    public void setRate(BigDecimal value) {
+        setAttributeInternal(RATE, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getTblGradeAllowance() {
         return (RowIterator) getAttributeInternal(TBLGRADEALLOWANCE);
     }
+
 
     /**
      * @param id key constituent
@@ -160,13 +187,6 @@ public class TblAllowanceImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblAllowance");
     }
 
     /**

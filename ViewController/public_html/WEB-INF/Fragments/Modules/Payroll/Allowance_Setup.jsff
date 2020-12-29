@@ -76,6 +76,18 @@
                                 <f:validator binding="#{row.bindings.Name.validator}"/>
                               </af:inputText>
                             </af:column>
+                            <af:column headerText="Rate" id="c3">
+                              <af:inputText value="#{row.bindings.Rate.inputValue}"
+                                            label="#{bindings.TblAllowanceView1.hints.Rate.label}"
+                                            required="#{bindings.TblAllowanceView1.hints.Rate.mandatory}"
+                                            columns="#{bindings.TblAllowanceView1.hints.Rate.displayWidth}"
+                                            maximumLength="#{bindings.TblAllowanceView1.hints.Rate.precision}"
+                                            shortDesc="#{bindings.TblAllowanceView1.hints.Rate.tooltip}" id="it4">
+                                <f:validator binding="#{row.bindings.Rate.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblAllowanceView1.hints.Rate.format}"/>
+                              </af:inputText>
+                            </af:column>
                           </af:table>
                           
                           <af:spacer width="5" height="10" id="s4"/>

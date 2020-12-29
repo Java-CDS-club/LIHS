@@ -705,6 +705,71 @@
                             </af:iterator>
                         </af:panelGroupLayout>
                         </af:showDetailItem>
+                        <af:showDetailItem text="Allowance" id="sdi4">
+                          <af:table value="#{bindings.TblEmpAllView2.collectionModel}" var="row"
+                                    rows="#{bindings.TblEmpAllView2.rangeSize}"
+                                    emptyText="#{bindings.TblEmpAllView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                    rowBandingInterval="0"
+                                    selectedRowKeys="#{bindings.TblEmpAllView2.collectionModel.selectedRow}"
+                                    selectionListener="#{bindings.TblEmpAllView2.collectionModel.makeCurrent}"
+                                    rowSelection="single" fetchSize="#{bindings.TblEmpAllView2.rangeSize}"
+                                    filterModel="#{bindings.TblEmpAllView2Query.queryDescriptor}" filterVisible="true"
+                                    queryListener="#{bindings.TblEmpAllView2Query.processQuery}" varStatus="vs" id="t5">
+                            <af:column sortProperty="#{bindings.TblEmpAllView2.hints.Id.name}" filterable="true"
+                                       sortable="true" headerText="#{bindings.TblEmpAllView2.hints.Id.label}" id="c27">
+                              <af:inputText value="#{row.bindings.Id.inputValue}"
+                                            label="#{bindings.TblEmpAllView2.hints.Id.label}"
+                                            required="#{bindings.TblEmpAllView2.hints.Id.mandatory}"
+                                            columns="#{bindings.TblEmpAllView2.hints.Id.displayWidth}"
+                                            maximumLength="#{bindings.TblEmpAllView2.hints.Id.precision}"
+                                            shortDesc="#{bindings.TblEmpAllView2.hints.Id.tooltip}" id="it45">
+                                <f:validator binding="#{row.bindings.Id.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblEmpAllView2.hints.Id.format}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblEmpAllView2.hints.EmpId.name}" filterable="true"
+                                       sortable="true" headerText="#{bindings.TblEmpAllView2.hints.EmpId.label}"
+                                       id="c28">
+                              <af:inputText value="#{row.bindings.EmpId.inputValue}"
+                                            label="#{bindings.TblEmpAllView2.hints.EmpId.label}"
+                                            required="#{bindings.TblEmpAllView2.hints.EmpId.mandatory}"
+                                            columns="#{bindings.TblEmpAllView2.hints.EmpId.displayWidth}"
+                                            maximumLength="#{bindings.TblEmpAllView2.hints.EmpId.precision}"
+                                            shortDesc="#{bindings.TblEmpAllView2.hints.EmpId.tooltip}" id="it46">
+                                <f:validator binding="#{row.bindings.EmpId.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblEmpAllView2.hints.EmpId.format}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblEmpAllView2.hints.AllowanceId.name}"
+                                       filterable="true" sortable="true"
+                                       headerText="#{bindings.TblEmpAllView2.hints.AllowanceId.label}" id="c29">
+                              <af:selectOneChoice value="#{row.bindings.AllowanceId.inputValue}"
+                                                  label="#{row.bindings.AllowanceId.label}"
+                                                  required="#{bindings.TblEmpAllView2.hints.AllowanceId.mandatory}"
+                                                  shortDesc="#{bindings.TblEmpAllView2.hints.AllowanceId.tooltip}"
+                                                  id="soc7">
+                                <f:selectItems value="#{row.bindings.AllowanceId.items}" id="si7"/>
+                                <f:validator binding="#{row.bindings.AllowanceId.validator}"/>
+                              </af:selectOneChoice>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.TblEmpAllView2.hints.QtyAmt.name}" filterable="true"
+                                       sortable="true" headerText="#{bindings.TblEmpAllView2.hints.QtyAmt.label}"
+                                       id="c30">
+                              <af:inputText value="#{row.bindings.QtyAmt.inputValue}"
+                                            label="#{bindings.TblEmpAllView2.hints.QtyAmt.label}"
+                                            required="#{bindings.TblEmpAllView2.hints.QtyAmt.mandatory}"
+                                            columns="#{bindings.TblEmpAllView2.hints.QtyAmt.displayWidth}"
+                                            maximumLength="#{bindings.TblEmpAllView2.hints.QtyAmt.precision}"
+                                            shortDesc="#{bindings.TblEmpAllView2.hints.QtyAmt.tooltip}" id="it47">
+                                <f:validator binding="#{row.bindings.QtyAmt.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.TblEmpAllView2.hints.QtyAmt.format}"/>
+                              </af:inputText>
+                            </af:column>
+                          </af:table>
+                        </af:showDetailItem>
                       </af:panelTabbed>
                     </af:gridCell>
                   </af:gridRow>

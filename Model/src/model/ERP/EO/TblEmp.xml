@@ -318,6 +318,13 @@
     AssociationOtherEnd="model.ERP.EO.FkTblEmpKinFkAssoc.TblEmp"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblEmpAll"
+    Association="model.ERP.EO.FkTblEmpAllFkAssoc"
+    AssociationEnd="model.ERP.EO.FkTblEmpAllFkAssoc.TblEmpAll"
+    AssociationOtherEnd="model.ERP.EO.FkTblEmpAllFkAssoc.TblEmp"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="PkEmpId"
     PrimaryKey="true">

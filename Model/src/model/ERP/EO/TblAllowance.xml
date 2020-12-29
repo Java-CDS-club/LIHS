@@ -68,6 +68,13 @@
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_ALLOWANCE"/>
+  <Attribute
+    Name="Rate"
+    ColumnName="RATE"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_ALLOWANCE"/>
   <AccessorAttribute
     Name="TblGradeAllowance"
     Association="model.ERP.EO.FkGradeAllAllIdAssoc"

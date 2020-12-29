@@ -53,7 +53,8 @@ public class TblEmpImpl extends EntityImpl {
         TblEmpExp,
         TblEmpQua,
         TblGrade,
-        TblEmpKin;
+        TblEmpKin,
+        TblEmpAll;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -109,6 +110,7 @@ public class TblEmpImpl extends EntityImpl {
     public static final int TBLEMPQUA = AttributesEnum.TblEmpQua.index();
     public static final int TBLGRADE = AttributesEnum.TblGrade.index();
     public static final int TBLEMPKIN = AttributesEnum.TblEmpKin.index();
+    public static final int TBLEMPALL = AttributesEnum.TblEmpAll.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -562,6 +564,14 @@ public class TblEmpImpl extends EntityImpl {
      */
     public RowIterator getTblEmpKin() {
         return (RowIterator) getAttributeInternal(TBLEMPKIN);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getTblEmpAll() {
+        return (RowIterator) getAttributeInternal(TBLEMPALL);
     }
 
 
