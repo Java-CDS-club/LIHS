@@ -27,16 +27,34 @@
   Where="TblDoD.ITEM_L4_ID = TblItemL4.ITEM_L4_ID   
 and TblItemL4.UOM_ID = TblUom.ID">
   <ViewAccessor
-    Name="Item_Level4_LOV1"
-    ViewObjectName="model.LOV.Item_Level4_LOV"
-    RowLevelBinds="true"/>
-  <ViewAccessor
     Name="Unit_of_Measurements_LOV1"
     ViewObjectName="model.LOV.Unit_of_Measurements_LOV"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Item_Level4_DO_LOV1"
+    ViewObjectName="model.LOV.Item_Level4_DO_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_UomId"
+    ListVOName="Unit_of_Measurements_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="UomId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <ListBinding
     Name="LOV_ItemL4Id"
-    ListVOName="Item_Level4_LOV1"
+    ListVOName="Item_Level4_DO_LOV1"
     ListRangeSize="-1"
     NullValueFlag="none"
     MRUCount="0">
@@ -50,24 +68,6 @@ and TblItemL4.UOM_ID = TblUom.ID">
     <AttrArray Name="ListAttrNames">
       <Item Value="ItemL4Id"/>
       <Item Value="UomId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_UomId"
-    ListVOName="Unit_of_Measurements_LOV1"
-    ListRangeSize="-1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="UomId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Id"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
