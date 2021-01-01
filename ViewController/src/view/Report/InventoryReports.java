@@ -48,6 +48,9 @@ public class InventoryReports {
                     reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Inventory_Reports&");
                     break;
                 
+                case "currentStock":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Current_Stock&");
+                        break;
                  default:
                     showMessage("Please Select Report Type");
                     break;
