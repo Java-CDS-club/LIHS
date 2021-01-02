@@ -6,34 +6,46 @@
             <af:panelGridLayout id="pgl1">
                 <af:gridRow marginTop="5px" height="auto" id="gr1">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1">
-                       <!--<af:panelGroupLayout id="pgl4" layout="horizontal">
-                            --><!--<af:inputDate label="From Date : " id="id3"
-                                          binding="#{backingBeanScope.ItemWiseReportBackBean.fromDateParam}"/>
-                            --><!----><!--<af:inputDate label="From Date"
+                       <af:panelGroupLayout id="pgl4" layout="horizontal">
+                            
+                            <af:inputDate label="From Date : " id="id3"
+                                          binding="#{backingBeanScope.InventoryReportsBackBean.fromDateParam}"/>
+                            <!----><!--<af:inputDate label="From Date"
                             binding="#{backingBeanScope.Grant_Approval_Report_BackBean.fromDateParam}"
                                           columns="#{bindings.Dated.hints.displayWidth}"
                                           shortDesc="#{bindings.Dated.hints.tooltip}" id="id1">
                                 <f:validator binding="#{bindings.Dated.validator}"/>
                                 <af:convertDateTime pattern="#{bindings.Dated.format}"/>
-                            </af:inputDate>--><!----><!--
+                            </af:inputDate>--><!---->
                             <af:spacer width="30" height="10" id="s11"/>
                             <af:inputDate label="To Date : " id="id1"
-                                          binding="#{backingBeanScope.ItemWiseReportBackBean.toDateParam}"/>
-                            --><!----><!--<af:inputDate label="To Date"
+                                          binding="#{backingBeanScope.InventoryReportsBackBean.toDateParam}"/>
+                            <!----><!--<af:inputDate label="To Date"
                             binding="#{backingBeanScope.Grant_Approval_Report_BackBean.toDateParam}"
                                           columns="#{bindings.Dated.hints.displayWidth}"
                                           shortDesc="#{bindings.Dated.hints.tooltip}" id="id2">
                                 <f:validator binding="#{bindings.Dated.validator}"/>
                                 <af:convertDateTime pattern="#{bindings.Dated.format}"/>
-                            </af:inputDate>--><!----><!--
-                         <af:spacer width="30" height="10" id="s12"/>--><!--
-                            <af:selectOneChoice label="Item L4 : "
-                                                shortDesc="#{bindings.ItemL4Id.hints.tooltip}" id="soc1"
-                                                binding="#{backingBeanScope.ItemWiseReportBackBean.itemL4IdParam}">
-                                <f:selectItems value="#{bindings.ItemL4Id.items}" id="si2"/>
-                                <f:validator binding="#{bindings.ItemL4Id.validator}"/>
+                            </af:inputDate>--><!---->
+                         <af:spacer width="30" height="10" id="s12"/>
+                            <af:selectOneChoice 
+                                                label="Project"
+                                                binding="#{backingBeanScope.InventoryReportsBackBean.projectidparam}"
+                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc1"
+                                                contentStyle="width:150px;">
+                                <f:selectItems value="#{bindings.ProjectId.items}" id="si2"/>
+                                <f:validator binding="#{bindings.ProjectId.validator}"/>
                             </af:selectOneChoice>
-                        </af:panelGroupLayout>-->
+                            <af:spacer width="30" height="10" id="s1"/>
+                            <af:selectOneChoice 
+                                                label="Department"
+                                                binding="#{backingBeanScope.InventoryReportsBackBean.departmentidparam}"
+                                                shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="soc2"
+                                                contentStyle="width:150px;">
+                                <f:selectItems value="#{bindings.DepartmentId.items}" id="si3"/>
+                                <f:validator binding="#{bindings.DepartmentId.validator}"/>
+                            </af:selectOneChoice>
+                        </af:panelGroupLayout>
                     </af:gridCell>
                 </af:gridRow>
                
@@ -50,10 +62,12 @@
                         <af:spacer width="30" height="30" id="s7"/>
                             <af:selectOneChoice label="Select Report Type" id="soc4" autoSubmit="true"
                                                 unselectedLabel="--Select--"
-                                                binding="#{backingBeanScope.InventoryReportsBackBean.report_type}">
+                                                binding="#{backingBeanScope.InventoryReportsBackBean.report_type}"
+                                                contentStyle="width:300px;">
                                                 
                                 <af:selectItem label="Inventory Report" value="inventoryReport" id="si9"/>
                                 <af:selectItem label="Current Stock" value="currentStock" id="si1"/>
+                                <af:selectItem label="Item Ledger" value="itemLedger" id="si4"/>
                                 
                                 
                             </af:selectOneChoice>

@@ -1,9 +1,21 @@
 package view.Report;
 
+import java.math.BigDecimal;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+import java.util.Date;
+import java.util.Locale;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
+import oracle.adf.view.rich.component.rich.input.RichInputDate;
 import oracle.adf.view.rich.component.rich.input.RichSelectOneChoice;
+
+import oracle.adf.view.rich.component.rich.input.RichSelectOneListbox;
 
 import oracle.jbo.domain.Number;
 
@@ -12,31 +24,41 @@ import view.DatabaseConnection.DatabaseConnection;
 public class InventoryReports {
     private RichSelectOneChoice format_type;
     private RichSelectOneChoice report_type;
+    private RichInputDate fromDateParam;
+    private RichInputDate toDateParam;
+    private RichSelectOneChoice projectidparam;
+    private RichSelectOneChoice departmentidparam;
 
     public InventoryReports() {
     }
     private static String selectedReportType = "";
     private static String gotFormat = "";
+    private static BigDecimal  gotprojectId;
+    private static BigDecimal  gotDepartmentidId;
    
     public String gen_Report() {
         // Add event code here...
         selectedReportType = (String)this.getReport_type().getValue();
         gotFormat = (String)this.getFormat_type().getValue();
-        
+        gotprojectId = (BigDecimal)this.getProjectidparam().getValue();
+        gotDepartmentidId = (BigDecimal)this.getDepartmentidparam().getValue();
         
         DatabaseConnection dbconnect = new DatabaseConnection();
         OracleReportBean reportBean = new OracleReportBean(dbconnect.getUipReport(), dbconnect.getUportReport(), null);
         String url = "";
         
-//        if(getFromDate() != ""){
-//            reportBean.setReportParameter("P_Fdated", getFromDate());
-//        }
-//        if(getToDate() != ""){
-//            reportBean.setReportParameter("P_Tdated", getToDate());
-//        }
-//        if(gotItemL4Id != null){
-//            reportBean.setReportParameter("P_Item", gotItemL4Id.toString());
-//        } 
+        if(getFromDate() != ""){
+            reportBean.setReportParameter("P_Fdated", getFromDate());
+        }
+        if(getToDate() != ""){
+            reportBean.setReportParameter("P_Tdated", getToDate());
+        }
+        if(gotprojectId != null){
+            reportBean.setReportParameter("P_Project_id", gotprojectId.toString());
+        } 
+        if(gotDepartmentidId != null){
+            reportBean.setReportParameter("P_Department_id", gotDepartmentidId.toString());
+        } 
 
         if (gotFormat == "") {
             showMessage("Please Select Report Format");
@@ -51,6 +73,10 @@ public class InventoryReports {
                 case "currentStock":
                         reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Current_Stock&");
                         break;
+                
+                case "itemLedger":
+                            reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Item_Ledger&");
+                            break;
                  default:
                     showMessage("Please Select Report Type");
                     break;
@@ -84,6 +110,34 @@ public class InventoryReports {
         return null;
     }
     
+    private String getFromDate() {
+        if(fromDateParam.getValue() != null && fromDateParam.getValue() != "") {
+            try {
+                DateFormat sdf = new SimpleDateFormat("EE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
+                Date parsedDate = sdf.parse(fromDateParam.getValue().toString());
+                SimpleDateFormat print = new SimpleDateFormat("dd-MMM-yy");
+                return (print.format(parsedDate));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        return "";
+    }
+    
+    private String getToDate() {
+        if(toDateParam.getValue() != null && toDateParam.getValue() != "") {
+            try {
+                DateFormat sdf = new SimpleDateFormat("EE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
+                Date parsedDate = sdf.parse(toDateParam.getValue().toString());
+                SimpleDateFormat print = new SimpleDateFormat("dd-MMM-yy");
+                return (print.format(parsedDate));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        return "";
+    }
+    
     public void setFormat_type(RichSelectOneChoice format_type) {
         this.format_type = format_type;
     }
@@ -100,5 +154,36 @@ public class InventoryReports {
         return report_type;
     }
 
-   
+
+    public void setFromDateParam(RichInputDate fromDateParam) {
+        this.fromDateParam = fromDateParam;
+    }
+
+    public RichInputDate getFromDateParam() {
+        return fromDateParam;
+    }
+
+    public void setToDateParam(RichInputDate toDateParam) {
+        this.toDateParam = toDateParam;
+    }
+
+    public RichInputDate getToDateParam() {
+        return toDateParam;
+    }
+
+    public void setProjectidparam(RichSelectOneChoice projectidparam) {
+        this.projectidparam = projectidparam;
+    }
+
+    public RichSelectOneChoice getProjectidparam() {
+        return projectidparam;
+    }
+
+    public void setDepartmentidparam(RichSelectOneChoice departmentidparam) {
+        this.departmentidparam = departmentidparam;
+    }
+
+    public RichSelectOneChoice getDepartmentidparam() {
+        return departmentidparam;
+    }
 }

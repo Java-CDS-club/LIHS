@@ -217,6 +217,7 @@
     <page path="/WEB-INF/Fragments/Modules/Reports/Party_Wise.jsff" usageId="view_Party_WisePageDef"/>
     <page path="/WEB-INF/Task_Flows/Modules/Inventory/Goods_Issue_Notes_TaskFlow.xml#Goods_Issue_Notes_TaskFlow@Execute"
           usageId="view_Goods_Issue_Notes_TaskFlow_Goods_Issue_Notes_TaskFlow_ExecutePageDef"/>
+    <page path="/WEB-INF/Fragments/Modules/Reports/Inventory_Reports.jsff" usageId="view_Inventory_ReportsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -418,6 +419,7 @@
     <page id="view_Party_WisePageDef" path="Fragments.Modules.Reports.Party_WisePageDef"/>
     <page id="view_Goods_Issue_Notes_TaskFlow_Goods_Issue_Notes_TaskFlow_ExecutePageDef"
           path="Task_Flows.Modules.Inventory.Goods_Issue_Notes_TaskFlow_Goods_Issue_Notes_TaskFlow_ExecutePageDef"/>
+    <page id="view_Inventory_ReportsPageDef" path="Fragments.Modules.Reports.Inventory_ReportsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"
