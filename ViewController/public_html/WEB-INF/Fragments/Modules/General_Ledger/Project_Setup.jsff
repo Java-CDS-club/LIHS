@@ -141,6 +141,16 @@
                                 <f:validator binding="#{row.bindings.Name.validator}"/>
                               </af:inputText>
                             </af:column>
+                            <af:column headerText="Center Category" id="c9">
+                              <af:selectOneChoice value="#{row.bindings.CenCat.inputValue}"
+                                                  label="#{row.bindings.CenCat.label}"
+                                                  required="#{bindings.TblProjectDView1.hints.CenCat.mandatory}"
+                                                  shortDesc="#{bindings.TblProjectDView1.hints.CenCat.tooltip}"
+                                                  id="soc4">
+                                <f:selectItems value="#{row.bindings.CenCat.items}" id="si4"/>
+                                <f:validator binding="#{row.bindings.CenCat.validator}"/>
+                              </af:selectOneChoice>
+                            </af:column>
                             <af:column sortProperty="#{bindings.TblProjectDView1.hints.Ast.name}" filterable="true"
                                        sortable="true" headerText="Active"
                                        id="c5">

@@ -90,6 +90,20 @@
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_PROJECT_D"/>
+  <Attribute
+    Name="CenCat"
+    Precision="3"
+    ColumnName="CEN_CAT"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_PROJECT_D"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="TblProjectDd"
     Association="model.ERP.EO.FkProjectCenterAssoc"

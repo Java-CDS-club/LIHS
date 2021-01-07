@@ -31,6 +31,7 @@ public class TblProjectDImpl extends EntityImpl {
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
+        CenCat,
         TblProjectDd,
         TblProject;
         private static AttributesEnum[] vals = null;
@@ -55,6 +56,7 @@ public class TblProjectDImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int PROJECTID = AttributesEnum.ProjectId.index();
     public static final int NAME = AttributesEnum.Name.index();
@@ -63,6 +65,7 @@ public class TblProjectDImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int CENCAT = AttributesEnum.CenCat.index();
     public static final int TBLPROJECTDD = AttributesEnum.TblProjectDd.index();
     public static final int TBLPROJECT = AttributesEnum.TblProject.index();
 
@@ -70,6 +73,13 @@ public class TblProjectDImpl extends EntityImpl {
      * This is the default constructor (do not remove).
      */
     public TblProjectDImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblProjectD");
     }
 
     /**
@@ -185,6 +195,22 @@ public class TblProjectDImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for CenCat, using the alias name CenCat.
+     * @return the value of CenCat
+     */
+    public String getCenCat() {
+        return (String) getAttributeInternal(CENCAT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for CenCat.
+     * @param value value to set the CenCat
+     */
+    public void setCenCat(String value) {
+        setAttributeInternal(CENCAT, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getTblProjectDd() {
@@ -205,6 +231,7 @@ public class TblProjectDImpl extends EntityImpl {
         setAttributeInternal(TBLPROJECT, value);
     }
 
+
     /**
      * @param id key constituent
 
@@ -212,13 +239,6 @@ public class TblProjectDImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblProjectD");
     }
 
     /**
