@@ -136,7 +136,12 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TBL_FG_TRN_MASTER"/>
+    TableName="TBL_FG_TRN_MASTER">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="TblFgTrnMasterRow"/>
+  </Attribute>
   <AccessorAttribute
     Name="TblFgTrnDetail"
     Association="model.ERP.EO.FkFgTrnDetailMasterAssoc"
