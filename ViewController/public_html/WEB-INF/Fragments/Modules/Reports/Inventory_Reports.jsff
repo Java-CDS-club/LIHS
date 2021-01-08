@@ -45,6 +45,15 @@
                                 <f:selectItems value="#{bindings.DepartmentId.items}" id="si3"/>
                                 <f:validator binding="#{bindings.DepartmentId.validator}"/>
                             </af:selectOneChoice>
+                            <af:spacer width="30" height="10" id="s2"/>
+                            <af:selectOneChoice 
+                                                label="Item L4"
+                                               binding="#{backingBeanScope.InventoryReportsBackBean.itemL4idparam}"
+                                                shortDesc="#{bindings.ItemL4Id.hints.tooltip}" id="soc3"
+                                                contentStyle="width:150px;">
+                                <f:selectItems value="#{bindings.ItemL4Id.items}" id="si5"/>
+                                <f:validator binding="#{bindings.ItemL4Id.validator}"/>
+                            </af:selectOneChoice>
                         </af:panelGroupLayout>
                     </af:gridCell>
                 </af:gridRow>
@@ -68,6 +77,7 @@
                                 <af:selectItem label="Inventory Report" value="inventoryReport" id="si9"/>
                                 <af:selectItem label="Current Stock" value="currentStock" id="si1"/>
                                 <af:selectItem label="Item Ledger" value="itemLedger" id="si4"/>
+                                 <af:selectItem label="MGT Daily Feeding" value="mGTdailyfeeding" id="si6"/>
                                 
                                 
                             </af:selectOneChoice>

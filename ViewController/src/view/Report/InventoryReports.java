@@ -2,6 +2,11 @@ package view.Report;
 
 import java.math.BigDecimal;
 
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -28,6 +33,7 @@ public class InventoryReports {
     private RichInputDate toDateParam;
     private RichSelectOneChoice projectidparam;
     private RichSelectOneChoice departmentidparam;
+    private RichSelectOneChoice itemL4idparam;
 
     public InventoryReports() {
     }
@@ -35,6 +41,7 @@ public class InventoryReports {
     private static String gotFormat = "";
     private static BigDecimal  gotprojectId;
     private static BigDecimal  gotDepartmentidId;
+    private static String  gotitemL4id;
    
     public String gen_Report() {
         // Add event code here...
@@ -42,6 +49,7 @@ public class InventoryReports {
         gotFormat = (String)this.getFormat_type().getValue();
         gotprojectId = (BigDecimal)this.getProjectidparam().getValue();
         gotDepartmentidId = (BigDecimal)this.getDepartmentidparam().getValue();
+        gotitemL4id = (String)this.getItemL4idparam().getValue();
         
         DatabaseConnection dbconnect = new DatabaseConnection();
         OracleReportBean reportBean = new OracleReportBean(dbconnect.getUipReport(), dbconnect.getUportReport(), null);
@@ -59,6 +67,9 @@ public class InventoryReports {
         if(gotDepartmentidId != null){
             reportBean.setReportParameter("P_Department_id", gotDepartmentidId.toString());
         } 
+        if(gotitemL4id != null){
+            reportBean.setReportParameter("P_item_L4_id", gotitemL4id.toString());
+        } 
 
         if (gotFormat == "") {
             showMessage("Please Select Report Format");
@@ -75,8 +86,31 @@ public class InventoryReports {
                         break;
                 
                 case "itemLedger":
+                    
                             reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Item_Ledger&");
                             break;
+               case "mGTdailyfeeding":
+                        
+                                reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/MGT_Daily_Feeding_1&");
+                                break;
+//                    //working for procedure call//
+//                    String sendItemL4IDLgrCnvrt = gotitemL4id;
+//                    int sendItemL4IDLgrfinal =Integer.parseInt(sendItemL4IDLgrCnvrt);  
+//                    //calling procedure start//
+//                    Connection conn;
+//                    ResultSet rs;
+//                    CallableStatement cstmt = null;
+//                        try {
+//                            conn = DatabaseConnection.getConnection();
+//                            String SQL = "{call P_IL(?)}";
+//                            cstmt = conn.prepareCall (SQL);
+//                            cstmt.setInt(1, sendItemL4IDLgrfinal);
+//                            rs = cstmt.executeQuery();
+//                        }
+//                        catch (SQLException e) {
+//                            System.out.println(e);
+//                        }
+//                    //calling procedure end//
                  default:
                     showMessage("Please Select Report Type");
                     break;
@@ -185,5 +219,13 @@ public class InventoryReports {
 
     public RichSelectOneChoice getDepartmentidparam() {
         return departmentidparam;
+    }
+
+    public void setItemL4idparam(RichSelectOneChoice itemL4idparam) {
+        this.itemL4idparam = itemL4idparam;
+    }
+
+    public RichSelectOneChoice getItemL4idparam() {
+        return itemL4idparam;
     }
 }

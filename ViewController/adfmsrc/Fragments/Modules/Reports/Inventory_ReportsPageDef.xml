@@ -17,5 +17,7 @@
         <Item Value="Dated"/>
       </AttrNames>
     </attributeValues>
+    <list IterBinding="TblOpenBlncInvView1Iterator" StaticList="false" Uses="LOV_ItemL4Id" id="ItemL4Id"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>
