@@ -17,7 +17,8 @@
        TblProFgMaster.ID, 
        TblProFgMaster.DEPARTMENT_ID"
   FromList="TBL_PRO_FG_MASTER TblProFgMaster"
-  Where="TblProFgMaster.PROJECT_ID = :get_ProID">
+  Where="ID not in (Select PRO_FG_MASTER_ID from Tbl_Fg_Trn_Master where PRO_FG_MASTER_ID is not Null)        
+AND TblProFgMaster.PROJECT_ID = :get_ProID">
   <Properties>
     <SchemaBasedProperties>
       <LABEL

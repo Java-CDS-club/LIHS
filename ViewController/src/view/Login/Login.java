@@ -107,13 +107,22 @@ public class Login {
                 //getting data against column from table
                 role_master_id = (rset.getString("role_master_id")).toString();
                 user_master_id = (rset.getString("user_master_id")).toString();
-                try {
-                    project_id = (rset.getString("project_id")).toString();
-                    
-                } catch (SQLException sqle) {
-                    // TODO: Add catch code
-                    sqle.printStackTrace();
+//                project_id = (rset.getString("project_id"));
+//                if (rset.wasNull()) {
+//                    project_id = ""; // set it to empty string as you desire.
+//                }
+//                
+                
+                if(rset.getString("project_id") != null)
+                {
+                    project_id = rset.getString("project_id").toString();
                 }
+                else
+                {
+                    project_id = "";
+                }
+                
+                
                 //Storing value in session username from input text field and role_master_id from DB
 
                 System.out.println(".........User Name stored in session is :..." + username + "...");
