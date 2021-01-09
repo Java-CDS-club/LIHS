@@ -36,6 +36,7 @@ public class TblPorMasterImpl extends EntityImpl {
         ProjectId,
         ProjectDId,
         MenuType,
+        FeedSt,
         TblPorDetail,
         TblProFgMaster,
         TblProIssMaster;
@@ -76,6 +77,7 @@ public class TblPorMasterImpl extends EntityImpl {
     public static final int PROJECTID = AttributesEnum.ProjectId.index();
     public static final int PROJECTDID = AttributesEnum.ProjectDId.index();
     public static final int MENUTYPE = AttributesEnum.MenuType.index();
+    public static final int FEEDST = AttributesEnum.FeedSt.index();
     public static final int TBLPORDETAIL = AttributesEnum.TblPorDetail.index();
     public static final int TBLPROFGMASTER = AttributesEnum.TblProFgMaster.index();
     public static final int TBLPROISSMASTER = AttributesEnum.TblProIssMaster.index();
@@ -284,6 +286,22 @@ public class TblPorMasterImpl extends EntityImpl {
      */
     public void setMenuType(String value) {
         setAttributeInternal(MENUTYPE, value);
+    }
+
+    /**
+     * Gets the attribute value for FeedSt, using the alias name FeedSt.
+     * @return the value of FeedSt
+     */
+    public BigDecimal getFeedSt() {
+        return (BigDecimal) getAttributeInternal(FEEDST);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for FeedSt.
+     * @param value value to set the FeedSt
+     */
+    public void setFeedSt(BigDecimal value) {
+        setAttributeInternal(FEEDST, value);
     }
 
     /**

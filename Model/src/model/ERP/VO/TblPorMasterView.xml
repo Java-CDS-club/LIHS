@@ -16,6 +16,7 @@
        TblPorMaster.DEPARTMENT_ID, 
        TblPorMaster.PROJECT_ID, 
        TblPorMaster.NARRATION, 
+       TblPorMaster.FEED_ST, 
        TblPorMaster.CREATED_DATE, 
        TblPorMaster.CREATED_BY, 
        TblPorMaster.UPDATED_DATE, 
@@ -233,6 +234,12 @@
     EntityAttrName="Narration"
     EntityUsage="TblPorMaster"
     AliasName="NARRATION"/>
+  <ViewAttribute
+    Name="FeedSt"
+    PrecisionRule="true"
+    EntityAttrName="FeedSt"
+    EntityUsage="TblPorMaster"
+    AliasName="FEED_ST"/>
   <ViewAttribute
     Name="CreatedDate"
     PrecisionRule="true"

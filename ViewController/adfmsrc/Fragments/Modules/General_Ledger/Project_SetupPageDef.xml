@@ -65,6 +65,7 @@
           <Item Value="Id"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
+          <Item Value="ScenCat"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

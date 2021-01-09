@@ -120,6 +120,7 @@
     TableName="TBL_POR_MASTER">
     <TransientExpression
       Name="ExpressionScript"
+      trustMode="trusted"
       CodeSourceName="TblPorMasterRow"/>
   </Attribute>
   <Attribute
@@ -141,6 +142,13 @@
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="FeedSt"
+    ColumnName="FEED_ST"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_POR_MASTER"/>
   <AccessorAttribute
     Name="TblPorDetail"
     Association="model.ERP.EO.FkPorDetailMasterAssoc"

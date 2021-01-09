@@ -89,8 +89,16 @@
                               <f:validator binding="#{bindings.DepartmentId.validator}"/>
                             </af:selectOneChoice>
                             <af:spacer  id="s4"/>
+                            <af:inputText value="#{bindings.FeedSt.inputValue}" label="Feedy Person"
+                                          required="#{bindings.FeedSt.hints.mandatory}"
+                                          columns="#{bindings.FeedSt.hints.displayWidth}"
+                                          maximumLength="#{bindings.FeedSt.hints.precision}"
+                                          shortDesc="#{bindings.FeedSt.hints.tooltip}" id="it14" contentStyle='width:150px;'>
+                              <f:validator binding="#{bindings.FeedSt.validator}"/>
+                              <af:convertNumber groupingUsed="false" pattern="#{bindings.FeedSt.format}"/>
+                            </af:inputText>
                             <af:spacer  id="s15"/>
-                            <af:spacer  id="s16"/>
+                            
                             <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No."
                                 required="#{bindings.Vno.hints.mandatory}" columns="17"
                                 maximumLength="#{bindings.Vno.hints.precision}"
