@@ -190,6 +190,7 @@
       <Item Value="Vno"/>
       <Item Value="Dated"/>
       <Item Value="Vtp"/>
+      <Item Value="Id"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
