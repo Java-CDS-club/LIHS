@@ -29,12 +29,7 @@ and TblPorMaster.PROJECT_ID = :getProID">
   <Variable
     Name="getProID"
     Kind="where"
-    Type="java.math.BigDecimal">
-    <TransientExpression
-      Name="VariableScript"
-      trustMode="trusted"
-      CodeSourceName="Por_Master_IN_NotIn_LOV"/>
-  </Variable>
+    Type="java.math.BigDecimal"/>
   <EntityUsage
     Name="TblPorMaster"
     Entity="model.ERP.EO.TblPorMaster"/>

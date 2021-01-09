@@ -6,19 +6,28 @@
   Name="Pro_FG_Master_NotIN_LOV"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SelectList="TblProFgMaster.PROJECT_ID, 
+       TblProFgMaster.PROJECT_D_ID, 
+       TblProFgMaster.VNO, 
+       TblProFgMaster.VTP, 
+       TblProFgMaster.DATED, 
+       TblProFgMaster.ID, 
+       TblProFgMaster.DEPARTMENT_ID"
+  FromList="TBL_PRO_FG_MASTER TblProFgMaster"
+  Where="TblProFgMaster.PROJECT_ID = :get_ProID">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
         ResId="model.LOV.Pro_FG_Master_NotIN_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <Variable
+    Name="get_ProID"
+    Kind="where"
+    Type="java.math.BigDecimal"/>
   <EntityUsage
     Name="TblProFgMaster"
     Entity="model.ERP.EO.TblProFgMaster"/>

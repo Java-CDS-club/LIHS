@@ -74,7 +74,7 @@
                    <af:spacer  id="s6"/>
                    <af:spacer  id="s67"/>
                             <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
-                                                label="Project"
+                                                label="Project" readOnly="true" autoSubmit="true"
                                                 required="#{bindings.ProjectId.hints.mandatory}"
                                                 shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc7">
                               <f:selectItems value="#{bindings.ProjectId.items}" id="si7"/>

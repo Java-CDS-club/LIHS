@@ -32,7 +32,6 @@
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblFgTrnMasterView"/>
   </Variable>
   <ViewAccessor
@@ -66,7 +65,15 @@
   <ViewAccessor
     Name="Pro_FG_Master_NotIN_LOV1"
     ViewObjectName="model.LOV.Pro_FG_Master_NotIN_LOV"
-    RowLevelBinds="true"/>
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="get_ProID">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[ProjectId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_Vtp"
     ListVOName="Voucher_Type1"
