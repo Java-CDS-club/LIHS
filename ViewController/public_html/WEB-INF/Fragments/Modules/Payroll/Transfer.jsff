@@ -106,14 +106,14 @@
                                           required="#{bindings.Vno.hints.mandatory}"
                                           columns="17"
                                           maximumLength="#{bindings.Vno.hints.precision}"
-                                          shortDesc="#{bindings.Vno.hints.tooltip}" id="it2" disabled="true"
+                                          shortDesc="#{bindings.Vno.hints.tooltip}" id="it2" readOnly="true"
                                           contentStyle="width:150px;">
                               <f:validator binding="#{bindings.Vno.validator}"/>
                             </af:inputText>
                             <af:spacer  id="s13"/>
                             <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type"
                                                 required="#{bindings.Vtp.hints.mandatory}"
-                                                shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc13" disabled="true"
+                                                shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc13" readOnly="true"
                                                 contentStyle="width:150px;">
                               <f:selectItems value="#{bindings.Vtp.items}" id="si13"/>
                               <f:validator binding="#{bindings.Vtp.validator}"/>

@@ -34,7 +34,7 @@
                                           required="#{bindings.Id.hints.mandatory}"
                                           columns="#{bindings.Id.hints.displayWidth}"
                                           maximumLength="#{bindings.Id.hints.precision}"
-                                          shortDesc="#{bindings.Id.hints.tooltip}" id="it1" disabled="true">
+                                          shortDesc="#{bindings.Id.hints.tooltip}" id="it1" readOnly="true">
                               <f:validator binding="#{bindings.Id.validator}"/>
                               <af:convertNumber groupingUsed="false" pattern="#{bindings.Id.format}"/>
                             </af:inputText>
@@ -50,7 +50,7 @@
                             <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
                                                 label="Project"
                                                 required="#{bindings.ProjectId.hints.mandatory}"
-                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc1" disabled="${sessionScope.sessPrID != ''}"
+                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc1" readOnly="${sessionScope.sessPrID != ''}"
                                                 contentStyle="width:150px;">
                               <f:selectItems value="#{bindings.ProjectId.items}" id="si1"/>
                               <f:validator binding="#{bindings.ProjectId.validator}"/>
@@ -73,14 +73,14 @@
                                           required="#{bindings.Vno.hints.mandatory}"
                                           columns="20"
                                           maximumLength="#{bindings.Vno.hints.precision}"
-                                          shortDesc="#{bindings.Vno.hints.tooltip}" id="it3" disabled="true"
+                                          shortDesc="#{bindings.Vno.hints.tooltip}" id="it3" readOnly="true"
                                           contentStyle="width:150px;">
                               <f:validator binding="#{bindings.Vno.validator}"/>
                             </af:inputText>
                             <af:spacer  id="s8"/>
                             <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type"
                                                 required="#{bindings.Vtp.hints.mandatory}"
-                                                shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc3" disabled="true"
+                                                shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc3" readOnly="true"
                                                 contentStyle="width:150px;">
                               <f:selectItems value="#{bindings.Vtp.items}" id="si3"/>
                               <f:validator binding="#{bindings.Vtp.validator}"/>

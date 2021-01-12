@@ -65,7 +65,7 @@
                    <af:spacer  id="s14"/>
                             <af:selectOneChoice value="#{bindings.ProjectId.inputValue}" label="Project"
                                       required="#{bindings.ProjectId.hints.mandatory}" autoSubmit="true"
-                                      shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc6" disabled="${sessionScope.sessPrID != ''}"
+                                      shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc6" readOnly="${sessionScope.sessPrID != ''}"
                                       contentStyle="width:135px;" >
                     <f:selectItems value="#{bindings.ProjectId.items}" id="si6"/>
                     <f:validator binding="#{bindings.ProjectId.validator}"/>
@@ -96,14 +96,14 @@
                             </af:selectOneChoice>
                             <af:spacer  id="s3"/>
                             <af:selectOneChoice value="#{bindings.staticDoMId1.inputValue}"
-                                                label="DO" disabled="true"
+                                                label="DO" readOnly="true"
                                                 required="#{bindings.staticDoMId1.hints.mandatory}"
                                                 shortDesc="#{bindings.staticDoMId1.hints.tooltip}" id="soc5">
                               <f:selectItems value="#{bindings.staticDoMId1.items}" id="si5"/>
                               <f:validator binding="#{bindings.staticDoMId1.validator}"/>
                             </af:selectOneChoice>
                             <af:spacer  id="s32"/>
-                            <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type" disabled="true"
+                            <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type" readOnly="true"
                                       required="#{bindings.Vtp.hints.mandatory}"
                                       shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc2" contentStyle="width:135px;" >
                                       
@@ -111,7 +111,7 @@
                     <f:validator binding="#{bindings.Vtp.validator}"/>
                   </af:selectOneChoice>
                   <af:spacer  id="s12"/>
-                  <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No." disabled="true"
+                  <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No." readOnly="true"
                                 required="#{bindings.Vno.hints.mandatory}" columns="17"
                                 maximumLength="#{bindings.Vno.hints.precision}"
                                 shortDesc="#{bindings.Vno.hints.tooltip}" id="it2" contentStyle='width:135px;' >
@@ -188,6 +188,8 @@
                             
                             
                             <af:column headerText="Item Level 4" id="c1">
+                           
+      
                               <af:selectOneChoice value="#{row.bindings.ItemL4IdStatic.inputValue}"
                                                   label="#{row.bindings.ItemL4IdStatic.label}" readOnly="true"
                                                   required="#{bindings.TblPoDView2.hints.ItemL4IdStatic.mandatory}"
@@ -270,7 +272,7 @@
                                             required="#{bindings.TblPoDView2.hints.Qty.mandatory}"
                                             columns="#{bindings.TblPoDView2.hints.Qty.displayWidth}"
                                             maximumLength="#{bindings.TblPoDView2.hints.Qty.precision}"
-                                            shortDesc="#{bindings.TblPoDView2.hints.Qty.tooltip}" id="it15">
+                                            shortDesc="#{bindings.TblPoDView2.hints.Qty.tooltip}" id="it6">
                                 <f:validator binding="#{row.bindings.Qty.validator}"/>
                                 <af:convertNumber groupingUsed="false"
                                                   pattern="#{bindings.TblPoDView2.hints.Qty.format}"/>

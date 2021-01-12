@@ -82,14 +82,14 @@
                   <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No."
                                 required="#{bindings.Vno.hints.mandatory}" columns="17"
                                 maximumLength="#{bindings.Vno.hints.precision}"
-                                shortDesc="#{bindings.Vno.hints.tooltip}" id="it2"  disabled="true"
+                                shortDesc="#{bindings.Vno.hints.tooltip}" id="it2"  readOnly="true"
                                 contentStyle='width:150px;'>
                     <f:validator binding="#{bindings.Vno.validator}"/>
                   </af:inputText>
                   <af:spacer  id="s7"/>
                     <af:selectOneChoice value="#{bindings.Vtp1.inputValue}" label="Voucher Type"
                                       required="#{bindings.Vtp1.hints.mandatory}"
-                                      shortDesc="#{bindings.Vtp1.hints.tooltip}" id="soc1" disabled="true"
+                                      shortDesc="#{bindings.Vtp1.hints.tooltip}" id="soc1" readOnly="true"
                                       contentStyle="width:150px;">
                     <f:selectItems value="#{bindings.Vtp1.items}" id="si1"/>
                     <f:validator binding="#{bindings.Vtp1.validator}"/>

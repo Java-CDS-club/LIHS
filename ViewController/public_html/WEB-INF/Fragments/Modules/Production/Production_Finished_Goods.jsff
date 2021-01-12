@@ -73,7 +73,7 @@
                   </af:inputText>
                   <af:spacer  id="s6"/>
                             <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
-                                                label="Project" autoSubmit="true" disabled="${sessionScope.sessPrID != ''}"
+                                                label="Project" autoSubmit="true" readOnly="${sessionScope.sessPrID != ''}"
                                                 required="#{bindings.ProjectId.hints.mandatory}"
                                                 shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc7">
                               <f:selectItems value="#{bindings.ProjectId.items}" id="si7"/>
@@ -81,7 +81,7 @@
                             </af:selectOneChoice>
                   <af:spacer  id="s22"/>
                             <af:selectOneChoice value="#{bindings.ProjectDId.inputValue}"
-                                                label="Project Centers" disabled="${sessionScope.sessPrID != ''}"
+                                                label="Project Centers" readOnly="${sessionScope.sessPrID != ''}"
                                                 required="#{bindings.ProjectDId.hints.mandatory}"
                                                 shortDesc="#{bindings.ProjectDId.hints.tooltip}" id="soc8">
                               <f:selectItems value="#{bindings.ProjectDId.items}" id="si8"/>
@@ -89,7 +89,7 @@
                             </af:selectOneChoice>
                   <af:spacer  id="s23"/>
                             <af:selectOneChoice value="#{bindings.DepartmentId.inputValue}"
-                                                label="Department" disabled="true"
+                                                label="Department" readOnly="true"
                                                 required="#{bindings.DepartmentId.hints.mandatory}"
                                                 shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="soc9">
                               <f:selectItems value="#{bindings.DepartmentId.items}" id="si9"/>
@@ -99,14 +99,14 @@
                             <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No."
                                 required="#{bindings.Vno.hints.mandatory}" columns="17"
                                 maximumLength="#{bindings.Vno.hints.precision}"
-                                shortDesc="#{bindings.Vno.hints.tooltip}" id="it2"   disabled="true"
+                                shortDesc="#{bindings.Vno.hints.tooltip}" id="it2"   readOnly="true"
                                 contentStyle='Width:150px;'>
                     <f:validator binding="#{bindings.Vno.validator}"/>
                   </af:inputText>
                   <af:spacer  id="s2"/>
                   <af:selectOneChoice value="#{bindings.Vtp.inputValue}" label="Voucher Type"
                                       required="#{bindings.Vtp.hints.mandatory}"
-                                      shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc1"  disabled="true"
+                                      shortDesc="#{bindings.Vtp.hints.tooltip}" id="soc1"  readOnly="true"
                                       contentStyle="Width:150px;">
                     <f:selectItems value="#{bindings.Vtp.items}" id="si1"/>
                     <f:validator binding="#{bindings.Vtp.validator}"/>

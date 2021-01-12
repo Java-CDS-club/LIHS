@@ -32,7 +32,7 @@
                             required="#{bindings.GlL1Id.hints.mandatory}"
                             columns="#{bindings.GlL1Id.hints.displayWidth}"
                             maximumLength="#{bindings.GlL1Id.hints.precision}"
-                            shortDesc="#{bindings.GlL1Id.hints.tooltip}" id="it29" disabled="true"
+                            shortDesc="#{bindings.GlL1Id.hints.tooltip}" id="it29" readOnly="true"
                             contentStyle="width:250px;">
                 <f:validator binding="#{bindings.GlL1Id.validator}"/>
                 <af:convertNumber groupingUsed="false" pattern="#{bindings.GlL1Id.format}"/>
@@ -163,7 +163,7 @@
                                           required="#{bindings.GlL2Id.hints.mandatory}"
                                           columns="#{bindings.GlL2Id.hints.displayWidth}"
                                           maximumLength="#{bindings.GlL2Id.hints.precision}"
-                                          shortDesc="#{bindings.GlL2Id.hints.tooltip}" id="it20" disabled="true"
+                                          shortDesc="#{bindings.GlL2Id.hints.tooltip}" id="it20" readOnly="true"
                                           contentStyle="width:250px;">
                               <f:validator binding="#{bindings.GlL2Id.validator}"/>
                               <af:convertNumber groupingUsed="false" pattern="#{bindings.GlL2Id.format}"/>
@@ -321,7 +321,7 @@
                                       required="#{bindings.GlL3Id.hints.mandatory}"
                                       columns="#{bindings.GlL3Id.hints.displayWidth}"
                                       maximumLength="#{bindings.GlL3Id.hints.precision}"
-                                      shortDesc="#{bindings.GlL3Id.hints.tooltip}" id="it23" disabled="true"
+                                      shortDesc="#{bindings.GlL3Id.hints.tooltip}" id="it23" readOnly="true"
                                       contentStyle="width:250px;">
                           <f:validator binding="#{bindings.GlL3Id.validator}"/>
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.GlL3Id.format}"/>
@@ -466,7 +466,7 @@
                                       required="#{bindings.GlL4Id.hints.mandatory}"
                                       columns="#{bindings.GlL4Id.hints.displayWidth}"
                                       maximumLength="#{bindings.GlL4Id.hints.precision}"
-                                      shortDesc="#{bindings.GlL4Id.hints.tooltip}" id="it26" disabled="true"
+                                      shortDesc="#{bindings.GlL4Id.hints.tooltip}" id="it26" readOnly="true"
                                       contentStyle="width:250px;">
                           <f:validator binding="#{bindings.GlL4Id.validator}"/>
                           <af:convertNumber groupingUsed="false" pattern="#{bindings.GlL4Id.format}"/>
