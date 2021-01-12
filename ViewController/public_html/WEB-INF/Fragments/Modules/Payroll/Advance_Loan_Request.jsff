@@ -48,9 +48,9 @@
                             </af:inputDate>
                             <af:spacer  id="s2"/>
                             <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
-                                                label="Project"
+                                                label="Project" 
                                                 required="#{bindings.ProjectId.hints.mandatory}"
-                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc1" disabled="true"
+                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc1" disabled="${sessionScope.sessPrID != ''}"
                                                 contentStyle="width:150px;">
                               <f:selectItems value="#{bindings.ProjectId.items}" id="si1"/>
                               <f:validator binding="#{bindings.ProjectId.validator}"/>

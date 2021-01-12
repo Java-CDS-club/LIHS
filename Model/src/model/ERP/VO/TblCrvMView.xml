@@ -20,14 +20,13 @@
        TblCrvM.UPDATED_DATE, 
        TblCrvM.UPDATED_BY"
   FromList="TBL_CRV_M TblCrvM"
-  Where="TblCrvM.PROJECT_ID = :get_Proj_ID">
+  Where="TblCrvM.PROJECT_ID = nvl(:get_Proj_ID,TblCrvM.PROJECT_ID)">
   <Variable
     Name="get_Proj_ID"
     Kind="where"
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblCrvMView"/>
   </Variable>
   <ViewAccessor
@@ -144,7 +143,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblCrvM"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -156,7 +156,8 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblCrvM"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"

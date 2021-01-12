@@ -24,7 +24,7 @@
        TblPorMaster.PROJECT_D_ID, 
        TblPorMaster.MENU_TYPE"
   FromList="TBL_POR_MASTER TblPorMaster"
-  Where="TblPorMaster.PROJECT_ID = :getProId">
+  Where="TblPorMaster.PROJECT_ID = nvl(:getProId,TblPorMaster.PROJECT_ID)">
   <Variable
     Name="getProId"
     Kind="where"

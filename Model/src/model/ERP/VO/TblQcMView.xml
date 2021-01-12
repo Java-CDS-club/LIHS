@@ -22,14 +22,13 @@
        TblQcM.UPDATED_BY, 
        TblQcM.IGP_M_ID AS IGP_MID1"
   FromList="TBL_QC_M TblQcM"
-  Where="TblQcM.PROJECT_ID=:getPRoID">
+  Where="TblQcM.PROJECT_ID= nvl(:getPRoID,TblQcM.PROJECT_ID)">
   <Variable
     Name="getPRoID"
     Kind="where"
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblQcMView"/>
   </Variable>
   <ViewAccessor

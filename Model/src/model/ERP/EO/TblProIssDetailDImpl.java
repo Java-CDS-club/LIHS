@@ -35,6 +35,8 @@ public class TblProIssDetailDImpl extends EntityImpl {
         UpdatedDate,
         UpdatedBy,
         BatchQty,
+        FrDeptId,
+        ProjectId,
         TblProIssDetail;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
@@ -59,6 +61,7 @@ public class TblProIssDetailDImpl extends EntityImpl {
         }
     }
 
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int PROISSDETAILID = AttributesEnum.ProIssDetailId.index();
     public static final int ITEML4ID = AttributesEnum.ItemL4Id.index();
@@ -72,6 +75,8 @@ public class TblProIssDetailDImpl extends EntityImpl {
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
     public static final int BATCHQTY = AttributesEnum.BatchQty.index();
+    public static final int FRDEPTID = AttributesEnum.FrDeptId.index();
+    public static final int PROJECTID = AttributesEnum.ProjectId.index();
     public static final int TBLPROISSDETAIL = AttributesEnum.TblProIssDetail.index();
 
     /**
@@ -86,6 +91,7 @@ public class TblProIssDetailDImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("model.ERP.EO.TblProIssDetailD");
     }
+
 
     /**
      * Gets the attribute value for Id, using the alias name Id.
@@ -277,6 +283,38 @@ public class TblProIssDetailDImpl extends EntityImpl {
      */
     public void setBatchQty(BigDecimal value) {
         setAttributeInternal(BATCHQTY, value);
+    }
+
+    /**
+     * Gets the attribute value for FrDeptId, using the alias name FrDeptId.
+     * @return the value of FrDeptId
+     */
+    public BigDecimal getFrDeptId() {
+        return (BigDecimal) getAttributeInternal(FRDEPTID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for FrDeptId.
+     * @param value value to set the FrDeptId
+     */
+    public void setFrDeptId(BigDecimal value) {
+        setAttributeInternal(FRDEPTID, value);
+    }
+
+    /**
+     * Gets the attribute value for ProjectId, using the alias name ProjectId.
+     * @return the value of ProjectId
+     */
+    public BigDecimal getProjectId() {
+        return (BigDecimal) getAttributeInternal(PROJECTID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ProjectId.
+     * @param value value to set the ProjectId
+     */
+    public void setProjectId(BigDecimal value) {
+        setAttributeInternal(PROJECTID, value);
     }
 
     /**

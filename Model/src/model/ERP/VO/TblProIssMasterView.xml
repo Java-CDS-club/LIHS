@@ -25,7 +25,7 @@
        TblProIssMaster.PROJECT_D_ID, 
        TblProIssMaster.POR_MASTER_ID AS POR_MASTER_ID1"
   FromList="TBL_PRO_ISS_MASTER TblProIssMaster"
-  Where="TblProIssMaster.PROJECT_ID = :getProId">
+  Where="TblProIssMaster.PROJECT_ID = nvl(:getProId,TblProIssMaster.PROJECT_ID)">
   <Variable
     Name="getProId"
     Kind="where"

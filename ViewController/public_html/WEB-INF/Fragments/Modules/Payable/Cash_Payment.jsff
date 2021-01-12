@@ -75,6 +75,14 @@
                               <f:validator binding="#{bindings.Narration.validator}"/>
                             </af:inputText>
                             <af:spacer  id="s7"/>
+                            <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
+                                                label="Project" disabled="${sessionScope.sessPrID != ''}"
+                                                required="#{bindings.ProjectId.hints.mandatory}"
+                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc8">
+                              <f:selectItems value="#{bindings.ProjectId.items}" id="si8"/>
+                              <f:validator binding="#{bindings.ProjectId.validator}"/>
+                            </af:selectOneChoice>
+                            <af:spacer  id="s71"/>
                             <af:inputText value="#{bindings.Vno.inputValue}" label="Voucher No."
                                           required="#{bindings.Vno.hints.mandatory}"
                                           columns="17"

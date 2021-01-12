@@ -23,7 +23,7 @@
        TblDnM.UPDATED_DATE, 
        TblDnM.UPDATED_BY"
   FromList="TBL_DN_M TblDnM"
-  Where="TblDnM.PROJECT_ID = :getProId">
+  Where="TblDnM.PROJECT_ID = nvl(:getProId,TblDnM.PROJECT_ID)">
   <Variable
     Name="getProId"
     Kind="where"

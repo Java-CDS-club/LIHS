@@ -23,7 +23,7 @@
        TblOpenBlncInv.UPDATED_BY, 
        TblOpenBlncInv.DEPARTMENT_ID"
   FromList="TBL_OPEN_BLNC_INV TblOpenBlncInv"
-  Where="TblOpenBlncInv.PROJECT_ID = :getProId">
+  Where="TblOpenBlncInv.PROJECT_ID = nvl(:getProId,TblOpenBlncInv.PROJECT_ID)">
   <Variable
     Name="getProId"
     Kind="where"

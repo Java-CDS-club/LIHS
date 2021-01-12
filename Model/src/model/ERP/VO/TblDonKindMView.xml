@@ -24,14 +24,13 @@
        TblDonKindM.UPDATED_DATE, 
        TblDonKindM.UPDATED_BY"
   FromList="TBL_DON_KIND_M TblDonKindM"
-  Where="TblDonKindM.PROJECT_ID = :getProId">
+  Where="TblDonKindM.PROJECT_ID = nvl(:getProId,TblDonKindM.PROJECT_ID)">
   <Variable
     Name="getProId"
     Kind="where"
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblDonKindMView"/>
   </Variable>
   <ViewAccessor
@@ -254,7 +253,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblDonKindM"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -266,7 +266,8 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblDonKindM"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"

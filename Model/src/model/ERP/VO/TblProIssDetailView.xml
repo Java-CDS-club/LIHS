@@ -123,7 +123,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblProIssDetail"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -135,13 +136,26 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblProIssDetail"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
     EntityUsage="TblProIssDetail"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="FrDeptId"
+    PrecisionRule="true"
+    EntityAttrName="FrDeptId"
+    EntityUsage="TblProIssDetail"
+    AliasName="FR_DEPT_ID"/>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="TblProIssDetail"
+    AliasName="PROJECT_ID"/>
   <ViewLinkAccessor
     Name="TblProIssDetailDView"
     ViewLink="model.ERP.VO.FkProIssDetailDMasterLink"

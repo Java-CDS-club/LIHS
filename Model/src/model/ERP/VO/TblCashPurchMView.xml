@@ -22,14 +22,13 @@
        TblCashPurchM.UPDATED_DATE, 
        TblCashPurchM.UPDATED_BY"
   FromList="TBL_CASH_PURCH_M TblCashPurchM"
-  Where="TblCashPurchM.PROJECT_ID = :getProId">
+  Where="TblCashPurchM.PROJECT_ID = nvl(:getProId,TblCashPurchM.PROJECT_ID)">
   <Variable
     Name="getProId"
     Kind="where"
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblCashPurchMView"/>
   </Variable>
   <ViewAccessor
@@ -209,7 +208,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblCashPurchM"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -221,7 +221,8 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblCashPurchM"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"

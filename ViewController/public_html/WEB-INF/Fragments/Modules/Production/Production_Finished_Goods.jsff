@@ -73,7 +73,7 @@
                   </af:inputText>
                   <af:spacer  id="s6"/>
                             <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
-                                                label="Project" autoSubmit="true" readOnly="true"
+                                                label="Project" autoSubmit="true" disabled="${sessionScope.sessPrID != ''}"
                                                 required="#{bindings.ProjectId.hints.mandatory}"
                                                 shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc7">
                               <f:selectItems value="#{bindings.ProjectId.items}" id="si7"/>
@@ -81,7 +81,7 @@
                             </af:selectOneChoice>
                   <af:spacer  id="s22"/>
                             <af:selectOneChoice value="#{bindings.ProjectDId.inputValue}"
-                                                label="Project Centers" readOnly="true"
+                                                label="Project Centers" disabled="${sessionScope.sessPrID != ''}"
                                                 required="#{bindings.ProjectDId.hints.mandatory}"
                                                 shortDesc="#{bindings.ProjectDId.hints.tooltip}" id="soc8">
                               <f:selectItems value="#{bindings.ProjectDId.items}" id="si8"/>
@@ -89,7 +89,7 @@
                             </af:selectOneChoice>
                   <af:spacer  id="s23"/>
                             <af:selectOneChoice value="#{bindings.DepartmentId.inputValue}"
-                                                label="Department" readOnly="true"
+                                                label="Department" disabled="true"
                                                 required="#{bindings.DepartmentId.hints.mandatory}"
                                                 shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="soc9">
                               <f:selectItems value="#{bindings.DepartmentId.items}" id="si9"/>

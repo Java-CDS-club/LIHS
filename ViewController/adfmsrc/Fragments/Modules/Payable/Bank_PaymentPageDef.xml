@@ -116,5 +116,7 @@
         <Item Value="Todate"/>
       </AttrNames>
     </attributeValues>
+    <list IterBinding="TblPbpMView1Iterator" StaticList="false" Uses="LOV_ProjectId" id="ProjectId"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

@@ -18,10 +18,11 @@
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
       <Attr Name="_finderName" Value="TblProIssMaster"/>
-      <Attr Name="_foreignKey" Value="model.ERP.EO.TblProIssMaster.PkProIssMasterId"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblProIssMaster.Id"/>
+      <Item Value="model.ERP.EO.TblProIssMaster.FrDeptId"/>
+      <Item Value="model.ERP.EO.TblProIssMaster.ProjectId"/>
     </AttrArray>
   </AssociationEnd>
   <AssociationEnd
@@ -32,10 +33,11 @@
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
       <Attr Name="_finderName" Value="TblProIssDetail"/>
-      <Attr Name="_foreignKey" Value="model.ERP.EO.TblProIssDetail.FkProIssDetailMaster"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.ERP.EO.TblProIssDetail.ProIssMasterId"/>
+      <Item Value="model.ERP.EO.TblProIssDetail.FrDeptId"/>
+      <Item Value="model.ERP.EO.TblProIssDetail.ProjectId"/>
     </AttrArray>
   </AssociationEnd>
 </Association>

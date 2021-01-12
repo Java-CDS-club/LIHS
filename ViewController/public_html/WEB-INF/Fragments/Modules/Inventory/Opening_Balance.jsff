@@ -80,7 +80,7 @@
                     <af:selectOneChoice value="#{row.bindings.ProjectId.inputValue}"
                                         label="#{row.bindings.ProjectId.label}"
                                         required="#{bindings.TblOpenBlncInvView1.hints.ProjectId.mandatory}"
-                                        shortDesc="#{bindings.TblOpenBlncInvView1.hints.ProjectId.tooltip}" id="soc3" readOnly="true">
+                                        shortDesc="#{bindings.TblOpenBlncInvView1.hints.ProjectId.tooltip}" id="soc3" readOnly="${sessionScope.sessPrID != ''}">
                       <f:selectItems value="#{row.bindings.ProjectId.items}" id="si3"/>
                       <f:validator binding="#{row.bindings.ProjectId.validator}"/>
                     </af:selectOneChoice>

@@ -22,14 +22,13 @@
        TblIgpM.UPDATED_BY, 
        TblIgpM.PO_M_ID AS PO_MID1"
   FromList="TBL_IGP_M TblIgpM"
-  Where="TblIgpM.PROJECT_ID=:getproID">
+  Where="TblIgpM.PROJECT_ID= nvl(:getproID,TblIgpM.PROJECT_ID)">
   <Variable
     Name="getproID"
     Kind="where"
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblIgpMView"/>
   </Variable>
   <ViewAccessor

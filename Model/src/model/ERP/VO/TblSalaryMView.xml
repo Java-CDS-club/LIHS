@@ -23,14 +23,13 @@
        TblSalaryM.UPDATED_DATE, 
        TblSalaryM.UPDATED_BY"
   FromList="TBL_SALARY_M TblSalaryM"
-  Where="TblSalaryM.PROJECT_ID = :getProID">
+  Where="TblSalaryM.PROJECT_ID = nvl(:getProID,TblSalaryM.PROJECT_ID)">
   <Variable
     Name="getProID"
     Kind="where"
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblSalaryMView"/>
   </Variable>
   <ViewAccessor
@@ -186,7 +185,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblSalaryM"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -198,7 +198,8 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblSalaryM"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"

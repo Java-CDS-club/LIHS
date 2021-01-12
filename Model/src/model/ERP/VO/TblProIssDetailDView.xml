@@ -95,44 +95,6 @@
   <EntityUsage
     Name="TblProIssDetailD"
     Entity="model.ERP.EO.TblProIssDetailD"/>
-  <EntityUsage
-    Name="TblProIssDetail"
-    Entity="model.ERP.EO.TblProIssDetail"
-    Association="model.ERP.EO.FkProIssDetailDMasterAssoc"
-    AssociationEnd="model.ERP.EO.FkProIssDetailDMasterAssoc.TblProIssDetail"
-    SourceUsage="model.ERP.VO.TblProIssDetailDView.TblProIssDetailD"
-    ReadOnly="true"
-    Reference="true"
-    DeleteParticipant="false"
-    JoinType="LEFT OUTER JOIN">
-    <DesignTime>
-      <AttrArray Name="_dstAttributes">
-        <Item Value="model.ERP.EO.TblProIssDetail.Id"/>
-      </AttrArray>
-      <AttrArray Name="_srcAttributes">
-        <Item Value="model.ERP.EO.TblProIssDetailD.ProIssDetailId"/>
-      </AttrArray>
-    </DesignTime>
-  </EntityUsage>
-  <EntityUsage
-    Name="TblProIssMaster"
-    Entity="model.ERP.EO.TblProIssMaster"
-    Association="model.ERP.EO.FkProIssDetailMasterAssoc"
-    AssociationEnd="model.ERP.EO.FkProIssDetailMasterAssoc.TblProIssMaster"
-    SourceUsage="model.ERP.VO.TblProIssDetailDView.TblProIssDetail"
-    ReadOnly="true"
-    Reference="true"
-    DeleteParticipant="false"
-    JoinType="LEFT OUTER JOIN">
-    <DesignTime>
-      <AttrArray Name="_dstAttributes">
-        <Item Value="model.ERP.EO.TblProIssMaster.Id"/>
-      </AttrArray>
-      <AttrArray Name="_srcAttributes">
-        <Item Value="model.ERP.EO.TblProIssDetail.ProIssMasterId"/>
-      </AttrArray>
-    </DesignTime>
-  </EntityUsage>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
@@ -226,24 +188,6 @@
     EntityUsage="TblProIssDetailD"
     AliasName="UPDATED_BY"/>
   <ViewAttribute
-    Name="FrDeptId"
-    PrecisionRule="true"
-    EntityAttrName="FrDeptId"
-    EntityUsage="TblProIssMaster"
-    AliasName="FR_DEPT_ID"/>
-  <ViewAttribute
-    Name="ProjectId"
-    PrecisionRule="true"
-    EntityAttrName="ProjectId"
-    EntityUsage="TblProIssMaster"
-    AliasName="PROJECT_ID"/>
-  <ViewAttribute
-    Name="Id1"
-    PrecisionRule="true"
-    EntityAttrName="Id"
-    EntityUsage="TblProIssMaster"
-    AliasName="ID1"/>
-  <ViewAttribute
     Name="BatchQty"
     PrecisionRule="true"
     EntityAttrName="BatchQty"
@@ -263,6 +207,18 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="TblProIssDetailD"
+    AliasName="PROJECT_ID"/>
+  <ViewAttribute
+    Name="FrDeptId"
+    PrecisionRule="true"
+    EntityAttrName="FrDeptId"
+    EntityUsage="TblProIssDetailD"
+    AliasName="FR_DEPT_ID"/>
   <AttrArray Name="KeyAttributes">
     <Item Value="Id"/>
   </AttrArray>

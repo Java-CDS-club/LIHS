@@ -77,15 +77,15 @@
                   </af:inputText>
                   <af:spacer  id="s6"/>
                   <af:selectOneChoice value="#{bindings.ProjectId.inputValue}"
-                                                label="Project" readOnly="true" autoSubmit="true"
+                                                label="Project" disabled="${sessionScope.sessPrID != ''}" autoSubmit="true"
                                                 required="#{bindings.ProjectId.hints.mandatory}"
-                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc9" disabled="true">
+                                                shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc9" >
                               <f:selectItems value="#{bindings.ProjectId.items}" id="si9"/>
                               <f:validator binding="#{bindings.ProjectId.validator}"/>
                             </af:selectOneChoice>
                             <af:spacer  id="s11"/>
                             <af:selectOneChoice value="#{bindings.ProjectDId.inputValue}"
-                                                label="Project Centers" readOnly="true"
+                                                label="Project Centers" disabled="${sessionScope.sessPrID != ''}"
                                                 required="#{bindings.ProjectDId.hints.mandatory}"
                                                 shortDesc="#{bindings.ProjectDId.hints.tooltip}" id="soc12">
                               <f:selectItems value="#{bindings.ProjectDId.items}" id="si12"/>
@@ -93,7 +93,7 @@
                             </af:selectOneChoice>
                             <af:spacer  id="s151"/>
                             <af:selectOneChoice value="#{bindings.FrDeptId.inputValue}"
-                                                label="From Department"
+                                                label="From Department" autoSubmit="true"
                                                 required="#{bindings.FrDeptId.hints.mandatory}"
                                                 shortDesc="#{bindings.FrDeptId.hints.tooltip}" id="soc10">
                               <f:selectItems value="#{bindings.FrDeptId.items}" id="si10"/>

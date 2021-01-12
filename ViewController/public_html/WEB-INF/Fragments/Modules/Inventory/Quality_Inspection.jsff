@@ -52,7 +52,7 @@
                                                 label="Project"
                                                 required="#{bindings.ProjectId.hints.mandatory}"
                                                 shortDesc="#{bindings.ProjectId.hints.tooltip}" id="soc6"
-                                                contentStyle="width:150px;" disabled="true">
+                                                contentStyle="width:150px;" disabled="${sessionScope.sessPrID != ''}">
                               <f:selectItems value="#{bindings.ProjectId.items}" id="si6"/>
                               <f:validator binding="#{bindings.ProjectId.validator}"/>
                             </af:selectOneChoice>

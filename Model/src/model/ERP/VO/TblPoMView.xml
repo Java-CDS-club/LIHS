@@ -25,7 +25,7 @@
        TblPoM.DO_M_ID, 
        TblPoM.DO_M_ID AS DO_MID1"
   FromList="TBL_PO_M TblPoM"
-  Where="TblPoM.PROJECT_ID = :getProId">
+  Where="TblPoM.PROJECT_ID = nvl(:getProId,TblPoM.PROJECT_ID)">
   <Variable
     Name="getProId"
     Kind="where"

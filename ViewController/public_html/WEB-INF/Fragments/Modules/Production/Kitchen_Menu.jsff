@@ -53,7 +53,7 @@
                                                                                 label="#{row.bindings.ProjectId.label}"
                                                                                 required="#{bindings.TblKitchenMenuMView1.hints.ProjectId.mandatory}"
                                                                                 shortDesc="#{bindings.TblKitchenMenuMView1.hints.ProjectId.tooltip}"
-                                                                                id="soc2" autoSubmit="true" readOnly="true">
+                                                                                id="soc2" autoSubmit="true" readOnly="${sessionScope.sessPrID != ''}">
                                                                 <f:selectItems value="#{row.bindings.ProjectId.items}"
                                                                                id="si2"/>
                                                                 <f:validator binding="#{row.bindings.ProjectId.validator}"/>

@@ -25,7 +25,7 @@
        TblDonCr.UPDATED_DATE, 
        TblDonCr.UPDATED_BY"
   FromList="TBL_DON_CR TblDonCr"
-  Where="TblDonCr.PROJECT_ID = :getProId">
+  Where="TblDonCr.PROJECT_ID =  nvl(:getProId,TblDonCr.PROJECT_ID)">
   <Variable
     Name="getProId"
     Kind="where"
@@ -230,7 +230,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblDonCr"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -242,7 +243,8 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblDonCr"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"

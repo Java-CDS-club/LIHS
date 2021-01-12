@@ -25,14 +25,13 @@
        TblAdvLoan.UPDATED_DATE, 
        TblAdvLoan.UPDATED_BY"
   FromList="TBL_ADV_LOAN TblAdvLoan"
-  Where="TblAdvLoan.PROJECT_ID = :getProId">
+  Where="TblAdvLoan.PROJECT_ID = nvl(:getProId,TblAdvLoan.PROJECT_ID)">
   <Variable
     Name="getProId"
     Kind="where"
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblAdvLoanView"/>
   </Variable>
   <ViewAccessor
@@ -261,7 +260,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblAdvLoan"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -273,7 +273,8 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblAdvLoan"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"

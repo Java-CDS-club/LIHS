@@ -27,14 +27,13 @@
        TblPbpM.TODATE, 
        TblPbpM.FRDATE"
   FromList="TBL_PBP_M TblPbpM"
-  Where="TblPbpM.PROJECT_ID = :getProID">
+  Where="TblPbpM.PROJECT_ID = nvl(:getProID,TblPbpM.PROJECT_ID)">
   <Variable
     Name="getProID"
     Kind="where"
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblPbpMView"/>
   </Variable>
   <ViewAccessor
