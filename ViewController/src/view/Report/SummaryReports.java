@@ -1,8 +1,18 @@
 package view.Report;
 
+import java.math.BigDecimal;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+import java.util.Date;
+import java.util.Locale;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
+import oracle.adf.view.rich.component.rich.input.RichInputDate;
 import oracle.adf.view.rich.component.rich.input.RichSelectOneChoice;
 
 import view.DatabaseConnection.DatabaseConnection;
@@ -10,6 +20,9 @@ import view.DatabaseConnection.DatabaseConnection;
 public class SummaryReports {
     private RichSelectOneChoice format_type;
     private RichSelectOneChoice report_type;
+    private RichInputDate fromDateParam;
+    private RichInputDate toDateParam;
+    private RichSelectOneChoice projidparam;
 
     public SummaryReports() {
         
@@ -17,15 +30,28 @@ public class SummaryReports {
     
     private static String selectedReportType = "";
     private static String gotFormat = "";
+    private static BigDecimal  gotprojectId;
 
     public String gen_Report() {
         // Add event code here...
         selectedReportType = (String)this.getReport_type().getValue();
         gotFormat = (String)this.getFormat_type().getValue();
+        gotprojectId = (BigDecimal)this.getProjidparam().getValue();
         
         DatabaseConnection dbconnect = new DatabaseConnection();
         OracleReportBean reportBean = new OracleReportBean(dbconnect.getUipReport(), dbconnect.getUportReport(), null);
         String url = "";
+        
+        if(getFromDate() != ""){
+            reportBean.setReportParameter("P_Fdated", getFromDate());
+        }
+        
+        if(getToDate() != ""){
+            reportBean.setReportParameter("P_Tdated", getToDate());
+        }
+        if(gotprojectId != null){
+            reportBean.setReportParameter("P_Project_id", gotprojectId.toString());
+        } 
 
 
         if (gotFormat == "") {
@@ -97,6 +123,34 @@ public class SummaryReports {
         context.addMessage(null, fm);
         return null;
     }
+    
+    private String getFromDate() {
+        if(fromDateParam.getValue() != null && fromDateParam.getValue() != "") {
+            try {
+                DateFormat sdf = new SimpleDateFormat("EE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
+                Date parsedDate = sdf.parse(fromDateParam.getValue().toString());
+                SimpleDateFormat print = new SimpleDateFormat("dd-MMM-yy");
+                return (print.format(parsedDate));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        return "";
+    }
+    
+    private String getToDate() {
+        if(toDateParam.getValue() != null && toDateParam.getValue() != "") {
+            try {
+                DateFormat sdf = new SimpleDateFormat("EE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
+                Date parsedDate = sdf.parse(toDateParam.getValue().toString());
+                SimpleDateFormat print = new SimpleDateFormat("dd-MMM-yy");
+                return (print.format(parsedDate));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        return "";
+    }
 
     public void setFormat_type(RichSelectOneChoice format_type) {
         this.format_type = format_type;
@@ -112,5 +166,29 @@ public class SummaryReports {
 
     public RichSelectOneChoice getReport_type() {
         return report_type;
+    }
+
+    public void setFromDateParam(RichInputDate fromDateParam) {
+        this.fromDateParam = fromDateParam;
+    }
+
+    public RichInputDate getFromDateParam() {
+        return fromDateParam;
+    }
+
+    public void setToDateParam(RichInputDate toDateParam) {
+        this.toDateParam = toDateParam;
+    }
+
+    public RichInputDate getToDateParam() {
+        return toDateParam;
+    }
+
+    public void setProjidparam(RichSelectOneChoice projidparam) {
+        this.projidparam = projidparam;
+    }
+
+    public RichSelectOneChoice getProjidparam() {
+        return projidparam;
     }
 }
