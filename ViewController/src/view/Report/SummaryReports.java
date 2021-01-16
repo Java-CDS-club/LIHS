@@ -23,18 +23,29 @@ public class SummaryReports {
     private RichInputDate fromDateParam;
     private RichInputDate toDateParam;
     private RichSelectOneChoice projidparam;
+    private RichSelectOneChoice itemreport_type;
+    private RichSelectOneChoice centerreport_type;
+    private RichSelectOneChoice dayreport_type;
 
     public SummaryReports() {
         
     }
     
     private static String selectedReportType = "";
+    private static String selectedItemReportType = "";
+    private static String selectedCenterReportType = "";
+    private static String selectedDayReportType = "";
     private static String gotFormat = "";
     private static BigDecimal  gotprojectId;
 
     public String gen_Report() {
         // Add event code here...
         selectedReportType = (String)this.getReport_type().getValue();
+        selectedItemReportType =(String)this.getItemreport_type().getValue();
+        selectedCenterReportType =(String)this.getCenterreport_type().getValue();
+        selectedDayReportType=(String)this.getDayreport_type().getValue();
+            
+            
         gotFormat = (String)this.getFormat_type().getValue();
         gotprojectId = (BigDecimal)this.getProjidparam().getValue();
         
@@ -56,8 +67,23 @@ public class SummaryReports {
 
         if (gotFormat == "") {
             showMessage("Please Select Report Format");
-        } else {
+        } else  {
             
+//                if(selectedReportType != null || selectedReportType != ""){
+//                }
+//                if(selectedItemReportType != null || selectedItemReportType != ""){
+//                }               
+//                if(selectedCenterReportType != null || selectedCenterReportType != ""){
+//                }
+//                if(selectedDayReportType != null || selectedDayReportType != ""){
+//                }
+               
+              
+            
+            if(selectedReportType == null || selectedReportType == ""){
+                System.out.println("Category wise not selected");
+            }
+            else{
                 switch (selectedReportType) {
                 
                 case "summaryITN":
@@ -91,12 +117,157 @@ public class SummaryReports {
                 case "summaryOB":
                     reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_OB_Item_Project&");
                     break;
+                
+               case "summaryPROIss":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_PRO_Iss_Item_Project&");
+                        break;
+                    
+               case "summaryFGTRN":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_FG_TRN_Item_Project&");
+                        break;
+                        
+                    case "summaryFGTRNDay":
+                            reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_FG_TRN_Day_Project&");
+                            break;
 
                 default:
                     showMessage("Please Select Report Type");
                     break;
 
                 }
+            }
+            
+                if(selectedItemReportType == null || selectedItemReportType == ""){
+                    System.out.println("Item wise not selected");
+                }
+                else{
+                switch (selectedItemReportType) {
+                
+                    case "summaryITNL4":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_ITN_L4_Item_Project&");
+                        break;
+                    
+                    case "summaryIRNL4":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_IRN_L4_Item_Project&");
+                        break;
+                    
+                    case "summaryGIRL4":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_GIR_L4_Item_Project&");
+                        break;
+                    
+                    case "summaryGINL4":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_GIN_L4_Item_Project&");
+                        break;
+                    
+                    case "summaryDNL4":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_DN_L4_Item_Project&");
+                        break;
+                    
+                    case "summaryCPL4":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_Cash_Purch_L4_Item_Project&");
+                        break;
+                    
+                    case "summaryGRNL4":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_GRN_L4_Item_Project&");
+                        break;
+                    
+                    case "summaryOBL4":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_OB_L4_Item_Project&");
+                        break;
+                    
+                    case "summaryPROIssL4":
+                            reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_PRO_Iss_L4_Item_Project&");
+                            break;
+                        
+                    case "summaryFGTRNL4":
+                            reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_FG_TRN_L4_Item_Project&");
+                            break;
+
+                default:
+                    showMessage("Please Select Report Type");
+                    break;
+
+                }
+                }
+            
+                if(selectedCenterReportType == null || selectedCenterReportType == ""){
+                    System.out.println("center sub center wise not selected");
+                }
+                else{
+                switch (selectedCenterReportType) {
+                
+                    case "summaryPROIssCenter":
+                            reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_PRO_Iss_Center_Project&");
+                            break;
+                        
+                    case "summaryFGTRNCenter":
+                            reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_FG_TRN_Center_Project&");
+                            break;
+                    case "summaryFGTRNSubCenter":
+                            reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_FG_TRN_Sub_Center_Project&");
+                            break;
+
+                default:
+                    showMessage("Please Select Report Type");
+                    break;
+
+                }
+                }
+            
+            
+                if(selectedDayReportType == null || selectedDayReportType == ""){
+                    System.out.println("day wise not selected");
+                }
+                else{
+                switch (selectedDayReportType) {
+                
+                    case "summaryITNDay":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_ITN_Day_Project&");
+                        break;
+                    
+                    case "summaryIRNDay":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_IRN_Day_Project&");
+                        break;
+                    
+                    case "summaryGIRDay":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_GIR_Day_Project&");
+                        break;
+                    
+                    case "summaryGINDay":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_GIN_Day_Project&");
+                        break;
+                    
+                    case "summaryDNDay":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_DN_Day_Project&");
+                        break;
+                    
+                    case "summaryCPDay":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_Cash_Purch_Day_Project&");
+                        break;
+                    
+                    case "summaryGRNDay":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_GRN_Day_Project&");
+                        break;
+                    
+                    case "summaryOBDay":
+                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_OB_Day_Project&");
+                        break;
+                    
+                    case "summaryPROIssDay":
+                            reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_PRO_Iss_Day_Project&");
+                            break;
+                        
+                    case "summaryFGTRNDay":
+                            reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Summary_FG_TRN_Day_Project&");
+                            break;
+
+                default:
+                    showMessage("Please Select Report Type");
+                    break;
+
+                }
+                }
+              
 
             
             reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESTYPE,
@@ -190,5 +361,29 @@ public class SummaryReports {
 
     public RichSelectOneChoice getProjidparam() {
         return projidparam;
+    }
+
+    public void setItemreport_type(RichSelectOneChoice itemreport_type) {
+        this.itemreport_type = itemreport_type;
+    }
+
+    public RichSelectOneChoice getItemreport_type() {
+        return itemreport_type;
+    }
+
+    public void setCenterreport_type(RichSelectOneChoice centerreport_type) {
+        this.centerreport_type = centerreport_type;
+    }
+
+    public RichSelectOneChoice getCenterreport_type() {
+        return centerreport_type;
+    }
+
+    public void setDayreport_type(RichSelectOneChoice dayreport_type) {
+        this.dayreport_type = dayreport_type;
+    }
+
+    public RichSelectOneChoice getDayreport_type() {
+        return dayreport_type;
     }
 }

@@ -93,6 +93,10 @@ public class InventoryReports {
                         
                                 reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/MGT_Daily_Feeding_1&");
                                 break;
+              case "mGTdailyfeeding2":
+                             
+                                     reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/MGT_Daily_Feeding_2&");
+                                     break;
 //                    //working for procedure call//
 //                    String sendItemL4IDLgrCnvrt = gotitemL4id;
 //                    int sendItemL4IDLgrfinal =Integer.parseInt(sendItemL4IDLgrCnvrt);  

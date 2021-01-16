@@ -714,37 +714,34 @@
                                     selectionListener="#{bindings.TblEmpAllView2.collectionModel.makeCurrent}"
                                     rowSelection="single" fetchSize="#{bindings.TblEmpAllView2.rangeSize}"
                                     filterModel="#{bindings.TblEmpAllView2Query.queryDescriptor}" filterVisible="true"
-                                    queryListener="#{bindings.TblEmpAllView2Query.processQuery}" varStatus="vs" id="t5">
+                                    queryListener="#{bindings.TblEmpAllView2Query.processQuery}" varStatus="vs" id="t5"
+                                    scrollPolicy="page" autoHeightRows="0">
                             <af:column sortProperty="#{bindings.TblEmpAllView2.hints.Id.name}" filterable="true"
-                                       sortable="true" headerText="#{bindings.TblEmpAllView2.hints.Id.label}" id="c27">
+                                       sortable="true" headerText="ID" id="c27" visible="false">
+                                        <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.Id}"
+       id="it46" placeholder="Search ">
+      </af:inputText>
+</f:facet>
                               <af:inputText value="#{row.bindings.Id.inputValue}"
                                             label="#{bindings.TblEmpAllView2.hints.Id.label}"
                                             required="#{bindings.TblEmpAllView2.hints.Id.mandatory}"
                                             columns="#{bindings.TblEmpAllView2.hints.Id.displayWidth}"
                                             maximumLength="#{bindings.TblEmpAllView2.hints.Id.precision}"
-                                            shortDesc="#{bindings.TblEmpAllView2.hints.Id.tooltip}" id="it45">
+                                            shortDesc="#{bindings.TblEmpAllView2.hints.Id.tooltip}" id="it45" readOnly="true" >
                                 <f:validator binding="#{row.bindings.Id.validator}"/>
                                 <af:convertNumber groupingUsed="false"
                                                   pattern="#{bindings.TblEmpAllView2.hints.Id.format}"/>
                               </af:inputText>
                             </af:column>
-                            <af:column sortProperty="#{bindings.TblEmpAllView2.hints.EmpId.name}" filterable="true"
-                                       sortable="true" headerText="#{bindings.TblEmpAllView2.hints.EmpId.label}"
-                                       id="c28">
-                              <af:inputText value="#{row.bindings.EmpId.inputValue}"
-                                            label="#{bindings.TblEmpAllView2.hints.EmpId.label}"
-                                            required="#{bindings.TblEmpAllView2.hints.EmpId.mandatory}"
-                                            columns="#{bindings.TblEmpAllView2.hints.EmpId.displayWidth}"
-                                            maximumLength="#{bindings.TblEmpAllView2.hints.EmpId.precision}"
-                                            shortDesc="#{bindings.TblEmpAllView2.hints.EmpId.tooltip}" id="it46">
-                                <f:validator binding="#{row.bindings.EmpId.validator}"/>
-                                <af:convertNumber groupingUsed="false"
-                                                  pattern="#{bindings.TblEmpAllView2.hints.EmpId.format}"/>
-                              </af:inputText>
-                            </af:column>
                             <af:column sortProperty="#{bindings.TblEmpAllView2.hints.AllowanceId.name}"
                                        filterable="true" sortable="true"
-                                       headerText="#{bindings.TblEmpAllView2.hints.AllowanceId.label}" id="c29">
+                                       headerText="Allowance" id="c29" width="200">
+                                        <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.AllowanceId}"
+       id="it48" placeholder="Search ">
+      </af:inputText>
+</f:facet>
                               <af:selectOneChoice value="#{row.bindings.AllowanceId.inputValue}"
                                                   label="#{row.bindings.AllowanceId.label}"
                                                   required="#{bindings.TblEmpAllView2.hints.AllowanceId.mandatory}"
@@ -755,8 +752,13 @@
                               </af:selectOneChoice>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblEmpAllView2.hints.QtyAmt.name}" filterable="true"
-                                       sortable="true" headerText="#{bindings.TblEmpAllView2.hints.QtyAmt.label}"
+                                       sortable="true" headerText="Qty Amount"
                                        id="c30">
+                                        <f:facet name="filter">
+      <af:inputText value="#{vs.filterCriteria.QtyAmt}"
+       id="it49" placeholder="Search ">
+      </af:inputText>
+</f:facet>
                               <af:inputText value="#{row.bindings.QtyAmt.inputValue}"
                                             label="#{bindings.TblEmpAllView2.hints.QtyAmt.label}"
                                             required="#{bindings.TblEmpAllView2.hints.QtyAmt.mandatory}"
@@ -769,6 +771,19 @@
                               </af:inputText>
                             </af:column>
                           </af:table>
+                          <af:spacer width="5" height="10" id="s21"/>
+                        
+			<af:panelGroupLayout id="pgl9" halign="center" layout="horizontal">
+                            <af:iterator id="i5" var="index" varStatus="status"
+                                         value="#{bindings.USERS_CRUD_OPERATIONS1.collectionModel}">
+                                <af:button id="btn#{status.index+1}" text="#{index.Operation}"
+                                           icon="/LIHS/faces/javax.faces.resource/#{index.bindings.icon.inputValue}?ln=images"
+                                           actionListener="#{USERS_CRUD_BEAN.get_users_crud_bind}">
+                                    <f:attribute name="AcLslink" value="#{index.bindings.Bindingname.inputValue}4"/>
+                                </af:button>
+                                <af:spacer width="5" height="10" id="s22"/>
+                            </af:iterator>
+                        </af:panelGroupLayout>
                         </af:showDetailItem>
                       </af:panelTabbed>
                     </af:gridCell>
