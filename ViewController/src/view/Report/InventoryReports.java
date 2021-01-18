@@ -96,25 +96,26 @@ public class InventoryReports {
               case "mGTdailyfeeding2":
                              
                                      reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/MGT_Daily_Feeding_2&");
-                                     break;
-//                    //working for procedure call//
-//                    String sendItemL4IDLgrCnvrt = gotitemL4id;
-//                    int sendItemL4IDLgrfinal =Integer.parseInt(sendItemL4IDLgrCnvrt);  
-//                    //calling procedure start//
-//                    Connection conn;
-//                    ResultSet rs;
-//                    CallableStatement cstmt = null;
-//                        try {
-//                            conn = DatabaseConnection.getConnection();
-//                            String SQL = "{call P_IL(?)}";
-//                            cstmt = conn.prepareCall (SQL);
-//                            cstmt.setInt(1, sendItemL4IDLgrfinal);
-//                            rs = cstmt.executeQuery();
-//                        }
-//                        catch (SQLException e) {
-//                            System.out.println(e);
-//                        }
-//                    //calling procedure end//
+                                    
+                    //working for procedure call//
+                    String sendItemL4IDLgrCnvrt = gotitemL4id;
+                    int sendItemL4IDLgrfinal =Integer.parseInt(sendItemL4IDLgrCnvrt);  
+                    //calling procedure start//
+                    Connection conn;
+                    ResultSet rs;
+                    CallableStatement cstmt = null;
+                        try {
+                            conn = DatabaseConnection.getConnection();
+                            String SQL = "{call P_IL(?)}";
+                            cstmt = conn.prepareCall (SQL);
+                            cstmt.setInt(1, sendItemL4IDLgrfinal);
+                            rs = cstmt.executeQuery();
+                        }
+                        catch (SQLException e) {
+                            System.out.println(e);
+                        }
+                    break;
+                    //calling procedure end//
                  default:
                     showMessage("Please Select Report Type");
                     break;
