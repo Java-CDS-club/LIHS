@@ -121,21 +121,21 @@ public class InventoryReports {
 
 
                 //calling procedure start//
-                Connection conn;
-                ResultSet rs;
-                CallableStatement cstmt = null;
-                try {
-                    conn = DatabaseConnection.getConnection();
-                    String SQL = "{call P_IL(?,?,?,?)}";
-                    cstmt = conn.prepareCall(SQL);
-                    cstmt.setInt(1, sendItemL4IDLgrfinal);
-                    cstmt.setDate(2, Date.valueOf(sendFDateFinal) );
-                    cstmt.setInt(3, sendProjectIDFinal);
-                    cstmt.setInt(4, sendDeptIDFinal);
-                    rs = cstmt.executeQuery();
-                } catch (SQLException e) {
-                    System.out.println(e);
-                }
+//                Connection conn;
+//                ResultSet rs;
+//                CallableStatement cstmt = null;
+//                try {
+//                    conn = DatabaseConnection.getConnection();
+//                    String SQL = "{call P_IL(?,?,?,?)}";
+//                    cstmt = conn.prepareCall(SQL);
+//                    cstmt.setInt(1, sendItemL4IDLgrfinal);
+//                    cstmt.setDate(2, Date.valueOf(sendFDateFinal) );
+//                    cstmt.setInt(3, sendProjectIDFinal);
+//                    cstmt.setInt(4, sendDeptIDFinal);
+//                    rs = cstmt.executeQuery();
+//                } catch (SQLException e) {
+//                    System.out.println(e);
+//                }
                 break;
                 //calling procedure end//
             default:
