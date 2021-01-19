@@ -157,6 +157,20 @@
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_DON_KIND_M"/>
+  <Attribute
+    Name="Category"
+    Precision="3"
+    ColumnName="CATEGORY"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_DON_KIND_M"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="TblDonKindD"
     Association="model.ERP.EO.FkDonKindDMAssoc"

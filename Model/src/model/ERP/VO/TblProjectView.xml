@@ -71,7 +71,8 @@
     PrecisionRule="true"
     EntityAttrName="CreatedDate"
     EntityUsage="TblProject"
-    AliasName="CREATED_DATE"/>
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
@@ -83,13 +84,20 @@
     PrecisionRule="true"
     EntityAttrName="UpdatedDate"
     EntityUsage="TblProject"
-    AliasName="UPDATED_DATE"/>
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="UpdatedBy"
     PrecisionRule="true"
     EntityAttrName="UpdatedBy"
     EntityUsage="TblProject"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="Category"
+    PrecisionRule="true"
+    EntityAttrName="Category"
+    EntityUsage="TblProject"
+    AliasName="CATEGORY"/>
   <ViewLinkAccessor
     Name="TblProjectDView"
     ViewLink="model.ERP.VO.FkProjectFkLink"

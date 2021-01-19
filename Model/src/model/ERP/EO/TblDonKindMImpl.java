@@ -37,6 +37,7 @@ public class TblDonKindMImpl extends EntityImpl {
         CreatedBy,
         UpdatedDate,
         UpdatedBy,
+        Category,
         TblDonKindD,
         TblDonSetup,
         TblDonType;
@@ -62,6 +63,7 @@ public class TblDonKindMImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int VNO = AttributesEnum.Vno.index();
     public static final int VTP = AttributesEnum.Vtp.index();
@@ -76,6 +78,7 @@ public class TblDonKindMImpl extends EntityImpl {
     public static final int CREATEDBY = AttributesEnum.CreatedBy.index();
     public static final int UPDATEDDATE = AttributesEnum.UpdatedDate.index();
     public static final int UPDATEDBY = AttributesEnum.UpdatedBy.index();
+    public static final int CATEGORY = AttributesEnum.Category.index();
     public static final int TBLDONKINDD = AttributesEnum.TblDonKindD.index();
     public static final int TBLDONSETUP = AttributesEnum.TblDonSetup.index();
     public static final int TBLDONTYPE = AttributesEnum.TblDonType.index();
@@ -84,6 +87,13 @@ public class TblDonKindMImpl extends EntityImpl {
      * This is the default constructor (do not remove).
      */
     public TblDonKindMImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblDonKindM");
     }
 
     /**
@@ -295,6 +305,22 @@ public class TblDonKindMImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for Category, using the alias name Category.
+     * @return the value of Category
+     */
+    public String getCategory() {
+        return (String) getAttributeInternal(CATEGORY);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Category.
+     * @param value value to set the Category
+     */
+    public void setCategory(String value) {
+        setAttributeInternal(CATEGORY, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getTblDonKindD() {
@@ -304,30 +330,31 @@ public class TblDonKindMImpl extends EntityImpl {
     /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
-    public EntityImpl getTblDonSetup() {
-        return (EntityImpl) getAttributeInternal(TBLDONSETUP);
+    public TblDonSetupImpl getTblDonSetup() {
+        return (TblDonSetupImpl) getAttributeInternal(TBLDONSETUP);
     }
 
     /**
      * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
      */
-    public void setTblDonSetup(EntityImpl value) {
+    public void setTblDonSetup(TblDonSetupImpl value) {
         setAttributeInternal(TBLDONSETUP, value);
     }
 
     /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
-    public EntityImpl getTblDonType() {
-        return (EntityImpl) getAttributeInternal(TBLDONTYPE);
+    public TblDonTypeImpl getTblDonType() {
+        return (TblDonTypeImpl) getAttributeInternal(TBLDONTYPE);
     }
 
     /**
      * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
      */
-    public void setTblDonType(EntityImpl value) {
+    public void setTblDonType(TblDonTypeImpl value) {
         setAttributeInternal(TBLDONTYPE, value);
     }
+
 
     /**
      * @param id key constituent
@@ -336,13 +363,6 @@ public class TblDonKindMImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblDonKindM");
     }
 
     /**

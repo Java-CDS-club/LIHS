@@ -22,7 +22,8 @@
        TblDonKindM.CREATED_DATE, 
        TblDonKindM.CREATED_BY, 
        TblDonKindM.UPDATED_DATE, 
-       TblDonKindM.UPDATED_BY"
+       TblDonKindM.UPDATED_BY, 
+       TblDonKindM.CATEGORY"
   FromList="TBL_DON_KIND_M TblDonKindM"
   Where="TblDonKindM.PROJECT_ID = nvl(:getProId,TblDonKindM.PROJECT_ID)">
   <Variable
@@ -274,6 +275,12 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblDonKindM"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="Category"
+    PrecisionRule="true"
+    EntityAttrName="Category"
+    EntityUsage="TblDonKindM"
+    AliasName="CATEGORY"/>
   <ViewLinkAccessor
     Name="TblDonKindDView"
     ViewLink="model.ERP.VO.FkDonKindDMLink"

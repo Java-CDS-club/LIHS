@@ -23,7 +23,8 @@
        TblDonCr.CREATED_DATE, 
        TblDonCr.CREATED_BY, 
        TblDonCr.UPDATED_DATE, 
-       TblDonCr.UPDATED_BY"
+       TblDonCr.UPDATED_BY, 
+       TblDonCr.CATEGORY"
   FromList="TBL_DON_CR TblDonCr"
   Where="TblDonCr.PROJECT_ID =  nvl(:getProId,TblDonCr.PROJECT_ID)">
   <Variable
@@ -251,4 +252,10 @@
     EntityAttrName="UpdatedBy"
     EntityUsage="TblDonCr"
     AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="Category"
+    PrecisionRule="true"
+    EntityAttrName="Category"
+    EntityUsage="TblDonCr"
+    AliasName="CATEGORY"/>
 </ViewObject>
