@@ -8,6 +8,7 @@ import oracle.adf.share.ADFContext;
 
 import oracle.jbo.Key;
 import oracle.jbo.RowIterator;
+import oracle.jbo.domain.NClobDomain;
 import oracle.jbo.domain.Number;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
@@ -59,6 +60,8 @@ public class TblItnMImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int VNO = AttributesEnum.Vno.index();
     public static final int VTP = AttributesEnum.Vtp.index();
@@ -81,6 +84,14 @@ public class TblItnMImpl extends EntityImpl {
     }
 
     /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblItnM");
+    }
+
+
+    /**
      * Gets the attribute value for Id, using the alias name Id.
      * @return the value of Id
      */
@@ -100,15 +111,15 @@ public class TblItnMImpl extends EntityImpl {
      * Gets the attribute value for Vno, using the alias name Vno.
      * @return the value of Vno
      */
-    public String getVno() {
-        return (String) getAttributeInternal(VNO);
+    public Number getVno() {
+        return (Number) getAttributeInternal(VNO);
     }
 
     /**
      * Sets <code>value</code> as the attribute value for Vno.
      * @param value value to set the Vno
      */
-    public void setVno(String value) {
+    public void setVno(Number value) {
         setAttributeInternal(VNO, value);
     }
 
@@ -279,6 +290,7 @@ public class TblItnMImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(TBLITND);
     }
 
+
     /**
      * @param id key constituent
 
@@ -286,13 +298,6 @@ public class TblItnMImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblItnM");
     }
 
     /**

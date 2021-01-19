@@ -27,14 +27,14 @@
     RetrievedOnUpdate="true"/>
   <Attribute
     Name="Vno"
-    Precision="25"
     ColumnName="VNO"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_ATT_M"
     RetrievedOnInsert="true"
-    RetrievedOnUpdate="true">
+    RetrievedOnUpdate="true"
+    Precision="25">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="25"/>
     </DesignTime>
