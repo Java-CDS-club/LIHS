@@ -219,6 +219,8 @@
           usageId="view_Goods_Issue_Notes_TaskFlow_Goods_Issue_Notes_TaskFlow_ExecutePageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Reports/Inventory_Reports.jsff" usageId="view_Inventory_ReportsPageDef"/>
     <page path="/WEB-INF/Fragments/Modules/Reports/Summary_Reports.jsff" usageId="view_Summary_ReportsPageDef"/>
+    <page path="/WEB-INF/Task_Flows/Modules/General_Ledger/Opening_Balance_TaskFlow.xml#Opening_Balance_TaskFlow@ExecuteWithParams"
+          usageId="view_Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecuteWithParamsPageDef1"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_General_LedgerPageDef" path="Main_Pages.Modules.General_Ledger.General_LedgerPageDef"/>
@@ -422,6 +424,8 @@
           path="Task_Flows.Modules.Inventory.Goods_Issue_Notes_TaskFlow_Goods_Issue_Notes_TaskFlow_ExecutePageDef"/>
     <page id="view_Inventory_ReportsPageDef" path="Fragments.Modules.Reports.Inventory_ReportsPageDef"/>
     <page id="view_Summary_ReportsPageDef" path="Fragments.Modules.Reports.Summary_ReportsPageDef"/>
+    <page id="view_Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecuteWithParamsPageDef1"
+          path="Task_Flows.Modules.General_Ledger.Opening_Balance_TaskFlow_Opening_Balance_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.UserRole"

@@ -39,90 +39,112 @@ public class InventoryReports {
     }
     private static String selectedReportType = "";
     private static String gotFormat = "";
-    private static BigDecimal  gotprojectId;
-    private static BigDecimal  gotDepartmentidId;
-    private static String  gotitemL4id;
-   
+    private static BigDecimal gotprojectId;
+    private static BigDecimal gotDepartmentidId;
+    private static String gotitemL4id;
+
     public String gen_Report() {
         // Add event code here...
-        selectedReportType = (String)this.getReport_type().getValue();
-        gotFormat = (String)this.getFormat_type().getValue();
-        gotprojectId = (BigDecimal)this.getProjectidparam().getValue();
-        gotDepartmentidId = (BigDecimal)this.getDepartmentidparam().getValue();
-        gotitemL4id = (String)this.getItemL4idparam().getValue();
-        
+        selectedReportType = (String) this.getReport_type().getValue();
+        gotFormat = (String) this.getFormat_type().getValue();
+        gotprojectId = (BigDecimal) this.getProjectidparam().getValue();
+        gotDepartmentidId = (BigDecimal) this.getDepartmentidparam().getValue();
+        gotitemL4id = (String) this.getItemL4idparam().getValue();
+
         DatabaseConnection dbconnect = new DatabaseConnection();
         OracleReportBean reportBean = new OracleReportBean(dbconnect.getUipReport(), dbconnect.getUportReport(), null);
         String url = "";
-        
-        if(getFromDate() != ""){
+
+        if (getFromDate() != "") {
             reportBean.setReportParameter("P_Fdated", getFromDate());
         }
-        if(getToDate() != ""){
+        if (getToDate() != "") {
             reportBean.setReportParameter("P_Tdated", getToDate());
         }
-        if(gotprojectId != null){
+        if (gotprojectId != null) {
             reportBean.setReportParameter("P_Project_id", gotprojectId.toString());
-        } 
-        if(gotDepartmentidId != null){
+        }
+        if (gotDepartmentidId != null) {
             reportBean.setReportParameter("P_Department_id", gotDepartmentidId.toString());
-        } 
-        if(gotitemL4id != null){
+        }
+        if (gotitemL4id != null) {
             reportBean.setReportParameter("P_item_L4_id", gotitemL4id.toString());
-        } 
+        }
 
         if (gotFormat == "") {
             showMessage("Please Select Report Format");
         } else {
-            
-                switch (selectedReportType) {
-                
-                case "inventoryReport":
-                    reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Inventory_Reports&");
-                    break;
-                
-                case "currentStock":
-                        reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Current_Stock&");
-                        break;
-                
-                case "itemLedger":
-                    
-                            reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Item_Ledger&");
-                            break;
-               case "mGTdailyfeeding":
-                        
-                                reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/MGT_Daily_Feeding_1&");
-                                break;
-              case "mGTdailyfeeding2":
-                             
-                                     reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/MGT_Daily_Feeding_2&");
-                                    
-                    //working for procedure call//
-                    String sendItemL4IDLgrCnvrt = gotitemL4id;
-                    int sendItemL4IDLgrfinal =Integer.parseInt(sendItemL4IDLgrCnvrt);  
-                    //calling procedure start//
-                    Connection conn;
-                    ResultSet rs;
-                    CallableStatement cstmt = null;
-                        try {
-                            conn = DatabaseConnection.getConnection();
-                            String SQL = "{call P_IL(?)}";
-                            cstmt = conn.prepareCall (SQL);
-                            cstmt.setInt(1, sendItemL4IDLgrfinal);
-                            rs = cstmt.executeQuery();
-                        }
-                        catch (SQLException e) {
-                            System.out.println(e);
-                        }
-                    break;
-                    //calling procedure end//
-                 default:
-                    showMessage("Please Select Report Type");
-                    break;
 
+            switch (selectedReportType) {
+
+            case "inventoryReport":
+                reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Inventory_Reports&");
+                break;
+
+            case "currentStock":
+                reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Current_Stock&");
+                break;
+
+            case "itemLedger":
+
+                reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/Item_Ledger&");
+                break;
+            case "mGTdailyfeeding":
+
+                reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/MGT_Daily_Feeding_1&");
+                break;
+            case "mGTdailyfeeding2":
+
+                reportBean.setReportURLName("userid=lihs/lihs@orcl&domain=classicdomain&report=C:/LIHS_Reports/MGT_Daily_Feeding_2&");
+
+                //working for procedure call//
+                String sendItemL4IDLgrCnvrt = gotitemL4id;
+                int sendItemL4IDLgrfinal = Integer.parseInt(sendItemL4IDLgrCnvrt);
+
+                String sendFDateCnvrt = getFromDate();
+                java.util.Date sendFDateFinal;
+//                    sendFDateFinal = new SimpleDateFormat("dd/MMM/yy").parse(sendFDateCnvrt);
+                    SimpleDateFormat df= new SimpleDateFormat("dd/MMM/yy");
+                    try {
+                    sendFDateFinal = new java.util.Date(df.parse(sendFDateCnvrt).getTime());
+                } catch (ParseException pe) {
+                    // TODO: Add catch code
+                    pe.printStackTrace();
                 }
+                
 
-            
+                String sendProjectIDCnvrt = gotprojectId.toString();
+                int sendProjectIDFinal = Integer.parseInt(sendProjectIDCnvrt);
+
+                String sendDeptIDCnvrt = gotDepartmentidId.toString();
+                int sendDeptIDFinal = Integer.parseInt(sendDeptIDCnvrt);
+
+
+                //calling procedure start//
+                Connection conn;
+                ResultSet rs;
+                CallableStatement cstmt = null;
+                try {
+                    conn = DatabaseConnection.getConnection();
+                    String SQL = "{call P_IL(?,?,?,?)}";
+                    cstmt = conn.prepareCall(SQL);
+                    cstmt.setInt(1, sendItemL4IDLgrfinal);
+                    cstmt.setDate(2, Date.valueOf(sendFDateFinal) );
+                    cstmt.setInt(3, sendProjectIDFinal);
+                    cstmt.setInt(4, sendDeptIDFinal);
+                    rs = cstmt.executeQuery();
+                } catch (SQLException e) {
+                    System.out.println(e);
+                }
+                break;
+                //calling procedure end//
+            default:
+                showMessage("Please Select Report Type");
+                break;
+
+            }
+
+
             reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESTYPE,
                                             "CACHE"); // which will be one of the [cashe - file - mail - printer]
             reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESFORMAT,
@@ -132,10 +154,10 @@ public class InventoryReports {
             url = reportBean.getReportServerURL();
             System.out.println("Url => " + url);
             reportBean.openUrlInNewWindow(url);
-            }
-            return null;
+        }
+        return null;
     }
-    
+
     public String showMessage(String msgs) {
         String messageText = msgs;
         FacesMessage fm = new FacesMessage(messageText);
@@ -148,9 +170,9 @@ public class InventoryReports {
         context.addMessage(null, fm);
         return null;
     }
-    
+
     private String getFromDate() {
-        if(fromDateParam.getValue() != null && fromDateParam.getValue() != "") {
+        if (fromDateParam.getValue() != null && fromDateParam.getValue() != "") {
             try {
                 DateFormat sdf = new SimpleDateFormat("EE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
                 Date parsedDate = sdf.parse(fromDateParam.getValue().toString());
@@ -162,9 +184,9 @@ public class InventoryReports {
         }
         return "";
     }
-    
+
     private String getToDate() {
-        if(toDateParam.getValue() != null && toDateParam.getValue() != "") {
+        if (toDateParam.getValue() != null && toDateParam.getValue() != "") {
             try {
                 DateFormat sdf = new SimpleDateFormat("EE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
                 Date parsedDate = sdf.parse(toDateParam.getValue().toString());
@@ -176,7 +198,7 @@ public class InventoryReports {
         }
         return "";
     }
-    
+
     public void setFormat_type(RichSelectOneChoice format_type) {
         this.format_type = format_type;
     }
