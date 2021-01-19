@@ -8,6 +8,7 @@ import oracle.adf.share.ADFContext;
 
 import oracle.jbo.Key;
 import oracle.jbo.RowIterator;
+import oracle.jbo.domain.NClobDomain;
 import oracle.jbo.domain.Number;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
@@ -57,6 +58,8 @@ public class TblAttMImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int VNO = AttributesEnum.Vno.index();
     public static final int VTP = AttributesEnum.Vtp.index();
@@ -75,6 +78,14 @@ public class TblAttMImpl extends EntityImpl {
      */
     public TblAttMImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblAttM");
+    }
+
 
     /**
      * Gets the attribute value for Id, using the alias name Id.
@@ -243,6 +254,7 @@ public class TblAttMImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(TBLATTD);
     }
 
+
     /**
      * @param id key constituent
 
@@ -250,13 +262,6 @@ public class TblAttMImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblAttM");
     }
 
     /**
