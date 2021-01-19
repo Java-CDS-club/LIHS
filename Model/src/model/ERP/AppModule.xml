@@ -490,6 +490,9 @@
   <ViewUsage
     Name="TblEmpAllView2"
     ViewObjectName="model.ERP.VO.TblEmpAllView"/>
+  <ViewUsage
+    Name="TblOpenBlncView1"
+    ViewObjectName="model.ERP.VO.TblOpenBlncView"/>
   <ViewLinkUsage
     Name="FkGlL1IdLink1"
     ViewLinkObjectName="model.ERP.VO.FkGlL1IdLink"
