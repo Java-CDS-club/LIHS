@@ -105,5 +105,7 @@
             Action="createInsertRow"/>
     <action IterBinding="TblDonKindDView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblDonKindDView2Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <list IterBinding="TblDonKindMView1Iterator" StaticList="false" Uses="LOV_Category" id="Category"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>
