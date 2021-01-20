@@ -96,7 +96,7 @@
                     </af:selectOneChoice>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblOpenBlncInvView1.hints.ItemL4Id.name}" filterable="true"
-                             sortable="true" headerText="General Legder L4"
+                             sortable="true" headerText="Item Level 4"
                              id="c3" width="200">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
